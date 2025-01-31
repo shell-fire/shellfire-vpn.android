@@ -15,6 +15,37 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
+---
+
+## Additional Licensing and Acknowledgments
+
+### **OpenVPN-ics**
+This project includes code from **OpenVPN-ics** by Arne Schwabe, which is licensed under GPL v2 with additional terms. 
+
+- **Derivative Work Clause**: Using or including any part of **ics-openvpn**, especially within the `de.blinkt.openvpn` package, constitutes a derivative work.
+- **OpenSSL Linking Exception**: OpenVPN-ics provides a special exception allowing linking with the OpenSSL library.
+
+For full terms, see the [original OpenVPN-ics license](https://github.com/schwabe/ics-openvpn/blob/master/LICENSE.txt).
+
+### **LZO Library**
+- LZO is copyrighted by **Markus F.X.J. Oberhumer** and licensed under GPL.
+- Special permission is granted to link OpenVPN with both **OpenSSL** and **LZO**.
+
+### **Google Breakpad**
+- Copyright (c) 2006, **Google Inc.**
+- Licensed under a **permissive BSD-style license** with the following conditions:
+  - Must retain copyright notice and disclaimers in source and binary distributions.
+  - The organization’s name cannot be used for endorsement without permission.
+  - Disclaimer of liability and warranty applies.
+
+### **Bouncy Castle**
+- Copyright (c) 2000-2013 **The Legion of the Bouncy Castle**.
+- Licensed under a **permissive MIT-style license**, allowing free use, modification, and distribution.
+
+---
+
+## Full GPL v2 License Text:
+
 GNU GENERAL PUBLIC LICENSE
 Version 2, June 1991
 
