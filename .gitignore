@@ -31,3 +31,17 @@ app/src/**/google-services.json
 android_keys
 android-keys
 new-release-key.jks
+fabric.properties
+
+# Ignore IntelliJ IDEA / Android Studio specific files
+.idea/
+.idea/**/*
+
+# Ignore local build files
+.gradle/
+build/
+app/build/
+captures/
+
+# Ignore OS-specific files
+Thumbs.db

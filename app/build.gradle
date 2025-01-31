@@ -33,12 +33,20 @@ android {
     signingConfigs {
         release {
             def props = new Properties()
-            def propFile = file("local.properties")
+            def propFile = file("../local.properties")
             if (propFile.exists()) {
                 props.load(new FileInputStream(propFile))
+            } else {
+                throw new FileNotFoundException("local.properties file not found")
             }
 
-            storeFile file(props['storeFile'])
+            def storeFilePath = props['storeFile']
+            if (storeFilePath) {
+                println "storeFile path: ${storeFilePath}"
+                storeFile file(storeFilePath)
+            } else {
+                throw new IllegalArgumentException("storeFile property is missing in local.properties")
+            }
             storePassword props['storePassword']
             keyAlias props['keyAlias']
             keyPassword props['keyPassword']
