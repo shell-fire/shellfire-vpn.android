@@ -1,0 +1,490 @@
+<resources>
+    <string name="channel_name_userreq">Nepieciešama lietotāja mijiedarbība</string>
+    <string name="channel_description_userreq">OpenVPN savienojumam ir nepieciešams lietotāja ievads, piemēram, divu faktoru autentifikācija.
+    </string>
+    <string name="channel_name_background">Savienojumu statistika</string>
+    <string name="channel_description_background">Izveidotā OpenVPN savienojuma pastāvīgā statistika</string>
+    <string name="channel_name_status">Savienojuma statusa maiņa</string>
+    <string name="channel_description_status">OpenVPN savienojuma statusa izmaiņas (savienošanās, autentifikācija,...)</string>
+	<string name="save_password">Saglabāt paroli</string>
+	<string name="show_password">Rādīt paroli</string>
+	<string name="auth_username">Lietotājvārds</string>
+	<string name="remote_trust">Es uzticos šim lietojumprogrammai.</string>
+	<string name="remote_warning">Turpinot darbību, jūs piešķirat programmai atļauju pilnībā kontrolēt OpenVPN Android un pārtvert visu tīkla datplūsmu.<b>Neakceptējiet pieteikumu, ja vien tam neuzticaties.</b> Pretējā gadījumā pastāv risks, ka jūsu datus var apdraudēt ļaunprātīga programmatūra.\"</string>
+	<string name="permission_icon_app">Ikona lietotnē, kas mēģina izmantot OpenVPN operētājsistēmai Android</string>
+	<string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+	<string name="config_error_found">Kļūda konfigurācijā</string>
+	<string name="nought_alwayson_warning"><![CDATA[Ja neesat saņēmis VPN apstiprinājuma dialoglodziņu, jums ir iespējota citas programmas \\"Vienmēr ieslēgts VPN\\". Tādā gadījumā tikai šai lietotnei ir atļauts izveidot savienojumu ar VPN. Pārbaudiet sadaļā Iestatījumi-> Tīkli vairāk .. -> VPNS.]]></string>
+	<string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+	<string name="pw_request_dialog_title">Nepieciešams %1$s</string>
+    <string name="pw_request_dialog_prompt">Lūdzu, ievadiet profila %1$s paroli</string>
+	<string name="shortcut_profile_notfound">Īsajā saīsnē norādītais profils nav atrasts</string>
+	<string name="app">Shellfire VPN operētājsistēmai Android</string>
+	<string name="prompt">%1$s mēģina kontrolēt %2$s</string>
+	<string name="all_app_prompt">Ārējā lietotne mēģina kontrolēt %s. Lietotni, kas pieprasa piekļuvi, nav iespējams noteikt. Atļaujot šo lietotni, piekļuve tiek piešķirta VISĀM lietotnēm.</string>
+	<string name="screen_nopersistenttun">Brīdinājums: Šim VPN nav iespējota pastāvīga melodija. Kad ekrāns ir izslēgts, datplūsma izmantos parasto interneta savienojumu.</string>
+	<string name="private_key_password">Privātās atslēgas parole</string>
+	<string name="pkcs12_file_encryption_key">PKCS12 failu šifrēšanas atslēga</string>
+	<string name="no_error_found">Kļūda nav atrasta</string>
+	<string name="no_orbotfound">Orbot programmu nevar atrast. Lūdzu, instalējiet Orbot vai izmantojiet manuālo Socks v5 integrāciju.</string>
+	<string name="error_orbot_and_proxy_options">Nevar vienlaikus izmantot papildu http-proxy-option paziņojumu un Orbot integrāciju</string>
+	<string name="openvpn3_socksproxy">OpenVPN 3 C++ implementācija neatbalsta savienošanu, izmantojot Socks proxy</string>
+	<string name="openvpn3_nostatickeys">OpenVPN 3 C++ implementācija neatbalsta statiskās atslēgas. Vispārīgos iestatījumos mainiet uz OpenVPN 2.x.</string>
+    <string name="openvpn3_pkcs12">PKCS12 failu izmantošana tieši ar OpenVPN 3 C++ implementāciju nav atbalstīta. Lūdzu, importējiet pkcs12 failus Android atslēgu krātuvē vai mainiet OpenVPN 2.x uz vispārīgajiem iestatījumiem.</string>
+	<string name="remote_no_server_selected">Ir jādefinē un jāaktivizē vismaz viens attālais serveris.</string>
+	<string name="missing_tlsauth">trūkst tls-auth faila</string>
+    <string name="missing_certificates">Trūkst lietotāja sertifikāta vai lietotāja sertifikāta atslēgas faila</string>
+    <string name="missing_ca_certificate">Trūkst CA sertifikāta</string>
+	<string name="custom_route_format_error">Kļūda, analizējot pielāgotos maršrutus</string>
+	<string name="ipv4_format_error">Kļūda IPv4 adreses analizēšanā</string>
+	<string name="deprecated_tls_remote">Konfigurācijā tiek izmantota opcija tls-remote, kas tika atcelta 2.3 versijā un beidzot izņemta 2.4 versijā.</string>
+	<string name="no_ca_cert_selected">Jāizvēlas CA sertifikāts vai jāiedarbina vienādranga pirkstu nospiedumu pārbaude.</string>
+	<string name="no_keystore_cert_selected">Jāizvēlas lietotāja sertifikāts</string>
+	<string name="keyChainAccessError">KeyChain piekļuves kļūda: %s</string>
+	<string name="cannotparsecert">Nevar parādīt sertifikāta informāciju</string>
+	<string name="crtext_requested">Atbildēt uz izaicinājumu, lai turpinātu VPN autentifikāciju</string>
+	<string name="openurl_requested">Atvērt URL, lai turpinātu VPN autentifikāciju</string>
+	<string name="ip_looks_like_subnet">Norādīta Vpn topoloģija \\"%3$s\\", bet ifconfig %1$s %2$s izskatās drīzāk kā IP adrese ar tīkla masku. Pieņemot, ka topoloģija ir \\"apakštīkls\\".</string>
+	<string name="allowed_vpn_apps_info">Atļautās VPN programmas: %1$s</string>
+	<string name="disallowed_vpn_apps_info">Aizliegtās VPN programmas: %1$s</string>
+	<string name="app_no_longer_exists">Pakete %s vairs nav instalēta, dzēšot to no lietotņu atļaut/aizliegt saraksta</string>
+	<string name="no_allowed_app">Nav pievienota neviena atļautā lietotne. Pievienojot sevi (%s), lai atļauto lietotņu sarakstā būtu vismaz viena lietotne, lai nebūtu atļautas visas lietotnes.</string>
+	<string name="ignore_multicast_route">Ignorē multiraides maršrutu: %s</string>
+	<string name="routes_debug">Uzstādīti VpnService maršruti: %1$s %2$s</string>
+	<string name="state_auth_failed">Autentifikācija neizdevās</string>
+	<string name="password">Parole</string>
+	<string name="state_waitorbot">Gaidām, kad sāksies Orbot</string>
+	<string name="service_restarted">OpenVPN pakalpojuma restartēšana (App crashed iespējams avarēja vai nogalināti atmiņas spiedienu)</string>
+	<string name="notifcation_title_notconnect">Nav savienots</string>
+	<string name="permission_revoked">VPN atļauja atcelta operētājsistēmā (piemēram, ir palaista cita VPN programma), pārtraucot VPN darbību.</string>
+	<string name="keychain_nocacert">Nav atgriezts CA sertifikāts, nolasot no Android atslēgu krātuves. Autentifikācija, iespējams, neizdosies.</string>
+	<string name="abi_mismatch">Preferred native ABI precedence of this device (%1$s) and ABI reported by native libraries (%2$s) mismatch mismatch</string>
+	<string name="jelly_keystore_alphanumeric_bug">Dažās Android 4.1 versijās ir problēmas, ja atslēgu krātuves sertifikāta nosaukumā ir rakstzīmes, kas nav burtciparu rakstzīmes (piemēram, atstarpes, pasvītrojumi vai defisi). Mēģiniet atkārtoti importēt sertifikātu bez īpašajām rakstzīmēm.</string>
+	<string name="keychain_access">Nevar piekļūt Android atslēgu kopas sertifikātiem. To var izraisīt programmaparatūras atjauninājums vai atjaunota lietotnes/aplikācijas iestatījumu dublējums. Lūdzu, rediģējiet VPN un pamatnosacījumos atkārtoti atlasiet sertifikātu, lai atjaunotu atļauju piekļūt sertifikātam.</string>
+	<string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>	
+	<string name="bits_per_second">%.0f bitu/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+	<string name="state_auth_pending">Autentifikācija vēl nav pabeigta</string>
+	<string name="reread_log">Atkārtoti nolasīt (%d) žurnāla vienumus no žurnāla kešatmiņas faila</string>
+	<string name="state_waitconnectretry">Gaidīšana %ss sekunžu laikā starp savienojuma mēģinājumiem</string>
+	<string name="unhandled_exception">Neapstrādāts izņēmums: %1$s\n\n%2$s</string>
+	<string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Maršruti: %1$s %2$s</string>
+    <string name="routes_info_excl">Izslēgtie maršruti: %1$s %2$s</string>
+    <string name="title_activity_login">Piesakieties</string>
+    <string name="action_forgot_password">Aizmirsāt paroli</string>
+    <string name="register_process_registering">Reģistrēties...</string>
+    <string name="error_invalid_password">Parole ir pārāk īsa</string>
+    <string name="error_passwords_dont_match">Paroles nesakrīt</string>
+    <string name="error_field_required">Šis lauks ir obligāts</string>
+    <string name="action_settings">Iestatījumi</string>
+    <string name="title_connect">Statuss</string>
+    <string name="title_serverlist">Serveru saraksts</string>
+    <string name="title_locations">Atrašanās vietas</string>
+    <string name="title_log">Log</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Savienot</string>
+    <string name="route_rejected">Maršruts, ko noraidījis Android</string>
+    <string name="tun_error_helpful">Dažos pielāgotos ICS tēlos /dev/tun atļauja var būt nepareiza vai arī tun moduļa var pilnībā nebūt. CM9 attēlu gadījumā izmēģiniet īpašumtiesību noteikšanas opciju vispārīgajos iestatījumos.</string>
+    <string name="tun_open_error">Neizdevās atvērt tun interfeisu</string>
+    <string name="error">\"Kļūda: \"</string>
+    <string name="last_openvpn_tun_config">Tūn interfeisa atvēršana:</string>
+    <string name="local_ip_info">Vietējais IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">DNS serveris: %1$s, domēns: %2$s</string>
+    <string name="routes_info">Maršruti: %s</string>
+    <string name="routes_info6">IPv6 maršruti: %s</string>
+    <string name="ip_not_cidr">Saņemta interfeisa informācija %1$s un %2$s, pieņemot, ka otrā adrese ir attālinātā vienādranga adrese. Vietējam IP tiek izmantota /32 tīkla maska. OpenVPN norādītais režīms ir \\"%3$s\\".</string>
+    <string name="route_not_cidr">Nevar izmantot %1$s un %2$s kā IP maršrutu ar CIDR masku, izmantojot /32 kā masku.</string>
+    <string name="route_not_netip">Labots maršruts %1$s/%2$s uz %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Jūsu attēls neatbalsta VPNService API, sorry :(</string>
+    <string name="encryption">-Šifrēšana</string>
+    <string name="opentun_no_ipaddr">Atteikšanās atvērt tun ierīci bez IP informācijas</string>
+    <string name="building_configration">Ēkas konfigurācija...</string>
+    <string name="netstatus">Tīkla statuss: %s</string>
+    <string name="mobile_info">Darbojas uz %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Kļūda, parakstot ar Android atslēgu krātuves atslēgu %1$s: %2$s</string>
+    <string name="warn_no_dns">DNS serveri netiek izmantoti. Nosaukumu izšķiršana var nedarboties. Apsveriet iespēju iestatīt pielāgotus DNS serverus. Lūdzu, ņemiet vērā, ka Android turpinās izmantot jūsu proxy iestatījumus, kas noteikti jūsu mobilajam/Wi-Fi savienojumam, ja nav iestatīti DNS serveri.</string>
+    <string name="dns_add_error">Nevar pievienot DNS serveri \\"%1$s\\", sistēma noraidīja: %2$s</string>
+    <string name="ip_add_error">Nevarēja konfigurēt IP adresi \\"%1$s\\", sistēma noraidīja: %2$s</string>
+    <string name="getproxy_error">Kļūda proxy iestatījumu iegūšanā: %s</string>
+    <string name="using_proxy">Izmantojot starpniekserveri %1$s %2$d</string>
+    <string name="minidump_generated">OpenVPN negaidīti sabruka. Lūdzu, apsveriet iespēju nosūtīt Minidump galvenajā izvēlnē.</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Savienošana</string>
+    <string name="state_wait">Servera atbildes gaidīšana</string>
+    <string name="state_auth">Autentiskuma autentificēšana</string>
+    <string name="state_get_config">Klienta konfigurācijas iegūšana</string>
+    <string name="state_assign_ip">IP adrešu piešķiršana</string>
+    <string name="state_add_routes">Maršrutu pievienošana</string>
+    <string name="state_connected">Savienots</string>
+    <string name="state_disconnected">Atvienojiet</string>
+    <string name="state_reconnecting">Atkārtoti savieno</string>
+    <string name="state_exiting">Iziešana no</string>
+    <string name="state_noprocess">Nedarbojas</string>
+    <string name="state_resolve">Saimnieka vārdu atrisināšana</string>
+    <string name="state_tcp_connect">Savienošana (TCP)</string>
+    <string name="unknown_state">Nezināms</string>
+    <string name="state_nonetwork">Gaidot lietojamu tīklu</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Savienošanās ar VPN %s</string>
+    <string name="start_vpn_ticker">Savienošanās ar VPN %s</string>
+    <string name="mobile_info_extended">Darbojas uz %1$s (%2$s) %3$s, Android API %4$d, versija %5$s, %6$s.</string>
+    <string name="built_by">būvēts ar %s</string>
+    <string name="debug_build">atkļūdošana būvēt</string>
+    <string name="official_build">oficiālā būvniecība</string>
+    <string name="screenoff_pause">Savienojuma apturēšana ekrāna izslēgtā stāvoklī: mazāk nekā %1$s %2$ss</string>
+    <string name="state_userpause">Lietotāja pieprasītā VPN pauze</string>
+    <string name="state_screenoff">VPN apturēts - ekrāns izslēgts</string>
+    <string name="defaultServerName">Serveris XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Izvēlieties VPN</string>
+    <string name="vpnSelectReason">Jūsu Shellfire kontā ir atrasti vairāki VPN. Lūdzu, izvēlieties, kuru no tiem izmantot.</string>
+    <string name="rememberVpnSelection">Saglabāt atlasi</string>
+    <string name="remember_vpn_summary">Ja ir pieejami vairāki VPN, jums nav jāizvēlas VPN pie katras pieteikšanās.</string>
+    <string name="remember_vpn_title">Saglabāt atlasīto VPN</string>
+    <string name="show_log_sum">Pastāvīga žurnāla rādīšana var izraisīt veiktspējas samazināšanos (nepieciešama lietotnes restartēšana).</string>
+    <string name="show_log">Displeja žurnāls</string>
+    <string name="default_product_type">Bezmaksas</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Serveris</string>
+    <string name="connectionAdvice">Savienojas ar atlasīto serveri. Lai mainītu serverus, pārvelciet pa labi.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Pieteikumu žurnāls</string>
+    <string name="connectionState">Statuss:</string>
+    <string name="disconnected">Atvienots</string>
+    <string name="noAccountData">Nav reģistrēts\?</string>
+    <string name="title_activity_register">Reģistrēties</string>
+    <string name="buyDailyPremium">0,99 eiro / 24 stundas.</string>
+    <string name="buyDailyPremiumPlus">1,99 Euro / 24 stundas.</string>
+    <string name="buyMonthlyPremium">3,49 eiro / mēnesī</string>
+    <string name="buyMonthlyPremiumPlus">7,95 eiro / mēnesī</string>
+    <string name="buyYearlyPremium">39,90 eiro / gadā</string>
+    <string name="buyYearlyPremiumPlus">84,90 eiro / gadā</string>
+    <string name="premiumUntil">Premium līdz:</string>
+    <string name="sendToShellfire">Nosūtīt žurnālu uz Shellfire</string>
+    <string name="verifying_purchase">Pirkums tiek pārbaudīts...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Veiksmīga Premium jaunināšana. Parādīt serveru sarakstu\?</string>
+    <string name="yes">Jā</string>
+    <string name="no">Nē</string>
+    <string name="YES">JĀ</string>
+    <string name="upgrade_not_successful_check_log">Atjaunināšana nav veiksmīga, pārbaudiet žurnālu!</string>
+    <string name="problem_setting_up_in_app_billing">\"Problēmas ar In-app norēķinu iestatīšanu: \"</string>
+    <string name="loading">Iekraušana...</string>
+    <string name="send_log_to_shellfire">Nosūtīt žurnālu uz Shellfire</string>
+    <string name="log_send_succesfully">Žurnāls veiksmīgi nosūtīts uz Shellfire</string>
+    <string name="log_could_not_be_sent">Žurnālu nevarēja nosūtīt</string>
+    <string name="connecting">Savienošana...</string>
+    <string name="cansel">ATCELT</string>
+    <string name="disconnect">Atvienojiet</string>
+    <string name="connected">Savienots</string>
+    <string name="loading_certificates">Sertifikātu ielādēšana</string>
+    <string name="switching_from_udp_to_tcp">Pāreja no UDP uz TCP</string>
+    <string name="switching_from_tcp_to_udp">Pāreja no TCP uz UDP</string>
+    <string name="item_already_owned_consuming">jau piederoša prece - patērē</string>
+    <string name="item_consumed">patērētā prece</string>
+    <string name="already_on_this_server_doing_nothing">Jau šajā serverī - neko nedara</string>
+    <string name="not_showing_premium_info">Nav parādīta informācija par prēmiju</string>
+    <string name="you_are_not_eligible_to_use_this_server">Nepieciešams atjauninājums.
+\nVai vēlaties vairāk informācijas\?</string>
+    <string name="you_are_currently_connecting_disconnect">Pašlaik esat pieslēgts. Pirms servera maiņas jums ir jāatvienojas. Atvienoties tagad\?</string>
+    <string name="not_changing_server">Servera maiņa atcelta</string>
+    <string name="sure_to_change_server">Vai esat pārliecināts, ka vēlaties mainīt serveri\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.Serveris tiek mainīts. Tas var aizņemt brīdi..</string>
+    <string name="server_selection_succesfully_performed_on_backend">Servera maiņa ir veiksmīga.</string>
+    <string name="server_selection_could_not_be_changed">Serveri nevarēja mainīt. Lūdzu, pārbaudiet žurnālā sīkāku informāciju.</string>
+    <string name="connecting_please_wait">Savienojums tiek apstrādāts - lūdzu, uzgaidiet</string>
+    <string name="action_about">Par Shellfire VPN</string>
+
+    <string name="country">valsts</string>
+    <string name="title_activity_about">Par Shellfire VPN</string>
+    <string name="hello_world">Sveika, pasaule!</string>
+    <string name="copyright_shellfire">© 2014, Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">Bouncy Castle Crypto API</string>
+    <string name="copyright_openssl">Šis produkts ietver OpenSSL projekta izstrādāto programmatūru izmantošanai OpenSSL Toolkit\n
+        Autortiesības © 1998-2008 The OpenSSL Project. Visas tiesības aizsargātas.\n\n
+        Šis produkts ietver kriptogrāfijas programmatūru, kuras autors ir Eric Young (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Visas tiesības aizsargātas.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Autortiesības © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Šajā programmā tiek izmantotas šādas sastāvdaļas; sīkāku informāciju par licencēm skatiet avota kodā (pieejams vietnē https://code.google.com/p/shellfirevpn4a/).</string>
+    <string name="copyright_arne">Projekts ics-openvpn, Autortiesības 2012-2013 Arne Schwabe (arne\@rfc2549.org), pieejams: https://code.google.com/p/ics-openvpn/.</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Autortiesības © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" ir OpenVPN Technologies, Inc. preču zīme.\n]]></string>
+    <string name="copyright_bouncycastle">Autortiesības © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">līdz</string>
+    <string name="state_user_vpn_password">Lietotāja VPN paroles gaidīšana</string>
+    <string name="state_user_vpn_permission_cancelled">VPN API atļaujas dialoglodziņš atcelts</string>
+    <string name="account_created_succesfully">Konts izveidots veiksmīgi - lūdzu, pārbaudiet savu e-pastu, lai saņemtu aktivizācijas e-pasta vēstuli.</string>
+    <string name="free">Bezmaksas</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 stundas</string>
+    <string name="month_1">1 mēnesis</string>
+    <string name="monthly">ikmēneša</string>
+    <string name="yearly">gada</string>
+    <string name="cents99">0.99 Eur</string>
+    <string name="cents199">Eur 1,99</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9.95 Eur</string>
+    <string name="cents395">3.95 Eur</string>
+    <string name="cents795">7.95 Eur</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Pirkt</string>
+    <string name="compare">Salīdzini</string>
+    <string name="singlePayment">vienreizējs maksājums *</string>
+    <string name="subscription">abonements **</string>
+    <string name="note_payment_types">* kredītkarte nav nepieciešama.\r\n
+** Nepieciešama kredītkarte; var atcelt jebkurā laikā, izmantojot Google Play. \r\n
+\r\n
+maksājiet ar Paypal mūsu tīmekļa vietnē: https://www.shellfire.co.uk/vpn.</string>
+    <string name="selecting_vpn">VPN izvēle...</string>
+    <string name="cobiCodeEnter">COMPUTER BILD kampaņa</string>
+    <string name="cobiClickHere">Ievadiet kodu</string>
+
+    <string name="enter_cobi_code">ievadiet COMPUTERBILD kods šeit:</string>
+    <string name="action_share">Kopīgojiet šo lietotni</string>
+    <string name="share_with">Dalīties ar</string>
+    <string name="share_text">Es izmantoju Shellfire #VPN lietotni, lai aizsargātu savus datus no hakeriem un atbloķētu cenzētu saturu: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Novērtējiet</string>
+    <string name="rate_this_app">Novērtējiet</string>
+    <string name="rate_explanation">Vai šī lietotne jūs ir pārliecinājusi\? Mēs būtu ļoti priecīgi, ja jūs novērtētu mūsu aplikāciju Google Play. Paldies par atbalstu!</string>
+    <string name="rate_now">Novērtējiet tagad</string>
+    <string name="rate_later">Vēlāk</string>
+    <string name="rate_never">Nē, paldies</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Mans plāns</string>
+    <string name="current_plan">AKTUALITĀTIS PLĀNS</string>
+    <string name="PAID_UNTIL">Apmaksāts līdz</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Uzlabojiet savu kontu, lai iegūtu vairāk funkciju</string>
+
+
+    <string name="retry">Atkārtot</string>
+    <string name="network_problem_title">Tīkla problēma</string>
+    <string name="network_problem_message">Pašlaik neesat pieslēgts internetam. Shellfire VPN ir nepieciešams aktīvs interneta savienojums.</string>
+    <string name="login_error">pieteikšanās kļūme.</string>
+    <string name="serverLoad">Ielādēt</string>
+    <string name="reloadServerList">Pārlādēt</string>
+    <string name="upgrade_not_successful">Modernizēšana nav veiksmīga</string>
+
+    <string name="new_version_available_title">Pieejama jauna versija</string>
+    <string name="new_version_available_message">Google Play veikalā ir pieejama jauna Shellfire VPN versija. Jums drīzumā vajadzētu to instalēt, jo šī versija var vairs nedarboties pareizi vai saturēt drošības problēmas.
+
+Dodieties uz Play veikalu, lai to atjauninātu\?
+
+Piezīme: Lai saņemtu jaunāko versiju, jums, iespējams, būs nepieciešams atinstalēt / atkārtoti instalēt.</string>
+
+    <string name="dontshowagain">Nē un vairs nerādīt</string>
+    <string name="not_now">Ne tagad</string>
+    <string name="server">Serveris</string>
+
+    <string name="_128bit">128 bitu šifrēšana</string>
+    <string name="_192bit">192 bitu šifrēšana</string>
+    <string name="_256bit">256 bitu šifrēšana</string>
+
+    <string name="upto786">līdz 786 kbit/sek.</string>
+    <string name="upto10000">līdz 10 000 kbit/sek.</string>
+    <string name="unlimited">neierobežots kbit/sec</string>
+
+    <string name="php_invalid_email">Lūdzu, ievadiet derīgu e-pasta adresi.</string>
+    <string name="php_account_exists">Šai e-pasta adresei jau ir reģistrēts konts.</string>
+
+
+    <string name="php_signature"><![CDATA[Shellfire komanda sūta sveicienus
+
+P.S.: Jaunums: Nopelniet naudu ar Shellfire! Kad piesaistīsiet mums jaunus klientus, mēs jums maksāsim līdz pat 100% komisijas maksu: https://www.shellfire.net/affiliate-center/.
+
+P.P.S.: Sekojiet mums Twitter: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Vadība: Florian Gattung, Maximilian Behr.
+Civillikumā paredzētā partnerība ar juridisko adresi Bad Vilbelā, Vācijā.]]></string>
+
+    <string name="php_surf_anonym">Anonīmi sērfojot tīmeklī</string>
+    <string name="php_hide_ip">Slēpt savu IP adresi</string>
+    <string name="php_encrypt_internet">Šifrēts interneta savienojums</string>
+    <string name="php_secure_wifi">Droša publisko wifi karsto punktu izmantošana</string>
+    <string name="php_unlimited">neierobežots</string>
+    <string name="php_traffic">Satiksme / datu apjoms</string>
+    <string name="php_speed_generic">%1$s kbit/sec</string>
+    <string name="php_speed">Ātrums</string>
+    <string name="php_server_in_generic">Serveris %1$s</string>
+    <string name="php_change_location">Visu laiku mainīt atrašanās vietu</string>
+    <string name="php_streaming_websites">Straumēšanas vietnes</string>
+
+
+    <string name="play_product_description">Shellfire VPN - viegli. droši. savienots. Nav reģistrācijas.
+
+Shellfire VPN ir BEZMAKSAS, un tas jums nekad nemaksās ne centa. Neierobežota datplūsma, neierobežots laiks!
+
+Shellfire VPN slēpj jūsu IP adresi, atbloķē internetu un sniedz jums iespēju brīvi un anonīmi piekļūt jebkurai vietnei. Izmantojot Shellfire VPN, varat pieslēgties jebkurai vietnei, droši zinot, ka atrodaties slepenībā. Mēs atbloķējam Skype, Facebook, Twitter, YouTube u. c. vietnes valstīs, kurās ir interneta cenzūra, un pat ļaujam jums piekļūt savas valsts TV un radio pakalpojumiem no ārzemēm.
+
+Shellfire VPN nodrošina īpaši spēcīgu šifrēšanu, lai aizsargātu jūsu datus no hakeriem, NSA un citiem draudiem pat nedrošos publiskos wifi tīklos!
+
+Pārejiet uz Premium, lai saņemtu
+ - Lielāku ātrumu.
+ - Spēcīgāku šifrēšanu.
+ - Bezmaksas izvēle no mūsu serveriem:
+Austrija, Francija, Lielbritānija, Itālija, Honkonga, Kanāda, Nīderlande, Polija, Rumānija, Krievija, Spānija, ASV, Kanāda, Šveice, Zviedrija, Šveice, Vācija, Spānija un ASV.
+- PremiumPlus klienti saņem ekskluzīvu piekļuvi serveriem:
+Čīlē, Islandē, Menas salā (ārzonā) un Lihtenšteinā.
+
+Shellfire VPN - labākais VPN klients Android operētājsistēmai.
+
+Shellfire VPN darbojas arī Windows, Mac OS, iOS vai Linux! Apmeklējiet https://www.shellfire.net/vpn/, lai iegūtu sīkāku informāciju.
+
+Lai uzreiz saņemtu jaunāko informāciju, sekojiet mums Facebook un Twitter
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Anonīms sērfošana - šifrēts savienojums - Piekļūstiet Hulu, Youtube... no jebkuras vietas</string>
+
+    <string name="play_product_description_generic">%1$s bitu šifrēšana
+Pārsūtīšanas ātrums līdz %2$s kbit/s
+Serveris %3$s pasaules valstīs</string>
+
+    <string name="hosting_since_2002">Hostings kopš 2002. gada</string>
+    <string name="vision">Vīzija</string>
+    <string name="vision_data">Mēs uzskatām, ka droša un brīva piekļuve internetam ir ikviena cilvēka pamattiesības uz šīs planētas. Tāpēc mūsu misija ir saglabāt internetu kā brīvības un jūsu privāto datu drošu vietu. Mēs to darām, nodrošinot jums aizsardzību pret noklausītājiem un hakeriem, izmantojot mūsu šifrētos VPN tuneļus un balss serverus.</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="hotspot_data_p1">Pēdējos gados esam palīdzējuši vairāk nekā 500 000 lietotāju aizsargāt savu privātumu tiešsaistē un pārvarēt cenzūru. Mūsu augstie pakalpojumu un drošības standarti \\"Made in Germany\\" padara Shellfire par vienu no labākajām adresēm VPN tirgū.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Nopirkt tagad</string>
+    <string name="tv_single_pay">Vienreizējs maksājums</string>
+    <string name="tv_subscription_pay">Abonements</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 mēnesis</string>
+    <string name="subs_month">mēnesis</string>
+    <string name="subs_year">gads</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Karte</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Servera maiņa ir veiksmīga - vai tagad vēlaties izveidot savienojumu\?</string>
+    <string name="saotomeandprincipe">Santome un Prinsipi</string>
+    <string name="hosting_data">Shellfire GmbH ir hostinga pakalpojumu sniedzējs, kas atrodas Šmitenē netālu no Frankfurtes pie Mainas. Uzņēmumu Shellfire 2002. gadā dibināja Florians Gattungs un Maksimilians Bērs, kuri kopš tā laika darbojas kā vadošie partneri.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Ievadiet savu ziņu Shellfire šeit...</string>
+    <string name="load">IELĀDĒT:</string>
+    <string name="choose_a_plan">Izvēlieties plānu</string>
+    <string name="speed">Ātrums</string>
+    <string name="servers">Serveri</string>
+    <string name="countries">Valstis</string>
+    <string name="encryption_server">Šifrēšana</string>
+    <string name="video_streaming">Video straumēšana</string>
+    <string name="unblock_all_content">Atbloķēt visu saturu</string>
+    <string name="encrypted_connection">Šifrēts savienojums</string>
+    <string name="safe_hotspot_usage">Droša karstās vietas izmantošana</string>
+    <string name="unlimited_traffic">Neierobežota datplūsma</string>
+    <string name="upgrade">UPGRADE</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Advanced</string>
+    <string name="STANDARD">Standarta</string>
+    <string name="ALL_SERVERS">Visi serveri</string>
+    <string name="unlock">Atbloķēt</string>
+    <string name="filter">Filtri</string>
+
+    <string name="format_server">Serveris %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN mazais logrīks</string>
+    <string name="widget_label_medium">Shellfire VPN vidēja izmēra logrīks</string>
+    <string name="widget_label_large">Shellfire VPN liels logrīks</string>
+
+    <string name="pref_title_mode_connection">Savienojuma režīms</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Lai aktivizētu savu kontu, noklikšķiniet uz saites, kas atrodas mūsu tikko nosūtītajā e-pasta vēstulē.</string>
+    <string name="email_validation_required_title">Nepieciešama konta aktivizēšana</string>
+    <string name="sending_log">Žurnāla nosūtīšana...</string>
+    <string name="loading_one">Iekraušana ONE</string>
+    <string name="loading_two">Iekraušana divos</string>
+    <string name="logout">Izrakstīšanās</string>
+    <string name="action_connection_mode">Savienojuma režīms</string>
+    <string name="action_select_vpn">Izvēlieties VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Sniedziet atsauksmes</string>
+    <string name="title_activity_log">Nosūtīt atsauksmi Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Novērtējiet mūsu lietotni</string>
+    <string name="initial_dialog_message">Vai jums patīk mūsu lietotne\?</string>
+    <string name="initial_dialog_positive">Jā</string>
+    <string name="initial_dialog_negative">Nē</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Novērtējiet mūsu lietotni</string>
+    <string name="rate_dialog_message">Vai vēlaties novērtēt mūsu lietotni\?</string>
+    <string name="rate_dialog_positive">Jā, man tas patīk!</string>
+    <string name="rate_dialog_negative">Nē, paldies</string>
+    <string name="rate_dialog_neutral">Varbūt vēlāk</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Sniegt atsauksmes</string>
+    <string name="feedback_dialog_message">Vai vēlaties sniegt atsauksmes\?</string>
+    <string name="feedback_dialog_positive">Jā, es vēlos sniegt atsauksmes</string>
+    <string name="feedback_dialog_negative">Nē, paldies</string>
+
+    <string name="send_feedback_progress">Sūtot atsauksmes...</string>
+    <string name="feedback_sent_successfully">Veiksmīgi nosūtītas atsauksmes</string>
+    <string name="feedback_not_sent">Nevarēja nosūtīt atsauksmes</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Lūdzu, sniedziet savas atsauksmes tālāk tekstā. Ja vēlaties, varat pievienot arī lietojumprogrammu un sistēmas žurnālus, lai palīdzētu mums labāk izprast problēmas.</string>
+    <string name="include_application_and_system_logs">Ietveriet lietojumprogrammu un sistēmas žurnālus</string>
+    <string name="send_feedback">Sūtīt atsauksmes</string>
+    <string name="abort">Pārtraukt</string>
+    <string name="serverchange_timeout">Servera maiņas operācijas laiks ir beidzies. Lūdzu, mēģiniet vēlreiz.</string>
+    <string name="protocol_is_being_changed">Protokols tiek mainīts. Tas var aizņemt brīdi..</string>
+    <string name="protocol_change_timeout">Servera maiņas operācijas laiks ir beidzies. Lūdzu, mēģiniet vēlreiz.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Pierakstīšanās...</string>
+    <string name="login_with_existing_account">Pieteikšanās ar esošo kontu</string>
+    <string name="prompt_email">E-pasts</string>
+    <string name="prompt_password">Parole</string>
+    <string name="action_sign_in_short">Pierakstīties</string>
+    <string name="login">Pieteikšanās</string>
+    <string name="lostAccountData">Zaudēti konta dati</string>
+    <string name="register_new_account">Reģistrēt jaunu kontu</string>
+    <string name="welcomeText">Laipni lūdzam Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Reģistrēt jaunu kontu</string>
+    <string name="prompt_email_only">E-pasts</string>
+    <string name="subscribeNewsletter">Parakstīties uz jaunumiem</string>
+    <string name="register">Reģistrēties</string>
+    <string name="i_have_an_account">Man jau ir Shellfire konts</string>
+    <string name="greeting_text">Laipni lūdzam Shellfire VPN! Lūdzu, piesakieties vai reģistrējieties, lai turpinātu.</string>
+    <string name="slow">Lēnais</string>
+    <string name="brilliant">Lielisks</string>
+    <string name="back">Atpakaļ</string>
+
+</resources>

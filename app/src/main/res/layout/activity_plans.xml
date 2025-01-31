@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="40dp"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="16dp" >
+
+        <TextView
+            android:id="@+id/current_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/current_plan"
+            android:textSize="22sp"
+            android:textColor="@color/base_blue_color"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/crown_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/status_intend_20"
+            android:layout_marginTop="@dimen/status_intend_20"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/rate_blue_bg">
+
+            <ImageView
+                android:id="@+id/star_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_crown"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/star_2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_crown"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/star_3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_crown"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/plan_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/free"
+            android:textColor="@color/base_blue_color"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/subs_or_single_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text=""
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/premium_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/PAID_UNTIL"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/paid_until_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/free_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/upgrate_account_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS"
+                android:textSize="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/upgrade_btn"
+                style="@style/main_button_style"
+                android:text="@string/upgrade" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/back_btn"
+                style="@style/main_button_style"
+                android:layout_gravity="bottom"
+                android:text="@string/back" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

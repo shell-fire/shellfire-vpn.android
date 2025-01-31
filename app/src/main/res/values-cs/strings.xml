@@ -1,0 +1,535 @@
+<resources>
+    <string name="channel_name_userreq">Vyžaduje se interakce s uživatelem</string>
+    <string name="channel_description_userreq">Připojení OpenVPN vyžaduje interakci uživatele, například dvoufaktorové ověření.</string>
+    <string name="channel_name_background">Statistiky připojení</string>
+    <string name="channel_description_background">Průběžné statistiky navázaného připojení OpenVPN</string>
+    <string name="channel_name_status">Změna stavu připojení</string>
+    <string name="channel_description_status">Změny stavu připojení OpenVPN (Připojení, ověřování,...)</string>
+    <string name="save_password">Uložit heslo</string>
+    <string name="show_password">Zobrazit heslo</string>
+    <string name="auth_username">Uživatelské jméno</string>
+    <string name="remote_trust">Této aplikaci důvěřuji.</string>
+    <string name="remote_warning">Pokračováním udělujete aplikaci oprávnění zcela ovládat OpenVPN pro Android a zachytávat veškerý síťový provoz. <b>NEPOKRAČUJTE, pokud aplikaci nedůvěřujete.</b> V opačném případě riskujete, že vaše data budou ohrožena škodlivým softwarem.</string>
+    <string name="permission_icon_app">Ikona aplikace, která se snaží používat OpenVPN pro Android</string>
+    <string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+    <string name="config_error_found">Chyba v konfiguraci</string>
+    <string name="nought_alwayson_warning"><![CDATA[Pokud se vám nezobrazilo dialogové okno pro potvrzení VPN, máte pro jinou aplikaci povoleno \\"Vždy zapnuto VPN\\". V takovém případě se k síti VPN může připojit pouze tato aplikace. Zkontrolujte to v Nastavení-> Sítě více .. -> VPNS.]]></string>
+    <string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+    <string name="pw_request_dialog_title">Potřebujete %1$s</string>
+    <string name="pw_request_dialog_prompt">Zadejte prosím heslo pro profil %1$s</string>
+    <string name="shortcut_profile_notfound">Profil zadaný v zástupci nebyl nalezen</string>
+    <string name="app">Shellfire VPN pro Android</string>
+    <string name="prompt">%1$s se pokouší ovládat %2$s</string>
+    <string name="all_app_prompt">Externí aplikace se pokouší ovládat %s. Aplikaci požadující přístup nelze určit. Povolením této aplikace získá přístup VŠECHNY aplikace.</string>
+    <string name="screen_nopersistenttun">Varování: Pro tuto VPN není povoleno trvalé ladění. Při vypnuté obrazovce bude provoz využívat běžné internetové připojení.</string>
+    <string name="private_key_password">Heslo soukromého klíče</string>
+    <string name="pkcs12_file_encryption_key">Šifrovací klíč souborů PKCS12</string>
+    <string name="no_error_found">Nebyla nalezena žádná chyba</string>
+    <string name="no_orbotfound">Aplikaci Orbot nelze najít. Nainstalujte si Orbot nebo použijte ruční integraci Socks v5.</string>
+    <string name="error_orbot_and_proxy_options">Nelze použít příkaz http-proxy-option a integraci Orbot současně.</string>
+    <string name="openvpn3_socksproxy">Implementace OpenVPN 3 C++ nepodporuje připojení přes proxy server Socks</string>
+    <string name="openvpn3_nostatickeys">Implementace OpenVPN 3 C++ nepodporuje statické klíče. V obecných nastaveních změňte nastavení na OpenVPN 2.x.</string>
+    <string name="openvpn3_pkcs12">Používání souborů PKCS12 přímo s implementací OpenVPN 3 C++ není podporováno. Importujte prosím soubory PKCS12 do úložiště klíčů systému Android nebo změňte nastavení na OpenVPN 2.x v obecných nastaveních.</string>
+    <string name="remote_no_server_selected">Je třeba definovat a povolit alespoň jeden vzdálený server.</string>
+    <string name="missing_tlsauth">Chybí soubor tls-auth.</string>
+    <string name="missing_certificates">Chybí uživatelský certifikát nebo soubor s klíčem uživatelského certifikátu.</string>
+    <string name="missing_ca_certificate">Chybějící certifikát certifikační autority</string>
+    <string name="custom_route_format_error">Chyba při analýze vlastních tras.</string>
+    <string name="ipv4_format_error">Chyba při analýze adresy IPv4</string>
+    <string name="deprecated_tls_remote">Konfigurace používá volbu tls-remote, která byla ve verzi 2.3 zrušena a ve verzi 2.4 odstraněna.</string>
+    <string name="no_ca_cert_selected">Je třeba vybrat certifikát certifikační autority nebo povolit kontrolu otisku prstu partnera.</string>
+    <string name="no_keystore_cert_selected">Je třeba vybrat certifikát uživatele</string>
+    <string name="keyChainAccessError">Chyba přístupu k řetězci klíčů: %s.</string>
+    <string name="cannotparsecert">Nelze zobrazit informace o certifikátu</string>
+    <string name="crtext_requested">Odpověď na výzvu k pokračování ověřování VPN</string>
+    <string name="openurl_requested">Otevření adresy URL pro pokračování ověřování VPN</string>
+    <string name="ip_looks_like_subnet">Je zadána topologie Vpn \\"%3$s\\", ale ifconfig %1$s %2$s vypadá spíše jako IP adresa s maskou sítě. Předpokládáme topologii \\"subnet\\".</string>
+    <string name="allowed_vpn_apps_info">Povolené aplikace VPN: %1$s</string>
+    <string name="disallowed_vpn_apps_info">Zakázané aplikace VPN: %1$s</string>
+    <string name="app_no_longer_exists">Balíček %s již není nainstalován, odstraňte jej ze seznamu povolených/nepovolených aplikací.</string>
+    <string name="no_allowed_app">Nebyla přidána žádná povolená aplikace. Přidat se (%s), aby byla v seznamu povolených aplikací alespoň jedna aplikace, aby nebyly povoleny všechny aplikace.</string>
+    <string name="ignore_multicast_route">Ignorování vícesměrové trasy: %s</string>
+    <string name="routes_debug">Nainstalované trasy VpnService: %1$s %2$s</string>
+    <string name="state_auth_failed">Ověření se nezdařilo</string>
+    <string name="password">Heslo</string>
+    <string name="state_waitorbot">Čekání na spuštění Orbotu</string>
+    <string name="service_restarted">Restartování služby OpenVPN (Aplikace pravděpodobně spadla nebo se zabila kvůli tlaku na paměť)</string>
+    <string name="notifcation_title_notconnect">Nepřipojeno</string>
+    <string name="permission_revoked">Oprávnění VPN zrušeno operačním systémem (např. spuštěn jiný program VPN), zastavení VPN</string>
+    <string name="keychain_nocacert">Při čtení z úložiště klíčů systému Android nebyl vrácen žádný certifikát certifikační autority. Ověřování pravděpodobně selže.</string>
+    <string name="abi_mismatch">Nesoulad preferované nativní priority ABI tohoto zařízení (%1$s) a ABI hlášené nativními knihovnami (%2$s)</string>
+    <string name="jelly_keystore_alphanumeric_bug">Některé verze systému Android 4.1 mají problémy, pokud název certifikátu úložiště klíčů obsahuje jiné než alfanumerické znaky (například mezery, podtržítka nebo pomlčky). Zkuste znovu importovat certifikát bez speciálních znaků.</string>
+    <string name="keychain_access">Nelze přistupovat k certifikátům klíčenky Android. To může být způsobeno aktualizací firmwaru nebo obnovením zálohy nastavení aplikace/aplikace. Upravte VPN a znovu vyberte certifikát v základním nastavení, abyste znovu vytvořili oprávnění k přístupu k certifikátu.</string>
+    <string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>
+    <string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+    <string name="state_auth_pending">Ověřování probíhá</string>
+    <string name="reread_log">Opětovné načtení (%d) položek protokolu ze souboru mezipaměti protokolu</string>
+    <string name="state_waitconnectretry">Čekání %ss sekund mezi pokusy o připojení</string>
+    <string name="unhandled_exception">Neošetřená výjimka: %1$s\n\n%2$s</string>
+    <string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Trasy: %1$s %2$s</string>
+    <string name="routes_info_excl">Vyloučené trasy: %1$s %2$s</string>
+    <string name="title_activity_login">Přihlášení</string>
+    <string name="action_forgot_password">Zapomenuté heslo</string>
+    <string name="register_process_registering">Zaregistrujte se...</string>
+    <string name="error_invalid_password">Heslo je příliš krátké</string>
+    <string name="error_passwords_dont_match">Hesla se neshodují</string>
+    <string name="error_field_required">Toto pole je povinné</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="title_connect">Stav</string>
+    <string name="title_serverlist">Seznam serverů</string>
+    <string name="title_locations">Lokality</string>
+    <string name="title_log">Přihlásit se</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Připojení</string>
+    <string name="route_rejected">Trasa odmítnutá systémem Android</string>
+    <string name="tun_error_helpful">U některých vlastních obrazů ICS může být oprávnění k /dev/tun špatné nebo může modul tun zcela chybět. U obrazů CM9 zkuste v obecných nastaveních opravit vlastnictví.</string>
+    <string name="tun_open_error">Nepodařilo se otevřít rozhraní tun</string>
+    <string name="error">\"Chyba: \"</string>
+    <string name="last_openvpn_tun_config">Otevření rozhraní tun:</string>
+    <string name="local_ip_info">Místní IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">Server DNS: %1$s, doména: %2$s</string>
+    <string name="routes_info">Trasy: %s</string>
+    <string name="routes_info6">Trasy IPv6: %s</string>
+    <string name="ip_not_cidr">Získal jsem informace o rozhraní %1$s a %2$s, předpokládám, že druhá adresa je adresa vzdáleného partnera. Použití masky sítě /32 pro místní IP. Režim zadaný OpenVPN je \\"%3$s\\".</string>
+    <string name="route_not_cidr">Nelze použít %1$s a %2$s jako IP trasu se síťovou maskou CIDR s použitím /32 jako síťové masky.</string>
+    <string name="route_not_netip">Oprava trasy %1$s/%2$s na %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Váš obrázek nepodporuje rozhraní API služby VPNService, je mi líto :(</string>
+    <string name="encryption">-Šifrování</string>
+    <string name="opentun_no_ipaddr">Odmítnutí otevření tunového zařízení bez informací o IP</string>
+    <string name="building_configration">Konfigurace budovy...</string>
+    <string name="netstatus">Stav sítě: %s</string>
+    <string name="mobile_info">Běží na %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Chyba při podepisování pomocí klíče úložiště klíčů Android %1$s: %2$s.</string>
+    <string name="warn_no_dns">Nepoužívají se žádné servery DNS. Překlad názvu nemusí fungovat. Zvažte nastavení vlastních serverů DNS. Upozorňujeme také, že systém Android bude nadále používat nastavení proxy serveru zadané pro mobilní připojení/Wi-Fi, pokud nejsou nastaveny žádné servery DNS.</string>
+    <string name="dns_add_error">Nepodařilo se přidat server DNS \"%1$s\", odmítnuto systémem: %2$s.</string>
+    <string name="ip_add_error">Nepodařilo se nakonfigurovat IP adresu \"%1$s\", odmítnuto systémem: %2$s.</string>
+    <string name="getproxy_error">Chyba při získávání nastavení proxy serveru: %s.</string>
+    <string name="using_proxy">Použití proxy serveru %1$s %2$d</string>
+    <string name="minidump_generated">OpenVPN neočekávaně spadla. Zvažte prosím použití možnosti odeslat Minidump v hlavní nabídce.</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Připojení</string>
+    <string name="state_wait">Čekání na odpověď serveru</string>
+    <string name="state_auth">Ověřování</string>
+    <string name="state_get_config">Získání konfigurace klienta</string>
+    <string name="state_assign_ip">Přidělování IP adres</string>
+    <string name="state_add_routes">Přidávání tras</string>
+    <string name="state_connected">Připojeno</string>
+    <string name="state_disconnected">Odpojení</string>
+    <string name="state_reconnecting">Opětovné připojení</string>
+    <string name="state_exiting">Výstup z</string>
+    <string name="state_noprocess">Neprovádí se</string>
+    <string name="state_resolve">Řešení názvů hostitelů</string>
+    <string name="state_tcp_connect">Připojení (TCP)</string>
+    <string name="unknown_state">Neznámý</string>
+    <string name="state_nonetwork">Čekání na použitelnou síť</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Připojení k síti VPN %s</string>
+    <string name="start_vpn_ticker">Připojení k síti VPN %s</string>
+    <string name="mobile_info_extended">Běží na %1$s (%2$s) %3$s, Android API %4$d, verze %5$s, %6$s.</string>
+    <string name="built_by">vytvořil %s</string>
+    <string name="debug_build">ladit sestavení</string>
+    <string name="official_build">oficiální sestavení</string>
+    <string name="screenoff_pause">Pozastavení připojení ve vypnutém stavu obrazovky: méně než %1$s v %2$ss</string>
+    <string name="state_userpause">Pauza VPN vyžádaná uživatelem</string>
+    <string name="state_screenoff">VPN pozastavena - vypnutá obrazovka</string>
+    <string name="defaultServerName">Server XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Vyberte VPN</string>
+    <string name="vpnSelectReason">V účtu Shellfire bylo nalezeno více sítí VPN. Vyberte si, kterou chcete používat.</string>
+    <string name="rememberVpnSelection">Uložit výběr</string>
+    <string name="remember_vpn_summary">Pokud je k dispozici více sítí VPN, nemusíte při každém přihlášení vybírat síť VPN.</string>
+    <string name="remember_vpn_title">Uložit vybranou síť VPN</string>
+    <string name="show_log_sum">Trvalé zobrazení protokolu může vést ke snížení výkonu (vyžaduje restartování aplikace).</string>
+    <string name="show_log">Zobrazení protokolu</string>
+    <string name="default_product_type">Zdarma</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Server</string>
+    <string name="connectionAdvice">Připojí se k vybranému serveru. Chcete-li změnit server, přejeďte prstem doprava.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Protokol aplikace</string>
+    <string name="connectionState">Stav:</string>
+    <string name="disconnected">Odpojení</string>
+    <string name="noAccountData">Nejste registrován\?</string>
+    <string name="title_activity_register">Registrace</string>
+    <string name="buyDailyPremium">0,99 Euro / 24 hod.</string>
+    <string name="buyDailyPremiumPlus">1,99 Euro / 24 hod.</string>
+    <string name="buyMonthlyPremium">3,49 eur / měsíc</string>
+    <string name="buyMonthlyPremiumPlus">7,95 eur / měsíc</string>
+    <string name="buyYearlyPremium">39,90 eur / rok</string>
+    <string name="buyYearlyPremiumPlus">84,90 eur / rok</string>
+    <string name="premiumUntil">Prémiové až do:</string>
+    <string name="sendToShellfire">Odeslat protokol do Shellfire</string>
+    <string name="verifying_purchase">Nákup se ověřuje...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Úspěšná aktualizace Premium. Zobrazení seznamu serverů\?</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+    <string name="YES">ANO</string>
+    <string name="upgrade_not_successful_check_log">Aktualizace se nezdařila, zkontrolujte protokol!</string>
+    <string name="problem_setting_up_in_app_billing">\"Problém s nastavením účtování v aplikaci: \"</string>
+    <string name="loading">Načítání...</string>
+    <string name="send_log_to_shellfire">Odeslat protokol do služby Shellfire</string>
+    <string name="log_send_succesfully">Protokol úspěšně odeslán do služby Shellfire</string>
+    <string name="log_could_not_be_sent">Protokol nelze odeslat</string>
+    <string name="connecting">Připojení...</string>
+    <string name="cansel">CANCEL</string>
+    <string name="disconnect">Odpojení</string>
+    <string name="connected">Připojeno</string>
+    <string name="loading_certificates">Načítání certifikátů</string>
+    <string name="switching_from_udp_to_tcp">Přechod z protokolu UDP na protokol TCP</string>
+    <string name="switching_from_tcp_to_udp">Přechod z protokolu TCP na UDP</string>
+    <string name="item_already_owned_consuming">již vlastněná položka - spotřebovávání</string>
+    <string name="item_consumed">spotřebovaná položka</string>
+    <string name="already_on_this_server_doing_nothing">Již na tomto serveru - nic nedělá</string>
+    <string name="not_showing_premium_info">Nezobrazují se informace o prémii</string>
+    <string name="you_are_not_eligible_to_use_this_server">Je nutná aktualizace.
+\nChcete více informací\?</string>
+    <string name="you_are_currently_connecting_disconnect">Právě jste připojeni. Před změnou serveru se musíte odpojit. Odpojit se nyní\?</string>
+    <string name="not_changing_server">Změna serveru zrušena</string>
+    <string name="sure_to_change_server">Určitě chcete změnit server\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.Server se mění. To může chvíli trvat..</string>
+    <string name="server_selection_succesfully_performed_on_backend">Změna serveru proběhla úspěšně.</string>
+    <string name="server_selection_could_not_be_changed">Server nebylo možné změnit. Podrobnosti naleznete v protokolu.</string>
+    <string name="connecting_please_wait">Připojení se zpracovává - vyčkejte prosím.</string>
+    <string name="action_about">O společnosti Shellfire VPN</string>
+
+    <string name="country">země</string>
+    <string name="title_activity_about">O společnosti Shellfire VPN</string>
+    <string name="hello_world">Ahoj světe!</string>
+    <string name="copyright_shellfire">© 2014 by Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">Rozhraní API Bouncy Castle Crypto</string>
+    <string name="copyright_openssl">Tento produkt obsahuje software vyvinutý projektem OpenSSL pro použití v sadě nástrojů OpenSSL\n
+        Copyright © 1998-2008 The OpenSSL Project. Všechna práva vyhrazena.\n\n
+        Tento produkt obsahuje kryptografický software napsaný Ericem Youngem (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Všechna práva vyhrazena.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Copyright © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Tento program používá následující komponenty; podrobnosti o licencích naleznete ve zdrojovém kódu (k dispozici na adrese https://code.google.com/p/shellfirevpn4a/).</string>
+    <string name="copyright_arne">Projekt ics-openvpn, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) k dispozici na: https://code.google.com/p/ics-openvpn/.</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Copyright © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" je ochranná známka společnosti OpenVPN Technologies, Inc.\n]]></string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">do</string>
+    <string name="state_user_vpn_password">Čekání na heslo uživatele VPN</string>
+    <string name="state_user_vpn_permission_cancelled">Dialogové okno s oprávněním k rozhraní VPN API bylo zrušeno.</string>
+    <string name="account_created_succesfully">Účet byl úspěšně vytvořen - zkontrolujte prosím své e-maily, zda jste neobdrželi aktivační e-mail.</string>
+    <string name="free">Zdarma</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 hodin</string>
+    <string name="month_1">1 měsíc</string>
+    <string name="monthly">měsíční</string>
+    <string name="yearly">roční</string>
+    <string name="cents99">0.99 Eur</string>
+    <string name="cents199">1,99 Eur</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9.95 Eur</string>
+    <string name="cents395">3,95 Eur</string>
+    <string name="cents795">7.95 Eur</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Koupit</string>
+    <string name="compare">Porovnat</string>
+    <string name="singlePayment">jednorázová platba *</string>
+    <string name="subscription">předplatné **</string>
+    <string name="note_payment_types">* kreditní karta není vyžadována.\r\n
+** kreditní karta vyžadována; lze kdykoli zrušit přes Google Play. \r\n
+\r\n
+plaťte přes Paypal na našich webových stránkách: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">Výběr VPN...</string>
+    <string name="cobiCodeEnter">Kampaň COMPUTER BILD</string>
+    <string name="cobiClickHere">Zadejte kód</string>
+
+    <string name="enter_cobi_code">zde zadejte kód COMPUTERBILD:</string>
+    <string name="action_share">Sdílet tuto aplikaci</string>
+    <string name="share_with">Sdílet prostřednictvím</string>
+    <string name="share_text">Používám aplikaci Shellfire #VPN, abych zabezpečil svá data před hackery a odblokoval cenzurovaný obsah: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Hodnotit</string>
+    <string name="rate_this_app">Hodnotit</string>
+    <string name="rate_explanation">Přesvědčila vás tato aplikace\? Budeme rádi, když naši aplikaci ohodnotíte na Google Play. Děkujeme za vaši podporu!</string>
+    <string name="rate_now">Hodnotit nyní</string>
+    <string name="rate_later">Později</string>
+    <string name="rate_never">Ne, děkuji.</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Můj plán</string>
+    <string name="current_plan">BĚŽNÝ PLÁN</string>
+    <string name="PAID_UNTIL">Vyplaceno do</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Upgradujte svůj účet a získejte více funkcí</string>
+
+
+    <string name="retry">Opakování</string>
+    <string name="network_problem_title">Problém se sítí</string>
+    <string name="network_problem_message">V současné době nejste připojeni k internetu. Shellfire VPN vyžaduje aktivní připojení k internetu.</string>
+    <string name="login_error">selhání přihlášení.</string>
+    <string name="serverLoad">Zatížení</string>
+    <string name="reloadServerList">Znovu načíst</string>
+    <string name="upgrade_not_successful">Aktualizace nebyla úspěšná</string>
+
+    <string name="new_version_available_title">K dispozici je nová verze</string>
+    <string name="new_version_available_message">V obchodě Google Play je k dispozici nová verze služby Shellfire VPN. Měli byste si ji brzy nainstalovat, protože tato verze již nemusí fungovat správně nebo může obsahovat bezpečnostní problémy.
+
+Přejít nyní do Obchodu Play a aktualizovat\?
+
+Poznámka: Pro získání nejnovější verze může být nutné odinstalovat / znovu nainstalovat.</string>
+
+    <string name="dontshowagain">Ne a už se nezobrazovat</string>
+    <string name="not_now">Teď ne</string>
+    <string name="server">Server</string>
+
+    <string name="_128bit">128bitové šifrování</string>
+    <string name="_192bit">192bitové šifrování</string>
+    <string name="_256bit">256bitové šifrování</string>
+
+    <string name="upto786">až 786 kbit/s</string>
+    <string name="upto10000">až 10 000 kbit/s</string>
+    <string name="unlimited">neomezený kbit/sec</string>
+
+    <string name="php_invalid_email">Zadejte prosím platnou e-mailovou adresu.</string>
+    <string name="php_account_exists">Pro tuto e-mailovou adresu již existuje registrovaný účet.</string>
+
+
+    <string name="php_signature"><![CDATA[S pozdravem od týmu Shellfire
+
+P.S.: Novinka: Vydělávejte peníze se Shellfire! Když nám získáte nové zákazníky, vyplatíme vám až 100% provizi: https://www.shellfire.net/affiliate-center/.
+
+P.P.S.: Sledujte nás na Twitteru: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Vedení společnosti: Florian Gattung, Maximilian Behr
+Společnost podle občanského zákoníku se sídlem v Bad Vilbelu, Německo]]></string>
+
+    <string name="php_surf_anonym">Anonymní surfování na webu</string>
+    <string name="php_hide_ip">Skrytí vlastní IP adresy</string>
+    <string name="php_encrypt_internet">Šifrované připojení k internetu</string>
+    <string name="php_secure_wifi">Bezpečné používání veřejných hotspotů wifi</string>
+    <string name="php_unlimited">neomezené</string>
+    <string name="php_traffic">Objem provozu / dat</string>
+    <string name="php_speed_generic">%1$s kbit/sec</string>
+    <string name="php_speed">Rychlost</string>
+    <string name="php_server_in_generic">Server v %1$s</string>
+    <string name="php_change_location">Změna polohy za všech okolností</string>
+    <string name="php_streaming_websites">Streamingové webové stránky</string>
+
+
+    <string name="play_product_description">Shellfire VPN - snadné. bezpečné. připojené. Bez registrace.
+
+Shellfire VPN je ZDARMA a nikdy vás nebude stát ani korunu. Neomezený provoz, neomezený čas!
+
+Shellfire VPN skryje vaši IP adresu, odblokuje internet a umožní vám volný a anonymní přístup na libovolné stránky. Se službou Shellfire VPN se můžete připojit k jakékoli webové stránce s jistotou, že jste v utajení. Odblokováváme Skype, Facebook, Twitter, YouTube atd. v zemích s cenzurou internetu a dokonce vám umožníme přístup k televizním a rozhlasovým službám vaší domovské země ze zahraničí.
+
+Shellfire VPN vám poskytuje mimořádně silné šifrování, které chrání vaše data před hackery, NSA a dalšími hrozbami, a to i v nezabezpečených veřejných wifi sítích!
+
+Přejděte na verzi Premium a získejte
+ - Vyšší rychlost.
+ - Silnější šifrování.
+ - Volný výběr z našich serverů v:
+Francie, Hongkong, Itálie, Kanada, Německo, Nizozemsko, Polsko, Rakousko, Rumunsko, Rusko, Spojené království, Španělsko, Švédsko, Švýcarsko a USA.
+- Zákazníci služby PremiumPlus získají exkluzivní přístup k serverům v:
+V těchto zemích: Chile, Island, Ostrov Man (offshore) a Lichtenštejnsko
+
+Shellfire VPN - nejlepší klient VPN pro Android.
+
+Shellfire VPN funguje také na Windows, Mac OS, iOS nebo Linuxu! Další podrobnosti najdete na adrese https://www.shellfire.net/vpn/.
+
+Pro okamžité aktualizace nás sledujte na Facebooku a Twitteru.
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Surfujte anonymně - Šifrované připojení - Přístup k Hulu, Youtube... odkudkoli</string>
+
+    <string name="play_product_description_generic">%1$s bitové šifrování
+Přenosová rychlost až %2$s kbit/s
+Server v %3$s zemích po celém světě</string>
+
+    <string name="hosting_since_2002">Hosting od roku 2002</string>
+    <string name="vision">Vize</string>
+    <string name="vision_data">Věříme, že bezpečný a bezplatný přístup k internetu je základním právem každého člověka na této planetě. Proto je naším posláním udržet internet místem svobody a zároveň bezpečným místem pro vaše soukromá data. Toho dosahujeme tím, že vám prostřednictvím našich šifrovaných tunelů VPN a hlasových serverů poskytujeme ochranu před odposlechy a hackery.</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="hotspot_data_p1">V posledních letech jsme již pomohli více než 500 000 uživatelů chránit jejich soukromí na internetu a překonat cenzuru. Díky našim vysokým standardům služeb a zabezpečení \\"Made in Germany\\" je Shellfire jednou z nejlepších adres na současném trhu VPN.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Koupit nyní</string>
+    <string name="tv_single_pay">Jednorázová platba</string>
+    <string name="tv_subscription_pay">Předplatné</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 měsíc</string>
+    <string name="subs_month">měsíc</string>
+    <string name="subs_year">rok</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Změna serveru proběhla úspěšně - chcete se nyní připojit\?</string>
+    <string name="saotomeandprincipe">Svatý Tomáš a Princův ostrov</string>
+    <string name="hosting_data">Shellfire GmbH je poskytovatel hostingu se sídlem ve Schmittenu u Frankfurtu nad Mohanem. Společnost Shellfire byla založena v roce 2002 Florianem Gattungem a Maximilianem Behrem, kteří od té doby působí jako jednatelé společnosti.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Zadejte zde svou zprávu pro Shellfire...</string>
+    <string name="load">LOAD:</string>
+    <string name="choose_a_plan">Výběr plánu</string>
+    <string name="speed">Rychlost</string>
+    <string name="servers">Servery</string>
+    <string name="countries">Země</string>
+    <string name="encryption_server">Šifrování</string>
+    <string name="video_streaming">Streamování videa</string>
+    <string name="unblock_all_content">Odblokování veškerého obsahu</string>
+    <string name="encrypted_connection">Šifrované připojení</string>
+    <string name="safe_hotspot_usage">Bezpečné používání hotspotu</string>
+    <string name="unlimited_traffic">Neomezený provoz</string>
+    <string name="upgrade">UPGRADE</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Pokročilé</string>
+    <string name="STANDARD">Standardní</string>
+    <string name="ALL_SERVERS">Všechny servery</string>
+    <string name="unlock">Odemknutí stránky</string>
+    <string name="filter">Filtry</string>
+
+    <string name="format_server">Server %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN Small Widget</string>
+    <string name="widget_label_medium">Shellfire VPN Medium Widget</string>
+    <string name="widget_label_large">Shellfire VPN Velký widget</string>
+
+    <string name="pref_title_mode_connection">Režim připojení</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Chcete-li aktivovat svůj účet, klikněte na odkaz v e-mailu, který jsme vám právě zaslali.</string>
+    <string name="email_validation_required_title">Účet je třeba aktivovat</string>
+    <string name="sending_log">Odesílání protokolu...</string>
+    <string name="loading_one">Načítání JEDEN</string>
+    <string name="loading_two">Načítání DVOU</string>
+    <string name="logout">Odhlášení</string>
+    <string name="action_connection_mode">Režim připojení</string>
+    <string name="action_select_vpn">Vyberte VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Poskytněte zpětnou vazbu</string>
+    <string name="title_activity_log">Odeslat zpětnou vazbu společnosti Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Ohodnoťte naši aplikaci</string>
+    <string name="initial_dialog_message">Líbí se vám naše aplikace\?</string>
+    <string name="initial_dialog_positive">Ano</string>
+    <string name="initial_dialog_negative">Ne</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Ohodnoťte naši aplikaci</string>
+    <string name="rate_dialog_message">Chcete naši aplikaci ohodnotit\?</string>
+    <string name="rate_dialog_positive">Ano, to se mi líbí!</string>
+    <string name="rate_dialog_negative">Ne, děkuji.</string>
+    <string name="rate_dialog_neutral">Možná později</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Poskytnutí zpětné vazby</string>
+    <string name="feedback_dialog_message">Chcete poskytnout zpětnou vazbu\?</string>
+    <string name="feedback_dialog_positive">Ano, chci poskytnout zpětnou vazbu</string>
+    <string name="feedback_dialog_negative">Ne, děkuji.</string>
+
+    <string name="send_feedback_progress">Zasílání zpětné vazby...</string>
+    <string name="feedback_sent_successfully">Zpětná vazba úspěšně odeslána</string>
+    <string name="feedback_not_sent">Nelze odeslat zpětnou vazbu</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Níže uveďte svůj názor. Pokud si přejete, můžete připojit také protokoly aplikace a systému, které nám pomohou lépe porozumět případným problémům.</string>
+    <string name="include_application_and_system_logs">Zahrnout protokoly aplikací a systému</string>
+    <string name="send_feedback">Odeslat zpětnou vazbu</string>
+    <string name="abort">Přerušit</string>
+    <string name="serverchange_timeout">Operace změny serveru vypršela. Zkuste to prosím znovu.</string>
+    <string name="protocol_is_being_changed">Protokol se mění. To může chvíli trvat.</string>
+    <string name="protocol_change_timeout">Operace změny serveru vypršela. Zkuste to prosím znovu.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Přihlášení...</string>
+    <string name="login_with_existing_account">Přihlášení pomocí existujícího účtu</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Heslo</string>
+    <string name="action_sign_in_short">Přihlásit se</string>
+    <string name="login">Přihlášení</string>
+    <string name="lostAccountData">Ztracené údaje o účtu</string>
+    <string name="register_new_account">Registrace nového účtu</string>
+    <string name="welcomeText">Vítejte v síti Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Registrace nového účtu</string>
+    <string name="prompt_email_only">E-mail</string>
+    <string name="subscribeNewsletter">Přihlásit se k odběru novinek</string>
+    <string name="register">Registrace</string>
+    <string name="i_have_an_account">Účet Shellfire již mám</string>
+    <string name="greeting_text">Vítejte v síti Shellfire VPN! Pro pokračování se prosím přihlaste nebo zaregistrujte.</string>
+    <string name="slow">Pomalý</string>
+    <string name="brilliant">Brilantní</string>
+    <string name="back">Zpět</string>
+    <string name="failed_to_change_server">Nepodařilo se změnit server</string>
+    <string name="sign_in_with_google">Přihlášení pomocí služby Google</string>
+    <string name="google_sign_in_confirmation_title">Potvrzení přihlášení ke službě Google</string>
+    <string name="cancel">Zrušit</string>
+    <string name="confirm">Potvrďte</string>
+    <string name="try_out_for_7_days">Vyzkoušejte 7 dní zdarma.</string>
+    <string name="then_get_discount">Pak získáte slevu %1$s.</string>
+    <string name="one_year">1 rok</string>
+    <string name="price_yearly_per_month">odpovídá %1$s / měsíc</string>
+    <string name="price_yearly_per_year">%1$s / rok</string>
+    <string name="price_yearly_per_month_all_subs">1 rok - %1$s / měsíc</string>
+    <string name="discount_also_in_next_two_years">%1$s sleva (na první 2 roky)</string>
+    <string name="first_seven_days_free_explain_text">Prvních 7 dní je zdarma.\nTakto funguje bezplatná zkušební verze.</string>
+    <string name="price_monthly_per_month_all_subs">1 měsíc - %1$s / měsíc</string>
+    <string name="price_per_month_selected_sub">%1$s pro %2$s</string>
+    <string name="price_info_yearly_per_year_trial_explainer">7 dní zdarma, pak %1$s / rok (odpovídá %2$s / měsíc).</string>
+    <string name="one_month">1 měsíc</string>
+    <string name="twelve_months">12 měsíců</string>
+    <string name="get_premium_plus">Získat Shellfire VPN Premium Plus</string>
+    <string name="try_now_for_free">Vyzkoušejte nyní zdarma</string>
+    <string name="start_now">Začněte nyní</string>
+    <string name="best_price_per_month">Nejlepší cena za měsíc</string>
+    <string name="seven_days_free">Prvních 7 dní zdarma</string>
+    <string name="cancel_monthly">Zrušit kdykoli</string>
+    <string name="no_longterm_commitment">Žádný dlouhodobý závazek</string>
+    <string name="show_all_subscriptions">Zobrazit všechny odběry</string>
+    <string name="choose_subscription">Vyberte si předplatné</string>
+    <string name="access_all_features_and_protect_five_devices">Přístup ke všem funkcím Premium a ochrana 5 zařízení</string>
+    <string name="first_payment_info_today">První platba je splatná nyní. Toto předplatné se automaticky obnovuje, dokud není zrušeno.</string>
+    <string name="first_payment_info_seven_days">První platba je splatná do 7 dnů. Toto předplatné se automaticky obnovuje, dokud není zrušeno.</string>
+    <string name="trial_link_text">Vyzkoušejte si 7 dní zdarma - zde je popsáno, jak to funguje.</string>
+    <string name="trial_info">Začněte platit po 7 dnech. Po uplynutí počátečního období se předplatné automaticky obnovuje každý rok, dokud jej nezrušíte.</string>
+    <!-- General -->
+    <string name="close_button_text">Zavřít</string>
+    <string name="cta_button_text">Vyzkoušejte nyní zdarma</string>
+
+    <!-- Trial Explainer Card -->
+    <string name="trial_explainer_title">Jak funguje 7denní bezplatná zkušební verze</string>
+    <string name="trial_step1_title">Dnes: Plný přístup ke všem prémiovým funkcím</string>
+    <string name="trial_step1_description">Prozkoumejte všechny prémiové funkce a otestujte všechny funkce aplikace.</string>
+    <string name="trial_step2_title">Den 5: Připomínkový e-mail o konci zkoušky</string>
+    <string name="trial_step2_description">Pošleme vám e-mail s upozorněním, že zkušební období brzy skončí.</string>
+    <string name="trial_step3_title">7. den: Zkušební verze končí, začíná předplatné</string>
+    <string name="trial_step3_description">Platba za první rok bude automaticky zpracována, pokud jste ji do tohoto dne nezrušili.</string>
+    <string name="for_the_first_two_years">(první dva roky)</string>
+    <string name="no_browser_available_to_open_the_link">Pro otevření odkazu není k dispozici žádný prohlížeč.</string>
+
+</resources>

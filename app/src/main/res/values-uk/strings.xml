@@ -1,0 +1,536 @@
+<resources>
+    <string name="channel_name_userreq">Потрібна взаємодія з користувачем</string>
+    <string name="channel_description_userreq">З\'єднання OpenVPN вимагає введення даних користувачем, наприклад, двофакторної автентифікації
+    </string>
+    <string name="channel_name_background">Статистика підключень</string>
+    <string name="channel_description_background">Поточна статистика встановленого OpenVPN з\'єднання</string>
+    <string name="channel_name_status">Зміна статусу з\'єднання</string>
+    <string name="channel_description_status">Зміни статусу OpenVPN-з\'єднання (Підключення, аутентифікація,...)</string>
+    <string name="save_password">Зберегти пароль</string>
+    <string name="show_password">Показати пароль</string>
+    <string name="auth_username">Ім\'я користувача</string>
+    <string name="remote_trust">Я довіряю цьому додатку.</string>
+    <string name="remote_warning">Продовжуючи, ви даєте програмі дозвіл повністю контролювати OpenVPN для Android і перехоплювати весь мережевий трафік.<b>НЕ приймайте заявку, якщо ви не довіряєте їй.</b> В іншому випадку ви ризикуєте, що ваші дані будуть скомпрометовані шкідливим програмним забезпеченням\".</string>
+    <string name="permission_icon_app">Іконка програми, яка намагається використовувати OpenVPN для Android</string>
+    <string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+    <string name="config_error_found">Помилка в конфігурації</string>
+    <string name="nought_alwayson_warning"><![CDATA[Якщо ви не отримали діалогове вікно підтвердження підключення до VPN, у вас увімкнено опцію \"Завжди у VPN\" для іншої програми. У цьому випадку лише цій програмі буде дозволено підключатися до VPN. Перевірте у розділі Налаштування-> Інші мережі ...-> VPNS]]></string>
+    <string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+    <string name="pw_request_dialog_title">Потрібно %1$s</string>
+    <string name="pw_request_dialog_prompt">Будь ласка, введіть пароль для профілю %1$s</string>
+    <string name="shortcut_profile_notfound">Профіль, вказаний у ярлику, не знайдено</string>
+    <string name="app">Shellfire VPN для Android</string>
+    <string name="prompt">%1$ намагається контролювати %2$</string>
+    <string name="all_app_prompt">Зовнішня програма намагається керувати %s. Програму, яка запитує доступ, неможливо визначити. Дозвіл цієї програми надає доступ ВСІМ програмам.</string>
+    <string name="screen_nopersistenttun">Попередження: Для цієї VPN не ввімкнено постійне підключення. Трафік використовуватиме звичайне інтернет-з\'єднання, коли екран вимкнено.</string>
+    <string name="private_key_password">Приватний ключ Пароль</string>
+    <string name="pkcs12_file_encryption_key">Ключ шифрування файлів PKCS12</string>
+    <string name="no_error_found">Помилки не знайдено</string>
+    <string name="no_orbotfound">Додаток Orbot не знайдено. Будь ласка, встановіть Orbot або скористайтеся ручною інтеграцією Socks v5.</string>
+    <string name="error_orbot_and_proxy_options">Неможливо одночасно використовувати додатковий оператор http-proxy-option та інтеграцію з Orbot</string>
+    <string name="openvpn3_socksproxy">Реалізація OpenVPN 3 C++ не підтримує підключення через проксі Socks</string>
+    <string name="openvpn3_nostatickeys">Реалізація OpenVPN 3 C++ не підтримує статичні ключі. Будь ласка, перейдіть на OpenVPN 2.x у загальних налаштуваннях.</string>
+    <string name="openvpn3_pkcs12">Використання файлів PKCS12 безпосередньо з OpenVPN 3 C++ не підтримується. Будь ласка, імпортуйте файли pkcs12 до сховища ключів Android або перейдіть на OpenVPN 2.x у загальних налаштуваннях.</string>
+    <string name="remote_no_server_selected">Вам потрібно визначити та увімкнути принаймні один віддалений сервер.</string>
+    <string name="missing_tlsauth">Файл tls-auth відсутній</string>
+    <string name="missing_certificates">Відсутній сертифікат користувача або файл ключа сертифіката користувача</string>
+    <string name="missing_ca_certificate">Відсутній сертифікат ЦСК</string>
+    <string name="custom_route_format_error">Помилка при розборі користувацьких маршрутів</string>
+    <string name="ipv4_format_error">Помилка розбору IPv4 адреси</string>
+    <string name="deprecated_tls_remote">У конфігурації використовується опція tls-remote, яка була застарілою у 2.3 і остаточно вилучена у 2.4</string>
+    <string name="no_ca_cert_selected">Ви повинні вибрати сертифікат ЦС або увімкнути перевірку відбитків пальців</string>
+    <string name="no_keystore_cert_selected">Ви повинні вибрати сертифікат користувача</string>
+    <string name="keyChainAccessError">Помилка доступу до ланцюжка ключів: %s</string>
+    <string name="cannotparsecert">Не вдається відобразити інформацію про сертифікат</string>
+    <string name="crtext_requested">Відповісти на виклик, щоб продовжити автентифікацію VPN</string>
+    <string name="openurl_requested">Відкрийте URL-адресу, щоб продовжити VPN-аутентифікацію</string>
+    <string name="ip_looks_like_subnet">Вказано топологію Vpn \\"%3$s\\", але ifconfig %1$s %2$s більше схоже на IP-адресу з мережевою маскою. Припускаючи топологію \\"підмережа\\".</string>
+    <string name="allowed_vpn_apps_info">Дозволені програми VPN: %1$s</string>
+    <string name="disallowed_vpn_apps_info">Заборонені програми VPN: %1$s</string>
+    <string name="app_no_longer_exists">Пакунок %s більше не встановлено, його видалено зі списку дозволених/заборонених додатків</string>
+    <string name="no_allowed_app">Не додано жодної дозволеної програми. Додаємо себе (%), щоб мати принаймні одну програму у списку дозволених програм, щоб не дозволяти всі програми</string>
+    <string name="ignore_multicast_route">Ігнорування маршруту багатоадресної розсилки: %s</string>
+    <string name="routes_debug">Маршрути VpnService встановлено: %1$s %2$s</string>
+    <string name="state_auth_failed">Не вдалося пройти автентифікацію</string>
+    <string name="password">Пароль</string>
+    <string name="state_waitorbot">Чекаємо на запуск Orbot</string>
+    <string name="service_restarted">Перезапуск служби OpenVPN (Додаток завершив роботу, ймовірно, через перевантаження пам\'яті)</string>
+    <string name="notifcation_title_notconnect">Не підключено</string>
+    <string name="permission_revoked">Дозвіл на VPN відкликано ОС (наприклад, запущено іншу програму VPN), зупинка VPN</string>
+    <string name="keychain_nocacert">Не повернуто сертифікат ЦС під час зчитування зі сховища ключів Android. Ймовірно, автентифікація не пройде.</string>
+    <string name="abi_mismatch">Неспівпадіння пріоритету нативного ABI цього пристрою (%1$s) та ABI, повідомленого нативними бібліотеками (%2$s)</string>
+    <string name="jelly_keystore_alphanumeric_bug">У деяких версіях Android 4.1 виникають проблеми, якщо ім\'я сертифіката сховища ключів містить неалфавітні символи (наприклад, пробіли, підкреслення або тире). Спробуйте повторно імпортувати сертифікат без спеціальних символів</string>
+    <string name="keychain_access">Не вдається отримати доступ до сертифікатів брелока Android. Це може бути спричинено оновленням прошивки або відновленням резервної копії налаштувань програми/додатку. Будь ласка, відредагуйте VPN і повторно виберіть сертифікат в основних налаштуваннях, щоб відтворити дозвіл на доступ до сертифіката.</string>
+    <string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>
+    <string name="bits_per_second">%.0f біт/с</string>
+    <string name="kbits_per_second">%.1f кбіт/с</string>
+    <string name="mbits_per_second">%.1f Мбіт/с</string>
+    <string name="gbits_per_second">%.1f Гбіт/с</string>
+    <string name="state_auth_pending">Очікується автентифікація</string>
+    <string name="reread_log">Перечитати (%d) елементи журналу з файлу кешу журналу</string>
+    <string name="state_waitconnectretry">Очікування %ss секунд між спробами з\'єднання</string>
+    <string name="unhandled_exception">Необроблене виключення: %1$s\n\n%2$s</string>
+    <string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Маршрути: %1$s %2$s</string>
+    <string name="routes_info_excl">Маршрути не враховуються: %1$s %2$s</string>
+    <string name="title_activity_login">Увійдіть в систему</string>
+    <string name="action_forgot_password">Забули пароль</string>
+    <string name="register_process_registering">Реєструйтеся...</string>
+    <string name="error_invalid_password">Пароль занадто короткий</string>
+    <string name="error_passwords_dont_match">Паролі не збігаються</string>
+    <string name="error_field_required">Це поле обов\'язкове для заповнення</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="title_connect">Статус</string>
+    <string name="title_serverlist">Список серверів</string>
+    <string name="title_locations">Локації</string>
+    <string name="title_log">Журнал</string>
+    <string name="title_billing">Преміум</string>
+    <string name="connect">Підключіться</string>
+    <string name="route_rejected">Маршрут відхилено Android</string>
+    <string name="tun_error_helpful">На деяких користувацьких образах ICS може бути неправильно вказано права доступу до /dev/tun, або модуль tun може бути повністю відсутній. Для образів CM9 спробуйте виправити право власності у загальних налаштуваннях</string>
+    <string name="tun_open_error">Не вдалося відкрити інтерфейс тюнера</string>
+    <string name="error">\"Помилка:\"</string>
+    <string name="last_openvpn_tun_config">Відкриваю інтерфейс тюнера:</string>
+    <string name="local_ip_info">Локальний IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">DNS-сервер: %1$s, Домен: %2$s</string>
+    <string name="routes_info">Маршрути: %s</string>
+    <string name="routes_info6">Маршрути IPv6: %s</string>
+    <string name="ip_not_cidr">Отримано інформацію про інтерфейси %1$s та %2$s, припускаючи, що друга адреса є одноранговою адресою віддаленого вузла. Використовується маска /32 для локального IP. Режим, наданий OpenVPN - \\"%3$s\\".</string>
+    <string name="route_not_cidr">Не вдається зрозуміти %1$s і %2$s як IP-маршрути з мережевою маскою CIDR, використовуючи /32 як маску мережі.</string>
+    <string name="route_not_netip">Виправлено маршрут %1$s/%2$s до %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Ваше зображення не підтримує API VPNService, вибачте :(</string>
+    <string name="encryption">-Шифрування</string>
+    <string name="opentun_no_ipaddr">Відмова у відкритті тюнера без інформації про IP-адресу</string>
+    <string name="building_configration">Конфігурація будівлі...</string>
+    <string name="netstatus">Стан мережі: %s</string>
+    <string name="mobile_info">Працює на %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Помилка підпису з ключем сховища ключів Android %1$s: %2$s</string>
+    <string name="warn_no_dns">Не використовуються DNS-сервери. Розпізнавання імен може не працювати. Спробуйте встановити власні DNS-сервери. Також зверніть увагу, що Android продовжуватиме використовувати налаштування проксі, вказані для вашого мобільного/ Wi-Fi з\'єднання, якщо не встановлено жодних DNS-серверів.</string>
+    <string name="dns_add_error">Не вдалося додати DNS-сервер \\"%1$s\\", відхилено системою: %2$s</string>
+    <string name="ip_add_error">Не вдалося налаштувати IP-адресу \\"%1$s\\", відхилено системою: %2$s</string>
+    <string name="getproxy_error">Помилка отримання налаштувань проксі: %s</string>
+    <string name="using_proxy">Використання проксі %1$s %2$d</string>
+    <string name="minidump_generated">OpenVPN несподівано завершив роботу. Будь ласка, розгляньте можливість використання опції надсилання Minidump у головному меню</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Підключення</string>
+    <string name="state_wait">Чекаємо на відповідь сервера</string>
+    <string name="state_auth">Аутентифікація</string>
+    <string name="state_get_config">Отримання конфігурації клієнта</string>
+    <string name="state_assign_ip">Присвоєння IP-адрес</string>
+    <string name="state_add_routes">Додавання маршрутів</string>
+    <string name="state_connected">Підключено</string>
+    <string name="state_disconnected">Від\'єднати</string>
+    <string name="state_reconnecting">Повторне підключення</string>
+    <string name="state_exiting">Виходьте.</string>
+    <string name="state_noprocess">Не біжу.</string>
+    <string name="state_resolve">Вирішення імен хостів</string>
+    <string name="state_tcp_connect">Підключення (TCP)</string>
+    <string name="unknown_state">Невідомо</string>
+    <string name="state_nonetwork">Чекаємо на придатну для використання мережу</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Підключення до VPN %s</string>
+    <string name="start_vpn_ticker">Підключення до VPN %s</string>
+    <string name="mobile_info_extended">Працює на %1$s (%2$s) %3$s, Android API %4$d, версія %5$s, %6$s</string>
+    <string name="built_by">побудовано за допомогою %s</string>
+    <string name="debug_build">налагоджувальна збірка</string>
+    <string name="official_build">офіційна збірка</string>
+    <string name="screenoff_pause">Призупинення з\'єднання у вимкненому стані екрана: менше %1$s у %2$ss</string>
+    <string name="state_userpause">Пауза VPN за запитом користувача</string>
+    <string name="state_screenoff">VPN призупинено - екран вимкнено</string>
+    <string name="defaultServerName">Сервер XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Виберіть VPN</string>
+    <string name="vpnSelectReason">У вашому акаунті Shellfire знайдено кілька VPN. Будь ласка, виберіть, який з них використовувати.</string>
+    <string name="rememberVpnSelection">Зберегти вибір</string>
+    <string name="remember_vpn_summary">У разі наявності декількох VPN, вам не потрібно вибирати VPN при кожному вході.</string>
+    <string name="remember_vpn_title">Зберегти вибрану VPN</string>
+    <string name="show_log_sum">Постійне відображення журналу може призвести до втрати продуктивності (вимагає перезапуску програми).</string>
+    <string name="show_log">Журнал відображення</string>
+    <string name="default_product_type">Безкоштовно</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Сервер</string>
+    <string name="connectionAdvice">Підключається до вибраного сервера. Щоб змінити сервер, проведіть пальцем праворуч.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Журнал заявок</string>
+    <string name="connectionState">Статус:</string>
+    <string name="disconnected">Відключено</string>
+    <string name="noAccountData">Не зареєстрований\?</string>
+    <string name="title_activity_register">Зареєструватися</string>
+    <string name="buyDailyPremium">0,99 євро / 24 години.</string>
+    <string name="buyDailyPremiumPlus">1,99 євро / 24 години.</string>
+    <string name="buyMonthlyPremium">3,49 євро / місяць</string>
+    <string name="buyMonthlyPremiumPlus">7,95 євро / місяць</string>
+    <string name="buyYearlyPremium">39,90 євро / рік</string>
+    <string name="buyYearlyPremiumPlus">84,90 євро / рік</string>
+    <string name="premiumUntil">Преміум до:</string>
+    <string name="sendToShellfire">Надіслати журнал до Shellfire</string>
+    <string name="verifying_purchase">Покупка перевіряється...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Оновлення до преміум-версії виконано успішно. Показати список серверів\?</string>
+    <string name="yes">Так.</string>
+    <string name="no">Ні.</string>
+    <string name="YES">ТАК.</string>
+    <string name="upgrade_not_successful_check_log">Оновлення не вдалося, перевірте журнал!</string>
+    <string name="problem_setting_up_in_app_billing">\"Проблема з налаштуванням білінгу в додатку: \"</string>
+    <string name="loading">Завантаження...</string>
+    <string name="send_log_to_shellfire">Надіслати журнал до Shellfire</string>
+    <string name="log_send_succesfully">Журнал успішно надіслано до Shellfire</string>
+    <string name="log_could_not_be_sent">Не вдалося надіслати журнал</string>
+    <string name="connecting">З\'єднання...</string>
+    <string name="cansel">СКАСУВАТИ</string>
+    <string name="disconnect">Від\'єднати</string>
+    <string name="connected">Підключено</string>
+    <string name="loading_certificates">Сертифікати завантаження</string>
+    <string name="switching_from_udp_to_tcp">Перехід з UDP на TCP</string>
+    <string name="switching_from_tcp_to_udp">Перехід з TCP на UDP</string>
+    <string name="item_already_owned_consuming">річ, яка вже є у власності - споживання</string>
+    <string name="item_consumed">спожитий елемент</string>
+    <string name="already_on_this_server_doing_nothing">Вже на цьому сервері - нічого не роблячи</string>
+    <string name="not_showing_premium_info">Не відображається інформація про преміум-клас</string>
+    <string name="you_are_not_eligible_to_use_this_server">Потрібне оновлення.
+\Хочете більше інформації\?</string>
+    <string name="you_are_currently_connecting_disconnect">Наразі ви підключені. Ви повинні від\'єднатися перед зміною сервера. Відключитися зараз\?</string>
+    <string name="not_changing_server">Зміну сервера скасовано</string>
+    <string name="sure_to_change_server">Ви впевнені, що хочете змінити сервер\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">Відбувається заміна сервера. Це може зайняти деякий час.</string>
+    <string name="server_selection_succesfully_performed_on_backend">Зміна сервера відбулася успішно.</string>
+    <string name="server_selection_could_not_be_changed">Не вдалося змінити сервер. Будь ласка, перевірте журнал для деталей.</string>
+    <string name="connecting_please_wait">З\'єднання обробляється - будь ласка, зачекайте</string>
+    <string name="action_about">Про Shellfire VPN</string>
+
+    <string name="country">країна</string>
+    <string name="title_activity_about">Про Shellfire VPN</string>
+    <string name="hello_world">Привіт, світе!</string>
+    <string name="copyright_shellfire">© 2014 Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">Крипто API Bouncy Castle</string>
+    <string name="copyright_openssl">Цей продукт містить програмне забезпечення, розроблене Проектом OpenSSL для використання в OpenSSL Toolkit\n
+        Авторське право © 1998-2008 Проект OpenSSL. Усі права захищені.\n\n
+        Цей продукт містить криптографічне програмне забезпечення, написане Еріком Янгом (eay\@cryptsoft.com)\n
+        Авторське право © 1995-1998 Eric Young (eay\@cryptsoft.com) Усі права захищені.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Авторське право © 1996 - 2011 Маркус Франц Ксавер Йоганнес Оберхумер</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Ця програма використовує наступні компоненти; див. вихідний код для отримання повної інформації про ліцензії (доступно на https://code.google.com/p/shellfirevpn4a/)</string>
+    <string name="copyright_arne">Проект ics-openvpn, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) доступний за посиланням: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Copyright © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" є товарним знаком компанії OpenVPN Technologies, Inc.\n]]></string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">до тих пір, поки</string>
+    <string name="state_user_vpn_password">Очікування пароля VPN користувача</string>
+    <string name="state_user_vpn_permission_cancelled">Діалогове вікно дозволу VPN API скасовано</string>
+    <string name="account_created_succesfully">Обліковий запис створено успішно - будь ласка, перевірте свої електронні скриньки, щоб отримати лист для активації.</string>
+    <string name="free">Безкоштовно</string>
+    <string name="premium">Преміум</string>
+    <string name="premiumplus">Обстріл\nVPN</string>
+    <string name="hours24">24 години</string>
+    <string name="month_1">1 місяць</string>
+    <string name="monthly">щомісяця</string>
+    <string name="yearly">щорічно</string>
+    <string name="cents99">0.99 EUR</string>
+    <string name="cents199">1,99 євро</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9.95 Eur</string>
+    <string name="cents395">3.95 Eur</string>
+    <string name="cents795">7.95 EUR</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Купити</string>
+    <string name="compare">Порівняйте</string>
+    <string name="singlePayment">єдиний платіж*</string>
+    <string name="subscription">підписка **</string>
+    <string name="note_payment_types">* кредитна картка не потрібна.\r\n
+** потрібна кредитна картка; можна скасувати в будь-який час через Google Play. \r\n
+оплата \r\n
+оплатити за допомогою Paypal на нашому сайті: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">Вибір VPN...</string>
+    <string name="cobiCodeEnter">Кампанія COMPUTER BILD</string>
+    <string name="cobiClickHere">Введіть код</string>
+
+    <string name="enter_cobi_code">введіть тут код COMPUTERBILD:</string>
+    <string name="action_share">Поділіться цим додатком</string>
+    <string name="share_with">Поділіться через</string>
+    <string name="share_text">Я використовую додаток Shellfire #VPN для захисту своїх даних від хакерів та розблокування цензурованого контенту: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Ставка</string>
+    <string name="rate_this_app">Ставка</string>
+    <string name="rate_explanation">Чи переконав вас цей додаток\? Ми будемо дуже раді, якщо ви оціните наш додаток у Google Play. Дякуємо за вашу підтримку!</string>
+    <string name="rate_now">Оцініть зараз</string>
+    <string name="rate_later">Пізніше.</string>
+    <string name="rate_never">Ні, дякую.</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Мій план</string>
+    <string name="current_plan">ПОТОЧНИЙ ПЛАН</string>
+    <string name="PAID_UNTIL">Сплачено до</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Оновіть свій обліковий запис, щоб отримати більше функцій</string>
+
+
+    <string name="retry">Спробуйте ще раз.</string>
+    <string name="network_problem_title">Проблема з мережею</string>
+    <string name="network_problem_message">Наразі ви не підключені до Інтернету. Shellfire VPN вимагає активного підключення до Інтернету.</string>
+    <string name="login_error">Помилка входу в систему.</string>
+    <string name="serverLoad">Завантажити</string>
+    <string name="reloadServerList">Перезавантажити</string>
+    <string name="upgrade_not_successful">Оновлення не вдалося</string>
+
+    <string name="new_version_available_title">Доступна нова версія</string>
+    <string name="new_version_available_message">Нова версія Shellfire VPN доступна в Google Play Маркеті. Вам слід встановити її якнайшвидше, оскільки ця версія може більше не працювати належним чином або містити проблеми з безпекою.
+
+Перейдіть до Play Маркету зараз, щоб оновити версію\?
+
+Примітка: Можливо, вам доведеться видалити / перевстановити програму, щоб отримати найновішу версію.</string>
+
+    <string name="dontshowagain">Ні, і не показуйте більше</string>
+    <string name="not_now">Не зараз.</string>
+    <string name="server">Сервер</string>
+
+    <string name="_128bit">128-бітове шифрування</string>
+    <string name="_192bit">192-бітове шифрування</string>
+    <string name="_256bit">256-бітове шифрування</string>
+
+    <string name="upto786">до 786 кбіт/с</string>
+    <string name="upto10000">до 10 000 кбіт/с</string>
+    <string name="unlimited">необмежена кбіт/с</string>
+
+    <string name="php_invalid_email">Будь ласка, введіть дійсну адресу електронної пошти.</string>
+    <string name="php_account_exists">Зареєстрований обліковий запис для цієї адреси електронної пошти вже існує.</string>
+
+
+    <string name="php_signature"><![CDATA[З найкращими побажаннями від команди Shellfire
+
+P.S.: Новинка: Заробляйте гроші з Shellfire! Коли ви приводите нам нових клієнтів, ми виплачуємо вам до 100% комісійних: https://www.shellfire.net/affiliate-center/
+
+P.P.S.: Слідкуйте за нами в Твіттері: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Керівництво: Флоріан Гаттунг, Максиміліан Бер
+Партнерство відповідно до Цивільного кодексу з місцезнаходженням у Бад-Вільбелі, Німеччина]]></string>
+
+    <string name="php_surf_anonym">Анонімно переглядайте веб-сторінки</string>
+    <string name="php_hide_ip">Приховати власну IP-адресу</string>
+    <string name="php_encrypt_internet">Зашифроване інтернет-з\'єднання</string>
+    <string name="php_secure_wifi">Безпечно користуйтеся громадськими точками доступу Wi-Fi</string>
+    <string name="php_unlimited">необмежений</string>
+    <string name="php_traffic">Обсяг трафіку / даних</string>
+    <string name="php_speed_generic">%1$s кбіт/с</string>
+    <string name="php_speed">Швидкість</string>
+    <string name="php_server_in_generic">Сервер у %1$s</string>
+    <string name="php_change_location">Постійно змінюйте місцезнаходження</string>
+    <string name="php_streaming_websites">Потокові веб-сайти</string>
+
+
+    <string name="play_product_description">Shellfire VPN - легко. безпечно. на зв\'язку. Без реєстрації.
+
+Shellfire VPN є БЕЗКОШТОВНИМ і ніколи не коштуватиме вам ні копійки. Необмежений трафік, необмежений час!
+
+Shellfire VPN приховує вашу IP-адресу, розблоковує Інтернет і дає вам можливість вільно і анонімно отримати доступ до будь-якого сайту. З Shellfire VPN ви можете підключитися до будь-якого веб-сайту з упевненістю, знаючи, що ви перебуваєте під прикриттям. Ми розблокуємо Skype, Facebook, Twitter, YouTube і т.д. в країнах з інтернет-цензурою і навіть надаємо вам доступ до теле- і радіослужб вашої країни з-за кордону.
+
+Shellfire VPN надає вам надзвичайно надійне шифрування для захисту ваших даних від хакерів, АНБ та інших загроз, навіть у незахищених публічних мережах Wi-Fi!
+
+Оновіть тариф до Преміум, щоб отримати
+ - Вищу швидкість.
+ - Надійніше шифрування.
+ - Вільний вибір з наших серверів у:
+Австрія, Канада, Франція, Німеччина, Гонконг, Італія, Нідерланди, Польща, Румунія, Росія, Іспанія, Швеція, Швейцарія, Великобританія та США
+- Клієнти PremiumPlus отримують ексклюзивний доступ до серверів у:
+Чилі, Ісландія, острів Мен (офшор) та Ліхтенштейн
+
+Shellfire VPN - найкращий VPN-клієнт для Android.
+
+Shellfire VPN також працює на Windows, Mac OS, iOS або Linux! Відвідайте https://www.shellfire.net/vpn/ для більш детальної інформації.
+
+Для миттєвих оновлень слідкуйте за нами у Facebook та Twitter
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Анонімний серфінг - Зашифроване з\'єднання - Доступ до Hulu, Youtube... звідусіль</string>
+
+    <string name="play_product_description_generic">Шифрування %1$s біт
+Швидкість передачі даних до %2$s кбіт/с
+Сервери в %3$s країнах світу</string>
+
+    <string name="hosting_since_2002">Хостинг з 2002 року</string>
+    <string name="vision">Бачення</string>
+    <string name="vision_data">Ми віримо, що безпечний та вільний доступ до Інтернету є фундаментальним правом кожної людини на нашій планеті. Саме тому наша місія полягає в тому, щоб інтернет залишався місцем свободи, а також безпечним місцем для ваших приватних даних. Ми робимо це, надаючи вам захист від підслуховування та хакерів за допомогою наших зашифрованих VPN-тунелів та голосових серверів.</string>
+    <string name="hotspot">Точка доступу</string>
+    <string name="hotspot_data_p1">За останні роки ми вже допомогли більш ніж 500 000 користувачів захистити свою конфіденційність в Інтернеті і подолати цензуру. Наші високі стандарти обслуговування та безпеки \"Зроблено в Німеччині\" роблять Shellfire однією з найкращих адрес на ринку VPN сьогодні.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Купити зараз</string>
+    <string name="tv_single_pay">Одноразовий платіж</string>
+    <string name="tv_subscription_pay">Підписка</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 місяць</string>
+    <string name="subs_month">місяць</string>
+    <string name="subs_year">рік</string>
+    <string name="plan_premium">Преміум</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Карта</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Зміна сервера відбулася успішно - ви хочете підключитися зараз\?</string>
+    <string name="saotomeandprincipe">Сан-Томе і Принсіпі</string>
+    <string name="hosting_data">Shellfire GmbH - хостинг-провайдер зі штаб-квартирою у Шміттені поблизу Франкфурта-на-Майні. Компанія Shellfire була заснована у 2002 році Флоріаном Гаттунгом та Максиміліаном Бером, які з того часу є керуючими партнерами.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Введіть своє повідомлення до Shellfire тут...</string>
+    <string name="load">ЗАВАНТАЖИТИ:</string>
+    <string name="choose_a_plan">Оберіть тарифний план</string>
+    <string name="speed">Швидкість</string>
+    <string name="servers">Сервери</string>
+    <string name="countries">Країни</string>
+    <string name="encryption_server">Шифрування</string>
+    <string name="video_streaming">Потокове відео</string>
+    <string name="unblock_all_content">Розблокувати весь вміст</string>
+    <string name="encrypted_connection">Зашифроване з\'єднання</string>
+    <string name="safe_hotspot_usage">Безпечне використання точки доступу</string>
+    <string name="unlimited_traffic">Необмежений трафік</string>
+    <string name="upgrade">ОНОВЛЕННЯ</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Розширений</string>
+    <string name="STANDARD">Стандартний</string>
+    <string name="ALL_SERVERS">Всі сервери</string>
+    <string name="unlock">Розблокувати</string>
+    <string name="filter">Фільтри</string>
+
+    <string name="format_server">Сервер %d</string>
+
+
+    <string name="widget_label_small">Малий віджет Shellfire VPN</string>
+    <string name="widget_label_medium">Віджет Shellfire VPN Medium</string>
+    <string name="widget_label_large">Великий віджет Shellfire VPN</string>
+
+    <string name="pref_title_mode_connection">Режим підключення</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Щоб активувати свій обліковий запис, перейдіть за посиланням в електронному листі, який ми щойно надіслали вам.</string>
+    <string name="email_validation_required_title">Обліковий запис потребує активації</string>
+    <string name="sending_log">Журнал відправлення...</string>
+    <string name="loading_one">Завантаження ОДИН</string>
+    <string name="loading_two">Завантаження ДВА</string>
+    <string name="logout">Вийти з системи</string>
+    <string name="action_connection_mode">Режим підключення</string>
+    <string name="action_select_vpn">Виберіть VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Залишити відгук</string>
+    <string name="title_activity_log">Надіслати відгук до Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Оцініть наш додаток</string>
+    <string name="initial_dialog_message">Вам подобається наш додаток\?</string>
+    <string name="initial_dialog_positive">Так.</string>
+    <string name="initial_dialog_negative">Ні.</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Оцініть наш додаток</string>
+    <string name="rate_dialog_message">Бажаєте оцінити наш додаток\?</string>
+    <string name="rate_dialog_positive">Так, я в захваті!</string>
+    <string name="rate_dialog_negative">Ні, дякую.</string>
+    <string name="rate_dialog_neutral">Може, пізніше.</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Залишити відгук</string>
+    <string name="feedback_dialog_message">Бажаєте залишити відгук\?</string>
+    <string name="feedback_dialog_positive">Так, я хочу залишити відгук</string>
+    <string name="feedback_dialog_negative">Ні, дякую.</string>
+
+    <string name="send_feedback_progress">Надіслати відгук...</string>
+    <string name="feedback_sent_successfully">Відгук успішно надіслано</string>
+    <string name="feedback_not_sent">Не вдалося надіслати відгук</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Будь ласка, залиште свій відгук нижче. За бажанням, ви також можете додати журнали програми та системи, щоб допомогти нам краще зрозуміти будь-які проблеми.</string>
+    <string name="include_application_and_system_logs">Включіть журнали програм і системи</string>
+    <string name="send_feedback">Надіслати відгук</string>
+    <string name="abort">Перервати.</string>
+    <string name="serverchange_timeout">Операція зміни сервера закінчилася. Спробуйте ще раз.</string>
+    <string name="protocol_is_being_changed">Протокол змінюється. Це може зайняти деякий час.</string>
+    <string name="protocol_change_timeout">Операція зміни сервера закінчилася. Спробуйте ще раз.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Вхід в систему...</string>
+    <string name="login_with_existing_account">Увійдіть з існуючим обліковим записом</string>
+    <string name="prompt_email">Електронна пошта</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in_short">Увійдіть</string>
+    <string name="login">Логін</string>
+    <string name="lostAccountData">Втрачені дані облікового запису</string>
+    <string name="register_new_account">Зареєструвати новий обліковий запис</string>
+    <string name="welcomeText">Ласкаво просимо до Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Зареєструвати новий обліковий запис</string>
+    <string name="prompt_email_only">Електронна пошта</string>
+    <string name="subscribeNewsletter">Підпишіться на розсилку новин</string>
+    <string name="register">Зареєструватися</string>
+    <string name="i_have_an_account">У мене вже є акаунт у Shellfire</string>
+    <string name="greeting_text">Ласкаво просимо до Shellfire VPN! Будь ласка, увійдіть або зареєструйтесь, щоб продовжити.</string>
+    <string name="slow">Повільно</string>
+    <string name="brilliant">Чудово.</string>
+    <string name="back">Назад</string>
+    <string name="failed_to_change_server">Не вдалося змінити сервер</string>
+    <string name="sign_in_with_google">Увійдіть за допомогою Google</string>
+    <string name="google_sign_in_confirmation_title">Підтвердження входу в Google</string>
+    <string name="cancel">Скасувати</string>
+    <string name="confirm">Підтвердити</string>
+    <string name="try_out_for_7_days">Спробуйте 7 днів безкоштовно.</string>
+    <string name="then_get_discount">Тоді отримайте знижку %1$s.</string>
+    <string name="one_year">1 рік</string>
+    <string name="price_yearly_per_month">відповідає %1$s / місяць</string>
+    <string name="price_yearly_per_year">%1$s / рік</string>
+    <string name="price_yearly_per_month_all_subs">1 рік - %1$s/місяць</string>
+    <string name="discount_also_in_next_two_years">Знижка %1$s (на перші 2 роки)</string>
+    <string name="first_seven_days_free_explain_text">Безкоштовно протягом перших 7 днів.\nОсь як працює безкоштовна пробна версія.</string>
+    <string name="price_monthly_per_month_all_subs">1 місяць - %1$s/місяць</string>
+    <string name="price_per_month_selected_sub">%1$s за %2$s</string>
+    <string name="price_info_yearly_per_year_trial_explainer">7 днів безкоштовно, потім %1$s/рік (відповідає %2$s/місяць).</string>
+    <string name="one_month">1 місяць</string>
+    <string name="twelve_months">12 місяців</string>
+    <string name="get_premium_plus">Отримайте Shellfire VPN Premium Plus</string>
+    <string name="try_now_for_free">Спробуйте зараз безкоштовно</string>
+    <string name="start_now">Почніть зараз</string>
+    <string name="best_price_per_month">Найкраща ціна на місяць</string>
+    <string name="seven_days_free">Безкоштовно протягом перших 7 днів</string>
+    <string name="cancel_monthly">Скасувати в будь-який час</string>
+    <string name="no_longterm_commitment">Немає довгострокових зобов\'язань</string>
+    <string name="show_all_subscriptions">Показати всі підписки</string>
+    <string name="choose_subscription">Виберіть свою підписку</string>
+    <string name="access_all_features_and_protect_five_devices">Отримайте доступ до всіх преміум-функцій та захистіть 5 пристроїв</string>
+    <string name="first_payment_info_today">Перший платіж має бути здійснений зараз. Ця підписка поновлюється автоматично, поки її не буде скасовано.</string>
+    <string name="first_payment_info_seven_days">Перший платіж має бути здійснений за 7 днів. Ця підписка поновлюється автоматично, поки її не скасують.</string>
+    <string name="trial_link_text">Спробуйте 7 днів безкоштовно - ось як це працює.</string>
+    <string name="trial_info">Почніть платити через 7 днів. Після закінчення початкового періоду підписка автоматично поновлюється щороку, поки ви не скасуєте її.</string>
+    <!-- General -->
+    <string name="close_button_text">Закрити</string>
+    <string name="cta_button_text">Спробуйте зараз безкоштовно</string>
+
+    <!-- Trial Explainer Card -->
+    <string name="trial_explainer_title">Як працює 7-денна безкоштовна пробна версія</string>
+    <string name="trial_step1_title">Сьогодні: Повний доступ до всіх преміум-функцій</string>
+    <string name="trial_step1_description">Відкрийте для себе всі преміум-функції та протестуйте повний функціонал додатку.</string>
+    <string name="trial_step2_title">День 5: лист-нагадування про закінчення судового розгляду</string>
+    <string name="trial_step2_description">Ми надішлемо вам електронного листа, щоб нагадати про те, що судовий розгляд незабаром закінчується.</string>
+    <string name="trial_step3_title">День 7: Тестовий період закінчується, починається підписка</string>
+    <string name="trial_step3_description">Оплата за перший рік буде автоматично проведена, якщо ви не скасуєте її до цього дня.</string>
+    <string name="for_the_first_two_years">(протягом перших двох років)</string>
+    <string name="no_browser_available_to_open_the_link">Відсутній браузер для відкриття посилання.</string>
+
+</resources>

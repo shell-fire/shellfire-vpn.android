@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/mainSectionFragment"
+        android:name="de.shellfire.vpn.android.MainSectionFragment"
+        android:label="Main Section"
+        tools:layout="@layout/fragment_status">
+
+        <action
+            android:id="@+id/action_mainSectionFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+
+        <action
+            android:id="@+id/action_mainSectionFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_mainSectionFragment_to_serverSelectFragment"
+            app:destination="@id/serverSelectSectionFragment" />
+
+
+
+        <action
+            android:id="@+id/action_mainSectionFragment_to_selectVpnFragment"
+            app:destination="@id/selectVpnFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/serverSelectSectionFragment"
+        android:name="de.shellfire.vpn.android.ServerListFragment"
+        android:label="Server Selection"
+        tools:layout="@layout/fragment_serverselect_view">
+
+        <action
+            android:id="@+id/action_serverSelectFragment_to_mainSectionFragment"
+            app:destination="@id/mainSectionFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/premiumFragment"
+        android:name="de.shellfire.vpn.android.PremiumFragment"
+        android:label="Premium"
+        tools:layout="@layout/fragment_premium" >
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="de.shellfire.vpn.android.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_mainSectionFragment"
+            app:destination="@id/mainSectionFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_selectVpnFragment"
+            app:destination="@id/selectVpnFragment" />
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="de.shellfire.vpn.android.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" >
+
+        <action
+            android:id="@+id/action_registerFragment_to_mainSectionFragment"
+            app:destination="@id/mainSectionFragment"
+            app:popUpToInclusive="false" />
+
+        <action
+            android:id="@+id/action_registerFragment_to_selectVpnFragment"
+            app:destination="@id/selectVpnFragment"
+            app:popUpToInclusive="false" />
+
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/selectVpnFragment"
+        android:name="de.shellfire.vpn.android.SelectVpnFragment"
+        android:label="Select VPN"
+        tools:layout="@layout/fragment_select_vpn" >
+
+        <action
+            android:id="@+id/action_selectVpnFragment_to_mainSectionFragment"
+            app:destination="@id/mainSectionFragment"
+            app:popUpToInclusive="false" />
+
+
+
+    </fragment>
+
+    <!-- Define global actions -->
+    <action
+        android:id="@+id/action_global_to_selectVpnFragment"
+        app:destination="@id/selectVpnFragment"
+        app:popUpToInclusive="false"/>
+
+    <action
+        android:id="@+id/action_global_to_mainSectionFragment"
+        app:destination="@id/mainSectionFragment"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/action_global_to_registerFragment"
+        app:destination="@id/registerFragment"
+        app:popUpToInclusive="false"/>
+
+    <action
+        android:id="@+id/action_global_to_loginFragment"
+        app:destination="@id/loginFragment"
+        app:popUpToInclusive="false"/>
+
+    <action
+        android:id="@+id/action_global_to_serverSelectSectionFragment"
+        app:destination="@id/serverSelectSectionFragment"
+        app:popUpToInclusive="false"/>
+
+
+
+</navigation>

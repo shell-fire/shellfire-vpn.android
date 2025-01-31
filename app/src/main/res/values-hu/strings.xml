@@ -1,0 +1,536 @@
+<resources>
+    <string name="channel_name_userreq">Felhasználói interakció szükséges</string>
+    <string name="channel_description_userreq">Az OpenVPN kapcsolat felhasználói bemenetet igényel, pl. kéttényezős hitelesítést
+    </string>
+    <string name="channel_name_background">Csatlakozási statisztikák</string>
+    <string name="channel_description_background">A létrehozott OpenVPN kapcsolat folyamatos statisztikái</string>
+    <string name="channel_name_status">A kapcsolat állapotának megváltozása</string>
+    <string name="channel_description_status">Az OpenVPN-kapcsolat állapotváltozásai (Csatlakozás, hitelesítés,...)</string>
+    <string name="save_password">Jelszó mentése</string>
+    <string name="show_password">Jelszó megjelenítése</string>
+    <string name="auth_username">Felhasználónév</string>
+    <string name="remote_trust">Bízom ebben az alkalmazásban.</string>
+    <string name="remote_warning">A folytatással engedélyt ad az alkalmazásnak az OpenVPN for Android teljes ellenőrzésére és az összes hálózati forgalom lehallgatására.<b>NEM fogadhatja el, hacsak nem bízik az alkalmazásban.</b> Ellenkező esetben fennáll annak a veszélye, hogy rosszindulatú szoftverek veszélyeztetik az adatokat.\"</string>
+    <string name="permission_icon_app">Az OpenVPN-t használni próbáló alkalmazás ikonja Androidon</string>
+    <string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+    <string name="config_error_found">Hiba a konfigurációban</string>
+    <string name="nought_alwayson_warning"><![CDATA[Ha nem jelenik meg a VPN megerősítő párbeszédpanel, akkor a \\"Always on VPN\\" egy másik alkalmazáshoz van engedélyezve. Ebben az esetben csak ez az alkalmazás csatlakozhat a VPN-hez. Ellenőrizze a Beállítások-> Hálózatok további .. -> VPNS alatt.]]></string>
+    <string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+    <string name="pw_request_dialog_title">Szükség van %1$s</string>
+    <string name="pw_request_dialog_prompt">Kérjük, adja meg a %1$s profil jelszavát.</string>
+    <string name="shortcut_profile_notfound">A parancsikonban megadott profil nem található</string>
+    <string name="app">Shellfire VPN az Androidhoz</string>
+    <string name="prompt">%1$s megpróbálja irányítani %2$s-t</string>
+    <string name="all_app_prompt">Egy külső alkalmazás próbálja vezérelni a %s-t. A hozzáférést kérő alkalmazás nem határozható meg. Az alkalmazás engedélyezése MINDEN alkalmazásnak hozzáférést biztosít.</string>
+    <string name="screen_nopersistenttun">Figyelmeztetés: A tartós tun nincs engedélyezve ebben a VPN-ben. A forgalom a normál internetkapcsolatot használja, amikor a képernyő ki van kapcsolva.</string>
+    <string name="private_key_password">Privát kulcs jelszó</string>
+    <string name="pkcs12_file_encryption_key">PKCS12 fájltitkosítási kulcs</string>
+    <string name="no_error_found">Nem talált hiba</string>
+    <string name="no_orbotfound">Az Orbot alkalmazás nem található. Kérjük, telepítse az Orbotot, vagy használja a kézi Socks v5 integrációt.</string>
+    <string name="error_orbot_and_proxy_options">Nem lehet extra http-proxy-option utasítást és Orbot integrációt használni egyszerre</string>
+    <string name="openvpn3_socksproxy">Az OpenVPN 3 C++ implementáció nem támogatja a Socks proxy-n keresztüli csatlakozást</string>
+    <string name="openvpn3_nostatickeys">Az OpenVPN 3 C++ implementációja nem támogatja a statikus kulcsokat. Kérjük, az általános beállítások között váltson OpenVPN 2.x-re.</string>
+    <string name="openvpn3_pkcs12">A PKCS12 fájlok közvetlen használata az OpenVPN 3 C++ implementációval nem támogatott. Kérjük, importálja a pkcs12 fájlokat az Android keystore-ba, vagy váltson OpenVPN 2.x-re az általános beállítások között.</string>
+    <string name="remote_no_server_selected">Legalább egy távoli kiszolgálót meg kell határoznia és engedélyeznie kell.</string>
+    <string name="missing_tlsauth">tls-auth fájl hiányzik</string>
+    <string name="missing_certificates">Hiányzó felhasználói tanúsítvány vagy felhasználói tanúsítvány kulcsfájl</string>
+    <string name="missing_ca_certificate">Hiányzó hitelesítésszolgáltatói tanúsítvány</string>
+    <string name="custom_route_format_error">Hiba az egyéni útvonalak elemzése</string>
+    <string name="ipv4_format_error">Hiba az IPv4-cím elemzése során</string>
+    <string name="deprecated_tls_remote">A konfiguráció a tls-remote opciót használja, amely a 2.3-ban elavult volt, és végül a 2.4-ben eltávolították.</string>
+    <string name="no_ca_cert_selected">Ki kell választania egy hitelesítésszolgáltatói tanúsítványt, vagy engedélyeznie kell a partner ujjlenyomat-ellenőrzést.</string>
+    <string name="no_keystore_cert_selected">Ki kell választania egy felhasználói tanúsítványt</string>
+    <string name="keyChainAccessError">KeyChain hozzáférési hiba: %s</string>
+    <string name="cannotparsecert">Nem lehet megjeleníteni a tanúsítványinformációkat</string>
+    <string name="crtext_requested">Válaszoljon a kihívásra a VPN-hitelesítés folytatásához</string>
+    <string name="openurl_requested">URL megnyitása a VPN-hitelesítés folytatásához</string>
+    <string name="ip_looks_like_subnet">Vpn topológia \\"%3$s\\" megadva, de az ifconfig %1$s %2$s inkább egy IP-címnek tűnik hálózati maszkkal. Feltételezve \\"alhálózat\\" topológiát.</string>
+    <string name="allowed_vpn_apps_info">Engedélyezett VPN alkalmazások: %1$s</string>
+    <string name="disallowed_vpn_apps_info">Letiltott VPN alkalmazások: %1$s</string>
+    <string name="app_no_longer_exists">A %s csomag már nincs telepítve, ezért eltávolítjuk az alkalmazás engedélyezési/elutasítási listájáról.</string>
+    <string name="no_allowed_app">Nincs engedélyezett alkalmazás hozzáadva. Adding ourselves (%s) to have at least one app in the allowed app list to not allow all apps</string>
+    <string name="ignore_multicast_route">Multicast útvonal figyelmen kívül hagyása: %s</string>
+    <string name="routes_debug">Telepített VpnService útvonalak: %1$s %2$s</string>
+    <string name="state_auth_failed">A hitelesítés sikertelen</string>
+    <string name="password">Jelszó</string>
+    <string name="state_waitorbot">Várjuk az Orbot indulását</string>
+    <string name="service_restarted">Az OpenVPN szolgáltatás újraindítása (Az alkalmazás valószínűleg lezuhant vagy meghalt a memóriaterhelés miatt)</string>
+    <string name="notifcation_title_notconnect">Nincs csatlakoztatva</string>
+    <string name="permission_revoked">VPN engedély visszavonása az operációs rendszer által (pl. más VPN program indítása), VPN leállítása</string>
+    <string name="keychain_nocacert">Android kulcstárolóból történő olvasáskor nem érkezett vissza hitelesítésszolgáltatói tanúsítvány. A hitelesítés valószínűleg sikertelen lesz.</string>
+    <string name="abi_mismatch">Az eszköz preferált natív ABI prioritása (%1$s) és a natív könyvtárak által jelentett ABI (%2$s) nem egyezik.</string>
+    <string name="jelly_keystore_alphanumeric_bug">Az Android 4.1 egyes verzióiban problémák merülnek fel, ha a kulcstároló tanúsítvány neve nem alfanumerikus karaktereket (például szóközöket, aláhúzásokat vagy kötőjeleket) tartalmaz. Próbálja meg újraimportálni a tanúsítványt speciális karakterek nélkül.</string>
+    <string name="keychain_access">Nem lehet hozzáférni az Android kulcstár tanúsítványaihoz. Ezt okozhatja egy firmware-frissítés vagy az alkalmazás/alkalmazás beállításainak biztonsági másolatának visszaállítása. Kérjük, szerkessze a VPN-t, és válassza ki újra a tanúsítványt az alapbeállítások között, hogy újra létrehozza a tanúsítványhoz való hozzáférés engedélyét.</string>
+    <string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>
+    <string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+    <string name="state_auth_pending">Hitelesítés folyamatban</string>
+    <string name="reread_log">Naplóelemek újraolvasása (%d) a napló gyorsítótár fájlból</string>
+    <string name="state_waitconnectretry">Várakozás %ss másodperc a csatlakozási kísérletek között</string>
+    <string name="unhandled_exception">Kezeletlen kivétel: %1$s\n\n%2$s</string>
+    <string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Útvonalak: %1$s %2$s</string>
+    <string name="routes_info_excl">Kizárt útvonalak: %1$s %2$s</string>
+    <string name="title_activity_login">Bejelentkezés</string>
+    <string name="action_forgot_password">Elfelejtett jelszó</string>
+    <string name="register_process_registering">Regisztráljon...</string>
+    <string name="error_invalid_password">A jelszó túl rövid</string>
+    <string name="error_passwords_dont_match">A jelszavak nem egyeznek</string>
+    <string name="error_field_required">Ez a mező kötelező</string>
+    <string name="action_settings">Beállítások</string>
+    <string name="title_connect">Állapot</string>
+    <string name="title_serverlist">Kiszolgáló lista</string>
+    <string name="title_locations">Helyszínek</string>
+    <string name="title_log">Napló</string>
+    <string name="title_billing">Prémium</string>
+    <string name="connect">Csatlakozás</string>
+    <string name="route_rejected">Android által elutasított útvonal</string>
+    <string name="tun_error_helpful">Néhány egyedi ICS-képen előfordulhat, hogy a /dev/tun modul engedélye nem megfelelő, vagy a tun modul teljesen hiányzik. CM9 képek esetén próbálja meg az általános beállítások között a tulajdonjog rögzítése opciót.</string>
+    <string name="tun_open_error">Nem sikerült megnyitni a tun interfészt</string>
+    <string name="error">\"Hiba: \"</string>
+    <string name="last_openvpn_tun_config">Nyitó tun felület:</string>
+    <string name="local_ip_info">Helyi IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">DNS-kiszolgáló: %1$s, Domain: %2$s</string>
+    <string name="routes_info">Útvonalak: %s</string>
+    <string name="routes_info6">IPv6 útvonalak: %s</string>
+    <string name="ip_not_cidr">Megkaptam az interfészinformációkat %1$s és %2$s, feltételezve, hogy a második cím a távoli partner címe. A helyi IP-hez /32-es hálómaszkot használ. Az OpenVPN által megadott mód \\"%3$s\\".</string>
+    <string name="route_not_cidr">Nem lehet értelmezni a %1$s és %2$s IP-útvonalat CIDR-netmaszkkal, a /32-t használva netmaszkként.</string>
+    <string name="route_not_netip">%1$s/%2$s útvonal javítva %3$s/%2$s útvonalra</string>
+    <string name="no_vpn_support_image">Az Ön képe nem támogatja a VPNService API-t, sajnálom :(</string>
+    <string name="encryption">-Enkryption</string>
+    <string name="opentun_no_ipaddr">A tun eszköz megnyitásának megtagadása IP-információ nélkül</string>
+    <string name="building_configration">Épületkonfiguráció...</string>
+    <string name="netstatus">Hálózat állapota: %s</string>
+    <string name="mobile_info">Futtatás %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Hiba az Android kulcstároló kulcsával történő aláírásnál %1$s: %2$s</string>
+    <string name="warn_no_dns">Nem használnak DNS-kiszolgálókat. A névfeloldás nem működik. Fontolja meg az egyéni DNS-kiszolgálók beállítását. Kérjük, vegye figyelembe, hogy az Android továbbra is a mobil/Wi-Fi kapcsolathoz megadott proxy-beállításokat használja, ha nincsenek DNS-kiszolgálók beállítva.</string>
+    <string name="dns_add_error">Nem sikerült hozzáadni a DNS-kiszolgálót \\"%1$s\\", a rendszer elutasította: %2$s</string>
+    <string name="ip_add_error">Nem sikerült konfigurálni az IP-címet \\"%1$s\\", a rendszer elutasította: %2$s</string>
+    <string name="getproxy_error">Hiba a proxy beállítások lekérdezésében: %s</string>
+    <string name="using_proxy">Proxy %1$s %2$d használata</string>
+    <string name="minidump_generated">Az OpenVPN váratlanul összeomlott. Kérjük, fontolja meg a főmenüben található Minidump küldése opció használatát.</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">A  csatlakoztatása</string>
+    <string name="state_wait">Várom a szerver válaszát</string>
+    <string name="state_auth">Hitelesítés</string>
+    <string name="state_get_config">Az ügyfél konfigurációjának beszerzése</string>
+    <string name="state_assign_ip">IP-címek hozzárendelése</string>
+    <string name="state_add_routes">Útvonalak hozzáadása</string>
+    <string name="state_connected">Csatlakoztatva</string>
+    <string name="state_disconnected">Kikapcsolás</string>
+    <string name="state_reconnecting">A  újrakapcsolása</string>
+    <string name="state_exiting">Kilépés</string>
+    <string name="state_noprocess">Nem fut</string>
+    <string name="state_resolve">Hostnevek feloldása</string>
+    <string name="state_tcp_connect">Csatlakozás (TCP)</string>
+    <string name="unknown_state">Ismeretlen</string>
+    <string name="state_nonetwork">Várakozás a használható hálózatra</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Csatlakozás a VPN-hez %s</string>
+    <string name="start_vpn_ticker">Csatlakozás a VPN-hez %s</string>
+    <string name="mobile_info_extended">Futtatás %1$s (%2$s) %3$s, Android API %4$d, verzió %5$s, %6$s</string>
+    <string name="built_by">%s által épített</string>
+    <string name="debug_build">debug build</string>
+    <string name="official_build">hivatalos építés</string>
+    <string name="screenoff_pause">A kapcsolat szüneteltetése kikapcsolt képernyő állapotban: kevesebb mint %1$s %2$ss alatt</string>
+    <string name="state_userpause">A felhasználó által kért VPN szünet</string>
+    <string name="state_screenoff">VPN szünetel - képernyő kikapcsolva</string>
+    <string name="defaultServerName">XX kiszolgáló</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">VPN kiválasztása</string>
+    <string name="vpnSelectReason">Több VPN található a Shellfire fiókjában. Kérjük, válassza ki, melyiket szeretné használni.</string>
+    <string name="rememberVpnSelection">Kiválasztás mentése</string>
+    <string name="remember_vpn_summary">Ha több VPN van jelen, nem kell minden egyes bejelentkezéskor kiválasztania a VPN-t.</string>
+    <string name="remember_vpn_title">Kiválasztott VPN mentése</string>
+    <string name="show_log_sum">A napló állandó megjelenítése teljesítménycsökkenéshez vezethet (az alkalmazás újraindítása szükséges).</string>
+    <string name="show_log">Napló megjelenítése</string>
+    <string name="default_product_type">Ingyenes</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Szerver</string>
+    <string name="connectionAdvice">Csatlakozik a kiválasztott kiszolgálóhoz. Kiszolgálóváltáshoz húzza a lapot jobbra.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Alkalmazási napló</string>
+    <string name="connectionState">Állapot:</string>
+    <string name="disconnected">Kikapcsolt</string>
+    <string name="noAccountData">Nincs regisztrálva\?</string>
+    <string name="title_activity_register">Regisztráció</string>
+    <string name="buyDailyPremium">0,99 Euro / 24 óra.</string>
+    <string name="buyDailyPremiumPlus">1,99 Euro / 24 óra.</string>
+    <string name="buyMonthlyPremium">3,49 euró / hónap</string>
+    <string name="buyMonthlyPremiumPlus">7,95 euró / hónap</string>
+    <string name="buyYearlyPremium">39,90 euró / év</string>
+    <string name="buyYearlyPremiumPlus">84,90 euró / év</string>
+    <string name="premiumUntil">Prémium amíg:</string>
+    <string name="sendToShellfire">Napló küldése Shellfire-nek</string>
+    <string name="verifying_purchase">A vásárlás ellenőrzése folyamatban van...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Prémium frissítés sikeres. Kiszolgálólista megjelenítése\?</string>
+    <string name="yes">Igen</string>
+    <string name="no">Nem</string>
+    <string name="YES">IGEN</string>
+    <string name="upgrade_not_successful_check_log">A frissítés nem sikeres, ellenőrizze a naplót!</string>
+    <string name="problem_setting_up_in_app_billing">\"Probléma az alkalmazáson belüli számlázás beállításával: \"</string>
+    <string name="loading">Betöltés...</string>
+    <string name="send_log_to_shellfire">Napló küldése Shellfire-nek</string>
+    <string name="log_send_succesfully">Sikeresen elküldte a naplót a Shellfire-nek</string>
+    <string name="log_could_not_be_sent">A naplót nem lehetett elküldeni</string>
+    <string name="connecting">Csatlakozás...</string>
+    <string name="cansel">CANCEL</string>
+    <string name="disconnect">Kikapcsolás</string>
+    <string name="connected">Csatlakoztatva</string>
+    <string name="loading_certificates">Tanúsítványok betöltése</string>
+    <string name="switching_from_udp_to_tcp">UDP-ről TCP-re váltás</string>
+    <string name="switching_from_tcp_to_udp">Átváltás TCP-ről UDP-re</string>
+    <string name="item_already_owned_consuming">már birtokolt tétel - fogyasztó</string>
+    <string name="item_consumed">elfogyasztott tétel</string>
+    <string name="already_on_this_server_doing_nothing">Már ezen a szerveren - nem csinál semmit</string>
+    <string name="not_showing_premium_info">Nem mutatja a prémium információt</string>
+    <string name="you_are_not_eligible_to_use_this_server">Frissítésre van szükség.
+\nKér további információkat\?</string>
+    <string name="you_are_currently_connecting_disconnect">Ön jelenleg csatlakoztatva van. A szerverváltás előtt meg kell szakítania a kapcsolatot. Most megszakítod a kapcsolatot\?</string>
+    <string name="not_changing_server">A szerverváltás törölték</string>
+    <string name="sure_to_change_server">Biztos, hogy meg akarja változtatni a szervert\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.szerver megváltozik. Ez eltarthat egy darabig..</string>
+    <string name="server_selection_succesfully_performed_on_backend">Szervercsere sikeres.</string>
+    <string name="server_selection_could_not_be_changed">A kiszolgálót nem lehetett megváltoztatni. Kérjük, ellenőrizze a naplót a részletekért.</string>
+    <string name="connecting_please_wait">A kapcsolat feldolgozása folyamatban van - kérjük, várjon</string>
+    <string name="action_about">A Shellfire VPN-ről</string>
+
+    <string name="country">ország</string>
+    <string name="title_activity_about">A Shellfire VPN-ről</string>
+    <string name="hello_world">Helló világ!</string>
+    <string name="copyright_shellfire">© 2014 by Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">Ugrálóvár kripto API-k</string>
+    <string name="copyright_openssl">Ez a termék az OpenSSL Project által az OpenSSL Toolkitben való használatra kifejlesztett szoftvert tartalmazza.
+        Szerzői jog © 1998-2008 The OpenSSL Project. Minden jog fenntartva.\n\n
+        Ez a termék az Eric Young (eay\@cryptsoft.com)\n által írt kriptográfiai szoftvert tartalmazza.
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Minden jog fenntartva.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Szerzői jog © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Ez a program a következő komponenseket használja; a licencek teljes részleteit a forráskódban találja (elérhető a https://code.google.com/p/shellfirevpn4a/ oldalon).</string>
+    <string name="copyright_arne">Az ics-openvpn projekt, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) elérhető a következő címen: https://code.google.com/p/ics-openvpn/.</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Szerzői jog © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  Az \"OpenVPN\" az OpenVPN Technologies, Inc. védjegye.\n]]></string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 Az Ugrálóvár Légiója (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">amíg</string>
+    <string name="state_user_vpn_password">Vár a felhasználó VPN jelszavára</string>
+    <string name="state_user_vpn_permission_cancelled">VPN API engedélyezési párbeszédpanel törlése</string>
+    <string name="account_created_succesfully">Fiók sikeresen létrehozva - kérjük, ellenőrizze az aktiváló e-maileket.</string>
+    <string name="free">Ingyenes</string>
+    <string name="premium">Prémium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 óra</string>
+    <string name="month_1">1 hónap</string>
+    <string name="monthly">havonta</string>
+    <string name="yearly">évente</string>
+    <string name="cents99">0,99 Eur</string>
+    <string name="cents199">Eur 1.99</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9.95 Eur</string>
+    <string name="cents395">3.95 Eur</string>
+    <string name="cents795">7.95 Eur</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Vásároljon</string>
+    <string name="compare">Összehasonlítás:</string>
+    <string name="singlePayment">egyszeri fizetés *</string>
+    <string name="subscription">előfizetés **</string>
+    <string name="note_payment_types">* hitelkártya nem szükséges.\r\n
+** hitelkártya szükséges; bármikor lemondható a Google Play-en keresztül. \r\n
+\r\n
+Paypal fizetéssel a weboldalunkon: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">VPN kiválasztása...</string>
+    <string name="cobiCodeEnter">COMPUTER BILD kampány</string>
+    <string name="cobiClickHere">Adja meg a kódot</string>
+
+    <string name="enter_cobi_code">adja meg a COMPUTERBILD kódot itt:</string>
+    <string name="action_share">Az alkalmazás megosztása</string>
+    <string name="share_with">Megosztás a</string>
+    <string name="share_text">A Shellfire #VPN alkalmazást használom, hogy megvédjem az adataimat a hackerektől és feloldjam a cenzúrázott tartalmak blokkolását: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Rate</string>
+    <string name="rate_this_app">Rate</string>
+    <string name="rate_explanation">Ez az alkalmazás meggyőzte Önt\? Nagyon örülnénk, ha értékelné alkalmazásunkat a Google Play-en. Köszönjük a támogatást!</string>
+    <string name="rate_now">Szavazz most</string>
+    <string name="rate_later">Később</string>
+    <string name="rate_never">Nem, köszönöm.</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">A tervem</string>
+    <string name="current_plan">AKTUÁLIS TERV</string>
+    <string name="PAID_UNTIL">Fizetett amíg</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Frissítse fiókját a további funkciókért</string>
+
+
+    <string name="retry">Retry</string>
+    <string name="network_problem_title">Hálózati probléma</string>
+    <string name="network_problem_message">Ön jelenleg nem csatlakozik az internethez. A Shellfire VPN aktív internetkapcsolatot igényel.</string>
+    <string name="login_error">bejelentkezési hiba.</string>
+    <string name="serverLoad">Terhelés</string>
+    <string name="reloadServerList">Újratöltés</string>
+    <string name="upgrade_not_successful">A frissítés nem sikeres</string>
+
+    <string name="new_version_available_title">Új verzió elérhető</string>
+    <string name="new_version_available_message">A Shellfire VPN új verziója elérhető a Google Play Áruházban. Érdemes hamarosan telepíteni, mert előfordulhat, hogy ez a verzió már nem működik megfelelően, vagy biztonsági problémákat tartalmaz.
+
+Frissítéshez menjen most a Play Áruházba\?
+
+Megjegyzés: Előfordulhat, hogy a legfrissebb verzió eléréséhez el kell távolítania/újratelepítenie a programot.</string>
+
+    <string name="dontshowagain">Nem, és ne jelenjen meg újra</string>
+    <string name="not_now">Most nem.</string>
+    <string name="server">Szerver</string>
+
+    <string name="_128bit">128 bites titkosítás</string>
+    <string name="_192bit">192 bites titkosítás</string>
+    <string name="_256bit">256 bites titkosítás</string>
+
+    <string name="upto786">akár 786 kbit/sec</string>
+    <string name="upto10000">akár 10.000 kbit/sec</string>
+    <string name="unlimited">korlátlan kbit/sec</string>
+
+    <string name="php_invalid_email">Kérjük, adjon meg egy érvényes e-mail címet.</string>
+    <string name="php_account_exists">Az adott e-mail címhez már létezik regisztrált fiók.</string>
+
+
+    <string name="php_signature"><![CDATA[Üdvözlettel a Shellfire csapatától
+
+P.S.: Új: Pénzt keresni Shellfire! Ha új ügyfeleket szerzel nekünk, akár 100%-os jutalékot fizetünk neked: https://www.shellfire.net/affiliate-center/.
+
+P.P.S.: Kövess minket a Twitteren: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Vezetőség: Florian Gattung, Maximilian Behr
+Polgári törvénykönyv szerinti társaság, székhelye Bad Vilbel, Németország.]]></string>
+
+    <string name="php_surf_anonym">Névtelenül szörfözhet az interneten</string>
+    <string name="php_hide_ip">Rejtse el saját IP-címét</string>
+    <string name="php_encrypt_internet">Titkosított internetkapcsolat</string>
+    <string name="php_secure_wifi">Biztonságos nyilvános wifi hotspotok használata</string>
+    <string name="php_unlimited">korlátlan</string>
+    <string name="php_traffic">Forgalom / adatmennyiség</string>
+    <string name="php_speed_generic">%1$s kbit/sec</string>
+    <string name="php_speed">Sebesség</string>
+    <string name="php_server_in_generic">Kiszolgáló %1$s-ban</string>
+    <string name="php_change_location">Mindig változtassa meg a helyszínt</string>
+    <string name="php_streaming_websites">Streaming weboldalak</string>
+
+
+    <string name="play_product_description">Shellfire VPN - egyszerű. biztonságos. csatlakoztatva. Nincs regisztráció.
+
+A Shellfire VPN INGYENES, és soha nem fog egy fillérjébe kerülni. Korlátlan forgalom, korlátlan idő!
+
+A Shellfire VPN elrejti az IP-címét, feloldja az internet blokkolását, és lehetővé teszi, hogy szabadon és névtelenül hozzáférjen bármelyik oldalhoz, amit csak akar. A Shellfire VPN segítségével bármilyen weboldalhoz csatlakozhatsz azzal a magabiztos tudattal, hogy álcázva vagy. Feloldjuk a Skype, a Facebook, a Twitter, a YouTube stb. blokkolását az internetes cenzúrával rendelkező országokban, sőt, külföldről még a saját országa\ tévé- és rádiószolgáltatásaihoz is hozzáférhet.
+
+A Shellfire VPN szuper erős titkosítást biztosít, hogy megvédje adatait a hackerektől, az NSA-tól és más fenyegetésektől, még a nem biztonságos nyilvános wifi hálózatokban is!
+
+Frissítsen prémiumra, hogy megkapja a következőket
+ - Nagyobb sebesség.
+ - Erősebb titkosítás.
+ - Szabad választás a szervereink közül:
+Ausztria, Kanada, Franciaország, Németország, Hong Kong, Olaszország, Hollandia, Lengyelország, Románia, Oroszország, Spanyolország, Svédország, Svájc, Egyesült Királyság, Egyesült Államok és USA.
+- PremiumPlus ügyfelek exkluzív hozzáférést kapnak a következő szerverekhez:
+Chile, Izland, Man-sziget (offshore) és Liechtenstein.
+
+Shellfire VPN - a legjobb VPN kliens Androidhoz.
+
+A Shellfire VPN Windows, Mac OS, iOS vagy Linux operációs rendszereken is fut! További részletekért látogasson el a https://www.shellfire.net/vpn/ weboldalra.
+
+Az azonnali frissítésekért kövessen minket a Facebookon és a Twitteren.
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Névtelen szörfözés - Titkosított kapcsolat - Hozzáférés a Hulu, Youtube... bárhonnan</string>
+
+    <string name="play_product_description_generic">%1$s bit titkosítás
+Legfeljebb %2$s kbit/s átviteli sebesség
+Kiszolgáló %3$s országban világszerte</string>
+
+    <string name="hosting_since_2002">Tárhelyszolgáltatás 2002 óta</string>
+    <string name="vision">Vision</string>
+    <string name="vision_data">Hiszünk abban, hogy az internethez való biztonságos és ingyenes hozzáférés alapvető joga minden egyes embernek ezen a bolygón. Ezért küldetésünk, hogy az internetet a szabadság és a magánadatok biztonságos helyeként tartsuk fenn. Ezt úgy tesszük, hogy titkosított VPN-alagútjaink és hangszerverünk segítségével védelmet nyújtunk Önnek a lehallgatók és a hackerek ellen.</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="hotspot_data_p1">Az elmúlt években már több mint 500 000 felhasználónak segítettünk megvédeni az online adatvédelmet és legyőzni a cenzúrát. Magas szolgáltatási és biztonsági szabványaink \\"Made in Germany\\" teszik a Shellfire-t az egyik legjobb címmé a mai VPN-piacon.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Vásárolja meg most</string>
+    <string name="tv_single_pay">Egyszeri kifizetés</string>
+    <string name="tv_subscription_pay">Előfizetés</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 hónap</string>
+    <string name="subs_month">hónap</string>
+    <string name="subs_year">év</string>
+    <string name="plan_premium">Prémium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Térkép</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">A szerverváltás sikeres - most már csatlakozni akarsz\?</string>
+    <string name="saotomeandprincipe">São Tomé és Príncipe</string>
+    <string name="hosting_data">A Shellfire GmbH egy Frankfurt am Main melletti Schmittenben működő tárhelyszolgáltató. A Shellfire-t 2002-ben alapította Florian Gattung és Maximilian Behr, akik azóta is ügyvezető partnerek.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Írja meg üzenetét Shellfire itt...</string>
+    <string name="load">LOAD:</string>
+    <string name="choose_a_plan">Válasszon tervet</string>
+    <string name="speed">Sebesség</string>
+    <string name="servers">Szerverek</string>
+    <string name="countries">Országok</string>
+    <string name="encryption_server">Titkosítás</string>
+    <string name="video_streaming">Videó streaming</string>
+    <string name="unblock_all_content">Minden tartalom blokkolásának feloldása</string>
+    <string name="encrypted_connection">Titkosított kapcsolat</string>
+    <string name="safe_hotspot_usage">Biztonságos hotspot-használat</string>
+    <string name="unlimited_traffic">Korlátlan forgalom</string>
+    <string name="upgrade">UPGRADE</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Haladó</string>
+    <string name="STANDARD">Standard</string>
+    <string name="ALL_SERVERS">Minden szerver</string>
+    <string name="unlock">Unlock</string>
+    <string name="filter">Szűrők</string>
+
+    <string name="format_server">Kiszolgáló %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN Kis Widget</string>
+    <string name="widget_label_medium">Shellfire VPN Medium Widget</string>
+    <string name="widget_label_large">Shellfire VPN Nagy Widget</string>
+
+    <string name="pref_title_mode_connection">Csatlakozási mód</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">A fiók aktiválásához kattintson a most küldött e-mailben található linkre.</string>
+    <string name="email_validation_required_title">A fióknak aktiválásra van szüksége</string>
+    <string name="sending_log">Napló küldése...</string>
+    <string name="loading_one">ONE betöltése</string>
+    <string name="loading_two">KETTŐ betöltése</string>
+    <string name="logout">Kijelentkezés</string>
+    <string name="action_connection_mode">Csatlakozási mód</string>
+    <string name="action_select_vpn">VPN kiválasztása</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Adjon visszajelzést</string>
+    <string name="title_activity_log">Visszajelzés küldése Shellfire-nek</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Értékelje az alkalmazásunkat</string>
+    <string name="initial_dialog_message">Tetszik az alkalmazásunk\?</string>
+    <string name="initial_dialog_positive">Igen</string>
+    <string name="initial_dialog_negative">Nem</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Értékelje az alkalmazásunkat</string>
+    <string name="rate_dialog_message">Szeretné értékelni az alkalmazásunkat\?</string>
+    <string name="rate_dialog_positive">Igen, imádom!</string>
+    <string name="rate_dialog_negative">Nem, köszönöm.</string>
+    <string name="rate_dialog_neutral">Talán később</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Visszajelzés adása</string>
+    <string name="feedback_dialog_message">Szeretne visszajelzést adni\?</string>
+    <string name="feedback_dialog_positive">Igen, visszajelzést szeretnék adni</string>
+    <string name="feedback_dialog_negative">Nem, köszönöm.</string>
+
+    <string name="send_feedback_progress">Visszajelzés küldése...</string>
+    <string name="feedback_sent_successfully">Sikeresen elküldött visszajelzés</string>
+    <string name="feedback_not_sent">Nem tudott visszajelzést küldeni</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Kérjük, adja meg visszajelzését az alábbiakban. Ha szeretné, az alkalmazás- és rendszernaplókat is csatolhatja, hogy jobban megértsük a problémákat.</string>
+    <string name="include_application_and_system_logs">Tartalmazza az alkalmazás- és rendszernaplókat</string>
+    <string name="send_feedback">Visszajelzés küldése</string>
+    <string name="abort">Megszakítás</string>
+    <string name="serverchange_timeout">A kiszolgálóváltási művelet lejárt. Kérjük, próbálja meg újra.</string>
+    <string name="protocol_is_being_changed">A protokollt megváltoztatják. Ez eltarthat egy darabig..</string>
+    <string name="protocol_change_timeout">A kiszolgálóváltási művelet lejárt. Kérjük, próbálja meg újra.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Bejelentkezés...</string>
+    <string name="login_with_existing_account">Bejelentkezés meglévő fiókkal</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Jelszó</string>
+    <string name="action_sign_in_short">Bejelentkezés</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="lostAccountData">Elveszett számlaadatok</string>
+    <string name="register_new_account">Új fiók regisztrálása</string>
+    <string name="welcomeText">Üdvözöljük a Shellfire VPN-nél!</string>
+    <string name="needToAcceptAndRegister">Új fiók regisztrálása</string>
+    <string name="prompt_email_only">E-mail</string>
+    <string name="subscribeNewsletter">Hírlevél feliratkozás</string>
+    <string name="register">Regisztráció</string>
+    <string name="i_have_an_account">Már van egy Shellfire fiókom</string>
+    <string name="greeting_text">Üdvözöljük a Shellfire VPN-nél! Kérjük, jelentkezzen be vagy regisztráljon a folytatáshoz.</string>
+    <string name="slow">Lassú</string>
+    <string name="brilliant">Briliáns</string>
+    <string name="back">Vissza</string>
+    <string name="failed_to_change_server">Kiszolgálóváltás sikertelen</string>
+    <string name="sign_in_with_google">Bejelentkezés a Google segítségével</string>
+    <string name="google_sign_in_confirmation_title">Google bejelentkezés megerősítése</string>
+    <string name="cancel">Törölje</string>
+    <string name="confirm">Megerősítés</string>
+    <string name="try_out_for_7_days">Próbálja ki 7 napig ingyen.</string>
+    <string name="then_get_discount">Akkor kapjon %1$s kedvezményt.</string>
+    <string name="one_year">1 év</string>
+    <string name="price_yearly_per_month">megfelel %1$s / hónapnak</string>
+    <string name="price_yearly_per_year">%1$s / év</string>
+    <string name="price_yearly_per_month_all_subs">1 év - %1$s / hónap</string>
+    <string name="discount_also_in_next_two_years">%1$s kedvezmény (az első 2 évre)</string>
+    <string name="first_seven_days_free_explain_text">Az első 7 napban ingyenes.\nÍgy működik az ingyenes próbaverzió.</string>
+    <string name="price_monthly_per_month_all_subs">1 hónap - %1$s / hónap</string>
+    <string name="price_per_month_selected_sub">%1$s a %2$s számára</string>
+    <string name="price_info_yearly_per_year_trial_explainer">7 nap ingyen, majd %1$s / év (megfelel %2$s / hónapnak).</string>
+    <string name="one_month">1 hónap</string>
+    <string name="twelve_months">12 hónap</string>
+    <string name="get_premium_plus">Szerezze be a Shellfire VPN Premium Plus-t</string>
+    <string name="try_now_for_free">Próbálja ki most ingyen</string>
+    <string name="start_now">Kezdje el most</string>
+    <string name="best_price_per_month">Legjobb havi ár</string>
+    <string name="seven_days_free">Ingyenes az első 7 napban</string>
+    <string name="cancel_monthly">Bármikor törölni</string>
+    <string name="no_longterm_commitment">Nincs hosszú távú kötelezettségvállalás</string>
+    <string name="show_all_subscriptions">Minden előfizetés megjelenítése</string>
+    <string name="choose_subscription">Válasszon előfizetést</string>
+    <string name="access_all_features_and_protect_five_devices">Hozzáférés az összes prémium funkcióhoz és 5 eszköz védelme</string>
+    <string name="first_payment_info_today">Az első fizetés most esedékes. Ez az előfizetés automatikusan megújul, amíg le nem mondják.</string>
+    <string name="first_payment_info_seven_days">Az első fizetés 7 napon belül esedékes. Ez az előfizetés automatikusan megújul, amíg le nem mondják.</string>
+    <string name="trial_link_text">Próbálja ki 7 napig ingyen - így működik.</string>
+    <string name="trial_info">7 nap után kezdjen el fizetni. A kezdeti időszak után az előfizetés minden évben automatikusan megújul, amíg le nem mondja.</string>
+    <!-- General -->
+    <string name="close_button_text">Zárja be a</string>
+    <string name="cta_button_text">Próbálja ki ingyen most</string>
+
+    <!-- Trial Explainer Card -->
+    <string name="trial_explainer_title">Hogyan működik a 7 napos ingyenes próbaverzió</string>
+    <string name="trial_step1_title">Ma: Teljes hozzáférés az összes prémium funkcióhoz</string>
+    <string name="trial_step1_description">Fedezze fel az összes prémium funkciót, és tesztelje az app\ teljes funkcionalitását.</string>
+    <string name="trial_step2_title">5. nap: Emlékeztető e-mail a próba végéről</string>
+    <string name="trial_step2_description">Küldeni fogunk egy e-mailt, hogy emlékeztessük Önt, hogy a próbaidőszak hamarosan véget ér.</string>
+    <string name="trial_step3_title">7. nap: A próbaidőszak véget ér, az Ön előfizetése megkezdődik</string>
+    <string name="trial_step3_description">Az első évre vonatkozó kifizetés automatikusan feldolgozásra kerül, ha nem mondod le az előfizetést ezen a napon.</string>
+    <string name="for_the_first_two_years">(az első két évben)</string>
+    <string name="no_browser_available_to_open_the_link">Nincs böngésző a link megnyitásához.</string>
+
+</resources>

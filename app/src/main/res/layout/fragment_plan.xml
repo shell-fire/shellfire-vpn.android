@@ -1,0 +1,90 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Banner Section -->
+        <TextView
+            android:id="@+id/banner_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:text="40% Rabatt plus 7 Tage gratis"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/base_blue_color" />
+
+        <!-- Yearly Subscription Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/plan_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="1 Jahr"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/plan_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:text="4,99€/Monat"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/plan_discounted_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="59,89€ für erstes Jahr"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/base_blue_color_light" />
+        </LinearLayout>
+
+        <!-- Trial Info -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="7 Tage kostenlos testen. Danach 4,99€/Monat, kündbar jederzeit."
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+    </LinearLayout>
+
+    <!-- Call-to-Action Button -->
+    <Button
+        android:id="@+id/cta_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Versuche 0,00€"
+        android:background="@color/base_blue_color"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- "Show All Subscriptions" -->
+    <TextView
+        android:id="@+id/show_all_subscriptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alle Abos anzeigen"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_above="@id/cta_button"
+        android:textColor="@color/base_blue_color_light" />
+</RelativeLayout>

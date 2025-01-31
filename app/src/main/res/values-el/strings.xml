@@ -1,0 +1,490 @@
+<resources>
+    <string name="channel_name_userreq">Απαιτείται αλληλεπίδραση με τον χρήστη</string>
+    <string name="channel_description_userreq">Η σύνδεση OpenVPN απαιτεί την εισαγωγή δεδομένων από τον χρήστη, π.χ. πιστοποίηση δύο παραγόντων.
+    </string>
+    <string name="channel_name_background">Στατιστικά στοιχεία σύνδεσης</string>
+    <string name="channel_description_background">Συνεχή στατιστικά στοιχεία της εγκατεστημένης σύνδεσης OpenVPN</string>
+    <string name="channel_name_status">Αλλαγή κατάστασης σύνδεσης</string>
+    <string name="channel_description_status">Αλλαγές κατάστασης της σύνδεσης OpenVPN (Σύνδεση, πιστοποίηση ταυτότητας,...)</string>
+	<string name="save_password">Αποθήκευση κωδικού πρόσβασης</string>
+	<string name="show_password">Εμφάνιση κωδικού πρόσβασης</string>
+	<string name="auth_username">Όνομα χρήστη</string>
+	<string name="remote_trust">Εμπιστεύομαι αυτή την εφαρμογή.</string>
+	<string name="remote_warning">Προχωρώντας, δίνετε στην εφαρμογή την άδεια να ελέγχει πλήρως το OpenVPN για Android και να υποκλέπτει όλη την κυκλοφορία του δικτύου.<b>ΜΗΝ αποδεχτείτε την αίτηση αν δεν την εμπιστεύεστε.</b> Διαφορετικά, διατρέχετε τον κίνδυνο να παραβιαστούν τα δεδομένα σας από κακόβουλο λογισμικό\".</string>
+	<string name="permission_icon_app">Εικονίδιο εφαρμογής που προσπαθεί να χρησιμοποιήσει το OpenVPN για Android</string>
+	<string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+	<string name="config_error_found">Σφάλμα στη διαμόρφωση</string>
+	<string name="nought_alwayson_warning"><![CDATA[Αν δεν εμφανίστηκε το παράθυρο επιβεβαίωσης VPN, τότε έχετε ενεργοποιήσει το \\"Always on VPN\\" για κάποια άλλη εφαρμογή. Σε αυτή την περίπτωση μόνο αυτή η εφαρμογή επιτρέπεται να συνδεθεί σε ένα VPN. Ελέγξτε στις Ρυθμίσεις-> Δίκτυα περισσότερα .. -> VPNS]]></string>
+	<string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+	<string name="pw_request_dialog_title">Ανάγκη %s</string>
+    <string name="pw_request_dialog_prompt">Παρακαλώ εισάγετε τον κωδικό πρόσβασης για το προφίλ %s</string>
+	<string name="shortcut_profile_notfound">Το προφίλ που καθορίζεται στη συντόμευση δεν βρέθηκε</string>
+	<string name="app">Shellfire VPN για Android</string>
+	<string name="prompt">%s προσπαθεί να ελέγξει %2$s</string>
+	<string name="all_app_prompt">Μια εξωτερική εφαρμογή προσπαθεί να ελέγξει το %s. Η εφαρμογή που ζητά πρόσβαση δεν μπορεί να προσδιοριστεί. Επιτρέποντας αυτή την εφαρμογή, παρέχεται πρόσβαση σε ΟΛΕΣ τις εφαρμογές.</string>
+	<string name="screen_nopersistenttun">Προειδοποίηση: Persistent tun δεν είναι ενεργοποιημένο για αυτό το VPN. Η κυκλοφορία θα χρησιμοποιεί την κανονική σύνδεση στο Internet όταν η οθόνη είναι απενεργοποιημένη.</string>
+	<string name="private_key_password">Κωδικός πρόσβασης ιδιωτικού κλειδιού</string>
+	<string name="pkcs12_file_encryption_key">Κλειδί κρυπτογράφησης αρχείων PKCS12</string>
+	<string name="no_error_found">Δεν βρέθηκε σφάλμα</string>
+	<string name="no_orbotfound">Η εφαρμογή Orbot δεν μπορεί να βρεθεί. Εγκαταστήστε το Orbot ή χρησιμοποιήστε χειροκίνητη ενσωμάτωση του Socks v5.</string>
+	<string name="error_orbot_and_proxy_options">Δεν είναι δυνατή η ταυτόχρονη χρήση επιπλέον δήλωσης http-proxy-option και ενσωμάτωσης Orbot</string>
+	<string name="openvpn3_socksproxy">Η υλοποίηση OpenVPN 3 C++ δεν υποστηρίζει σύνδεση μέσω διακομιστή μεσολάβησης Socks</string>
+	<string name="openvpn3_nostatickeys">Η υλοποίηση OpenVPN 3 C++ δεν υποστηρίζει στατικά κλειδιά. Παρακαλούμε αλλάξτε σε OpenVPN 2.x στις γενικές ρυθμίσεις.</string>
+    <string name="openvpn3_pkcs12">Η χρήση αρχείων PKCS12 απευθείας με την υλοποίηση OpenVPN 3 C++ δεν υποστηρίζεται. Παρακαλούμε εισάγετε τα αρχεία pkcs12 στο keystore του Android ή αλλάξτε σε OpenVPN 2.x στις γενικές ρυθμίσεις.</string>
+	<string name="remote_no_server_selected">Πρέπει να ορίσετε και να ενεργοποιήσετε τουλάχιστον έναν απομακρυσμένο διακομιστή.</string>
+	<string name="missing_tlsauth">Το αρχείο tls-auth λείπει</string>
+    <string name="missing_certificates">Έλλειψη πιστοποιητικού χρήστη ή αρχείου κλειδιού πιστοποιητικού χρήστη</string>
+    <string name="missing_ca_certificate">Λείπει το πιστοποιητικό CA</string>
+	<string name="custom_route_format_error">Σφάλμα ανάλυσης των προσαρμοσμένων διαδρομών</string>
+	<string name="ipv4_format_error">Σφάλμα ανάλυσης της διεύθυνσης IPv4</string>
+	<string name="deprecated_tls_remote">Η διαμόρφωση χρησιμοποιεί την επιλογή tls-remote που είχε καταργηθεί στην 2.3 και τελικά καταργήθηκε στην 2.4</string>
+	<string name="no_ca_cert_selected">Πρέπει να επιλέξετε ένα πιστοποιητικό CA ή να ενεργοποιήσετε τον έλεγχο δακτυλικών αποτυπωμάτων ομότιμων</string>
+	<string name="no_keystore_cert_selected">Πρέπει να επιλέξετε ένα πιστοποιητικό χρήστη</string>
+	<string name="keyChainAccessError">Σφάλμα πρόσβασης στην αλυσίδα κλειδιών: %s</string>
+	<string name="cannotparsecert">Δεν είναι δυνατή η εμφάνιση πληροφοριών πιστοποιητικού</string>
+	<string name="crtext_requested">Απαντήστε στην πρόκληση για να συνεχίσετε τον έλεγχο ταυτότητας VPN</string>
+	<string name="openurl_requested">Ανοίξτε τη διεύθυνση URL για να συνεχίσετε τον έλεγχο ταυτότητας VPN</string>
+	<string name="ip_looks_like_subnet">Η τοπολογία VPN \\"%3$s\\" καθορίζεται, αλλά το ifconfig %s %2$s μοιάζει περισσότερο με διεύθυνση IP με μάσκα δικτύου. Υποθέτοντας τοπολογία \\"subnet\\".</string>
+	<string name="allowed_vpn_apps_info">Επιτρεπόμενες εφαρμογές VPN: %s</string>
+	<string name="disallowed_vpn_apps_info">Απαγορευμένες εφαρμογές VPN: %s</string>
+	<string name="app_no_longer_exists">Το πακέτο %s δεν είναι πλέον εγκατεστημένο, αφαιρώντας το από τη λίστα allow/disallow της εφαρμογής</string>
+	<string name="no_allowed_app">Δεν προστέθηκε καμία επιτρεπόμενη εφαρμογή. Προσθέτουμε τον εαυτό μας (%s) για να έχουμε τουλάχιστον μία εφαρμογή στη λίστα επιτρεπόμενων εφαρμογών για να μην επιτρέψουμε όλες τις εφαρμογές</string>
+	<string name="ignore_multicast_route">Αγνόηση διαδρομής πολλαπλής διανομής: %s</string>
+	<string name="routes_debug">Εγκατεστημένες διαδρομές VpnService: %s %2$s</string>
+	<string name="state_auth_failed">Αποτυχία ελέγχου ταυτότητας</string>
+	<string name="password">Κωδικός πρόσβασης</string>
+	<string name="state_waitorbot">Περιμένοντας την έναρξη του Orbot</string>
+	<string name="service_restarted">Επανεκκίνηση της υπηρεσίας OpenVPN (Η εφαρμογή συνετρίβη πιθανότατα ή σκοτώθηκε λόγω πίεσης μνήμης)</string>
+	<string name="notifcation_title_notconnect">Δεν έχει συνδεθεί</string>
+	<string name="permission_revoked">Ανάκληση της άδειας VPN από το λειτουργικό σύστημα (π.χ. έναρξη άλλου προγράμματος VPN), διακοπή του VPN</string>
+	<string name="keychain_nocacert">Δεν επιστράφηκε πιστοποιητικό CA κατά την ανάγνωση από το keystore του Android. Ο έλεγχος ταυτότητας πιθανόν να αποτύχει.</string>
+	<string name="abi_mismatch">Αναντιστοιχία μεταξύ της προτιμώμενης εγγενούς προτεραιότητας ABI αυτής της συσκευής (%s) και της ABI που αναφέρεται από τις εγγενείς βιβλιοθήκες (%2$s)</string>
+	<string name="jelly_keystore_alphanumeric_bug">Ορισμένες εκδόσεις του Android 4.1 αντιμετωπίζουν προβλήματα εάν το όνομα του πιστοποιητικού keystore περιέχει μη αλφαριθμητικούς χαρακτήρες (όπως κενά, υπογράμμιση ή παύλες). Προσπαθήστε να επαναφέρετε το πιστοποιητικό χωρίς ειδικούς χαρακτήρες</string>
+	<string name="keychain_access">Δεν είναι δυνατή η πρόσβαση στα πιστοποιητικά του κλειδοδικτύου Android. Αυτό μπορεί να προκληθεί από μια αναβάθμιση υλικολογισμικού ή από την επαναφορά ενός αντιγράφου ασφαλείας της εφαρμογής/των ρυθμίσεων της εφαρμογής. Παρακαλούμε επεξεργαστείτε το VPN και επιλέξτε εκ νέου το πιστοποιητικό στις βασικές ρυθμίσεις για να δημιουργήσετε εκ νέου την άδεια πρόσβασης στο πιστοποιητικό.</string>
+	<string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>	
+	<string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+	<string name="state_auth_pending">Εκκρεμεί η πιστοποίηση ταυτότητας</string>
+	<string name="reread_log">Επανεξέταση (%d) στοιχείων καταγραφής από το αρχείο cache καταγραφής</string>
+	<string name="state_waitconnectretry">Αναμονή %ss δευτερολέπτων μεταξύ προσπαθειών σύνδεσης</string>
+	<string name="unhandled_exception">Μη επεξεργασμένη εξαίρεση: %s\n\n%2$s</string>
+	<string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Διαδρομές: %s %2$s</string>
+    <string name="routes_info_excl">Εξαιρούνται οι διαδρομές: %s %2$s</string>
+    <string name="title_activity_login">Συνδεθείτε</string>
+    <string name="action_forgot_password">Ξεχάσατε τον κωδικό πρόσβασης</string>
+    <string name="register_process_registering">Εγγραφή...</string>
+    <string name="error_invalid_password">Ο κωδικός πρόσβασης είναι πολύ σύντομος</string>
+    <string name="error_passwords_dont_match">Οι κωδικοί πρόσβασης δεν ταιριάζουν</string>
+    <string name="error_field_required">Το πεδίο αυτό είναι υποχρεωτικό</string>
+    <string name="action_settings">Ρυθμίσεις</string>
+    <string name="title_connect">Κατάσταση</string>
+    <string name="title_serverlist">Λίστα διακομιστών</string>
+    <string name="title_locations">Τοποθεσίες</string>
+    <string name="title_log">Ημερολόγιο</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Συνδέστε το</string>
+    <string name="route_rejected">Διαδρομή που απορρίπτεται από το Android</string>
+    <string name="tun_error_helpful">Σε ορισμένες προσαρμοσμένες εικόνες ICS η άδεια χρήσης του /dev/tun μπορεί να είναι λανθασμένη ή η ενότητα tun μπορεί να λείπει εντελώς. Για εικόνες CM9 δοκιμάστε την επιλογή fix ownership στις γενικές ρυθμίσεις</string>
+    <string name="tun_open_error">Απέτυχε να ανοίξει η διασύνδεση tun</string>
+    <string name="error">\"Σφάλμα: \"</string>
+    <string name="last_openvpn_tun_config">Άνοιγμα διεπαφής tun:</string>
+    <string name="local_ip_info">Τοπικό IPv4: %s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">Διακομιστής DNS: %s, Τομέας: %2$s</string>
+    <string name="routes_info">Διαδρομές: %s</string>
+    <string name="routes_info6">Διαδρομές IPv6: %s</string>
+    <string name="ip_not_cidr">Πήρα πληροφορίες διασύνδεσης %s και %2$s, υποθέτοντας ότι η δεύτερη διεύθυνση είναι η ομότιμη διεύθυνση του απομακρυσμένου. Χρήση μάσκας δικτύου /32 για την τοπική IP. Ο τρόπος λειτουργίας που δίνει το OpenVPN είναι \\"%3$s\\".</string>
+    <string name="route_not_cidr">Δεν μπορεί να βγάλει νόημα το %s και το %2$s ως διαδρομή IP με μάσκα δικτύου CIDR, χρησιμοποιώντας /32 ως μάσκα δικτύου.</string>
+    <string name="route_not_netip">Διόρθωση της διαδρομής %s/%2$s σε %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Η εικόνα σας δεν υποστηρίζει το VPNService API, λυπάμαι :(</string>
+    <string name="encryption">-Κρυπτογράφηση</string>
+    <string name="opentun_no_ipaddr">Άρνηση ανοίγματος συσκευής tun χωρίς πληροφορίες IP</string>
+    <string name="building_configration">Διαμόρφωση κτιρίου...</string>
+    <string name="netstatus">Κατάσταση δικτύου: %s</string>
+    <string name="mobile_info">Εκτέλεση σε %s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Σφάλμα υπογραφής με κλειδί κλειδοθήκης Android %s: %2$s</string>
+    <string name="warn_no_dns">Δεν χρησιμοποιούνται διακομιστές DNS. Η επίλυση ονομάτων ενδέχεται να μην λειτουργεί. Εξετάστε το ενδεχόμενο να ορίσετε προσαρμοσμένους διακομιστές DNS. Λάβετε επίσης υπόψη ότι το Android θα συνεχίσει να χρησιμοποιεί τις ρυθμίσεις μεσολάβησης που έχουν καθοριστεί για τη σύνδεση κινητού/ Wi-Fi όταν δεν έχουν οριστεί διακομιστές DNS.</string>
+    <string name="dns_add_error">Δεν ήταν δυνατή η προσθήκη διακομιστή DNS \\"%s\\", απορρίφθηκε από το σύστημα: %2$s</string>
+    <string name="ip_add_error">Δεν ήταν δυνατή η διαμόρφωση της διεύθυνσης IP \\"%s\\", απορρίφθηκε από το σύστημα: %2$s</string>
+    <string name="getproxy_error">Σφάλμα λήψης ρυθμίσεων μεσολάβησης: %s</string>
+    <string name="using_proxy">Χρήση διακομιστή μεσολάβησης %s %2$d</string>
+    <string name="minidump_generated">Το OpenVPN συνετρίβη απροσδόκητα. Παρακαλώ σκεφτείτε να χρησιμοποιήσετε την επιλογή send Minidump στο κύριο μενού</string>
+    <string name="session_ipv4string">%s - %2$s</string>
+    <string name="session_ipv6string">%s - %3$s, %2$s</string>
+    <string name="state_connecting">Σύνδεση</string>
+    <string name="state_wait">Αναμονή για απάντηση του διακομιστή</string>
+    <string name="state_auth">Αυθεντικοποίηση</string>
+    <string name="state_get_config">Λήψη ρυθμίσεων πελάτη</string>
+    <string name="state_assign_ip">Εκχώρηση διευθύνσεων IP</string>
+    <string name="state_add_routes">Προσθήκη διαδρομών</string>
+    <string name="state_connected">Συνδεδεμένο</string>
+    <string name="state_disconnected">Αποσύνδεση</string>
+    <string name="state_reconnecting">Επανασύνδεση</string>
+    <string name="state_exiting">Έξοδος από το</string>
+    <string name="state_noprocess">Δεν τρέχει</string>
+    <string name="state_resolve">Επίλυση ονομάτων κεντρικών υπολογιστών</string>
+    <string name="state_tcp_connect">Σύνδεση (TCP)</string>
+    <string name="unknown_state">Άγνωστος</string>
+    <string name="state_nonetwork">Αναμονή για χρησιμοποιήσιμο δίκτυο</string>
+    <string name="statusline_bytecount">↓%2$s/s %s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Σύνδεση σε VPN %s</string>
+    <string name="start_vpn_ticker">Σύνδεση σε VPN %s</string>
+    <string name="mobile_info_extended">Εκτέλεση σε %s (%2$s) %3$s, Android API %4$d, έκδοση %5$s, %6$s</string>
+    <string name="built_by">κατασκευασμένο από %s</string>
+    <string name="debug_build">debug build</string>
+    <string name="official_build">επίσημη κατασκευή</string>
+    <string name="screenoff_pause">Παύση σύνδεσης σε κατάσταση απενεργοποιημένης οθόνης: λιγότερο από %s σε %2$ss</string>
+    <string name="state_userpause">Παύση VPN που ζητήθηκε από τον χρήστη</string>
+    <string name="state_screenoff">Παύση VPN - απενεργοποιημένη οθόνη</string>
+    <string name="defaultServerName">Διακομιστής XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Επιλέξτε VPN</string>
+    <string name="vpnSelectReason">Πολλαπλά VPN βρέθηκαν στο λογαριασμό σας Shellfire. Παρακαλούμε επιλέξτε ποιο θα χρησιμοποιήσετε.</string>
+    <string name="rememberVpnSelection">Αποθήκευση επιλογής</string>
+    <string name="remember_vpn_summary">Σε περίπτωση που υπάρχουν πολλαπλά VPN, δεν χρειάζεται να επιλέγετε το VPN σε κάθε σύνδεση.</string>
+    <string name="remember_vpn_title">Αποθήκευση επιλεγμένου VPN</string>
+    <string name="show_log_sum">Η μόνιμη εμφάνιση του αρχείου καταγραφής μπορεί να οδηγήσει σε απώλεια επιδόσεων (απαιτεί επανεκκίνηση της εφαρμογής).</string>
+    <string name="show_log">Εμφάνιση αρχείου καταγραφής</string>
+    <string name="default_product_type">Δωρεάν</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Διακομιστής</string>
+    <string name="connectionAdvice">Συνδέεται με τον επιλεγμένο διακομιστή. Για να αλλάξετε διακομιστές, σαρώστε προς τα δεξιά.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Αρχείο καταγραφής εφαρμογών</string>
+    <string name="connectionState">Κατάσταση:</string>
+    <string name="disconnected">Αποσυνδεδεμένο</string>
+    <string name="noAccountData">Δεν έχετε εγγραφεί;</string>
+    <string name="title_activity_register">Εγγραφή</string>
+    <string name="buyDailyPremium">0,99 ευρώ / 24 ώρες.</string>
+    <string name="buyDailyPremiumPlus">1,99 ευρώ / 24 ώρες.</string>
+    <string name="buyMonthlyPremium">3,49 ευρώ / μήνα</string>
+    <string name="buyMonthlyPremiumPlus">7,95 ευρώ / μήνα</string>
+    <string name="buyYearlyPremium">39,90 ευρώ / έτος</string>
+    <string name="buyYearlyPremiumPlus">84,90 ευρώ / έτος</string>
+    <string name="premiumUntil">Premium μέχρι:</string>
+    <string name="sendToShellfire">Στείλτε αρχείο καταγραφής στο Shellfire</string>
+    <string name="verifying_purchase">Η αγορά επαληθεύεται...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Η αναβάθμιση Premium είναι επιτυχής. Εμφάνιση λίστας διακομιστών\?</string>
+    <string name="yes">Ναι</string>
+    <string name="no">Όχι</string>
+    <string name="YES">ΝΑΙ</string>
+    <string name="upgrade_not_successful_check_log">Η αναβάθμιση δεν ήταν επιτυχής, ελέγξτε το αρχείο καταγραφής!</string>
+    <string name="problem_setting_up_in_app_billing">\"Πρόβλημα στη ρύθμιση χρέωσης εντός εφαρμογής: \"</string>
+    <string name="loading">Φόρτωση...</string>
+    <string name="send_log_to_shellfire">Στείλτε αρχείο καταγραφής στο Shellfire</string>
+    <string name="log_send_succesfully">Το αρχείο καταγραφής στάλθηκε στο Shellfire με επιτυχία</string>
+    <string name="log_could_not_be_sent">Το αρχείο καταγραφής δεν μπόρεσε να σταλεί</string>
+    <string name="connecting">Σύνδεση...</string>
+    <string name="cansel">ΑΚΥΡΩΣΗ</string>
+    <string name="disconnect">Αποσύνδεση</string>
+    <string name="connected">Συνδεδεμένο</string>
+    <string name="loading_certificates">Φόρτωση πιστοποιητικών</string>
+    <string name="switching_from_udp_to_tcp">Εναλλαγή από UDP σε TCP</string>
+    <string name="switching_from_tcp_to_udp">Εναλλαγή από TCP σε UDP</string>
+    <string name="item_already_owned_consuming">στοιχείο που ανήκει ήδη - καταναλώνουν</string>
+    <string name="item_consumed">στοιχείο που καταναλώνεται</string>
+    <string name="already_on_this_server_doing_nothing">Ήδη σε αυτόν τον διακομιστή - δεν κάνει τίποτα</string>
+    <string name="not_showing_premium_info">Δεν εμφανίζονται πληροφορίες για το ασφάλιστρο</string>
+    <string name="you_are_not_eligible_to_use_this_server">Χρειάζεται αναβάθμιση.
+\nΘέλετε περισσότερες πληροφορίες;</string>
+    <string name="you_are_currently_connecting_disconnect">Αυτή τη στιγμή είστε συνδεδεμένοι. Πρέπει να αποσυνδεθείτε πριν από την αλλαγή του διακομιστή. Αποσυνδέεστε τώρα;</string>
+    <string name="not_changing_server">Ακύρωση αλλαγής διακομιστή</string>
+    <string name="sure_to_change_server">Είστε σίγουροι ότι θέλετε να αλλάξετε τον διακομιστή;</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.Server αλλάζει. Αυτό μπορεί να πάρει λίγο χρόνο..</string>
+    <string name="server_selection_succesfully_performed_on_backend">Επιτυχής αλλαγή διακομιστή.</string>
+    <string name="server_selection_could_not_be_changed">Ο διακομιστής δεν μπόρεσε να αλλάξει. Ελέγξτε το αρχείο καταγραφής για λεπτομέρειες.</string>
+    <string name="connecting_please_wait">Η σύνδεση επεξεργάζεται - παρακαλώ περιμένετε</string>
+    <string name="action_about">Σχετικά με το Shellfire VPN</string>
+
+    <string name="country">χώρα</string>
+    <string name="title_activity_about">Σχετικά με το Shellfire VPN</string>
+    <string name="hello_world">Γεια σας κόσμε!</string>
+    <string name="copyright_shellfire">© 2014 by Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">Bouncy Castle Crypto APIs</string>
+    <string name="copyright_openssl">Αυτό το προϊόν περιλαμβάνει λογισμικό που αναπτύχθηκε από το OpenSSL Project για χρήση στο OpenSSL Toolkit\n
+        Πνευματικά δικαιώματα © 1998-2008 The OpenSSL Project. Όλα τα δικαιώματα διατηρούνται.\n\n
+        Αυτό το προϊόν περιλαμβάνει κρυπτογραφικό λογισμικό γραμμένο από τον Eric Young (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Όλα τα δικαιώματα διατηρούνται.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Copyright © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Αυτό το πρόγραμμα χρησιμοποιεί τα ακόλουθα συστατικά- δείτε τον πηγαίο κώδικα για πλήρεις λεπτομέρειες σχετικά με τις άδειες χρήσης (διαθέσιμο στη διεύθυνση https://code.google.com/p/shellfirevpn4a/)</string>
+    <string name="copyright_arne">The ics-openvpn project, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) διαθέσιμο στη διεύθυνση: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Copyright © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  Το \"OpenVPN\" είναι εμπορικό σήμα της OpenVPN Technologies, Inc.\n]]></string>
+    <string name="copyright_bouncycastle">Πνευματικά δικαιώματα © 2000-2012 Η Λεγεώνα του Κάστρου της Αναπήδησης (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">μέχρι το</string>
+    <string name="state_user_vpn_password">Αναμονή για τον κωδικό πρόσβασης χρήστη VPN</string>
+    <string name="state_user_vpn_permission_cancelled">Ο διάλογος δικαιωμάτων VPN API ακυρώθηκε</string>
+    <string name="account_created_succesfully">Ο λογαριασμός δημιουργήθηκε με επιτυχία - παρακαλούμε ελέγξτε τα email σας για το email ενεργοποίησης.</string>
+    <string name="free">Δωρεάν</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 ώρες</string>
+    <string name="month_1">1 μήνας</string>
+    <string name="monthly">μηνιαία</string>
+    <string name="yearly">ετήσια</string>
+    <string name="cents99">0.99 Eur</string>
+    <string name="cents199">Eur 1.99</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9.95 Eur</string>
+    <string name="cents395">3.95 Eur</string>
+    <string name="cents795">7.95 Eur</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Αγοράστε</string>
+    <string name="compare">Σύγκριση</string>
+    <string name="singlePayment">ενιαία πληρωμή *</string>
+    <string name="subscription">συνδρομή **</string>
+    <string name="note_payment_types">* Δεν απαιτείται πιστωτική κάρτα.\r\n
+** Απαιτείται πιστωτική κάρτα, μπορεί να ακυρωθεί ανά πάσα στιγμή μέσω του Google Play. \r\n
+\r\n
+πληρώστε με Paypal στην ιστοσελίδα μας: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">Επιλογή VPN...</string>
+    <string name="cobiCodeEnter">Εκστρατεία COMPUTER BILD</string>
+    <string name="cobiClickHere">Πληκτρολογήστε τον κωδικό</string>
+
+    <string name="enter_cobi_code">εισάγετε τον κωδικό COMPUTERBILD εδώ:</string>
+    <string name="action_share">Μοιραστείτε αυτή την εφαρμογή</string>
+    <string name="share_with">Μοιραστείτε το μέσω</string>
+    <string name="share_text">Χρησιμοποιώ την εφαρμογή Shellfire #VPN για να προστατεύσω τα δεδομένα μου από χάκερ και να ξεμπλοκάρω λογοκριμένο περιεχόμενο: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Βαθμολογήστε</string>
+    <string name="rate_this_app">Βαθμολογήστε</string>
+    <string name="rate_explanation">Σας έπεισε αυτή η εφαρμογή; Θα χαιρόμασταν πολύ αν μπορούσατε να αξιολογήσετε την εφαρμογή μας στο Google Play. Ευχαριστούμε για την υποστήριξή σας!</string>
+    <string name="rate_now">Βαθμολογήστε τώρα</string>
+    <string name="rate_later">Αργότερα</string>
+    <string name="rate_never">Όχι, ευχαριστώ</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Το σχέδιό μου</string>
+    <string name="current_plan">ΤΡΕΧΟΝ ΣΧΕΔΙΟ</string>
+    <string name="PAID_UNTIL">Πληρώνεται μέχρι</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Αναβαθμίστε το λογαριασμό σας για περισσότερες λειτουργίες</string>
+
+
+    <string name="retry">Επανάληψη</string>
+    <string name="network_problem_title">Πρόβλημα δικτύου</string>
+    <string name="network_problem_message">Προς το παρόν δεν είστε συνδεδεμένοι στο διαδίκτυο. Το Shellfire VPN απαιτεί ενεργή σύνδεση στο διαδίκτυο.</string>
+    <string name="login_error">αποτυχία σύνδεσης.</string>
+    <string name="serverLoad">Φορτίο</string>
+    <string name="reloadServerList">Επαναφόρτωση</string>
+    <string name="upgrade_not_successful">Η αναβάθμιση δεν είναι επιτυχής</string>
+
+    <string name="new_version_available_title">Νέα έκδοση διαθέσιμη</string>
+    <string name="new_version_available_message">Υπάρχει μια νέα έκδοση του Shellfire VPN διαθέσιμη στο Google Play Store. Θα πρέπει να την εγκαταστήσετε σύντομα, επειδή αυτή η έκδοση ενδέχεται να μην λειτουργεί πλέον σωστά ή να περιέχει ζητήματα ασφαλείας.
+
+Πηγαίνετε τώρα στο Play Store για να ενημερώσετε;
+
+Σημείωση: Ενδέχεται να χρειαστεί να απεγκαταστήσετε/επανεγκαταστήσετε για να λάβετε τη νεότερη έκδοση.</string>
+
+    <string name="dontshowagain">Όχι και μην το ξαναδείξετε</string>
+    <string name="not_now">Όχι τώρα</string>
+    <string name="server">Διακομιστής</string>
+
+    <string name="_128bit">Κρυπτογράφηση 128 bit</string>
+    <string name="_192bit">Κρυπτογράφηση 192 bit</string>
+    <string name="_256bit">Κρυπτογράφηση 256 bit</string>
+
+    <string name="upto786">έως 786 kbit/sec</string>
+    <string name="upto10000">έως 10.000 kbit/sec</string>
+    <string name="unlimited">απεριόριστα kbit/sec</string>
+
+    <string name="php_invalid_email">Παρακαλούμε εισάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου.</string>
+    <string name="php_account_exists">Υπάρχει ήδη ένας εγγεγραμμένος λογαριασμός για αυτή τη διεύθυνση ηλεκτρονικού ταχυδρομείου.</string>
+
+
+    <string name="php_signature"><![CDATA[Με τους καλύτερους χαιρετισμούς από την ομάδα Shellfire
+
+Υ.Γ.: Νέα: Κερδίστε χρήματα με το Shellfire! Όταν μας φέρνετε νέους πελάτες, σας πληρώνουμε έως και 100%% προμήθεια: https://www.shellfire.net/affiliate-center/
+
+P.P.S.: Ακολουθήστε μας στο Twitter: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Διοίκηση: Florian Gattung, Maximilian Behr
+Εταιρεία αστικού δικαίου με έδρα το Bad Vilbel, Γερμανία]]></string>
+
+    <string name="php_surf_anonym">Σερφάρετε ανώνυμα στο διαδίκτυο</string>
+    <string name="php_hide_ip">Απόκρυψη της δικής σας διεύθυνσης IP</string>
+    <string name="php_encrypt_internet">Κρυπτογραφημένη σύνδεση στο διαδίκτυο</string>
+    <string name="php_secure_wifi">Ασφαλής χρήση δημόσιων σημείων wifi</string>
+    <string name="php_unlimited">απεριόριστο</string>
+    <string name="php_traffic">Κυκλοφορία/όγκος δεδομένων</string>
+    <string name="php_speed_generic">%s kbit/sec</string>
+    <string name="php_speed">Ταχύτητα</string>
+    <string name="php_server_in_generic">Διακομιστής σε %s</string>
+    <string name="php_change_location">Αλλαγή τοποθεσίας ανά πάσα στιγμή</string>
+    <string name="php_streaming_websites">Ιστοσελίδες ροής</string>
+
+
+    <string name="play_product_description"><![CDATA[Shellfire VPN - εύκολο. ασφαλές. συνδεδεμένο. Χωρίς εγγραφή.
+
+Το Shellfire VPN είναι ΔΩΡΕΑΝ και δεν θα σας κοστίσει ποτέ δεκάρα. Απεριόριστη κίνηση, απεριόριστος χρόνος!
+
+Το Shellfire VPN κρύβει τη διεύθυνση IP σας, ξεμπλοκάρει το διαδίκτυο και σας δίνει τη δυνατότητα να έχετε ελεύθερη και ανώνυμη πρόσβαση σε οποιονδήποτε ιστότοπο θέλετε. Με το Shellfire VPN, μπορείτε να συνδεθείτε σε οποιονδήποτε ιστότοπο με τη σιγουριά ότι είστε μυστικοί. Ξεμπλοκάρουμε το Skype, το Facebook, το Twitter, το YouTube κ.λπ. σε χώρες με λογοκρισία στο Διαδίκτυο και σας δίνουμε ακόμη και πρόσβαση στις τηλεοπτικές και ραδιοφωνικές υπηρεσίες της χώρας σας από το εξωτερικό.
+
+Το Shellfire VPN σας παρέχει εξαιρετικά ισχυρή κρυπτογράφηση για την προστασία των δεδομένων σας από χάκερ, την NSA και άλλες απειλές, ακόμα και σε μη ασφαλή δημόσια δίκτυα wifi!
+
+Κάντε αναβάθμιση σε Premium για να αποκτήσετε
+ - Υψηλότερη ταχύτητα.
+ - Ισχυρότερη κρυπτογράφηση.
+ - Ελεύθερη επιλογή από τους διακομιστές μας σε:
+Αυστρία, Καναδάς, Γαλλία, Γερμανία, Χονγκ Κονγκ, Ιταλία, Ολλανδία, Πολωνία, Ρουμανία, Ρωσία, Ισπανία, Σουηδία, Ελβετία, Ηνωμένο Βασίλειο και ΗΠΑ.
+- Οι πελάτες PremiumPlus αποκτούν αποκλειστική πρόσβαση σε διακομιστές σε:
+Χιλή, Ισλανδία, Νήσος του Μαν (offshore) και Λιχτενστάιν
+
+Shellfire VPN - ο απόλυτος πελάτης VPN για Android.
+
+Το Shellfire VPN τρέχει επίσης σε Windows, Mac OS, iOS ή Linux! Επισκεφθείτε το https://www.shellfire.net/vpn/ για περισσότερες λεπτομέρειες.
+
+Για άμεσες ενημερώσεις ακολουθήστε μας στο Facebook & Twitter
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en]]></string>
+
+    <string name="play_promo_text">Σερφάρετε ανώνυμα - Κρυπτογραφημένη σύνδεση - Πρόσβαση στο Hulu, Youtube... από οπουδήποτε</string>
+
+    <string name="play_product_description_generic">%s κρυπτογράφηση bit
+Μέχρι %2$s kbit/s ρυθμός μεταφοράς
+Διακομιστής σε %3$s χώρες παγκοσμίως</string>
+
+    <string name="hosting_since_2002">Φιλοξενία από το 2002</string>
+    <string name="vision">Όραμα</string>
+    <string name="vision_data">Πιστεύουμε ότι η ασφαλής και ελεύθερη πρόσβαση στο διαδίκτυο αποτελεί θεμελιώδες δικαίωμα για κάθε άνθρωπο σε αυτόν τον πλανήτη. Γι\' αυτό το λόγο, η αποστολή μας είναι να διατηρήσουμε το διαδίκτυο ένα μέρος ελευθερίας καθώς και ένα ασφαλές μέρος για τα προσωπικά σας δεδομένα. Αυτό το επιτυγχάνουμε παρέχοντάς σας προστασία από υποκλοπές και χάκερ μέσω των κρυπτογραφημένων σηράγγων VPN και των διακομιστών φωνής μας.</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="hotspot_data_p1">Τα τελευταία χρόνια, έχουμε ήδη βοηθήσει περισσότερους από 500.000 χρήστες να προστατεύσουν την ιδιωτική τους ζωή στο διαδίκτυο και να ξεπεράσουν τη λογοκρισία. Τα υψηλά πρότυπα υπηρεσιών και ασφάλειας \\"Made in Germany\\" καθιστούν το Shellfire μία από τις καλύτερες διευθύνσεις στην αγορά VPN σήμερα.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Αγοράστε τώρα</string>
+    <string name="tv_single_pay">Ενιαία πληρωμή</string>
+    <string name="tv_subscription_pay">Συνδρομή</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 μήνας</string>
+    <string name="subs_month">μήνας</string>
+    <string name="subs_year">έτος</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Χάρτης</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Επιτυχής αλλαγή διακομιστή - θέλετε να συνδεθείτε τώρα;</string>
+    <string name="saotomeandprincipe">Σάο Τομέ και Πρίνσιπε</string>
+    <string name="hosting_data">Η Shellfire GmbH είναι πάροχος υπηρεσιών φιλοξενίας με έδρα το Schmitten κοντά στη Φρανκφούρτη. Η Shellfire ιδρύθηκε το 2002 από τον Florian Gattung και τον Maximilian Behr, οι οποίοι από τότε είναι διευθύνοντες εταίροι.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Καταχωρήστε το μήνυμά σας στο Shellfire εδώ...</string>
+    <string name="load">ΦΟΡΤΊΟ:</string>
+    <string name="choose_a_plan">Επιλέξτε ένα σχέδιο</string>
+    <string name="speed">Ταχύτητα</string>
+    <string name="servers">Servers</string>
+    <string name="countries">Χώρες</string>
+    <string name="encryption_server">Κρυπτογράφηση</string>
+    <string name="video_streaming">Ροή βίντεο</string>
+    <string name="unblock_all_content">Ξεμπλοκάρετε όλο το περιεχόμενο</string>
+    <string name="encrypted_connection">Κρυπτογραφημένη σύνδεση</string>
+    <string name="safe_hotspot_usage">Ασφαλής χρήση hotspot</string>
+    <string name="unlimited_traffic">Απεριόριστη κυκλοφορία</string>
+    <string name="upgrade">ΑΝΑΒΑΘΜΙΣΗ</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Προχωρημένο</string>
+    <string name="STANDARD">Πρότυπο</string>
+    <string name="ALL_SERVERS">Όλοι οι διακομιστές</string>
+    <string name="unlock">Ξεκλειδώστε το</string>
+    <string name="filter">Φίλτρα</string>
+
+    <string name="format_server">Διακομιστής %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN Μικρό Widget</string>
+    <string name="widget_label_medium">Shellfire VPN Medium Widget</string>
+    <string name="widget_label_large">Shellfire VPN Μεγάλο Widget</string>
+
+    <string name="pref_title_mode_connection">Λειτουργία σύνδεσης</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Για να ενεργοποιήσετε τον λογαριασμό σας, κάντε κλικ στον σύνδεσμο στο email που μόλις σας στείλαμε.</string>
+    <string name="email_validation_required_title">Ο λογαριασμός χρειάζεται ενεργοποίηση</string>
+    <string name="sending_log">Αποστολή ημερολογίου...</string>
+    <string name="loading_one">Φόρτωση ONE</string>
+    <string name="loading_two">Φόρτωση ΔΥΟ</string>
+    <string name="logout">Αποσύνδεση</string>
+    <string name="action_connection_mode">Λειτουργία σύνδεσης</string>
+    <string name="action_select_vpn">Επιλέξτε VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Δώστε ανατροφοδότηση</string>
+    <string name="title_activity_log">Στείλτε σχόλια στο Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Βαθμολογήστε την εφαρμογή μας</string>
+    <string name="initial_dialog_message">Σας αρέσει η εφαρμογή μας;</string>
+    <string name="initial_dialog_positive">Ναι</string>
+    <string name="initial_dialog_negative">Όχι</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Βαθμολογήστε την εφαρμογή μας</string>
+    <string name="rate_dialog_message">Θα θέλατε να αξιολογήσετε την εφαρμογή μας;</string>
+    <string name="rate_dialog_positive">Ναι, το λατρεύω!</string>
+    <string name="rate_dialog_negative">Όχι, ευχαριστώ</string>
+    <string name="rate_dialog_neutral">Ίσως αργότερα</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Παροχή ανατροφοδότησης</string>
+    <string name="feedback_dialog_message">Θα θέλατε να δώσετε σχόλια;</string>
+    <string name="feedback_dialog_positive">Ναι, θέλω να δώσω ανατροφοδότηση</string>
+    <string name="feedback_dialog_negative">Όχι, ευχαριστώ</string>
+
+    <string name="send_feedback_progress">Στέλνοντας σχόλια...</string>
+    <string name="feedback_sent_successfully">Αποστολή ανατροφοδότησης με επιτυχία</string>
+    <string name="feedback_not_sent">Δεν μπόρεσε να στείλει ανατροφοδότηση</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Παρακαλείστε να δώσετε τα σχόλιά σας παρακάτω. Εάν επιθυμείτε, μπορείτε επίσης να συμπεριλάβετε αρχεία καταγραφής εφαρμογών και συστημάτων για να μας βοηθήσετε να κατανοήσουμε καλύτερα τυχόν προβλήματα.</string>
+    <string name="include_application_and_system_logs">Συμπεριλάβετε αρχεία καταγραφής εφαρμογών και συστημάτων</string>
+    <string name="send_feedback">Στείλτε σχόλια</string>
+    <string name="abort">Διακοπή</string>
+    <string name="serverchange_timeout">Η λειτουργία αλλαγής διακομιστή έχει λήξει. Προσπαθήστε ξανά.</string>
+    <string name="protocol_is_being_changed">Το πρωτόκολλο αλλάζει. Αυτό μπορεί να πάρει μια στιγμή..</string>
+    <string name="protocol_change_timeout">Η λειτουργία αλλαγής διακομιστή έχει λήξει. Προσπαθήστε ξανά.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Σύνδεση...</string>
+    <string name="login_with_existing_account">Σύνδεση με υπάρχοντα λογαριασμό</string>
+    <string name="prompt_email">Ηλεκτρονικό ταχυδρομείο</string>
+    <string name="prompt_password">Κωδικός πρόσβασης</string>
+    <string name="action_sign_in_short">Σύνδεση</string>
+    <string name="login">Σύνδεση</string>
+    <string name="lostAccountData">Χαμένα δεδομένα λογαριασμού</string>
+    <string name="register_new_account">Εγγραφή νέου λογαριασμού</string>
+    <string name="welcomeText">Καλώς ήρθατε στη Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Εγγραφή νέου λογαριασμού</string>
+    <string name="prompt_email_only">Ηλεκτρονικό ταχυδρομείο</string>
+    <string name="subscribeNewsletter">Εγγραφείτε στο Newsletter</string>
+    <string name="register">Εγγραφή</string>
+    <string name="i_have_an_account">Έχω ήδη λογαριασμό Shellfire</string>
+    <string name="greeting_text">Καλώς ήρθατε στη Shellfire VPN! Παρακαλώ συνδεθείτε ή εγγραφείτε για να συνεχίσετε.</string>
+    <string name="slow">Αργή</string>
+    <string name="brilliant">Λαμπρό</string>
+    <string name="back">Πίσω</string>
+
+</resources>

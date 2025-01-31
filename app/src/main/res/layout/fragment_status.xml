@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/server_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/sky_blue"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/stars_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/flag_img"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:id="@+id/crown_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/status_intend_10"
+                        android:layout_marginTop="@dimen/status_intend_10"
+                        android:alpha="0.75"
+                        android:background="@drawable/status_rate_bg"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/status_intend_5"
+                        android:paddingLeft="@dimen/status_intend_8"
+                        android:paddingRight="@dimen/status_intend_8"
+                        android:paddingTop="@dimen/status_intend_5">
+
+                        <ImageView
+                            android:id="@+id/star_1"
+                            android:layout_width="15dp"
+                            android:layout_height="@dimen/status_intend_15"
+                            android:alpha="1"
+                            android:src="@drawable/ic_crown"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:id="@+id/star_2"
+                            android:layout_width="15dp"
+                            android:layout_height="@dimen/status_intend_15"
+                            android:alpha="1"
+                            android:src="@drawable/ic_crown"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:id="@+id/star_3"
+                            android:layout_width="15dp"
+                            android:layout_height="@dimen/status_intend_15"
+                            android:alpha="1"
+                            android:src="@drawable/ic_crown"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:id="@+id/star_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/status_intend_15"
+                            android:src="@drawable/ic_crown"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:id="@+id/star_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/status_intend_15"
+                            android:src="@drawable/ic_crown"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/server_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/status_intend_5"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/status_txt_size_18"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/server_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.5"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/status_txt_size_18"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/status_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:elevation="2dp"
+        android:translationZ="7dp"
+        android:background="@color/red_disconnect">
+
+        <TextView
+            android:id="@+id/connectionState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/disconnected"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/status_txt_size_14"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <androidx.fragment.app.FragmentContainerView
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.styledmap.MapsActivityRaw"
+            map:cameraZoom="3"
+            tools:layout="@layout/activity_maps" />
+
+        <Button
+            android:id="@+id/buttonConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/status_intend_15"
+            android:background="@drawable/connect_btn_selector"
+            android:elevation="2dp"
+            android:paddingLeft="@dimen/status_intend_20"
+            android:paddingTop="@dimen/status_intend_8"
+            android:paddingRight="@dimen/status_intend_20"
+            android:paddingBottom="@dimen/status_intend_8"
+            android:text="@string/connect"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/status_txt_size_12"
+            android:textStyle="bold"
+            android:translationZ="7dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

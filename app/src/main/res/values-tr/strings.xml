@@ -1,0 +1,496 @@
+<resources>
+    <string name="channel_name_userreq">Kullanıcı etkileşimi gerekli</string>
+    <string name="channel_description_userreq">OpenVPN bağlantısı bir kullanıcı girişi gerektirir, örneğin iki faktörlü kimlik doğrulama
+    </string>
+    <string name="channel_name_background">Bağlantı istatistikleri</string>
+    <string name="channel_description_background">Kurulan OpenVPN bağlantısının devam eden istatistikleri</string>
+    <string name="channel_name_status">Bağlantı durumu değişikliği</string>
+    <string name="channel_description_status">OpenVPN bağlantısının durum değişiklikleri (Bağlanıyor, kimlik doğrulama, ...)</string>
+    <string name="save_password">Şifre Kaydet</string>
+    <string name="show_password">Şifreyi göster</string>
+    <string name="auth_username">Kullanıcı Adı</string>
+    <string name="remote_trust">Bu uygulamaya güveniyorum.</string>
+    <string name="remote_warning">Devam ederek, uygulamaya Android için OpenVPN\'i tamamen kontrol etme ve tüm ağ trafiğine müdahale etme izni vermiş olursunuz.<b>Başvuruya güvenmediğiniz sürece kabul etmeyin.</b> Aksi takdirde, verilerinizin kötü amaçlı yazılımlar tarafından ele geçirilmesi riskiyle karşı karşıya kalırsınız.\"</string>
+    <string name="permission_icon_app">Android için OpenVPN kullanmaya çalışan uygulamanın simgesi</string>
+    <string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+    <string name="config_error_found">Yapılandırmada Hata</string>
+    <string name="nought_alwayson_warning"><![CDATA[Bir VPN onay iletişim kutusu almadıysanız, başka bir uygulama için \\"Her zaman VPN açık\\" özelliğini etkinleştirmişsinizdir. Bu durumda sadece o uygulamanın VPN\'e bağlanmasına izin verilir. Ayarlar-> Ağlar daha fazla ... -> VPNS altında kontrol edin]]></string>
+    <string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+    <string name="pw_request_dialog_title">İhtiyaç %1$s</string>
+    <string name="pw_request_dialog_prompt">Lütfen %1$s profili için şifreyi girin</string>
+    <string name="shortcut_profile_notfound">Kısayolda belirtilen profil bulunamadı</string>
+    <string name="app">Android için Shellfire VPN</string>
+    <string name="prompt">1$s %2$s\'yi kontrol etmeye çalışıyor</string>
+    <string name="all_app_prompt">Harici bir uygulama %s\'yi kontrol etmeye çalışıyor. Erişim talep eden uygulama belirlenemiyor. Bu uygulamaya izin vermek TÜM uygulamalara erişim sağlar.</string>
+    <string name="screen_nopersistenttun">Uyarı: Bu VPN için kalıcı ayar etkin değil. Ekran kapalıyken trafik normal İnternet bağlantısını kullanacaktır.</string>
+    <string name="private_key_password">Özel Anahtar Şifresi</string>
+    <string name="pkcs12_file_encryption_key">PKCS12 Dosya Şifreleme Anahtarı</string>
+    <string name="no_error_found">Hata bulunamadı</string>
+    <string name="no_orbotfound">Orbot uygulaması bulunamadı. Lütfen Orbot\'u yükleyin veya manuel Socks v5 entegrasyonunu kullanın.</string>
+    <string name="error_orbot_and_proxy_options">Ekstra http-proxy-option deyimi ve Orbot entegrasyonu aynı anda kullanılamaz</string>
+    <string name="openvpn3_socksproxy">OpenVPN 3 C++ uygulaması Socks proxy üzerinden bağlanmayı desteklemiyor</string>
+    <string name="openvpn3_nostatickeys">OpenVPN 3 C++ uygulaması statik anahtarları desteklemez. Lütfen genel ayarlar altında OpenVPN 2.x\'e geçin.</string>
+    <string name="openvpn3_pkcs12">PKCS12 dosyalarının doğrudan OpenVPN 3 C++ uygulaması ile kullanılması desteklenmemektedir. Lütfen pkcs12 dosyalarını Android anahtar deposuna aktarın veya genel ayarlar altında OpenVPN 2.x olarak değiştirin.</string>
+    <string name="remote_no_server_selected">En az bir uzak sunucu tanımlamanız ve etkinleştirmeniz gerekir.</string>
+    <string name="missing_tlsauth">tls-auth dosyası eksik</string>
+    <string name="missing_certificates">Eksik kullanıcı sertifikası veya kullanıcı sertifika anahtarı dosyası</string>
+    <string name="missing_ca_certificate">Eksik CA sertifikası</string>
+    <string name="custom_route_format_error">Özel rotalar ayrıştırılırken hata oluştu</string>
+    <string name="ipv4_format_error">IPv4 adresi ayrıştırılırken hata oluştu</string>
+    <string name="deprecated_tls_remote">Yapılandırma, 2.3\'te kullanımdan kaldırılan ve son olarak 2.4\'te kaldırılan tls-remote seçeneğini kullanır</string>
+    <string name="no_ca_cert_selected">Bir CA sertifikası seçmeli veya eş parmak izi kontrolünü etkinleştirmelisiniz</string>
+    <string name="no_keystore_cert_selected">Bir Kullanıcı sertifikası seçmelisiniz</string>
+    <string name="keyChainAccessError">KeyChain Erişim hatası: %s</string>
+    <string name="cannotparsecert">Sertifika bilgileri görüntülenemiyor</string>
+    <string name="crtext_requested">VPN kimlik doğrulamasına devam etmek için soruyu yanıtlayın</string>
+    <string name="openurl_requested">VPN kimlik doğrulamasına devam etmek için URL\'yi açın</string>
+    <string name="ip_looks_like_subnet">Vpn topolojisi \\"%3$s\\" belirtilmiş ancak ifconfig %1$s %2$s daha çok ağ maskeli bir IP adresi gibi görünüyor. Topolojinin \\"alt ağ\\" olduğunu varsayarsak.</string>
+    <string name="allowed_vpn_apps_info">İzin verilen VPN uygulamaları: %1$s</string>
+    <string name="disallowed_vpn_apps_info">İzin verilmeyen VPN uygulamaları: %1$s</string>
+    <string name="app_no_longer_exists">Paket %s artık yüklü değil, uygulama izin ver/izinsiz bırak listesinden kaldırılıyor</string>
+    <string name="no_allowed_app">İzin verilen uygulama eklenmedi. Tüm uygulamalara izin vermemek için izin verilen uygulama listesinde en az bir uygulamaya sahip olmak için kendimizi (%s) ekleme</string>
+    <string name="ignore_multicast_route">Çok noktaya yayın rotası yok sayılıyor: %s</string>
+    <string name="routes_debug">VpnService rotaları yüklendi: %1$s %2$s</string>
+    <string name="state_auth_failed">Kimlik doğrulama başarısız</string>
+    <string name="password">Şifre</string>
+    <string name="state_waitorbot">Orbot\'un başlamasını bekliyorum</string>
+    <string name="service_restarted">OpenVPN Hizmetini Yeniden Başlatma (Uygulama muhtemelen çöktü veya bellek baskısı nedeniyle öldürüldü)</string>
+    <string name="notifcation_title_notconnect">Bağlı değil</string>
+    <string name="permission_revoked">VPN izni işletim sistemi tarafından iptal edildi (örn. başka bir VPN programı başlatıldı), VPN durduruldu</string>
+    <string name="keychain_nocacert">Android anahtar deposundan okuma yapılırken CA Sertifikası döndürülmedi. Kimlik doğrulama muhtemelen başarısız olacaktır.</string>
+    <string name="abi_mismatch">Bu cihazın tercih edilen yerel ABI önceliği (%1$s) ve yerel kütüphaneler tarafından bildirilen ABI (%2$s) uyuşmazlığı</string>
+    <string name="jelly_keystore_alphanumeric_bug">Android 4.1\'in bazı sürümlerinde, anahtar deposu sertifikasının adı alfanümerik olmayan karakterler (boşluk, alt çizgi veya tire gibi) içeriyorsa sorun yaşanır. Sertifikayı özel karakterler olmadan yeniden içe aktarmayı deneyin</string>
+    <string name="keychain_access">Android Anahtar Zinciri Sertifikalarına erişilemiyor. Bunun nedeni bir ürün yazılımı yükseltmesi veya uygulama/uygulama ayarlarının bir yedeğinin geri yüklenmesi olabilir. Lütfen VPN\'i düzenleyin ve sertifikaya erişim iznini yeniden oluşturmak için temel ayarlar altında sertifikayı yeniden seçin.</string>
+    <string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>
+    <string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/sn</string>
+    <string name="state_auth_pending">Kimlik doğrulama beklemede</string>
+    <string name="reread_log">Günlük önbellek dosyasından (%d) günlük öğelerini yeniden oku</string>
+    <string name="state_waitconnectretry">Bağlantı denemeleri arasında %ss saniye bekleniyor</string>
+    <string name="unhandled_exception">İşlenmemiş istisna: %1$s\n\n%2$s</string>
+    <string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Routes: %1$s %2$s</string>
+    <string name="routes_info_excl" translatable="false">önlenen rotalar: %1$s %2$s</string>
+    <string name="title_activity_login">Oturum aç</string>
+    <string name="action_forgot_password">Parolamı unuttum</string>
+    <string name="register_process_registering">Kayıt ol...</string>
+    <string name="error_invalid_password">Parola çok kısa</string>
+    <string name="error_passwords_dont_match">Parolalar eşleşmiyor</string>
+    <string name="error_field_required">Bu alan gereklidir</string>
+    <string name="action_settings">Ayarlar</string>
+    <string name="title_connect">Bağlan</string>
+    <string name="title_serverlist">Sunucu listesi</string>
+    <string name="title_locations">Yerleri</string>
+    <string name="title_log">Günlükle</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Bağlan</string>
+    <string name="route_rejected">Yol Android tarafından reddedildi</string>
+    <string name="tun_error_helpful">Bazı özel ICS görüntülerinde /dev/tun izni yanlış olabilir veya tun modülü mevcut olmayabilir. CM9 görüntülerinde, genel ayarları altında sahiplik seçeneğini düzeltmeyi deneyin</string>
+    <string name="tun_open_error">Tun arabirimi açılamadı</string>
+    <string name="error">Hata:</string>
+    <string name="last_openvpn_tun_config">Tun arabirimi açılıyor:</string>
+    <string name="local_ip_info">Yerel IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">DNS Sunucusu: %1$s, Alanadı: %2$s</string>
+    <string name="routes_info">Yollar: %s</string>
+    <string name="routes_info6">IPv6 Yolları: %s</string>
+    <string name="ip_not_cidr">İkinci adresin uzak akran adresi olduğu varsayılarak arayüz bilgileri %1$s ve %2$s alındı. Yerel IP için /32 ağ maskesi kullanılıyor. OpenVPN tarafından verilen mod: \"%3$s\".</string>
+    <string name="route_not_cidr">%1$s ve %2$s, CIDR ağ maskesi ile IP rotası olarak mantıklı değil. Ağ maskesi olarak /32 kullanılıyor.</string>
+    <string name="route_not_netip">%1$s/%2$s yolları %3$s/%2$s olarak düzeltildi.</string>
+    <string name="no_vpn_support_image">Görüntünüz VPNService API\'sini desteklemiyor :(</string>
+    <string name="encryption">-Şifreleme</string>
+    <string name="opentun_no_ipaddr">IP bilgisi olmadan tun cihazını açma reddedildi</string>
+    <string name="building_configration">Yapılandırma gerçekleştiriliyor...</string>
+    <string name="netstatus">Ağ Durumu: %s</string>
+    <string name="mobile_info">Çalışma platformu: %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Android keystore anahtarı %1$s ile imzalama hatası: %2$s</string>
+    <string name="warn_no_dns">Kullanılan DNS sunucusu yok. Ad çözümlemesi çalışmayabilir. Özel DNS Sunucusu kurmayı düşünebilirsiniz. Ayrıca DNS sunucuları ayarlanmadığında Android\'in mobil/Wi-Fi bağlantısı için belirtilen proxy ayarlarını kullanmaya devam edeceğini lütfen unutmayın.</string>
+    <string name="dns_add_error">\"%1$s\" DNS Sunucusu eklenemedi. Sistem tarafından reddedildi: %2$s</string>
+    <string name="ip_add_error">\"%1$s\" IP Adresi yapılandırılamadı. Sistem tarafından reddedildi: %2$s</string>
+    <string name="getproxy_error">Proxy ayarları alınırken hata oluştu: %s</string>
+    <string name="using_proxy">Şu proxy kullanılıyor: %1$s %2$d</string>
+    <string name="minidump_generated">OpenVPN beklenmedik şekilde çöktü. Lütfen ana menüden Minidump gönderme seçeneğini kullanmayı düşünün.</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Bağlanıyor</string>
+    <string name="state_wait">Sunucudan cevap bekleniyor</string>
+    <string name="state_auth">Kimlik doğrulanıyor</string>
+    <string name="state_get_config">İstemci yapılandırması alınıyor</string>
+    <string name="state_assign_ip">IP adresleri atanıyor</string>
+    <string name="state_add_routes">Yollar ekleniyor</string>
+    <string name="state_connected">Bağlandı</string>
+    <string name="state_disconnected">Bağlantıyı Kes</string>
+    <string name="state_reconnecting">Yeniden bağlanıyor</string>
+    <string name="state_exiting">Çıkış yapılıyor</string>
+    <string name="state_noprocess">Çalışmıyor</string>
+    <string name="state_resolve">Ana bilgisayar adları çözümleniyor</string>
+    <string name="state_tcp_connect">Bağlanıyor (TCP)</string>
+    <string name="unknown_state">Bilinmiyor</string>
+    <string name="state_nonetwork">Kullanılabilir ağ bekleniyor</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">%s VPN\'ine bağlanılıyor</string>
+    <string name="start_vpn_ticker">VPN\'e bağlanılıyor: %s</string>
+    <string name="mobile_info_extended">Çalışma platformu: %1$s (%2$s) %3$s, Android API %4$d, Sürüm %5$s, %6$s</string>
+    <string name="built_by">%s tarafından yapılmıştır</string>
+    <string name="debug_build">hata ayıklama derlemesi</string>
+    <string name="official_build">resmi derleme</string>
+    <string name="screenoff_pause">Ekran kapalıyken bağlantıyı duraklatma: %2$s sn\'de %1$s den az</string>
+    <string name="state_userpause">Kullanıcı tarafından ,VPN duraklatması istendi</string>
+    <string name="state_screenoff">VPN duraklatıldı - ekran kapalı</string>
+    <string name="defaultServerName">Sunucu XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">VPN\'yi seç</string>
+    <string name="vpnSelectReason">Shellfire Hesabınızda birden çok VPN var. Lütfen kullanmak için birini seçin.</string>
+    <string name="rememberVpnSelection">Seçimi kaydet</string>
+    <string name="remember_vpn_summary">Birden çok VPN mevcut olduğu durumda, VPN\'i her oturumda seçmek zorunda değilsiniz.</string>
+    <string name="remember_vpn_title">Seçilen VPN\'i kaydet</string>
+    <string name="show_log_sum">Günlüğünü kalıcı olarak görüntülemek performans kaybına yol açabilir (uygulamayı yeniden başlatmak gerekir).</string>
+    <string name="show_log">Günlüğü göster</string>
+    <string name="default_product_type">Ücretsiz</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Sunucu</string>
+    <string name="connectionAdvice">Seçilen sunucuya bağlanır. Sunucu değiştirmek için sağa kaydırın.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Uygulama Günlüğü</string>
+    <string name="connectionState">Durum:</string>
+    <string name="disconnected">Bağlantı kesildi</string>
+    <string name="noAccountData">Kayıtlı değil misiniz?</string>
+    <string name="title_activity_register">Kaydol</string>
+    <string name="buyDailyPremium">0,99 Euro / 24 saat</string>
+    <string name="buyDailyPremiumPlus">1,99 Euro / 24 saat</string>
+    <string name="buyMonthlyPremium">3,49 Euro / ay</string>
+    <string name="buyMonthlyPremiumPlus">7,95 Euro / ay</string>
+    <string name="buyYearlyPremium">39,90 Euro / yıl</string>
+    <string name="buyYearlyPremiumPlus">84,90 Euro / yıl</string>
+    <string name="premiumUntil">Premium sonu:</string>
+    <string name="sendToShellfire">Günlüğü Shellfire\'a gönder</string>
+    <string name="verifying_purchase">Satınalma doğrulanıyor...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Premium Yükseltme başarılı. Sunucu listesi görüntülensin mi?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="YES">EVET</string>
+    <string name="upgrade_not_successful_check_log">Yükseltme başarılı değil, günlüğü kontrol edin!</string>
+    <string name="problem_setting_up_in_app_billing">Uygulama içi Faturalandırma sorunu:</string>
+    <string name="loading">Yükleniyor...</string>
+    <string name="send_log_to_shellfire">Günlüğü Shellfire\'a gönder</string>
+    <string name="log_send_succesfully">Günlük başarıyla Shellfire\'a gönderildi</string>
+    <string name="log_could_not_be_sent">Günlük gönderilemedi</string>
+    <string name="connecting">Bağlanıyor…</string>
+    <string name="cansel">CANCEL</string>
+    <string name="disconnect">Bağlantıyı kes</string>
+    <string name="connected">Bağlandı</string>
+    <string name="loading_certificates">Sertifikalar yükleniyor</string>
+    <string name="switching_from_udp_to_tcp">UDP\'den TCP\'ye geçiş</string>
+    <string name="switching_from_tcp_to_udp">TCP\'den UDP\'ye geçiş</string>
+    <string name="item_already_owned_consuming">öğeye zaten sahipsiniz - tüketiliyor</string>
+    <string name="item_consumed">öğe tüketildi</string>
+    <string name="already_on_this_server_doing_nothing">Zaten bu sunucuda - hiçbir şey yapılmıyor</string>
+    <string name="not_showing_premium_info">Premium bilgileri gösterilmiyor</string>
+    <string name="you_are_not_eligible_to_use_this_server">Sunucu sizin için mevcut değil.\nYükseltme bilgilerini görmek ister misiniz?</string>
+    <string name="you_are_currently_connecting_disconnect">Şu anda bağlısınız. Sunucu değişikliğinden önce bağlantı kesilmeli. Şimdi bağlantı kesilsin mi?</string>
+    <string name="not_changing_server">Sunucu değişimi iptal edildi</string>
+    <string name="sure_to_change_server">Sunucu değiştirmek istediğinize emin misiniz?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">Sunucu değiştiriliyor. Biraz zaman alabilir...</string>
+    <string name="server_selection_succesfully_performed_on_backend">Sunucu başarıyla değiştirildi.</string>
+    <string name="server_selection_could_not_be_changed">Sunucu değiştirilemedi. Lütfen ayrıntılar için günlüğü kontrol edin.</string>
+    <string name="connecting_please_wait">Bağlantı işleniyor - lütfen bekleyin</string>
+    <string name="action_about">Shellfire VPN Hakkında</string>
+
+    <string name="country">ülke</string>
+    <string name="title_activity_about">Shellfire VPN Hakkında</string>
+    <string name="hello_world">Merhaba dünya!</string>
+    <string name="copyright_shellfire">© 2014 Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">Bouncy Castle Kripto API\'leri</string>
+    <string name="copyright_openssl">Bu ürün, OpenSSL Toolkit ile birlikte kullanılmak üzere OpenSSL Project tarafından geliştirilmiş yazılım içermektedir\n Copyright © 1998-2008 OpenSSL Project. Tüm hakları saklıdır.\n\n Bu ürün, Eric Young tarafından yazılmış şifreleme yazılımı içerir (eay\@cryptsoft.com)\n 1995-1998 Eric Young © Copyright (eay\@cryptsoft.com) Tüm hakları saklıdır.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Copyright © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Bu program, aşağıdaki bileşenleri kullanır; lisanslar hakkında tam bilgi için (https://code.google.com/p/shellfirevpn4a/ mevcut) kaynak kodlarına bakın</string>
+    <string name="copyright_arne">The ics-openvpn project, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) adresinde mevcut: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright">Copyright © 2002-2010 OpenVPN Technologies, Inc &lt;sales\@openvpn.net&gt;\n OpenVPN, OpenVPN Technologies, Inc\'in bir ticari markasıdır</string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 Bouncy Castle Of Legion (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">kadar</string>
+    <string name="state_user_vpn_password">Kullanıcı VPN parolası bekleniyor</string>
+    <string name="state_user_vpn_permission_cancelled">VPN API izni iletişimi iptal edildi</string>
+    <string name="account_created_succesfully">Hesap başarıyla oluşturuldu - aktivasyon e-postası için e-postalarınızı kontrol edin.</string>
+    <string name="free">Ücretsiz</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Premium\nPlus</string>
+    <string name="hours24">24 saat</string>
+    <string name="month_1">1 ay</string>
+    <string name="monthly">aylık</string>
+    <string name="yearly">yıllık</string>
+    <string name="cents99">0.99 Eur</string>
+    <string name="cents199">1.99 Eur</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9.95 Eur</string>
+    <string name="cents395">3.95 Eur</string>
+    <string name="cents795">7.95 Eur</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Satın Al</string>
+    <string name="compare">Karşılaştır</string>
+    <string name="singlePayment">tek ödeme *</string>
+    <string name="subscription">abonelik **</string>
+    <string name="note_payment_types">* Kredi kartı gerekli değil\n ** Kredi kartı gerekmektedir; Google Play ile her zaman iptal edilebilir. r\n r\n sitemizde Paypal ile ödeme: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">VPN seçiliyor ...</string>
+    <string name="cobiCodeEnter">BİLGİSAYAR BILD Campaign</string>
+    <string name="cobiClickHere">Kodu Girin</string>
+
+    <string name="enter_cobi_code">COMPUTERBILD Kodunun buraya girin:</string>
+    <string name="action_share">Bu uygulamayı paylaş</string>
+    <string name="share_with">Şunu kullanarak paylaş:</string>
+    <string name="share_text">Verilerimi hacker\'lardan korumak ve sansür engelini kaldırmak için Shellfire #VPN uygulamasını kullanıyorum: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Bu uygulamayı oylayın</string>
+    <string name="rate_this_app">Bu uygulamayı oylayın</string>
+    <string name="rate_explanation">Bu uygulama sizi ikna etti mi? Google Play\'de uygulamamızı oylarsanız çok mutlu oluruz. Desteğiniz için teşekkürler!</string>
+    <string name="rate_now">Şimdi oyla</string>
+    <string name="rate_later">Sonra</string>
+    <string name="rate_never">Hayır, teşekkürler</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Tarifim</string>
+    <string name="current_plan">geçerli tarife</string>
+    <string name="PAID_UNTIL">Geçerlilik</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Daha fazla işlev için hesabınızı yükseltin</string>
+
+
+    <string name="retry">Yeniden Dene</string>
+    <string name="network_problem_title">Ağ sorunu</string>
+    <string name="network_problem_message">Şu anda internete bağlı değilsiniz. Shellfire VPN etkin bir internet bağlantısı gerektirir.</string>
+    <string name="login_error">oturum açma hatası</string>
+    <string name="serverLoad">Yük</string>
+    <string name="reloadServerList">Güncelle</string>
+    <string name="upgrade_not_successful">Yükseltme başarılı değil</string>
+
+    <string name="new_version_available_title">Yeni sürüm mevcut</string>
+    <string name="new_version_available_message">Google Play Store üzerinde Shellfire VPN\'in yeni bir sürümü var. Bu sürüm artık düzgün çalışmayabilir veya güvenlik sorunları içeriyor olabilir bu yüzden yakın zamanda yüklemeniz gerekir. Güncellemek için şimdi Play Store gitmek? Not: / yeni sürümünü almak için yeniden yüklemeniz kaldırmanız gerekebilir.</string>
+
+    <string name="dontshowagain">Hayır ve tekrar gösterme</string>
+    <string name="not_now">Şimdi değil</string>
+    <string name="server">Sunucu</string>
+
+    <string name="_128bit">128 bit şifreleme</string>
+    <string name="_192bit">192 bit şifreleme</string>
+    <string name="_256bit">256 bit şifreleme</string>
+
+    <string name="upto786">786 kbit/sn\'ye kadar</string>
+    <string name="upto10000">10.000 kbit/sn\'ye kadar</string>
+    <string name="unlimited">sınırsız kbit/sn</string>
+
+    <string name="php_invalid_email">Lütfen geçerli bir e-posta adresi girin.</string>
+    <string name="php_account_exists">Bu e-posta adresi ile kayıtlı bir hesap zaten var.</string>
+
+
+    <string name="php_signature">Shellfire takımından saygılarımızla 
+        
+Not: Shellfire ile para kazanın! Bize yeni müşteri bulun, size %%100\'e varan komisyon ödeyelim: https://www.shellfire.net/affiliate-center/
+İkinci not: Twitter\'da bizi takip edin: Http://twitter.com/shellfire_en 
+
+Shellfire Gattung &amp; Behr GbR http://www.shellfire.net
+mailto: hosting@shellfire.de
+----------------------------------------------------------------------------
+Shellfire Gattung &amp; Behr GbR 
+Yönetimi: Florian Gattung, Maximilian Behr
+Medeni Kanun\'daki Ortaklığı Bad Vilbel, Almanya</string>
+
+    <string name="php_surf_anonym">Web\'de anonim olarak gezin</string>
+    <string name="php_hide_ip">Kendi IP adresinizi gizleyin</string>
+    <string name="php_encrypt_internet">Şifreli internet bağlantısı</string>
+    <string name="php_secure_wifi">Açık wifi noktalarını güvenle kullanın</string>
+    <string name="php_unlimited">sınırsız</string>
+    <string name="php_traffic">Trafik / veri hacmi</string>
+    <string name="php_speed_generic">%1$s kbit / sn</string>
+    <string name="php_speed">Hız</string>
+    <string name="php_server_in_generic">Sunucu konumu: %1$s</string>
+    <string name="php_change_location">Her zaman yerini değiştirin</string>
+    <string name="php_streaming_websites">Akış web siteleri</string>
+
+
+    <string name="play_product_description">Shellfire VPN - kolay. güvenli. bağlı. Kayda gerek yok. Shellfire VPN ÜCRETSİZ\'dir ve size bir kuruş maliyeti yoktur. Sınırsız Trafik, Sınırsız Süre! Shellfire VPN, IP adresinizi gizler, Internet engellerini kaldırır ve size özgürce ve anonim istediğiniz herhangi bir siteye erişme için seçeneği sunar. Shellfire VPN ile, kimliğinizin gizli olduğunu bilerek herhangi bir web sitesine bağlanabilirsiniz. Biz internet sansürü uygulayan ülkelerde Skype, Facebook, Twitter, YouTube vb engelini kaldırıyoruz ve hatta yurt dışından ülkenizin televizyon ve radyo hizmetlerine erişiminizi sağlıyor. Shellfire VPN güvensiz açık wifi ağlarını bile, bilgisayar korsanlarına, NSA ve diğer tehditlere karşı verilerinizi korumak için size süper güçlü şifreleme verir! Daha Yüksek Hız - Daha Güçlü Şifreleme - Sunuculardan Serbest seçim için: Şili, Avusturya, Kanada, Fransa, Almanya, Hong Kong, İtalya, Hollanda, Polonya, Romanya, Rusya, İspanya, İsveç, İsviçre, İngiltere ve ABD. - PremiumPlus müşteriler şu sunuculara özel erişime sahiptir: İzlanda, Isle of Man (deniz) ve Liechtenstein Shellfire VPN - Android için en iyi VPN istemcisi. Shellfire VPN, Windows, Mac OS, iOS veya Linux üzerinde çalışır! Daha fazla bilgi için ziyaret edin: https://www.shellfire.net/vpn/ .  Anlık güncellemeler için Facebook\'ta ve Twitter\'da bizi takip edin https://www.facebook.com/shellfire.de\nhttps://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Web\'de anonim gezinme - Şifreli bağlantı - Her yerden Hulu, Youtube vs. erişim</string>
+
+    <string name="play_product_description_generic">%1$s bit şifreleme, %2$s kbit/sn\'ye kadar aktarım hızı dünya çapında %3$s ülkede Sunucu,</string>
+
+    <string name="hosting_since_2002">2002’den beri hizmeti sunuyoruz</string>
+    <string name="vision">Vision</string>
+    <string name="vision_data">Inanıyoruz ki bağımsız ve güvenilir internet erişimi bu dünyada her bir şahısın en temel haklarından biri olduğuna. Işte bu bizim görevimiz, sanal dünyayı güvenilir ve bağımsız bir yer olarak sunmak. Şifrelenmis VPN sayesinde sizleri kulak misafirlerinden ve hackerlardan koruyoruz.</string>
+    <string name="hotspot">translate</string>
+    <string name="hotspot_data_p1">Son yıllarda 500.000\'den fazla kullanıcının çevrimiçi gizliliklerini korumalarına ve sansürün üstesinden gelmelerine yardımcı olduk. Yüksek hizmet ve güvenlik standartlarımız \"Made in Germany\" Shellfire\'ı bugün VPN pazarındaki en iyi adreslerden biri haline getiriyor.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Şimdi satın al</string>
+    <string name="tv_single_pay">Tek ödeme</string>
+    <string name="tv_subscription_pay">Abone</string>
+    <string name="pay_24h">24 saat</string>
+    <string name="pay_month">1 ay</string>
+    <string name="subs_month">ay</string>
+    <string name="subs_year">yıl</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Harita</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Sunucu değişimi başarıyla tamamlandı – şimdi bağlanmak istermisin?</string>
+    <string name="saotomeandprincipe">São Tomé ve Príncipe</string>
+    <string name="hosting_data">Shellfire GmbH, Frankfurt am Main yakınlarındaki Schmitten\'de bulunan bir barındırma sağlayıcısıdır. Shellfire 2002 yılında Florian Gattung ve Maximilian Behr tarafından kurulmuştur ve o tarihten bu yana yönetici ortak olarak görev yapmaktadırlar.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Shellfire’ye söylemek istediklerini buraya yazabilirsin…</string>
+    <string name="load">Sunucu kullanımı:</string>
+    <string name="choose_a_plan">Bir tarife seçin</string>
+    <string name="speed">Hız</string>
+    <string name="servers">Sunucular</string>
+    <string name="countries">Ülkeler</string>
+    <string name="encryption_server">Şifreleme</string>
+    <string name="video_streaming">Video akışı</string>
+    <string name="unblock_all_content">Tüm içeriğin engelini kaldır</string>
+    <string name="encrypted_connection">Şifreli bağlantı</string>
+    <string name="safe_hotspot_usage">Güvenli hotspot kullanımı</string>
+    <string name="unlimited_traffic">Sınırsız Trafik</string>
+    <string name="upgrade">YÜKSELTMEK</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Ileri</string>
+    <string name="STANDARD">Standart</string>
+    <string name="ALL_SERVERS">Tüm sunucular</string>
+    <string name="unlock">engeli kaldırmak</string>
+    <string name="filter">Filtrele</string>
+
+    <string name="format_server">Sunucu %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN Küçük Widget</string>
+    <string name="widget_label_medium">Shellfire VPN Medium Widget</string>
+    <string name="widget_label_large">Shellfire VPN Büyük Widget</string>
+
+    <string name="pref_title_mode_connection">Bağlantı Modu</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Hesabınızı etkinleştirmek için, lütfen size az önce gönderdiğimiz e-postadaki bağlantıya tıklayın.</string>
+    <string name="email_validation_required_title">Hesabın etkinleştirilmesi gerekiyor</string>
+    <string name="sending_log">Günlük Gönderiliyor...</string>
+    <string name="loading_one">Yükleme BİR</string>
+    <string name="loading_two">İKİ Yükleniyor</string>
+    <string name="logout">Oturumu Kapat</string>
+    <string name="action_connection_mode">Bağlantı Modu</string>
+    <string name="action_select_vpn">VPN\'i seçin</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Geri Bildirim Verin</string>
+    <string name="title_activity_log">Shellfire\'a Geri Bildirim Gönderin</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Uygulamamızı Değerlendirin</string>
+    <string name="initial_dialog_message">Uygulamamızı beğendiniz mi\?</string>
+    <string name="initial_dialog_positive">Evet</string>
+    <string name="initial_dialog_negative">Hayır</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Uygulamamızı Değerlendirin</string>
+    <string name="rate_dialog_message">Uygulamamızı değerlendirmek ister misiniz\?</string>
+    <string name="rate_dialog_positive">Evet, bayıldım!</string>
+    <string name="rate_dialog_negative">Hayır, teşekkürler.</string>
+    <string name="rate_dialog_neutral">Belki daha sonra.</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Geri Bildirim Sağlayın</string>
+    <string name="feedback_dialog_message">Geri bildirimde bulunmak ister misiniz\?</string>
+    <string name="feedback_dialog_positive">Evet, geri bildirim vermek istiyorum</string>
+    <string name="feedback_dialog_negative">Hayır, teşekkürler.</string>
+
+    <string name="send_feedback_progress">Geri bildirim gönderiyorum...</string>
+    <string name="feedback_sent_successfully">Geri bildirim başarıyla gönderildi</string>
+    <string name="feedback_not_sent">Geri bildirim gönderilemedi</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Lütfen geri bildiriminizi aşağıda belirtin. Dilerseniz, herhangi bir sorunu daha iyi anlamamıza yardımcı olmak için uygulama ve sistem günlüklerini de ekleyebilirsiniz.</string>
+    <string name="include_application_and_system_logs">Uygulama ve sistem günlüklerini dahil edin</string>
+    <string name="send_feedback">Geri bildirim gönderin</string>
+    <string name="abort">İptal</string>
+    <string name="serverchange_timeout">Sunucu değiştirme işlemi zaman aşımına uğradı. Lütfen tekrar deneyin.</string>
+    <string name="protocol_is_being_changed">Protokol değiştiriliyor. Bu biraz zaman alabilir..</string>
+    <string name="protocol_change_timeout">Sunucu değiştirme işlemi zaman aşımına uğradı. Lütfen tekrar deneyin.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Giriş yap...</string>
+    <string name="login_with_existing_account">Mevcut Shellfire hesabı ile oturum aç</string>
+    <string name="prompt_email">e-posta / müşteri no. / VPN kullanıcısı</string>
+    <string name="prompt_password">parola</string>
+    <string name="action_sign_in_short">Oturum aç</string>
+    <string name="login">Oturum aç</string>
+    <string name="lostAccountData">Parolanızı mı unuttunuz?</string>
+    <string name="register_new_account">Yeni Hesap Açın</string>
+    <string name="welcomeText">Shellfire VPN\'e Hoş Geldiniz!</string>
+    <string name="needToAcceptAndRegister">Shellfire VPN\'i kullanmak için hüküm ve koşulları kabul etmeniz ve e-posta adresinizle kaydolmanız gerekir.</string>
+    <string name="prompt_email_only">e-posta</string>
+    <string name="subscribeNewsletter">Haber bültenine abone olun - Shellfire, ürünleri ve özel fırsatlarıyla e-posta almayı kabul ediyorum.</string>
+    <string name="register">Kabul et ve Kaydol</string>
+    <string name="i_have_an_account">Zaten bir Shellfire VPN hesabım  var</string>
+    <string name="greeting_text">Shellfire VPN\'e hoş geldiniz! Devam etmek için lütfen giriş yapın veya kayıt olun.</string>
+    <string name="slow">Yavaş</string>
+    <string name="brilliant">Mükemmel</string>
+    <string name="back">Geri</string>
+    <string name="failed_to_change_server">Sunucu değiştirilemedi</string>
+    <string name="sign_in_with_google">Google ile oturum açın</string>
+    <string name="google_sign_in_confirmation_title">Google Oturum Açma Onayı</string>
+    <string name="cancel">İptal</string>
+    <string name="confirm">Onaylayın</string>
+    <string name="try_out_for_7_days">7 gün ücretsiz deneyin.</string>
+    <string name="then_get_discount">O zaman %1$s indirim kazanın.</string>
+    <string name="one_year">1 Yıl</string>
+    <string name="price_yearly_per_month">1$s / ay\'a karşılık gelir</string>
+    <string name="price_yearly_per_year">%1$s / yıl</string>
+    <string name="price_yearly_per_month_all_subs">1 yıl - %1$s / ay</string>
+    <string name="discount_also_in_next_two_years">%1$s indirim (ilk 2 yıl için)</string>
+    <string name="first_seven_days_free_explain_text">İlk 7 gün ücretsiz.\nÜcretsiz deneme şu şekilde çalışır.</string>
+    <string name="price_monthly_per_month_all_subs">1 ay - %1$s / ay</string>
+    <string name="price_per_month_selected_sub">%2$s için %1$s</string>
+    <string name="price_info_yearly_per_year_trial_explainer">7 gün ücretsiz, ardından %1$s/yıl (%2$s/ay\'a karşılık gelir).</string>
+    <string name="one_month">1 ay</string>
+    <string name="twelve_months">12 ay</string>
+    <string name="get_premium_plus">Shellfire VPN Premium Plus\'ı edinin</string>
+    <string name="try_now_for_free">Şimdi Ücretsiz Deneyin</string>
+    <string name="start_now">Şimdi Başlayın</string>
+    <string name="best_price_per_month">Aylık en iyi fiyat</string>
+    <string name="seven_days_free">İlk 7 gün için ücretsiz</string>
+    <string name="cancel_monthly">İstediğin zaman iptal et</string>
+    <string name="no_longterm_commitment">Uzun vadeli taahhüt yok</string>
+    <string name="show_all_subscriptions">Tüm Abonelikleri Göster</string>
+    <string name="choose_subscription">Aboneliğinizi seçin</string>
+    <string name="access_all_features_and_protect_five_devices">Tüm Premium özelliklere erişin ve 5 cihazı koruyun</string>
+    <string name="first_payment_info_today">İlk ödeme şimdi yapılmalıdır. Bu abonelik iptal edilene kadar otomatik olarak yenilenir.</string>
+    <string name="first_payment_info_seven_days">İlk ödemenin 7 gün içinde yapılması gerekmektedir. Bu abonelik iptal edilene kadar otomatik olarak yenilenir.</string>
+    <string name="trial_link_text">7 gün ücretsiz deneyin - işte böyle çalışır.</string>
+    <string name="trial_info">Ödemeye 7 gün sonra başlayın. İlk dönemden sonra abonelik, siz iptal edene kadar her yıl otomatik olarak yenilenir.</string>
+    <!-- General -->
+    <string name="close_button_text">Kapat</string>
+    <string name="cta_button_text">Şimdi Ücretsiz Deneyin</string>
+
+    <!-- Trial Explainer Card -->
+    <string name="trial_explainer_title">7 Günlük Ücretsiz Deneme Nasıl Çalışır\?</string>
+    <string name="trial_step1_title">Bugün: Tüm Premium Özelliklere Tam Erişim</string>
+    <string name="trial_step1_description">Tüm premium özellikleri keşfedin ve uygulamanın tam işlevselliğini test edin.</string>
+    <string name="trial_step2_title">5. Gün: Denemenin Sonu Hakkında Hatırlatma E-postası</string>
+    <string name="trial_step2_description">Denemenin yakında sona ereceğini hatırlatmak için size bir e-posta göndereceğiz.</string>
+    <string name="trial_step3_title">7. Gün: Deneme Süreniz Sona Eriyor, Aboneliğiniz Başlıyor</string>
+    <string name="trial_step3_description">Bu güne kadar iptal etmediğiniz takdirde ilk yılın ödemesi otomatik olarak yapılacaktır.</string>
+    <string name="for_the_first_two_years">(ilk iki yıl için)</string>
+    <string name="no_browser_available_to_open_the_link">Bağlantıyı açmak için tarayıcı mevcut değil.</string>
+
+</resources>

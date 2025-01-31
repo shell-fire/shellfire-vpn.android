@@ -1,0 +1,98 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="big">18dp</dimen>
+    <dimen name="verybig">25dp</dimen>
+    <dimen name="almostverybig">23dp</dimen>
+    <dimen name="small">8dp</dimen>
+    <dimen name="medium">10dp</dimen>
+    <dimen name="mediumbig">14dp</dimen>
+    <dimen name="log_txt_size">16sp</dimen>
+    <dimen name="log_margin">10dp</dimen>
+    <dimen name="about_txt_size_16">16sp</dimen>
+    <dimen name="server_list_indent_10">10dp</dimen>
+    <dimen name="server_list_img_size">40dp</dimen>
+    <dimen name="server_list_indent_5">5dp</dimen>
+
+    <dimen name="status_intend_5">5dp</dimen>
+    <dimen name="status_intend_8">8dp</dimen>
+    <dimen name="status_intend_10">10dp</dimen>
+    <dimen name="status_intend_15">15dp</dimen>
+    <dimen name="status_intend_20">20dp</dimen>
+    <dimen name="status_txt_size_12">12sp</dimen>
+    <dimen name="status_txt_size_10">10sp</dimen>
+    <dimen name="status_txt_size_14">14sp</dimen>
+    <dimen name="status_txt_size_18">18sp</dimen>
+    <dimen name="status_btn_connect_height">35dp</dimen>
+    <dimen name="status_btn_connect_width">120dp</dimen>
+    <dimen name="status_container_height">50dp</dimen>
+
+    <dimen name="premium_intent_15">15dp</dimen>
+    <dimen name="premium_intent_43">43dp</dimen>
+    <dimen name="premium_intent_5">5dp</dimen>
+    <dimen name="premium_intent_7">7dp</dimen>
+    <dimen name="premium_intent_40">40dp</dimen>
+    <dimen name="premium_intent_3">3dp</dimen>
+    <dimen name="premium_txt_size">14sp</dimen>
+
+    <dimen name="log_intent_25">25dp</dimen>
+    <dimen name="server_list_intent_20">20dp</dimen>
+
+<!--fragment_payment-->
+    <dimen name="crown_size">16dp</dimen>
+    <dimen name="payment_dialog_indent_4">4dp</dimen>
+    <dimen name="payment_dialog_indent_5">5dp</dimen>
+    <dimen name="payment_dialog_indent_7">7dp</dimen>
+    <dimen name="payment_dialog_indent_13">13dp</dimen>
+    <dimen name="payment_dialog_indent_15">15dp</dimen>
+    <dimen name="payment_dialog_indent_35">35dp</dimen>
+    <dimen name="payment_dialog_indent_65">65dp</dimen>
+    <dimen name="payment_dialog_indent_80">80dp</dimen>
+    <dimen name="payment_dialog_indent_130">130dp</dimen>
+    <dimen name="payment_dialog_text_size_17">17sp</dimen>
+    <dimen name="payment_dialog_triangle_height">8dp</dimen>
+
+    <dimen name="current_plan_indent_20">20dp</dimen>
+
+    <dimen name="viewpager_margin">-20dp</dimen>
+    <dimen name="viewpager_margin_fix">10dp</dimen>
+    <dimen name="btn_upgrade_indent_40">40dp</dimen>
+    <dimen name="dialog_text_size">20sp</dimen>
+    <dimen name="server_list_button_indent">0dp</dimen>
+
+   <!-- ContinentChooseFragment-->
+    <dimen name="asia_margin_bottom">79dp</dimen>
+    <dimen name="asia_margin_start">97dp</dimen>
+    <dimen name="europa_margin_start">308dp</dimen>
+
+    <!--Widget-->
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="widget_indent_8">8dp</dimen>
+    <dimen name="widget_indent_4">4dp</dimen>
+    <dimen name="widget_logo_size">24dp</dimen>
+
+
+    <dimen name="corner_radius">4dp</dimen>
+    <dimen name="corner_radius_12">12dp</dimen>
+
+    <dimen name="app_widget_width_large">250dp</dimen>
+    <dimen name="app_widget_width_medium">180dp</dimen>
+
+    <dimen name="logo_size">100dp</dimen>
+    <dimen name="indent_small">8dp</dimen>
+    <dimen name="indent_tiny">4dp</dimen>
+    <dimen name="icon_size_24">24dp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <dimen name="about_padding">16dp</dimen>
+    <dimen name="about_txt_size_10">10sp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="about_space_height">16dp</dimen>
+
+
+</resources>

@@ -1,0 +1,490 @@
+<resources>
+    <string name="channel_name_userreq">Reikalinga naudotojo sąveika</string>
+    <string name="channel_description_userreq">\"OpenVPN\" ryšys reikalauja naudotojo įvesties, pvz., dviejų veiksnių autentifikavimo.
+    </string>
+    <string name="channel_name_background">Ryšio statistika</string>
+    <string name="channel_description_background">Užmegzto OpenVPN ryšio nuolatinė statistika</string>
+    <string name="channel_name_status">Ryšio būsenos pasikeitimas</string>
+    <string name="channel_description_status">OpenVPN ryšio būsenos pokyčiai (prisijungimas, autentifikavimas,...)</string>
+	<string name="save_password">Išsaugoti slaptažodį</string>
+	<string name="show_password">Rodyti slaptažodį</string>
+	<string name="auth_username">Vartotojo vardas</string>
+	<string name="remote_trust">Pasitikiu šia programa.</string>
+	<string name="remote_warning">Tęsdami veiksmus suteikiate programai leidimą visiškai valdyti \"OpenVPN for Android\" ir perimti visą tinklo srautą.<b>NEPRIKLAUSYKITE, jei nepasitikite paraiška.</b> Priešingu atveju rizikuojate, kad jūsų duomenims kenkia kenkėjiška programinė įranga.\"</string>
+	<string name="permission_icon_app">Programos, bandančios naudoti \"OpenVPN\" \"Android\", piktograma</string>
+	<string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+	<string name="config_error_found">Klaida konfigūracijoje</string>
+	<string name="nought_alwayson_warning"><![CDATA[Jei negavote VPN patvirtinimo dialogo lango, vadinasi, esate įjungę \\"Visada įjungtas VPN\\" kitoje programoje. Tokiu atveju tik tai programėlei leidžiama prisijungti prie VPN. Patikrinkite nustatymų dalyje Nustatymai-> Tinklai daugiau... -> VPNS]]></string>
+	<string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+	<string name="pw_request_dialog_title">Reikia %1$s</string>
+    <string name="pw_request_dialog_prompt">Įveskite profilio %1$s slaptažodį</string>
+	<string name="shortcut_profile_notfound">Nerastas nuorodoje nurodytas profilis</string>
+	<string name="app">\"Shellfire\" VPN \"Android</string>
+	<string name="prompt">%1$s bando kontroliuoti %2$s</string>
+	<string name="all_app_prompt">Išorinė programa bando valdyti %s. Programos, prašančios prieigos, nustatyti neįmanoma. Leidimas šiai programėlei suteikia prieigą VISOMS programėlėms.</string>
+	<string name="screen_nopersistenttun">Įspėjimas: Nuolatinis derinimas neįjungtas šiam VPN. Kai ekranas išjungtas, duomenų srautas bus perduodamas įprastu interneto ryšiu.</string>
+	<string name="private_key_password">Privataus rakto slaptažodis</string>
+	<string name="pkcs12_file_encryption_key">PKCS12 failų šifravimo raktas</string>
+	<string name="no_error_found">Klaidų nerasta</string>
+	<string name="no_orbotfound">\"Orbot\" programos negalima rasti. Įdiekite \"Orbot\" arba naudokite rankinį \"Socks v5\" integravimą.</string>
+	<string name="error_orbot_and_proxy_options">Negalima vienu metu naudoti papildomo http-proxy-option teiginio ir \"Orbot\" integracijos</string>
+	<string name="openvpn3_socksproxy">\"OpenVPN 3 C++\" nepalaiko prisijungimo per \"Socks\" tarpinį serverį</string>
+	<string name="openvpn3_nostatickeys">\"OpenVPN 3 C++\" įgyvendinimas nepalaiko statinių raktų. Bendruosiuose nustatymuose pakeiskite \"OpenVPN 2.x\".</string>
+    <string name="openvpn3_pkcs12">PKCS12 failų naudojimas tiesiogiai su \"OpenVPN 3 C++\" nepalaikomas. Importuokite pkcs12 failus į \"Android\" raktų saugyklą arba pakeiskite \"OpenVPN 2.x\" bendruosiuose nustatymuose.</string>
+	<string name="remote_no_server_selected">Reikia nustatyti ir įjungti bent vieną nuotolinį serverį.</string>
+	<string name="missing_tlsauth">trūksta tls-auth failo</string>
+    <string name="missing_certificates">Trūksta naudotojo sertifikato arba naudotojo sertifikato rakto failo</string>
+    <string name="missing_ca_certificate">Trūksta CA sertifikato</string>
+	<string name="custom_route_format_error">Klaida analizuojant pasirinktinius maršrutus</string>
+	<string name="ipv4_format_error">Klaida analizuojant IPv4 adresą</string>
+	<string name="deprecated_tls_remote">Konfigūracijoje naudojama parinktis tls-remote, kuri 2.3 versijoje buvo panaikinta, o 2.4 versijoje - pašalinta.</string>
+	<string name="no_ca_cert_selected">Privalote pasirinkti CA sertifikatą arba įjungti tarpusavio pirštų atspaudų tikrinimą.</string>
+	<string name="no_keystore_cert_selected">Turite pasirinkti naudotojo sertifikatą</string>
+	<string name="keyChainAccessError">KeyChain prieigos klaida: %s</string>
+	<string name="cannotparsecert">Negalima rodyti sertifikato informacijos</string>
+	<string name="crtext_requested">Atsakykite į iššūkį ir tęskite VPN autentifikavimą</string>
+	<string name="openurl_requested">Atidarykite URL, kad tęstumėte VPN autentifikavimą</string>
+	<string name="ip_looks_like_subnet">Nurodyta Vpn topologija \\"%3$s\\", bet ifconfig %1$s %2$s labiau primena IP adresą su tinklo kauke. Darant prielaidą, kad topologija \\"potinklis\\".</string>
+	<string name="allowed_vpn_apps_info">Leidžiamos VPN programos: %1$s</string>
+	<string name="disallowed_vpn_apps_info">Neleidžiamos VPN programos: %1$s</string>
+	<string name="app_no_longer_exists">Paketas %s nebėra įdiegtas, pašalinkite jį iš programų leidžiamų/neleidžiamų sąrašo</string>
+	<string name="no_allowed_app">Nebuvo pridėta leistina programa. Pridėti save (%s), kad į leidžiamų programėlių sąrašą būtų įtraukta bent viena programėlė, kad nebūtų leista naudoti visų programėlių</string>
+	<string name="ignore_multicast_route">Daugiaadresinio transliavimo maršruto ignoravimas: %s</string>
+	<string name="routes_debug">Įdiegti VpnService maršrutai: %1$s %2$s</string>
+	<string name="state_auth_failed">Autentifikavimas nepavyko</string>
+	<string name="password">Slaptažodis</string>
+	<string name="state_waitorbot">Laukiama, kol startuos \"Orbot</string>
+	<string name="service_restarted">OpenVPN paslaugos paleidimas iš naujo (programa tikriausiai sugedo arba žuvo dėl atminties spaudimo)</string>
+	<string name="notifcation_title_notconnect">Neprijungta</string>
+	<string name="permission_revoked">OS atšaukė VPN leidimą (pvz., paleista kita VPN programa), sustabdytas VPN</string>
+	<string name="keychain_nocacert">Skaitydamas iš \"Android\" raktų saugyklos negrąžino jokio CA sertifikato. Autentiškumo nustatymas tikriausiai nepavyks.</string>
+	<string name="abi_mismatch">Nesutampa šio įrenginio pageidaujama ABI pirmenybė (%1$s) ir ABI, apie kurią praneša vietinės bibliotekos (%2$s)</string>
+	<string name="jelly_keystore_alphanumeric_bug">Kai kuriose \"Android 4.1\" versijose kyla problemų, jei raktų saugyklos sertifikato pavadinime yra ne raidinių ir skaitmeninių simbolių (pvz., tarpų, pabraukimų ar brūkšnelių). Pabandykite iš naujo importuoti sertifikatą be specialiųjų simbolių</string>
+	<string name="keychain_access">Negalima pasiekti \"Android\" raktų rinkinio sertifikatų. Taip gali nutikti dėl programinės įrangos atnaujinimo arba atkuriant atsarginę programėlės ir (arba) programėlių nustatymų kopiją. Redaguokite VPN ir iš naujo pasirinkite sertifikatą pagrindiniuose nustatymuose, kad iš naujo sukurtumėte leidimą pasiekti sertifikatą.</string>
+	<string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>	
+	<string name="bits_per_second">%.0f bitų/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+	<string name="state_auth_pending">Laukiama autentiškumo patvirtinimo</string>
+	<string name="reread_log">Iš naujo perskaityti (%d) žurnalo elementų iš žurnalo talpyklos failo</string>
+	<string name="state_waitconnectretry">Laukimas %ss sekundžių tarp bandymų prisijungti</string>
+	<string name="unhandled_exception">Neišspręsta išimtis: %1$s\n\n%2$s</string>
+	<string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Maršrutai: %1$s %2$s</string>
+    <string name="routes_info_excl">Neįtraukti maršrutai: %1$s %2$s</string>
+    <string name="title_activity_login">Prisijungti</string>
+    <string name="action_forgot_password">Pamirštas slaptažodis</string>
+    <string name="register_process_registering">Registruokitės...</string>
+    <string name="error_invalid_password">Slaptažodis yra per trumpas</string>
+    <string name="error_passwords_dont_match">Slaptažodžiai nesutampa</string>
+    <string name="error_field_required">Šis laukas yra privalomas</string>
+    <string name="action_settings">Nustatymai</string>
+    <string name="title_connect">Statusas</string>
+    <string name="title_serverlist">Serverių sąrašas</string>
+    <string name="title_locations">Vietovės</string>
+    <string name="title_log">Žurnalas</string>
+    <string name="title_billing">\"Premium\"</string>
+    <string name="connect">Prisijungti</string>
+    <string name="route_rejected">\"Android\" atmestas maršrutas</string>
+    <string name="tun_error_helpful">Kai kuriuose pasirinktiniuose ICS atvaizduose /dev/tun leidimas gali būti neteisingas arba gali visiškai nebūti tune modulio. CM9 atvaizdų atveju pabandykite nustatyti nuosavybės teisių nustatymo parinktį bendruosiuose nustatymuose</string>
+    <string name="tun_open_error">Nepavyko atidaryti tun sąsajos</string>
+    <string name="error">\"Klaida: \"</string>
+    <string name="last_openvpn_tun_config">Tun sąsajos atidarymas:</string>
+    <string name="local_ip_info">Vietinis IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">DNS serveris: %1$s, domenas: %2$s</string>
+    <string name="routes_info">Maršrutai: %s</string>
+    <string name="routes_info6">IPv6 maršrutai: %s</string>
+    <string name="ip_not_cidr">Gauta informacija apie sąsają %1$s ir %2$s, darant prielaidą, kad antrasis adresas yra nutolusios sąsajos adresas. Vietiniam IP naudojama /32 tinklo kaukė. \"OpenVPN\" nurodytas režimas yra \\"%3$s\\".</string>
+    <string name="route_not_cidr">Negalima suprasti %1$s ir %2$s kaip IP maršruto su CIDR tinklo kauke, naudojant /32 kaip tinklo kaukę.</string>
+    <string name="route_not_netip">Ištaisytas maršrutas %1$s/%2$s į %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Jūsų vaizdas nepalaiko VPNService API, atsiprašome :(</string>
+    <string name="encryption">-Šifravimas</string>
+    <string name="opentun_no_ipaddr">Atsisakymas atidaryti tun įrenginį be IP informacijos</string>
+    <string name="building_configration">Pastato konfigūracija...</string>
+    <string name="netstatus">Tinklo būsena: %s</string>
+    <string name="mobile_info">Veikia %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Pasirašymo su \"Android\" raktų saugyklos raktu klaida %1$s: %2$s</string>
+    <string name="warn_no_dns">Nenaudojami jokie DNS serveriai. Vardų perskyrimas gali neveikti. Apsvarstykite galimybę nustatyti pasirinktinius DNS serverius. Taip pat atkreipkite dėmesį, kad \"Android\" ir toliau naudos jūsų proxy nustatymus, nurodytus jūsų mobiliajam / \"Wi-Fi\" ryšiui, kai nenustatyti jokie DNS serveriai.</string>
+    <string name="dns_add_error">Nepavyko pridėti DNS serverio \\"%1$s\\", sistema atmetė: %2$s</string>
+    <string name="ip_add_error">Nepavyko sukonfigūruoti IP adreso \\"%1$s\\", sistema atmetė: %2$s</string>
+    <string name="getproxy_error">Klaida gaunant tarpinio serverio nustatymus: %s</string>
+    <string name="using_proxy">Naudojant tarpinį serverį %1$s %2$d</string>
+    <string name="minidump_generated">\"OpenVPN\" netikėtai sugedo. Apsvarstykite galimybę naudoti pagrindinio meniu parinktį Siųsti Minidump</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Prijungimas</string>
+    <string name="state_wait">Laukiama serverio atsakymo</string>
+    <string name="state_auth">Autentiškumo nustatymas</string>
+    <string name="state_get_config">Kliento konfigūracijos gavimas</string>
+    <string name="state_assign_ip">IP adresų priskyrimas</string>
+    <string name="state_add_routes">Maršrutų pridėjimas</string>
+    <string name="state_connected">Prijungta</string>
+    <string name="state_disconnected">Atjunkite</string>
+    <string name="state_reconnecting">Pakartotinis prijungimas</string>
+    <string name="state_exiting">Išėjimas iš</string>
+    <string name="state_noprocess">Neveikia</string>
+    <string name="state_resolve">Prieglobsčio vardų sprendimas</string>
+    <string name="state_tcp_connect">Jungimasis (TCP)</string>
+    <string name="unknown_state">Nežinomas</string>
+    <string name="state_nonetwork">Laukiama, kol bus galima naudoti tinklą</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Prisijungimas prie VPN %s</string>
+    <string name="start_vpn_ticker">Prisijungimas prie VPN %s</string>
+    <string name="mobile_info_extended">Veikia %1$s (%2$s) %3$s, Android API %4$d, versija %5$s, %6$s</string>
+    <string name="built_by">sukurta %s</string>
+    <string name="debug_build">derinti statybą</string>
+    <string name="official_build">oficiali statyba</string>
+    <string name="screenoff_pause">Ryšio sustabdymas išjungto ekrano būsenoje: mažiau nei %1$s per %2$ss</string>
+    <string name="state_userpause">Vartotojo prašoma VPN pauzė</string>
+    <string name="state_screenoff">VPN pristabdytas - ekranas išjungtas</string>
+    <string name="defaultServerName">Serveris XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">\"PremiumPlus\"</string>
+
+
+    <string name="title_activity_select_vpn">Pasirinkite VPN</string>
+    <string name="vpnSelectReason">\"Shellfire\" paskyroje rasti keli VPN. Pasirinkite, kurį naudoti.</string>
+    <string name="rememberVpnSelection">Išsaugoti pasirinkimą</string>
+    <string name="remember_vpn_summary">Jei yra keli VPN, nereikia rinktis VPN kiekvieną kartą prisijungiant.</string>
+    <string name="remember_vpn_title">Išsaugoti pasirinktą VPN</string>
+    <string name="show_log_sum">Dėl nuolatinio žurnalo rodymo gali sumažėti našumas (reikia iš naujo paleisti programą).</string>
+    <string name="show_log">Rodyti žurnalą</string>
+    <string name="default_product_type">Nemokamai</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Serveris</string>
+    <string name="connectionAdvice">Prisijungia prie pasirinkto serverio. Jei norite pakeisti serverį, braukite į dešinę.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Paraiškų žurnalas</string>
+    <string name="connectionState">Būklė:</string>
+    <string name="disconnected">Atjungtas</string>
+    <string name="noAccountData">Neregistruotas\?</string>
+    <string name="title_activity_register">Registruotis</string>
+    <string name="buyDailyPremium">0,99 Eur / 24 val.</string>
+    <string name="buyDailyPremiumPlus">1,99 Eur / 24 val.</string>
+    <string name="buyMonthlyPremium">3,49 euro per mėnesį</string>
+    <string name="buyMonthlyPremiumPlus">7,95 eurų per mėnesį</string>
+    <string name="buyYearlyPremium">39,90 eurų per metus</string>
+    <string name="buyYearlyPremiumPlus">84,90 eurų per metus</string>
+    <string name="premiumUntil">\"Premium\" iki:</string>
+    <string name="sendToShellfire">Siųsti žurnalą į Shellfire</string>
+    <string name="verifying_purchase">Pirkimas tikrinamas...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">\"Premium\" atnaujinimas pavyko. Rodyti serverių sąrašą\?</string>
+    <string name="yes">Taip</string>
+    <string name="no">Ne</string>
+    <string name="YES">TAIP</string>
+    <string name="upgrade_not_successful_check_log">Atnaujinimas nepavyko, patikrinkite žurnalą!</string>
+    <string name="problem_setting_up_in_app_billing">\"Problema nustatant \"In-app Billing\": \"</string>
+    <string name="loading">Pakraunama...</string>
+    <string name="send_log_to_shellfire">Siųsti žurnalą į \"Shellfire</string>
+    <string name="log_send_succesfully">Žurnalas sėkmingai išsiųstas į \"Shellfire</string>
+    <string name="log_could_not_be_sent">Žurnalo nepavyko išsiųsti</string>
+    <string name="connecting">Prijungimas...</string>
+    <string name="cansel">CANCEL</string>
+    <string name="disconnect">Atjunkite</string>
+    <string name="connected">Prijungta</string>
+    <string name="loading_certificates">Sertifikatų įkėlimas</string>
+    <string name="switching_from_udp_to_tcp">Perėjimas nuo UDP prie TCP</string>
+    <string name="switching_from_tcp_to_udp">Perėjimas nuo TCP prie UDP</string>
+    <string name="item_already_owned_consuming">jau turima prekė - vartojimas</string>
+    <string name="item_consumed">sunaudotas elementas</string>
+    <string name="already_on_this_server_doing_nothing">Jau esate šiame serveryje - nieko nedarote</string>
+    <string name="not_showing_premium_info">Nerodoma informacija apie priemokas</string>
+    <string name="you_are_not_eligible_to_use_this_server">Reikia atnaujinti.
+\nAr norite gauti daugiau informacijos\?</string>
+    <string name="you_are_currently_connecting_disconnect">Šiuo metu esate prisijungęs. Prieš keičiant serverį turite atsijungti. Atsijungti dabar\?</string>
+    <string name="not_changing_server">Serverio keitimas atšauktas</string>
+    <string name="sure_to_change_server">Ar tikrai norite pakeisti serverį\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.Serveris keičiamas. Tai gali užtrukti akimirką..</string>
+    <string name="server_selection_succesfully_performed_on_backend">Serverio keitimas sėkmingas.</string>
+    <string name="server_selection_could_not_be_changed">Serverio nepavyko pakeisti. Išsamesnės informacijos ieškokite žurnale.</string>
+    <string name="connecting_please_wait">Ryšys apdorojamas - palaukite</string>
+    <string name="action_about">Apie \"Shellfire VPN</string>
+
+    <string name="country">šalis</string>
+    <string name="title_activity_about">Apie \"Shellfire VPN</string>
+    <string name="hello_world">Sveikas pasauli!</string>
+    <string name="copyright_shellfire">© 2014 m. Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">\"Bouncy Castle Crypto API</string>
+    <string name="copyright_openssl">Šis produktas apima \"OpenSSL\" projekto sukurtą programinę įrangą, skirtą naudoti \"OpenSSL Toolkit\n\".
+        Copyright © 1998-2008 The OpenSSL Project. Visos teisės saugomos.\n\n
+        Šiame produkte yra kriptografinė programinė įranga, kurią parašė Eric Young (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Visos teisės saugomos.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Autorinės teisės © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Šioje programoje naudojami šie komponentai; išsamią informaciją apie licencijas rasite šaltinio kode (žr. https://code.google.com/p/shellfirevpn4a/).</string>
+    <string name="copyright_arne">Projektas ics-openvpn, Autorinės teisės 2012-2013 Arne Schwabe (arne\@rfc2549.org) galima rasti adresu: https://code.google.com/p/ics-openvpn/.</string>
+    <string name="openvpn">\"OpenVPN\"</string>
+    <string name="opevpn_copyright"><![CDATA[Copyright © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" yra \"OpenVPN Technologies, Inc.\" prekės ženklas.\n]]></string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">iki</string>
+    <string name="state_user_vpn_password">Laukiama naudotojo VPN slaptažodžio</string>
+    <string name="state_user_vpn_permission_cancelled">Atšauktas VPN API leidimo dialogas</string>
+    <string name="account_created_succesfully">Paskyra sukurta sėkmingai - patikrinkite, ar el. paštu gausite aktyvavimo el. laišką.</string>
+    <string name="free">Nemokamai</string>
+    <string name="premium">\"Premium\"</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 valandos</string>
+    <string name="month_1">1 mėnuo</string>
+    <string name="monthly">kas mėnesį</string>
+    <string name="yearly">metinis</string>
+    <string name="cents99">0,99 Eur</string>
+    <string name="cents199">1,99 Eur</string>
+    <string name="cents495">4,95 Eur</string>
+    <string name="cents995">9,95 Eur</string>
+    <string name="cents395">3,95 Eur</string>
+    <string name="cents795">7,95 Eur</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Pirkti</string>
+    <string name="compare">Palyginkite</string>
+    <string name="singlePayment">vienkartinė išmoka *</string>
+    <string name="subscription">prenumerata **</string>
+    <string name="note_payment_types">* kredito kortelė nereikalinga.\r\n
+** kreditinė kortelė nereikalinga; galima bet kada atšaukti per \"Google Play\". \r\n
+\r\n
+mokėkite naudodamiesi \"Paypal\" mūsų svetainėje: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">VPN pasirinkimas...</string>
+    <string name="cobiCodeEnter">COMPUTER BILD kampanija</string>
+    <string name="cobiClickHere">Įveskite kodą</string>
+
+    <string name="enter_cobi_code">įveskite COMPUTERBILD kodą čia:</string>
+    <string name="action_share">Dalytis šia programėle</string>
+    <string name="share_with">Dalytis per</string>
+    <string name="share_text">Naudoju \"Shellfire\" #VPN programėlę, kad apsaugočiau savo duomenis nuo įsilaužėlių ir atblokuočiau cenzūruojamą turinį: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Įvertinkite</string>
+    <string name="rate_this_app">Įvertinkite</string>
+    <string name="rate_explanation">Ar ši programėlė jus įtikino\? Būtume labai laimingi, jei įvertintumėte mūsų programą \"Google Play\". Ačiū už palaikymą!</string>
+    <string name="rate_now">Įvertinkite dabar</string>
+    <string name="rate_later">Vėliau</string>
+    <string name="rate_never">Ne, ačiū</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Mano planas</string>
+    <string name="current_plan">TĘSTINIS PLANAS</string>
+    <string name="PAID_UNTIL">Apmokėta iki</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Atnaujinkite savo paskyrą, kad gautumėte daugiau funkcijų</string>
+
+
+    <string name="retry">Pakartoti</string>
+    <string name="network_problem_title">Tinklo problema</string>
+    <string name="network_problem_message">Šiuo metu nesate prisijungę prie interneto. Shellfire VPN reikia aktyvaus interneto ryšio.</string>
+    <string name="login_error">prisijungimo klaida.</string>
+    <string name="serverLoad">Krovinys</string>
+    <string name="reloadServerList">Perkrauti</string>
+    <string name="upgrade_not_successful">Atnaujinti nepavyko</string>
+
+    <string name="new_version_available_title">Galima įsigyti naują versiją</string>
+    <string name="new_version_available_message">\"Google Play\" parduotuvėje yra nauja \"Shellfire VPN\" versija. Turėtumėte ją greitai įdiegti, nes ši versija gali nebeveikti tinkamai arba joje gali būti saugumo problemų.
+
+Eikite į \"Play Store\" parduotuvę ir atnaujinkite dabar\?
+
+Pastaba: norint gauti naujausią versiją, gali tekti ją pašalinti / iš naujo įdiegti.</string>
+
+    <string name="dontshowagain">Ne ir daugiau nerodyti</string>
+    <string name="not_now">Ne dabar</string>
+    <string name="server">Serveris</string>
+
+    <string name="_128bit">128 bitų šifravimas</string>
+    <string name="_192bit">192 bitų šifravimas</string>
+    <string name="_256bit">256 bitų šifravimas</string>
+
+    <string name="upto786">iki 786 kbit/sek.</string>
+    <string name="upto10000">iki 10 000 kbit/sek.</string>
+    <string name="unlimited">neribotas kbit/sek.</string>
+
+    <string name="php_invalid_email">Įveskite galiojantį el. pašto adresą.</string>
+    <string name="php_account_exists">Šio el. pašto adreso registruota paskyra jau egzistuoja.</string>
+
+
+    <string name="php_signature"><![CDATA[Geriausi Shellfire komandos linkėjimai
+
+P.S.: Naujiena: Uždirbkite pinigų su Shellfire! Kai pritrauksite mums naujų klientų, mokėsime jums iki 100 % komisinių: https://www.shellfire.net/affiliate-center/
+
+P.P.S.: Sekite mus \"Twitter\": http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Vadovybė: Florian Gattung, Maximilian Behr
+Partnerystė pagal Civilinį kodeksą, įsikūrusi Bad Vilbel, Vokietijoje]]></string>
+
+    <string name="php_surf_anonym">Naršykite internete anonimiškai</string>
+    <string name="php_hide_ip">Paslėpkite savo IP adresą</string>
+    <string name="php_encrypt_internet">Užšifruotas interneto ryšys</string>
+    <string name="php_secure_wifi">Saugiai naudokitės viešaisiais \"Wi-Fi\" prieigos taškais</string>
+    <string name="php_unlimited">neribotas</string>
+    <string name="php_traffic">Eismo / duomenų kiekis</string>
+    <string name="php_speed_generic">%1$s kbit/sek.</string>
+    <string name="php_speed">Greitis</string>
+    <string name="php_server_in_generic">Serveris %1$s</string>
+    <string name="php_change_location">Visada keiskite vietą</string>
+    <string name="php_streaming_websites">Transliavimo svetainės</string>
+
+
+    <string name="play_product_description">\"Shellfire VPN\" - paprasta. saugu. prijungta. Jokios registracijos.
+
+\"Shellfire VPN\" yra NEMOKAMAS ir niekada nekainuos nė cento. Neribotas duomenų srautas, neribotas laikas!
+
+Shellfire VPN paslepia jūsų IP adresą, atblokuoja internetą ir suteikia galimybę laisvai ir anonimiškai pasiekti bet kurią norimą svetainę. Naudodami \"Shellfire VPN\" galite jungtis prie bet kurios svetainės pasitikėdami, kad esate slapti. Mes atblokuojame \"Skype\", \"Facebook\", \"Twitter\", \"YouTube\" ir kt. svetaines šalyse, kuriose taikoma interneto cenzūra, ir net suteikiame galimybę naudotis savo šalies televizijos ir radijo paslaugomis iš užsienio.
+
+Shellfire VPN suteikia itin stiprų šifravimą, kad apsaugotumėte savo duomenis nuo įsilaužėlių, NSA ir kitų grėsmių net nesaugiuose viešuosiuose \"Wi-Fi\" tinkluose!
+
+Atnaujinkite iki \"Premium\" ir gaukite
+ - Didesnę spartą.
+ - Stipresnis šifravimas.
+ - Nemokamas pasirinkimas iš mūsų serverių:
+Austrija, Kanada, Prancūzija, Vokietija, Honkongas, Italija, Nyderlandai, Lenkija, Rumunija, Rusija, Ispanija, Švedija, Šveicarija, Jungtinė Karalystė ir JAV.
+- \"PremiumPlus\" klientams suteikiama išskirtinė prieiga prie serverių:
+Čilėje, Islandijoje, Meno saloje (ofšorinėje zonoje) ir Lichtenšteine.
+
+\"Shellfire VPN\" - geriausias \"Android\" skirtas VPN klientas.
+
+\"Shellfire VPN\" taip pat veikia \"Windows\", \"Mac OS\", \"iOS\" arba \"Linux\"! Daugiau informacijos rasite svetainėje https://www.shellfire.net/vpn/.
+
+Jei norite iš karto gauti naujienas, sekite mus \"Facebook\" ir \"Twitter
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Naršykite anonimiškai - šifruotas ryšys - prieiga prie \"Hulu\", \"Youtube\"... iš bet kurios vietos</string>
+
+    <string name="play_product_description_generic">%1$s bitų šifravimas
+Iki %2$s kbit/s perdavimo sparta
+Serveris %3$s šalių visame pasaulyje</string>
+
+    <string name="hosting_since_2002">Hostingas nuo 2002 m.</string>
+    <string name="vision">Vizija</string>
+    <string name="vision_data">Manome, kad saugi ir nemokama prieiga prie interneto yra pagrindinė kiekvieno šios planetos gyventojo teisė. Todėl mūsų misija - užtikrinti, kad internetas būtų laisvas ir saugus jūsų privatiems duomenims. Tai darome suteikdami jums apsaugą nuo pasiklausytojų ir įsilaužėlių per mūsų šifruotus VPN tunelius ir balso serverius.</string>
+    <string name="hotspot">Karštasis taškas</string>
+    <string name="hotspot_data_p1">Pastaraisiais metais jau padėjome daugiau nei 500 000 naudotojų apsaugoti savo privatumą internete ir įveikti cenzūrą. Dėl mūsų aukštų paslaugų ir saugumo standartų \\"Pagaminta Vokietijoje\\" \"Shellfire\" yra vienas geriausių adresų VPN rinkoje.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Pirkti dabar</string>
+    <string name="tv_single_pay">Vienkartinis mokėjimas</string>
+    <string name="tv_subscription_pay">Prenumerata</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 mėnuo</string>
+    <string name="subs_month">mėnuo</string>
+    <string name="subs_year">metai</string>
+    <string name="plan_premium">\"Premium\"</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Žemėlapis</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Serverio keitimas pavyko - ar norite prisijungti dabar\?</string>
+    <string name="saotomeandprincipe">San Tomė ir Prinsipė</string>
+    <string name="hosting_data">\"Shellfire GmbH\" yra prieglobos paslaugų teikėja, įsikūrusi Schmittene netoli Frankfurto prie Maino. 2002 m. \"Shellfire\" įkūrė Florianas Gattungas ir Maximilianas Behras, kurie nuo to laiko yra vadovaujantys partneriai.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Įveskite savo žinutę \"Shellfire\" čia...</string>
+    <string name="load">ĮKROVIMAS:</string>
+    <string name="choose_a_plan">Pasirinkite planą</string>
+    <string name="speed">Greitis</string>
+    <string name="servers">Serveriai</string>
+    <string name="countries">Šalys</string>
+    <string name="encryption_server">Šifravimas</string>
+    <string name="video_streaming">Vaizdo transliacija</string>
+    <string name="unblock_all_content">Viso turinio atblokavimas</string>
+    <string name="encrypted_connection">Užšifruotas ryšys</string>
+    <string name="safe_hotspot_usage">Saugus naudojimasis karštąja dėže</string>
+    <string name="unlimited_traffic">Neribotas srautas</string>
+    <string name="upgrade">UPGRADE</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Išplėstinė</string>
+    <string name="STANDARD">Standartinis</string>
+    <string name="ALL_SERVERS">Visi serveriai</string>
+    <string name="unlock">Atrakinti</string>
+    <string name="filter">Filtrai</string>
+
+    <string name="format_server">Serveris %d</string>
+
+
+    <string name="widget_label_small">\"Shellfire VPN\" mažoji programėlė</string>
+    <string name="widget_label_medium">\"Shellfire\" VPN vidutinis valdiklis</string>
+    <string name="widget_label_large">Shellfire VPN didelis valdiklis</string>
+
+    <string name="pref_title_mode_connection">Ryšio režimas</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Norėdami aktyvuoti paskyrą, spustelėkite ką tik atsiųstame el. laiške esančią nuorodą.</string>
+    <string name="email_validation_required_title">Reikia aktyvuoti paskyrą</string>
+    <string name="sending_log">Siųsti žurnalą...</string>
+    <string name="loading_one">Įkrovimas ONE</string>
+    <string name="loading_two">Įkrovimas DVIEJŲ</string>
+    <string name="logout">Atsijungimas</string>
+    <string name="action_connection_mode">Ryšio režimas</string>
+    <string name="action_select_vpn">Pasirinkite VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Pateikite atsiliepimus</string>
+    <string name="title_activity_log">Siųsti atsiliepimus į Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Įvertinkite mūsų programėlę</string>
+    <string name="initial_dialog_message">Ar jums patinka mūsų programėlė\?</string>
+    <string name="initial_dialog_positive">Taip</string>
+    <string name="initial_dialog_negative">Ne</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Įvertinkite mūsų programėlę</string>
+    <string name="rate_dialog_message">Ar norėtumėte įvertinti mūsų programėlę\?</string>
+    <string name="rate_dialog_positive">Taip, man patinka!</string>
+    <string name="rate_dialog_negative">Ne, ačiū</string>
+    <string name="rate_dialog_neutral">Galbūt vėliau</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Pateikite grįžtamąjį ryšį</string>
+    <string name="feedback_dialog_message">Ar norėtumėte pateikti atsiliepimus\?</string>
+    <string name="feedback_dialog_positive">Taip, noriu pateikti atsiliepimus</string>
+    <string name="feedback_dialog_negative">Ne, ačiū</string>
+
+    <string name="send_feedback_progress">Atsiliepimų siuntimas...</string>
+    <string name="feedback_sent_successfully">Sėkmingai išsiųstas grįžtamasis ryšys</string>
+    <string name="feedback_not_sent">Nepavyko išsiųsti atsiliepimų</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Toliau pateikite savo atsiliepimus. Jei norite, taip pat galite pridėti programų ir sistemos žurnalus, kad geriau suprastume visas problemas.</string>
+    <string name="include_application_and_system_logs">Įtraukti programų ir sistemos žurnalus</string>
+    <string name="send_feedback">Siųsti atsiliepimus</string>
+    <string name="abort">Abort</string>
+    <string name="serverchange_timeout">Serverio keitimo operacija baigėsi. Bandykite dar kartą.</string>
+    <string name="protocol_is_being_changed">Keičiamas protokolas. Tai gali užtrukti akimirką.</string>
+    <string name="protocol_change_timeout">Serverio keitimo operacija baigėsi. Bandykite dar kartą.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Prisijungimas...</string>
+    <string name="login_with_existing_account">Prisijunkite su esama paskyra</string>
+    <string name="prompt_email">El. paštas</string>
+    <string name="prompt_password">Slaptažodis</string>
+    <string name="action_sign_in_short">Prisijungti</string>
+    <string name="login">Prisijungimas</string>
+    <string name="lostAccountData">Prarasti paskyros duomenys</string>
+    <string name="register_new_account">Užregistruoti naują paskyrą</string>
+    <string name="welcomeText">Sveiki atvykę į \"Shellfire VPN\"!</string>
+    <string name="needToAcceptAndRegister">Užregistruoti naują paskyrą</string>
+    <string name="prompt_email_only">El. paštas</string>
+    <string name="subscribeNewsletter">Prenumeruoti naujienlaiškį</string>
+    <string name="register">Registruotis</string>
+    <string name="i_have_an_account">Jau turiu \"Shellfire\" paskyrą</string>
+    <string name="greeting_text">Sveiki atvykę į \"Shellfire VPN\"! Prisijunkite arba užsiregistruokite, kad galėtumėte tęsti.</string>
+    <string name="slow">Lėtas</string>
+    <string name="brilliant">Puikus</string>
+    <string name="back">Atgal</string>
+
+</resources>

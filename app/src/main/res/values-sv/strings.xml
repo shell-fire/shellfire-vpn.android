@@ -1,0 +1,536 @@
+<resources>
+    <string name="channel_name_userreq">Användarinteraktion krävs</string>
+    <string name="channel_description_userreq">OpenVPN-anslutning kräver en användarinmatning, t.ex. tvåfaktorsautentisering
+    </string>
+    <string name="channel_name_background">Statistik över anslutningar</string>
+    <string name="channel_description_background">Löpande statistik över den etablerade OpenVPN-anslutningen</string>
+    <string name="channel_name_status">Ändring av anslutningsstatus</string>
+    <string name="channel_description_status">Statusändringar för OpenVPN-anslutningen (anslutning, autentisering, ...)</string>
+    <string name="save_password">Spara lösenord</string>
+    <string name="show_password">Visa lösenord</string>
+    <string name="auth_username">Användarnamn</string>
+    <string name="remote_trust">Jag litar på den här applikationen.</string>
+    <string name="remote_warning">Genom att fortsätta ger du programmet tillstånd att helt kontrollera OpenVPN för Android och att avlyssna all nätverkstrafik.<b>Acceptera INTE om du inte litar på ansökan.</b> Annars riskerar du att dina data äventyras av skadlig programvara.\"</string>
+    <string name="permission_icon_app">Ikon för app som försöker använda OpenVPN för Android</string>
+    <string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+    <string name="config_error_found">Fel i konfigurationen</string>
+    <string name="nought_alwayson_warning"><![CDATA[Om du inte fick en VPN-bekräftelsedialog har du aktiverat \"Alltid på VPN\" för en annan app. I så fall är det bara den appen som får ansluta till ett VPN. Kontrollera under Inställningar-> Nätverk mer ... -> VPNS]]></string>
+    <string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+    <string name="pw_request_dialog_title">Behöver %1$s</string>
+    <string name="pw_request_dialog_prompt">Ange lösenordet för profilen %1$s</string>
+    <string name="shortcut_profile_notfound">Profilen som anges i genvägen hittades inte</string>
+    <string name="app">Shellfire VPN för Android</string>
+    <string name="prompt">%1$s försök att kontrollera %2$s</string>
+    <string name="all_app_prompt">En extern app försöker kontrollera %s. Appen som begär åtkomst kan inte identifieras. Att tillåta denna app ger ALLA appar åtkomst.</string>
+    <string name="screen_nopersistenttun">Varning: Persistent tun är inte aktiverat för detta VPN. Trafiken kommer att använda den normala Internetanslutningen när skärmen är avstängd.</string>
+    <string name="private_key_password">Lösenord för privat nyckel</string>
+    <string name="pkcs12_file_encryption_key">PKCS12 nyckel för filkryptering</string>
+    <string name="no_error_found">Inget fel hittades</string>
+    <string name="no_orbotfound">Orbot-applikationen kan inte hittas. Vänligen installera Orbot eller använd manuell Socks v5-integration.</string>
+    <string name="error_orbot_and_proxy_options">Det går inte att använda extra http-proxy-option statement och Orbot integration samtidigt</string>
+    <string name="openvpn3_socksproxy">OpenVPN 3 C++-implementeringen stöder inte anslutning via Socks-proxy</string>
+    <string name="openvpn3_nostatickeys">OpenVPN 3 C++-implementeringen stöder inte statiska nycklar. Vänligen ändra till OpenVPN 2.x under allmänna inställningar.</string>
+    <string name="openvpn3_pkcs12">Att använda PKCS12-filer direkt med OpenVPN 3 C++-implementering stöds inte. Importera pkcs12-filerna till Androids keystore eller ändra till OpenVPN 2.x under allmänna inställningar.</string>
+    <string name="remote_no_server_selected">Du måste definiera och aktivera minst en fjärrserver.</string>
+    <string name="missing_tlsauth">Filen tls-auth saknas</string>
+    <string name="missing_certificates">Användarcertifikat eller nyckelfil för användarcertifikat saknas</string>
+    <string name="missing_ca_certificate">Saknar CA-certifikat</string>
+    <string name="custom_route_format_error">Fel vid analys av de anpassade rutterna</string>
+    <string name="ipv4_format_error">Fel vid analys av IPv4-adressen</string>
+    <string name="deprecated_tls_remote">Config använder alternativet tls-remote som var föråldrat i 2.3 och slutligen togs bort i 2.4</string>
+    <string name="no_ca_cert_selected">Du måste välja ett CA-certifikat eller aktivera kontroll av peer-fingeravtryck</string>
+    <string name="no_keystore_cert_selected">Du måste välja ett användarcertifikat</string>
+    <string name="keyChainAccessError">Fel i åtkomst till nyckelkedja: %s</string>
+    <string name="cannotparsecert">Det går inte att visa certifikatinformation</string>
+    <string name="crtext_requested">Svara på utmaningen för att fortsätta VPN-autentiseringen</string>
+    <string name="openurl_requested">Öppna URL för att fortsätta VPN-autentiseringen</string>
+    <string name="ip_looks_like_subnet">Vpn-topologi \\"%3$s\\" specificerad men ifconfig %1$s %2$s ser mer ut som en IP-adress med en nätverksmask. Antar att topologin är \"subnät\".</string>
+    <string name="allowed_vpn_apps_info">Tillåtna VPN-appar: %1$s</string>
+    <string name="disallowed_vpn_apps_info">Otillåtna VPN-appar: %1$s</string>
+    <string name="app_no_longer_exists">Paketet %s installeras inte längre och tas bort från appens lista över tillåtna/icke tillåtna</string>
+    <string name="no_allowed_app">Ingen tillåten app har lagts till. Lägger till oss själva (%s) för att ha minst en app i listan över tillåtna appar för att inte tillåta alla appar</string>
+    <string name="ignore_multicast_route">Ignorerar multicast-väg: %s</string>
+    <string name="routes_debug">VpnService-vägar installerade: %1$s %2$s</string>
+    <string name="state_auth_failed">Autentiseringen misslyckades</string>
+    <string name="password">Lösenord</string>
+    <string name="state_waitorbot">Väntar på att Orbot ska starta</string>
+    <string name="service_restarted">Starta om OpenVPN-tjänsten (Appen kraschade förmodligen eller dödades av minnestryck)</string>
+    <string name="notifcation_title_notconnect">Inte ansluten</string>
+    <string name="permission_revoked">VPN-behörighet återkallas av OS (t.ex. annat VPN-program startat), stoppar VPN</string>
+    <string name="keychain_nocacert">Inget CA-certifikat returnerades vid läsning från Android keystore. Autentiseringen kommer förmodligen att misslyckas.</string>
+    <string name="abi_mismatch">Företrädesvis ABI-prioritet för den här enheten (%1$s) och ABI som rapporteras av inbyggda bibliotek (%2$s) stämmer inte överens</string>
+    <string name="jelly_keystore_alphanumeric_bug">Vissa versioner av Android 4.1 har problem om namnet på keystore-certifikatet innehåller icke-alfanumeriska tecken (som mellanslag, understreck eller bindestreck). Försök att återimportera certifikatet utan specialtecken</string>
+    <string name="keychain_access">Det går inte att komma åt Android Keychain-certifikaten. Detta kan orsakas av en firmware-uppgradering eller av att du återställer en säkerhetskopia av appen/appinställningarna. Redigera VPN och välj om certifikatet under grundinställningar för att återskapa behörigheten att komma åt certifikatet.</string>
+    <string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>
+    <string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+    <string name="state_auth_pending">Autentisering pågår</string>
+    <string name="reread_log">Läsa om (%d) loggposter från loggcachefilen</string>
+    <string name="state_waitconnectretry">Väntar %ss sekunder mellan anslutningsförsöken</string>
+    <string name="unhandled_exception">Ohanterat undantag: %1$s\n\n%2$s</string>
+    <string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Rutter: %1$s %2$s</string>
+    <string name="routes_info_excl">Rutterna är undantagna: %1$s %2$s</string>
+    <string name="title_activity_login">Logga in</string>
+    <string name="action_forgot_password">Glömt lösenord</string>
+    <string name="register_process_registering">Registrera dig...</string>
+    <string name="error_invalid_password">Lösenordet är för kort</string>
+    <string name="error_passwords_dont_match">Lösenorden stämmer inte överens</string>
+    <string name="error_field_required">Detta fält är obligatoriskt</string>
+    <string name="action_settings">Inställningar</string>
+    <string name="title_connect">Status</string>
+    <string name="title_serverlist">Serverlista</string>
+    <string name="title_locations">Platser</string>
+    <string name="title_log">Logg</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Anslut</string>
+    <string name="route_rejected">Rutten avvisas av Android</string>
+    <string name="tun_error_helpful">På vissa anpassade ICS-avbildningar kan behörigheten på /dev/tun vara fel, eller så kan tun-modulen saknas helt. För CM9-bilder kan du prova alternativet fixa ägarskap under allmänna inställningar</string>
+    <string name="tun_open_error">Misslyckades med att öppna tun-gränssnittet</string>
+    <string name="error">\"Fel: \"</string>
+    <string name="last_openvpn_tun_config">Öppnar tun-gränssnittet:</string>
+    <string name="local_ip_info">Lokal IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">DNS-server: %1$s, Domän: %2$s</string>
+    <string name="routes_info">Rutter: %s</string>
+    <string name="routes_info6">IPv6-vägar: %s</string>
+    <string name="ip_not_cidr">Fick gränssnittsinformation %1$s och %2$s, antar att den andra adressen är fjärrkontrollens peer-adress. Använder /32 nätmask för lokal IP. Läget som ges av OpenVPN är \\"%3$s\\".</string>
+    <string name="route_not_cidr">Det går inte att förstå %1$s och %2$s som IP-väg med CIDR-nätmask, med /32 som nätmask.</string>
+    <string name="route_not_netip">Korrigerad rutt %1$s/%2$s till %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Din bild har inte stöd för VPNService API, tyvärr :(</string>
+    <string name="encryption">-kryptering</string>
+    <string name="opentun_no_ipaddr">Vägrar att öppna tunnapparaten utan IP-information</string>
+    <string name="building_configration">Byggnadskonfiguration...</string>
+    <string name="netstatus">Nätverksstatus: %s</string>
+    <string name="mobile_info">Körs på %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Fel vid signering med Android keystore-nyckel %1$s: %2$s</string>
+    <string name="warn_no_dns">Inga DNS-servrar används. Namnupplösning kanske inte fungerar. Överväg att ställa in anpassade DNS-servrar. Observera också att Android kommer att fortsätta använda de proxyinställningar som anges för din mobil-/Wi-Fi-anslutning när inga DNS-servrar har ställts in.</string>
+    <string name="dns_add_error">Det gick inte att lägga till DNS-servern \\"%1$s\\", avvisad av systemet: %2$s</string>
+    <string name="ip_add_error">Det gick inte att konfigurera IP-adressen \\"%1$s\\", avvisad av systemet: %2$s</string>
+    <string name="getproxy_error">Fel vid hämtning av proxyinställningar: %s</string>
+    <string name="using_proxy">Använder proxy %1$s %2$d</string>
+    <string name="minidump_generated">OpenVPN kraschade oväntat. Överväg att använda alternativet Skicka minidump i huvudmenyn</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Anslutning</string>
+    <string name="state_wait">Väntar på svar från server</string>
+    <string name="state_auth">Autentisering</string>
+    <string name="state_get_config">Hämta klientkonfiguration</string>
+    <string name="state_assign_ip">Tilldelning av IP-adresser</string>
+    <string name="state_add_routes">Lägga till rutter</string>
+    <string name="state_connected">Ansluten</string>
+    <string name="state_disconnected">Koppla bort</string>
+    <string name="state_reconnecting">Återanslutning</string>
+    <string name="state_exiting">Avslutande</string>
+    <string name="state_noprocess">Inte igång</string>
+    <string name="state_resolve">Lösa värdnamn</string>
+    <string name="state_tcp_connect">Anslutning (TCP)</string>
+    <string name="unknown_state">Okänd</string>
+    <string name="state_nonetwork">Väntar på användbart nätverk</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Ansluter till VPN %s</string>
+    <string name="start_vpn_ticker">Ansluter till VPN %s</string>
+    <string name="mobile_info_extended">Körs på %1$s (%2$s) %3$s, Android API %4$d, version %5$s, %6$s</string>
+    <string name="built_by">byggd av %s</string>
+    <string name="debug_build">felsöka bygga</string>
+    <string name="official_build">officiell byggnad</string>
+    <string name="screenoff_pause">Pausa anslutningen i skärmavstängt läge: mindre än %1$s i %2$ss</string>
+    <string name="state_userpause">VPN-paus begärd av användaren</string>
+    <string name="state_screenoff">VPN pausat - skärmen avstängd</string>
+    <string name="defaultServerName">Server XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Välj VPN</string>
+    <string name="vpnSelectReason">Flera VPN:er finns på ditt Shellfire-konto. Vänligen välj vilken du vill använda.</string>
+    <string name="rememberVpnSelection">Spara val</string>
+    <string name="remember_vpn_summary">Om det finns flera VPN:er behöver du inte välja VPN vid varje inloggning.</string>
+    <string name="remember_vpn_title">Spara valt VPN</string>
+    <string name="show_log_sum">Om loggen visas permanent kan det leda till prestandaförluster (kräver omstart av appen).</string>
+    <string name="show_log">Visa logg</string>
+    <string name="default_product_type">Gratis</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Server</string>
+    <string name="connectionAdvice">Ansluter till den valda servern. För att byta server, svep åt höger.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Applikationslogg</string>
+    <string name="connectionState">Status:</string>
+    <string name="disconnected">Frånkopplad</string>
+    <string name="noAccountData">Är du inte registrerad\?</string>
+    <string name="title_activity_register">Registrera</string>
+    <string name="buyDailyPremium">0,99 Euro / 24 timmar.</string>
+    <string name="buyDailyPremiumPlus">1,99 Euro / 24 timmar.</string>
+    <string name="buyMonthlyPremium">3,49 euro / månad</string>
+    <string name="buyMonthlyPremiumPlus">7,95 euro / månad</string>
+    <string name="buyYearlyPremium">39,90 euro / år</string>
+    <string name="buyYearlyPremiumPlus">84,90 euro / år</string>
+    <string name="premiumUntil">Premium till:</string>
+    <string name="sendToShellfire">Skicka logg till Shellfire</string>
+    <string name="verifying_purchase">Köpet håller på att verifieras...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Premium Upgrade lyckad. Visa serverlista\?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nej</string>
+    <string name="YES">JA</string>
+    <string name="upgrade_not_successful_check_log">Uppgraderingen lyckades inte, kontrollera loggen!</string>
+    <string name="problem_setting_up_in_app_billing">\"Problem med att ställa in fakturering i appen: \"</string>
+    <string name="loading">Laddar...</string>
+    <string name="send_log_to_shellfire">Skicka logg till Shellfire</string>
+    <string name="log_send_succesfully">Logg skickad till Shellfire framgångsrikt</string>
+    <string name="log_could_not_be_sent">Loggen kunde inte skickas</string>
+    <string name="connecting">Ansluter...</string>
+    <string name="cansel">AVBRYT</string>
+    <string name="disconnect">Koppla bort</string>
+    <string name="connected">Ansluten</string>
+    <string name="loading_certificates">Laddning av certifikat</string>
+    <string name="switching_from_udp_to_tcp">Byte från UDP till TCP</string>
+    <string name="switching_from_tcp_to_udp">Byte från TCP till UDP</string>
+    <string name="item_already_owned_consuming">redan ägd vara - förbrukning</string>
+    <string name="item_consumed">artikel förbrukad</string>
+    <string name="already_on_this_server_doing_nothing">Redan på denna server - gör ingenting</string>
+    <string name="not_showing_premium_info">Visar inte premiuminformation</string>
+    <string name="you_are_not_eligible_to_use_this_server">Uppgradering behövs.
+\nVill du ha mer information\?</string>
+    <string name="you_are_currently_connecting_disconnect">Du är för närvarande ansluten. Du måste koppla från innan serverbytet. Koppla från nu\?</string>
+    <string name="not_changing_server">Serverbyte inställt</string>
+    <string name="sure_to_change_server">Är du säker på att du vill byta server\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.server håller på att ändras. Detta kan ta en stund...</string>
+    <string name="server_selection_succesfully_performed_on_backend">Serverbytet lyckades.</string>
+    <string name="server_selection_could_not_be_changed">Servern kunde inte ändras. Kontrollera loggen för mer information.</string>
+    <string name="connecting_please_wait">Anslutningen bearbetas - vänligen vänta</string>
+    <string name="action_about">Om Shellfire VPN</string>
+
+    <string name="country">land</string>
+    <string name="title_activity_about">Om Shellfire VPN</string>
+    <string name="hello_world">Hej, världen!</string>
+    <string name="copyright_shellfire">© 2014 av Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">Bouncy Castle Crypto API:er</string>
+    <string name="copyright_openssl">Denna produkt innehåller programvara som utvecklats av OpenSSL Project för användning i OpenSSL Toolkit\n
+        Copyright © 1998-2008 OpenSSL-projektet. Alla rättigheter förbehållna.\n\n
+        Den här produkten innehåller kryptografisk programvara skriven av Eric Young (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Alla rättigheter förbehållna.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Copyright © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Det här programmet använder följande komponenter; se källkoden för fullständig information om licenserna (finns på https://code.google.com/p/shellfirevpn4a/)</string>
+    <string name="copyright_arne">Projektet ics-openvpn, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) tillgängligt på: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Copyright © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" är ett varumärke som tillhör OpenVPN Technologies, Inc.\n]]></string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">tills</string>
+    <string name="state_user_vpn_password">Väntar på användarens VPN-lösenord</string>
+    <string name="state_user_vpn_permission_cancelled">Dialog för VPN API-behörighet avbruten</string>
+    <string name="account_created_succesfully">Konto har skapats framgångsrikt - kontrollera din e-post för aktiveringsmeddelandet.</string>
+    <string name="free">Gratis</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 timmar</string>
+    <string name="month_1">1 månad</string>
+    <string name="monthly">månadsvis</string>
+    <string name="yearly">årligen</string>
+    <string name="cents99">0,99 euro</string>
+    <string name="cents199">1,99 euro</string>
+    <string name="cents495">4,95 euro</string>
+    <string name="cents995">9,95 euro</string>
+    <string name="cents395">3,95 euro</string>
+    <string name="cents795">7,95 euro</string>
+    <string name="cents3990">39,90 euro</string>
+    <string name="cents8490">84,90 euro</string>
+    <string name="buy">Köp</string>
+    <string name="compare">Jämför</string>
+    <string name="singlePayment">enstaka betalning</string>
+    <string name="subscription">Abonnemang **.</string>
+    <string name="note_payment_types">* kreditkort krävs inte.\r\n
+** kreditkort krävs; kan avbrytas när som helst via Google Play. \r\n
+\r\n
+betala med Paypal på vår hemsida: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">Välja VPN...</string>
+    <string name="cobiCodeEnter">COMPUTER BILD-kampanj</string>
+    <string name="cobiClickHere">Ange kod</string>
+
+    <string name="enter_cobi_code">ange COMPUTERBILD-kod här:</string>
+    <string name="action_share">Dela denna app</string>
+    <string name="share_with">Dela via</string>
+    <string name="share_text">Jag använder Shellfire #VPN-appen för att skydda mina data från hackare och avblockera censurerat innehåll: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Pris</string>
+    <string name="rate_this_app">Pris</string>
+    <string name="rate_explanation">Har den här appen övertygat dig\? Vi skulle vara mycket glada om du kunde betygsätta vår applikation på Google Play. Tack för ditt stöd!</string>
+    <string name="rate_now">Betygsätt nu</string>
+    <string name="rate_later">Senare</string>
+    <string name="rate_never">Nej, tack.</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Min plan</string>
+    <string name="current_plan">NUVARANDE PLAN</string>
+    <string name="PAID_UNTIL">Betald fram till</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Uppgradera ditt konto för fler funktioner</string>
+
+
+    <string name="retry">Försök igen</string>
+    <string name="network_problem_title">Problem med nätverket</string>
+    <string name="network_problem_message">Du är för närvarande inte ansluten till internet. Shellfire VPN kräver en aktiv internetanslutning.</string>
+    <string name="login_error">felaktig inloggning.</string>
+    <string name="serverLoad">Last</string>
+    <string name="reloadServerList">Ladda om</string>
+    <string name="upgrade_not_successful">Uppgraderingen lyckades inte</string>
+
+    <string name="new_version_available_title">Ny version tillgänglig</string>
+    <string name="new_version_available_message">Det finns en ny version av Shellfire VPN tillgänglig i Google Play Store. Du bör installera den snart, eftersom den här versionen kanske inte fungerar korrekt längre eller innehåller säkerhetsproblem.
+
+Gå till Play Store nu för att uppdatera\?
+
+Obs: Du kan behöva avinstallera / installera om för att få den senaste versionen.</string>
+
+    <string name="dontshowagain">Nej och visa inte igen</string>
+    <string name="not_now">Inte nu</string>
+    <string name="server">Server</string>
+
+    <string name="_128bit">128 bitars kryptering</string>
+    <string name="_192bit">192 bitars kryptering</string>
+    <string name="_256bit">256 bitars kryptering</string>
+
+    <string name="upto786">upp till 786 kbit/sek</string>
+    <string name="upto10000">upp till 10.000 kbit/sek</string>
+    <string name="unlimited">obegränsat kbit/sek</string>
+
+    <string name="php_invalid_email">Vänligen ange en giltig e-postadress.</string>
+    <string name="php_account_exists">Det finns redan ett registrerat konto för den e-postadressen.</string>
+
+
+    <string name="php_signature"><![CDATA[Bästa hälsningar från Shellfire-teamet
+
+P.S.: Nytt: Tjäna pengar med Shellfire! När du skaffar oss nya kunder betalar vi dig upp till 100%% provision: https://www.shellfire.net/affiliate-center/
+
+P.P.S.: Följ oss på Twitter: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Ledning: Florian Gattung, Maximilian Behr
+Partnerskap enligt civillagen med säte i Bad Vilbel, Tyskland]]></string>
+
+    <string name="php_surf_anonym">Surfa på nätet anonymt</string>
+    <string name="php_hide_ip">Dölj din egen IP-adress</string>
+    <string name="php_encrypt_internet">Krypterad internetanslutning</string>
+    <string name="php_secure_wifi">Använd offentliga wifi-hotspots på ett säkert sätt</string>
+    <string name="php_unlimited">obegränsad</string>
+    <string name="php_traffic">Trafik/datavolym</string>
+    <string name="php_speed_generic">%1$s kbit/sek</string>
+    <string name="php_speed">Hastighet</string>
+    <string name="php_server_in_generic">Server i %1$s</string>
+    <string name="php_change_location">Ändra plats hela tiden</string>
+    <string name="php_streaming_websites">Webbplatser för streaming</string>
+
+
+    <string name="play_product_description"><![CDATA[Shellfire VPN - enkelt. säkert. uppkopplat. Ingen registrering.
+
+Shellfire VPN är GRATIS och kommer aldrig att kosta dig en krona. Obegränsad trafik, obegränsad tid!
+
+Shellfire VPN döljer din IP-adress, avblockerar Internet och ger dig möjlighet att fritt och anonymt komma åt vilken webbplats du vill. Med Shellfire VPN kan du ansluta till vilken webbplats som helst med förtroendet att veta att du är undercover. Vi avblockerar Skype, Facebook, Twitter, YouTube etc. i länder med internetcensur och ger dig till och med tillgång till ditt hemlands TV- och radiotjänster från utlandet.
+
+Shellfire VPN ger dig superstark kryptering för att skydda dina data från hackare, NSA och andra hot, även i osäkra offentliga wifi-nätverk!
+
+Uppgradera till Premium för att få
+ - Högre hastighet.
+ - Starkare kryptering.
+ - Fritt val från våra servrar i:
+Österrike, Kanada, Frankrike, Tyskland, Hong Kong, Italien, Nederländerna, Polen, Rumänien, Ryssland, Spanien, Sverige, Schweiz, Storbritannien och USA
+- PremiumPlus-kunder får exklusiv tillgång till servrar i:
+Chile, Island, Isle of Man (offshore) och Liechtenstein
+
+Shellfire VPN - den ultimata VPN-klienten för Android.
+
+Shellfire VPN körs också på Windows, Mac OS, iOS eller Linux! Besök https://www.shellfire.net/vpn/ för mer information.
+
+För omedelbara uppdateringar, följ oss på Facebook & Twitter
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en]]></string>
+
+    <string name="play_promo_text">Surfa anonymt - Krypterad anslutning - Få tillgång till Hulu, Youtube ... var som helst</string>
+
+    <string name="play_product_description_generic">%1$s bit kryptering
+Upp till %2$s kbit/s överföringshastighet
+Server i %3$s länder över hela världen</string>
+
+    <string name="hosting_since_2002">Hosting sedan 2002</string>
+    <string name="vision">Vision</string>
+    <string name="vision_data">Vi anser att säker och fri tillgång till internet är en grundläggande rättighet för varje enskild person på denna planet. Därför är vårt uppdrag att se till att internet förblir en plats för frihet och en säker plats för dina privata data. Vi gör det genom att ge dig skydd mot avlyssnare och hackare genom våra krypterade VPN-tunnlar och röstservrar.</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="hotspot_data_p1">Under de senaste åren har vi redan hjälpt mer än 500.000 användare att skydda sin integritet online och övervinna censur. Våra höga service- och säkerhetsstandarder \\"Made in Germany\\" gör Shellfire till en av de bästa adresserna på VPN-marknaden idag.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Köp nu</string>
+    <string name="tv_single_pay">Enstaka betalning</string>
+    <string name="tv_subscription_pay">Prenumeration</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 månad</string>
+    <string name="subs_month">månad</string>
+    <string name="subs_year">år</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Karta</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Serverbytet lyckades - vill du ansluta nu\?</string>
+    <string name="saotomeandprincipe">São Tomé och Príncipe</string>
+    <string name="hosting_data">Shellfire GmbH är en hostingleverantör som är baserad i Schmitten nära Frankfurt am Main. Shellfire grundades 2002 av Florian Gattung och Maximilian Behr, som sedan dess har fungerat som verkställande delägare.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Skriv ditt meddelande till Shellfire här...</string>
+    <string name="load">LADDA:</string>
+    <string name="choose_a_plan">Välj en plan</string>
+    <string name="speed">Hastighet</string>
+    <string name="servers">Servrar</string>
+    <string name="countries">Länder</string>
+    <string name="encryption_server">Kryptering</string>
+    <string name="video_streaming">Videostreaming</string>
+    <string name="unblock_all_content">Avblockera allt innehåll</string>
+    <string name="encrypted_connection">Krypterad anslutning</string>
+    <string name="safe_hotspot_usage">Säker användning av hotspot</string>
+    <string name="unlimited_traffic">Obegränsad trafik</string>
+    <string name="upgrade">UPGRADE</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Avancerad</string>
+    <string name="STANDARD">Standard</string>
+    <string name="ALL_SERVERS">Alla servrar</string>
+    <string name="unlock">Lås upp</string>
+    <string name="filter">Filter</string>
+
+    <string name="format_server">Server %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN Liten widget</string>
+    <string name="widget_label_medium">Shellfire VPN Medium Widget</string>
+    <string name="widget_label_large">Shellfire VPN Stor widget</string>
+
+    <string name="pref_title_mode_connection">Anslutningsläge</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">För att aktivera ditt konto, klicka på länken i det e-postmeddelande som vi just skickat till dig.</string>
+    <string name="email_validation_required_title">Kontot behöver aktiveras</string>
+    <string name="sending_log">Skickar logg...</string>
+    <string name="loading_one">Lastning ONE</string>
+    <string name="loading_two">Lastning TWO</string>
+    <string name="logout">Logga ut</string>
+    <string name="action_connection_mode">Anslutningsläge</string>
+    <string name="action_select_vpn">Välj VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Ge feedback</string>
+    <string name="title_activity_log">Skicka feedback till Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Betygsätt vår app</string>
+    <string name="initial_dialog_message">Tycker du om vår app\?</string>
+    <string name="initial_dialog_positive">Ja</string>
+    <string name="initial_dialog_negative">Nej</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Betygsätt vår app</string>
+    <string name="rate_dialog_message">Skulle du vilja betygsätta vår app\?</string>
+    <string name="rate_dialog_positive">Ja, jag älskar det!</string>
+    <string name="rate_dialog_negative">Nej, tack.</string>
+    <string name="rate_dialog_neutral">Kanske senare</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Ge feedback</string>
+    <string name="feedback_dialog_message">Vill du ge oss feedback\?</string>
+    <string name="feedback_dialog_positive">Ja, jag vill ge feedback</string>
+    <string name="feedback_dialog_negative">Nej, tack.</string>
+
+    <string name="send_feedback_progress">Skickar feedback...</string>
+    <string name="feedback_sent_successfully">Återkoppling skickad framgångsrikt</string>
+    <string name="feedback_not_sent">Det gick inte att skicka feedback</string>
+    <string name="small">12sp</string>
+    <string name="big">18 sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Vänligen lämna din feedback nedan. Om du vill kan du också inkludera applikations- och systemloggar för att hjälpa oss att bättre förstå eventuella problem.</string>
+    <string name="include_application_and_system_logs">Inkludera program- och systemloggar</string>
+    <string name="send_feedback">Skicka feedback</string>
+    <string name="abort">Avbryta</string>
+    <string name="serverchange_timeout">Serverbytesoperationen har tagit slut. Vänligen försök igen.</string>
+    <string name="protocol_is_being_changed">Protokollet håller på att ändras. Detta kan ta ett ögonblick.</string>
+    <string name="protocol_change_timeout">Serverbytesoperationen har tagit slut. Vänligen försök igen.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Jag skriver in mig...</string>
+    <string name="login_with_existing_account">Logga in med befintligt konto</string>
+    <string name="prompt_email">E-post</string>
+    <string name="prompt_password">Lösenord</string>
+    <string name="action_sign_in_short">Logga in</string>
+    <string name="login">Logga in</string>
+    <string name="lostAccountData">Förlorad kontodata</string>
+    <string name="register_new_account">Registrera nytt konto</string>
+    <string name="welcomeText">Välkommen till Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Registrera nytt konto</string>
+    <string name="prompt_email_only">E-post</string>
+    <string name="subscribeNewsletter">Prenumerera på nyhetsbrev</string>
+    <string name="register">Registrera</string>
+    <string name="i_have_an_account">Jag har redan ett Shellfire-konto</string>
+    <string name="greeting_text">Välkommen till Shellfire VPN! Vänligen logga in eller registrera dig för att fortsätta.</string>
+    <string name="slow">Långsam</string>
+    <string name="brilliant">Briljant</string>
+    <string name="back">Tillbaka</string>
+    <string name="failed_to_change_server">Misslyckades med att byta server</string>
+    <string name="sign_in_with_google">Logga in med Google</string>
+    <string name="google_sign_in_confirmation_title">Bekräftelse av Google-inloggning</string>
+    <string name="cancel">Avbryt</string>
+    <string name="confirm">Bekräfta</string>
+    <string name="try_out_for_7_days">Prova 7 dagar gratis.</string>
+    <string name="then_get_discount">Då får du %1$s rabatt.</string>
+    <string name="one_year">1 år</string>
+    <string name="price_yearly_per_month">motsvarar %1$s / månad</string>
+    <string name="price_yearly_per_year">%1$s / år</string>
+    <string name="price_yearly_per_month_all_subs">1 år - %1$s / månad</string>
+    <string name="discount_also_in_next_two_years">%1$s rabatt (för de första 2 åren)</string>
+    <string name="first_seven_days_free_explain_text">Gratis under de första 7 dagarna.\nSå här fungerar den kostnadsfria provperioden.</string>
+    <string name="price_monthly_per_month_all_subs">1 månad - %1$s / månad</string>
+    <string name="price_per_month_selected_sub">%1$s för %2$s</string>
+    <string name="price_info_yearly_per_year_trial_explainer">7 dagar gratis, sedan %1$s / år (motsvarar %2$s / månad).</string>
+    <string name="one_month">1 månad</string>
+    <string name="twelve_months">12 månader</string>
+    <string name="get_premium_plus">Skaffa Shellfire VPN Premium Plus</string>
+    <string name="try_now_for_free">Prova nu gratis</string>
+    <string name="start_now">Starta nu</string>
+    <string name="best_price_per_month">Bästa pris per månad</string>
+    <string name="seven_days_free">Gratis under de första 7 dagarna</string>
+    <string name="cancel_monthly">Avbryt när som helst</string>
+    <string name="no_longterm_commitment">Inget långsiktigt åtagande</string>
+    <string name="show_all_subscriptions">Visa alla prenumerationer</string>
+    <string name="choose_subscription">Välj din prenumeration</string>
+    <string name="access_all_features_and_protect_five_devices">Få tillgång till alla Premium-funktioner och skydda 5 enheter</string>
+    <string name="first_payment_info_today">Den första betalningen förfaller till betalning nu. Denna prenumeration förnyas automatiskt tills den sägs upp.</string>
+    <string name="first_payment_info_seven_days">Den första betalningen förfaller till betalning inom 7 dagar. Denna prenumeration förnyas automatiskt tills den sägs upp.</string>
+    <string name="trial_link_text">Prova 7 dagar gratis - så här fungerar det.</string>
+    <string name="trial_info">Börja betala efter 7 dagar. Efter den inledande perioden förnyas prenumerationen automatiskt varje år tills du säger upp den.</string>
+    <!-- General -->
+    <string name="close_button_text">Nära</string>
+    <string name="cta_button_text">Prova gratis nu</string>
+
+    <!-- Trial Explainer Card -->
+    <string name="trial_explainer_title">Hur den 7-dagars kostnadsfria provperioden fungerar</string>
+    <string name="trial_step1_title">Idag: Full tillgång till alla premiumfunktioner</string>
+    <string name="trial_step1_description">Utforska alla premiumfunktioner och testa appens fulla funktionalitet.</string>
+    <string name="trial_step2_title">Dag 5: Påminnelsemejl om slutet av prövningen</string>
+    <string name="trial_step2_description">Vi kommer att skicka ett e-postmeddelande till dig för att påminna dig om att testperioden snart är slut.</string>
+    <string name="trial_step3_title">Dag 7: Testperioden avslutas och prenumerationen inleds</string>
+    <string name="trial_step3_description">Betalningen för det första året kommer att behandlas automatiskt om du inte har avbokat senast denna dag.</string>
+    <string name="for_the_first_two_years">(under de två första åren)</string>
+    <string name="no_browser_available_to_open_the_link">Ingen webbläsare tillgänglig för att öppna länken.</string>
+
+</resources>

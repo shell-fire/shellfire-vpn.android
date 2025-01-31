@@ -1,0 +1,535 @@
+<resources>
+    <string name="channel_name_userreq">Interação necessária com o usuário</string>
+    <string name="channel_description_userreq">A conexão OpenVPN requer uma entrada de usuário, por exemplo, autenticação de dois fatores
+    </string>
+    <string name="channel_name_background">Estatísticas de conexão</string>
+    <string name="channel_description_background">Estatísticas contínuas da conexão OpenVPN estabelecida</string>
+    <string name="channel_name_status">Alteração do status da conexão</string>
+    <string name="channel_description_status">Alterações de status da conexão OpenVPN (Conectando, autenticando,...)</string>
+    <string name="save_password">Salvar senha</string>
+    <string name="show_password">Mostrar senha</string>
+    <string name="auth_username">Nome de usuário</string>
+    <string name="remote_trust">Eu confio nesse aplicativo.</string>
+    <string name="remote_warning">Ao prosseguir, você estará dando permissão ao aplicativo para controlar completamente o OpenVPN para Android e interceptar todo o tráfego de rede.<b>NÃO aceite a menos que você confie no aplicativo.</b> Caso contrário, você corre o risco de ter seus dados comprometidos por software malicioso.\"</string>
+    <string name="permission_icon_app">Ícone do aplicativo que está tentando usar o OpenVPN para Android</string>
+    <string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+    <string name="config_error_found">Erro na configuração</string>
+    <string name="nought_alwayson_warning"><![CDATA[Se você não recebeu uma caixa de diálogo de confirmação de VPN, você tem o \\"Always on VPN\\" ativado para outro aplicativo. Nesse caso, somente esse aplicativo tem permissão para se conectar a uma VPN. Verifique em Configurações-> Redes mais ... -> VPNS]]></string>
+    <string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+    <string name="pw_request_dialog_title">Necessidade de %s</string>
+    <string name="pw_request_dialog_prompt">Digite a senha do perfil %s</string>
+    <string name="shortcut_profile_notfound">Perfil especificado no atalho não encontrado</string>
+    <string name="app">Shellfire VPN para Android</string>
+    <string name="prompt">%s tenta controlar %2$s</string>
+    <string name="all_app_prompt">Um aplicativo externo tenta controlar %s. O aplicativo que está solicitando acesso não pode ser determinado. A permissão desse aplicativo concede acesso a TODOS os aplicativos.</string>
+    <string name="screen_nopersistenttun">Aviso: O ajuste persistente não está ativado para esta VPN. O tráfego usará a conexão normal com a Internet quando a tela estiver desligada.</string>
+    <string name="private_key_password">Senha da chave privada</string>
+    <string name="pkcs12_file_encryption_key">Chave de criptografia de arquivo PKCS12</string>
+    <string name="no_error_found">Nenhum erro encontrado</string>
+    <string name="no_orbotfound">O aplicativo Orbot não pode ser encontrado. Instale o Orbot ou use a integração manual do Socks v5.</string>
+    <string name="error_orbot_and_proxy_options">Não é possível usar a instrução extra http-proxy-option e a integração do Orbot ao mesmo tempo</string>
+    <string name="openvpn3_socksproxy">A implementação do OpenVPN 3 C++ não oferece suporte à conexão via proxy Socks</string>
+    <string name="openvpn3_nostatickeys">A implementação do OpenVPN 3 C++ não é compatível com chaves estáticas. Altere para o OpenVPN 2.x nas configurações gerais.</string>
+    <string name="openvpn3_pkcs12">Não há suporte para o uso de arquivos PKCS12 diretamente com a implementação do OpenVPN 3 C++. Importe os arquivos pkcs12 para o keystore do Android ou mude para o OpenVPN 2.x nas configurações gerais.</string>
+    <string name="remote_no_server_selected">Você precisa definir e ativar pelo menos um servidor remoto.</string>
+    <string name="missing_tlsauth">O arquivo tls-auth está faltando</string>
+    <string name="missing_certificates">Falta de certificado de usuário ou de arquivo de chave de certificado de usuário</string>
+    <string name="missing_ca_certificate">Certificado CA ausente</string>
+    <string name="custom_route_format_error">Erro ao analisar as rotas personalizadas</string>
+    <string name="ipv4_format_error">Erro ao analisar o endereço IPv4</string>
+    <string name="deprecated_tls_remote">A configuração usa a opção tls-remote que foi descontinuada na versão 2.3 e finalmente removida na versão 2.4</string>
+    <string name="no_ca_cert_selected">Você deve selecionar um certificado CA ou ativar a verificação de impressão digital de pares</string>
+    <string name="no_keystore_cert_selected">Você deve selecionar um certificado de usuário</string>
+    <string name="keyChainAccessError">Erro de acesso ao KeyChain: %s</string>
+    <string name="cannotparsecert">Não é possível exibir informações sobre o certificado</string>
+    <string name="crtext_requested">Responder ao desafio para continuar a autenticação da VPN</string>
+    <string name="openurl_requested">Abra o URL para continuar a autenticação da VPN</string>
+    <string name="ip_looks_like_subnet">Topologia VPN \\"%3$s\\" especificada, mas o ifconfig %s %2$s se parece mais com um endereço IP com uma máscara de rede. Supondo uma topologia de \\"sub-rede\\".</string>
+    <string name="allowed_vpn_apps_info">Aplicativos de VPN permitidos: %s</string>
+    <string name="disallowed_vpn_apps_info">Aplicativos VPN não permitidos: %s</string>
+    <string name="app_no_longer_exists">O pacote %s não está mais instalado, removendo-o da lista de permissões/despermissões do aplicativo</string>
+    <string name="no_allowed_app">Nenhum aplicativo permitido adicionado. Adicionando nós mesmos (%s) para ter pelo menos um aplicativo na lista de aplicativos permitidos para não permitir todos os aplicativos</string>
+    <string name="ignore_multicast_route">Ignorando rota multicast: %s</string>
+    <string name="routes_debug">Rotas VpnService instaladas: %s %2$s</string>
+    <string name="state_auth_failed">Falha na autenticação</string>
+    <string name="password">Senha</string>
+    <string name="state_waitorbot">Aguardando o início do Orbot</string>
+    <string name="service_restarted">Reiniciar o serviço OpenVPN (o aplicativo travou, provavelmente travou ou foi eliminado por pressão da memória)</string>
+    <string name="notifcation_title_notconnect">Não conectado</string>
+    <string name="permission_revoked">Permissão de VPN revogada pelo sistema operacional (por exemplo, outro programa de VPN iniciado), interrompendo a VPN</string>
+    <string name="keychain_nocacert">Nenhum certificado CA foi retornado durante a leitura do repositório de chaves do Android. A autenticação provavelmente falhará.</string>
+    <string name="abi_mismatch">A precedência da ABI nativa preferida deste dispositivo (%s) e a ABI relatada pelas bibliotecas nativas (%2$s) não coincidem</string>
+    <string name="jelly_keystore_alphanumeric_bug">Algumas versões do Android 4.1 têm problemas se o nome do certificado do repositório de chaves contiver caracteres não alfanuméricos (como espaços, sublinhados ou traços). Tente reimportar o certificado sem caracteres especiais</string>
+    <string name="keychain_access">Não é possível acessar os certificados do Android Keychain. Isso pode ser causado por uma atualização de firmware ou pela restauração de um backup das configurações do aplicativo/aplicativo. Edite a VPN e selecione novamente o certificado nas configurações básicas para recriar a permissão de acesso ao certificado.</string>
+    <string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>
+    <string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+    <string name="state_auth_pending">Autenticação pendente</string>
+    <string name="reread_log">Reler (%d) itens de registro do arquivo de cache de registro</string>
+    <string name="state_waitconnectretry">Aguardando %ss segundos entre tentativas de conexão</string>
+    <string name="unhandled_exception">Exceção não tratada: %s\n\n%2$s</string>
+    <string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Rotas: %s %2$s</string>
+    <string name="routes_info_excl">Rotas excluídas: %s %2$s</string>
+    <string name="title_activity_login">Fazer login</string>
+    <string name="action_forgot_password">Esqueci minha senha</string>
+    <string name="register_process_registering">Registre-se...</string>
+    <string name="error_invalid_password">A senha é muito curta</string>
+    <string name="error_passwords_dont_match">As senhas não são iguais</string>
+    <string name="error_field_required">Este campo é obrigatório</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_connect">Status</string>
+    <string name="title_serverlist">Lista de servidores</string>
+    <string name="title_locations">Locais</string>
+    <string name="title_log">Registro</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Conectar</string>
+    <string name="route_rejected">Rota rejeitada pelo Android</string>
+    <string name="tun_error_helpful">Em algumas imagens ICS personalizadas, a permissão em /dev/tun pode estar incorreta ou o módulo tun pode estar completamente ausente. Para imagens CM9, tente a opção de correção de propriedade em configurações gerais</string>
+    <string name="tun_open_error">Falha ao abrir a interface tun</string>
+    <string name="error">\"Erro: \"</string>
+    <string name="last_openvpn_tun_config">Abrindo a interface de ajuste:</string>
+    <string name="local_ip_info">IPv4 local: %s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">Servidor DNS: %s, Domínio: %2$s</string>
+    <string name="routes_info">Rotas: %s</string>
+    <string name="routes_info6">Rotas IPv6: %s</string>
+    <string name="ip_not_cidr">Obteve informações de interface %s e %2$s, assumindo que o segundo endereço é o endereço do par remoto. Usando a máscara de rede /32 para o IP local. O modo fornecido pelo OpenVPN é \\"%3$s\\".</string>
+    <string name="route_not_cidr">Não é possível entender %s e %2$s como rota IP com máscara de rede CIDR, usando /32 como máscara de rede.</string>
+    <string name="route_not_netip">Correção da rota %s/%2$s para %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Sua imagem não é compatível com a API do VPNService, desculpe :(</string>
+    <string name="encryption">-Encriptação</string>
+    <string name="opentun_no_ipaddr">Recusa de abrir um dispositivo sem informações de IP</string>
+    <string name="building_configration">Configuração do edifício...</string>
+    <string name="netstatus">Status da rede: %s</string>
+    <string name="mobile_info">Em execução em %s (%2$s) %3$s, API do Android %4$d</string>
+    <string name="error_rsa_sign">Erro ao assinar com a chave do repositório de chaves do Android %s: %2$s</string>
+    <string name="warn_no_dns">Nenhum servidor DNS está sendo usado. A resolução de nomes pode não funcionar. Considere a possibilidade de configurar servidores DNS personalizados. Observe também que o Android continuará usando as configurações de proxy especificadas para sua conexão móvel/Wi-Fi quando nenhum servidor DNS estiver definido.</string>
+    <string name="dns_add_error">Não foi possível adicionar o servidor DNS \\"%s\\", rejeitado pelo sistema: %2$s</string>
+    <string name="ip_add_error">Não foi possível configurar o endereço IP \\"%s\\", rejeitado pelo sistema: %2$s</string>
+    <string name="getproxy_error">Erro ao obter configurações de proxy: %s</string>
+    <string name="using_proxy">Usando proxy %s %2$d</string>
+    <string name="minidump_generated">O OpenVPN teve uma falha inesperada. Considere a possibilidade de usar a opção enviar Minidump no menu principal</string>
+    <string name="session_ipv4string">%s - %2$s</string>
+    <string name="session_ipv6string">%s - %3$s, %2$s</string>
+    <string name="state_connecting">Conexão</string>
+    <string name="state_wait">Aguardando a resposta do servidor</string>
+    <string name="state_auth">Autenticação</string>
+    <string name="state_get_config">Obtendo a configuração do cliente</string>
+    <string name="state_assign_ip">Atribuição de endereços IP</string>
+    <string name="state_add_routes">Adição de rotas</string>
+    <string name="state_connected">Conectado</string>
+    <string name="state_disconnected">Desconectar</string>
+    <string name="state_reconnecting">Reconectando</string>
+    <string name="state_exiting">Saída</string>
+    <string name="state_noprocess">Não está funcionando</string>
+    <string name="state_resolve">Resolução de nomes de host</string>
+    <string name="state_tcp_connect">Conexão (TCP)</string>
+    <string name="unknown_state">Desconhecido</string>
+    <string name="state_nonetwork">Aguardando uma rede utilizável</string>
+    <string name="statusline_bytecount">↓%2$s/s %s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Conectando-se à VPN %s</string>
+    <string name="start_vpn_ticker">Conectando-se à VPN %s</string>
+    <string name="mobile_info_extended">Em execução em %s (%2$s) %3$s, API Android %4$d, versão %5$s, %6$s</string>
+    <string name="built_by">construído por %s</string>
+    <string name="debug_build">depuração de compilação</string>
+    <string name="official_build">construção oficial</string>
+    <string name="screenoff_pause">Pausa da conexão no estado de tela desligada: menos de %s em %2$ss</string>
+    <string name="state_userpause">Pausa na VPN solicitada pelo usuário</string>
+    <string name="state_screenoff">VPN pausada - tela desligada</string>
+    <string name="defaultServerName">Servidor XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Selecione VPN</string>
+    <string name="vpnSelectReason">Várias VPNs encontradas em sua conta Shellfire. Por favor, escolha qual delas usar.</string>
+    <string name="rememberVpnSelection">Salvar seleção</string>
+    <string name="remember_vpn_summary">Caso várias VPNs estejam presentes, você não precisa selecionar a VPN a cada login.</string>
+    <string name="remember_vpn_title">Salvar a VPN selecionada</string>
+    <string name="show_log_sum">Exibir o registro permanentemente pode levar à perda de desempenho (requer a reinicialização do aplicativo).</string>
+    <string name="show_log">Exibir registro</string>
+    <string name="default_product_type">Grátis</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Servidor</string>
+    <string name="connectionAdvice">Conecta-se ao servidor selecionado. Para alterar os servidores, deslize o dedo para a direita.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Registro de aplicativos</string>
+    <string name="connectionState">Status:</string>
+    <string name="disconnected">Desconectado</string>
+    <string name="noAccountData">Não está registrado\?</string>
+    <string name="title_activity_register">Registro</string>
+    <string name="buyDailyPremium">0,99 Euro / 24 hrs.</string>
+    <string name="buyDailyPremiumPlus">1,99 euros / 24 horas.</string>
+    <string name="buyMonthlyPremium">3,49 euros / mês</string>
+    <string name="buyMonthlyPremiumPlus">7,95 euros / mês</string>
+    <string name="buyYearlyPremium">39,90 euros / ano</string>
+    <string name="buyYearlyPremiumPlus">84,90 euros / ano</string>
+    <string name="premiumUntil">Prêmio até:</string>
+    <string name="sendToShellfire">Enviar registro para Shellfire</string>
+    <string name="verifying_purchase">A compra está sendo verificada...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Upgrade Premium bem-sucedido. Exibir lista de servidores\?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="YES">SIM</string>
+    <string name="upgrade_not_successful_check_log">A atualização não foi bem-sucedida, verifique o registro!</string>
+    <string name="problem_setting_up_in_app_billing">\"Problema ao configurar o faturamento no aplicativo: \"</string>
+    <string name="loading">Carregando...</string>
+    <string name="send_log_to_shellfire">Enviar registro para a Shellfire</string>
+    <string name="log_send_succesfully">Registro enviado para a Shellfire com sucesso</string>
+    <string name="log_could_not_be_sent">Não foi possível enviar o registro</string>
+    <string name="connecting">Conectando...</string>
+    <string name="cansel">CANCELAR</string>
+    <string name="disconnect">Desconectar</string>
+    <string name="connected">Conectado</string>
+    <string name="loading_certificates">Carregando certificados</string>
+    <string name="switching_from_udp_to_tcp">Mudança de UDP para TCP</string>
+    <string name="switching_from_tcp_to_udp">Mudança de TCP para UDP</string>
+    <string name="item_already_owned_consuming">item já possuído - consumindo</string>
+    <string name="item_consumed">item consumido</string>
+    <string name="already_on_this_server_doing_nothing">Já neste servidor - sem fazer nada</string>
+    <string name="not_showing_premium_info">Não está exibindo informações sobre o prêmio</string>
+    <string name="you_are_not_eligible_to_use_this_server">A atualização é necessária.
+\nVocê deseja mais informações\?</string>
+    <string name="you_are_currently_connecting_disconnect">Você está conectado no momento. Você precisa se desconectar antes da mudança de servidor. Desconectar agora\?</string>
+    <string name="not_changing_server">Mudança de servidor cancelada</string>
+    <string name="sure_to_change_server">Tem certeza de que deseja alterar o servidor\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">O servidor está sendo alterado. Isso pode demorar um pouco.</string>
+    <string name="server_selection_succesfully_performed_on_backend">Mudança de servidor bem-sucedida.</string>
+    <string name="server_selection_could_not_be_changed">O servidor não pôde ser alterado. Verifique o registro para obter detalhes.</string>
+    <string name="connecting_please_wait">A conexão está sendo processada - aguarde</string>
+    <string name="action_about">Sobre a Shellfire VPN</string>
+
+    <string name="country">país</string>
+    <string name="title_activity_about">Sobre a Shellfire VPN</string>
+    <string name="hello_world">Olá mundo!</string>
+    <string name="copyright_shellfire">© 2014 por Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">APIs de criptografia do Bouncy Castle</string>
+    <string name="copyright_openssl">Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenSSL Toolkit\n
+        Direitos autorais © 1998-2008 The OpenSSL Project. Todos os direitos reservados.\n\n
+        Este produto inclui software criptográfico escrito por Eric Young (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Todos os direitos reservados.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Direitos autorais © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Este programa usa os seguintes componentes; consulte o código-fonte para obter detalhes completos sobre as licenças (disponível em https://code.google.com/p/shellfirevpn4a/)</string>
+    <string name="copyright_arne">O projeto ics-openvpn, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) disponível em: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Direitos autorais © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" é uma marca registrada da OpenVPN Technologies, Inc.\n]]></string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">até que</string>
+    <string name="state_user_vpn_password">Aguardando a senha da VPN do usuário</string>
+    <string name="state_user_vpn_permission_cancelled">Caixa de diálogo de permissão da API da VPN cancelada</string>
+    <string name="account_created_succesfully">Conta criada com sucesso - verifique em seus e-mails o e-mail de ativação.</string>
+    <string name="free">Grátis</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 horas</string>
+    <string name="month_1">1 mês</string>
+    <string name="monthly">mensal</string>
+    <string name="yearly">anualmente</string>
+    <string name="cents99">0,99 euros</string>
+    <string name="cents199">Eur 1,99</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9,95 euros</string>
+    <string name="cents395">3,95 euros</string>
+    <string name="cents795">7,95 euros</string>
+    <string name="cents3990">39,90 Eur</string>
+    <string name="cents8490">84,90 Eur</string>
+    <string name="buy">Comprar</string>
+    <string name="compare">Comparar</string>
+    <string name="singlePayment">pagamento único *</string>
+    <string name="subscription">assinatura **</string>
+    <string name="note_payment_types">* Não é necessário cartão de crédito.
+** cartão de crédito necessário; pode ser cancelado a qualquer momento pelo Google Play. \r\n
+\r\n
+Pague com Paypal em nosso site: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">Selecionando a VPN...</string>
+    <string name="cobiCodeEnter">Campanha COMPUTER BILD</string>
+    <string name="cobiClickHere">Inserir código</string>
+
+    <string name="enter_cobi_code">insira o código COMPUTERBILD aqui:</string>
+    <string name="action_share">Compartilhar este aplicativo</string>
+    <string name="share_with">Compartilhar via</string>
+    <string name="share_text">Eu uso o aplicativo Shellfire #VPN para proteger meus dados contra hackers e desbloquear conteúdo censurado: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Taxa</string>
+    <string name="rate_this_app">Taxa</string>
+    <string name="rate_explanation">Este aplicativo o convenceu\? Ficaríamos muito felizes se você avaliasse nosso aplicativo no Google Play. Obrigado por seu apoio!</string>
+    <string name="rate_now">Avalie agora</string>
+    <string name="rate_later">Mais tarde</string>
+    <string name="rate_never">Não, obrigado</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Meu plano</string>
+    <string name="current_plan">PLANO ATUAL</string>
+    <string name="PAID_UNTIL">Pago até</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Faça upgrade de sua conta para obter mais funções</string>
+
+
+    <string name="retry">Repetir</string>
+    <string name="network_problem_title">Problema de rede</string>
+    <string name="network_problem_message">Você não está conectado à Internet no momento. A Shellfire VPN requer uma conexão ativa com a Internet.</string>
+    <string name="login_error">Falha no login.</string>
+    <string name="serverLoad">Carga</string>
+    <string name="reloadServerList">Recarregar</string>
+    <string name="upgrade_not_successful">A atualização não foi bem-sucedida</string>
+
+    <string name="new_version_available_title">Nova versão disponível</string>
+    <string name="new_version_available_message">Há uma nova versão da Shellfire VPN disponível na Google Play Store. Você deve instalá-la logo, pois essa versão pode não funcionar mais corretamente ou conter problemas de segurança.
+
+Ir para a Play Store agora para atualizar\?
+
+Observação: talvez seja necessário desinstalar / reinstalar para receber a versão mais recente.</string>
+
+    <string name="dontshowagain">Não e não mostrar novamente</string>
+    <string name="not_now">Não agora</string>
+    <string name="server">Servidor</string>
+
+    <string name="_128bit">Criptografia de 128 bits</string>
+    <string name="_192bit">Criptografia de 192 bits</string>
+    <string name="_256bit">Criptografia de 256 bits</string>
+
+    <string name="upto786">até 786 kbit/s</string>
+    <string name="upto10000">até 10.000 kbit/s</string>
+    <string name="unlimited">kbit/s ilimitado</string>
+
+    <string name="php_invalid_email">Digite um endereço de e-mail válido.</string>
+    <string name="php_account_exists">Já existe uma conta registrada para esse endereço de e-mail.</string>
+
+
+    <string name="php_signature"><![CDATA[Saudações da equipe Shellfire
+
+P.S.: Novo: Ganhe dinheiro com a Shellfire! Quando você conseguir novos clientes, nós lhe pagaremos até 100% de comissão: https://www.shellfire.net/affiliate-center/
+
+P.P.S.: Siga-nos no Twitter: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Gerência: Florian Gattung, Maximilian Behr
+Sociedade de pessoas de acordo com o Código Civil com sede em Bad Vilbel, Alemanha]]></string>
+
+    <string name="php_surf_anonym">Navegue na Web de forma anônima</string>
+    <string name="php_hide_ip">Oculte seu próprio endereço IP</string>
+    <string name="php_encrypt_internet">Conexão criptografada com a Internet</string>
+    <string name="php_secure_wifi">Use com segurança os hotspots de wifi públicos</string>
+    <string name="php_unlimited">ilimitado</string>
+    <string name="php_traffic">Tráfego/volume de dados</string>
+    <string name="php_speed_generic">%s kbit/sec</string>
+    <string name="php_speed">Velocidade</string>
+    <string name="php_server_in_generic">Servidor em %s</string>
+    <string name="php_change_location">Mudar de local a todo momento</string>
+    <string name="php_streaming_websites">Sites de streaming</string>
+
+
+    <string name="play_product_description">Shellfire VPN - fácil. seguro. conectado. Sem registro.
+
+A Shellfire VPN é GRATUITA e nunca lhe custará um centavo. Tráfego ilimitado, tempo ilimitado!
+
+A Shellfire VPN oculta seu endereço IP, desbloqueia a Internet e lhe dá a capacidade de acessar livre e anonimamente qualquer site que você quiser. Com a Shellfire VPN, você pode se conectar a qualquer site com a confiança de saber que está disfarçado. Desbloqueamos o Skype, o Facebook, o Twitter, o YouTube etc. em países com censura na Internet e até mesmo permitimos que você acesse os serviços de TV e rádio do seu país no exterior.
+
+A Shellfire VPN oferece criptografia super forte para proteger seus dados contra hackers, a NSA e outras ameaças, mesmo em redes Wi-Fi públicas inseguras!
+
+Faça upgrade para Premium para obter
+ - Maior velocidade.
+ - Criptografia mais forte.
+ - Livre escolha de nossos servidores em:
+Áustria, Canadá, França, Alemanha, Hong Kong, Itália, Holanda, Polônia, Romênia, Rússia, Espanha, Suécia, Suíça, Reino Unido e EUA
+- Os clientes PremiumPlus têm acesso exclusivo a servidores em:
+Chile, Islândia, Ilha de Man (offshore) e Liechtenstein
+
+Shellfire VPN - o melhor cliente VPN para Android.
+
+A Shellfire VPN também funciona no Windows, Mac OS, iOS ou Linux! Visite https://www.shellfire.net/vpn/ para obter mais detalhes.
+
+Para atualizações instantâneas, siga-nos no Facebook e no Twitter
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Navegue anonimamente - Conexão criptografada - Acesse Hulu, Youtube... de qualquer lugar</string>
+
+    <string name="play_product_description_generic">Criptografia de %s bits
+Taxa de transferência de até %2$s kbit/s
+Servidor em %3$s países em todo o mundo</string>
+
+    <string name="hosting_since_2002">Hospedagem desde 2002</string>
+    <string name="vision">Visão</string>
+    <string name="vision_data">Acreditamos que o acesso seguro e gratuito à Internet é um direito fundamental de todas as pessoas do planeta. Por isso, nossa missão é manter a Internet como um lugar de liberdade e também como um lugar seguro para seus dados privados. Fazemos isso fornecendo proteção contra bisbilhoteiros e hackers por meio de nossos túneis VPN criptografados e servidores de voz.</string>
+    <string name="hotspot">Ponto de acesso</string>
+    <string name="hotspot_data_p1">Nos últimos anos, já ajudamos mais de 500.000 usuários a proteger sua privacidade on-line e a superar a censura. Nossos altos padrões de serviço e segurança \\"Made in Germany\\" fazem da Shellfire um dos melhores endereços no mercado de VPN atualmente.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Compre agora</string>
+    <string name="tv_single_pay">Pagamento único</string>
+    <string name="tv_subscription_pay">Assinatura</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 mês</string>
+    <string name="subs_month">mês</string>
+    <string name="subs_year">ano</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Mudança de servidor bem-sucedida - você deseja se conectar agora\?</string>
+    <string name="saotomeandprincipe">São Tomé ve Príncipe</string>
+    <string name="hosting_data">A Shellfire GmbH é um provedor de hospedagem com sede em Schmitten, próximo a Frankfurt am Main. A Shellfire foi fundada em 2002 por Florian Gattung e Maximilian Behr, que têm atuado como sócios-gerentes desde então</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Digite sua mensagem para Shellfire aqui...</string>
+    <string name="load">CARGA:</string>
+    <string name="choose_a_plan">Escolha um plano</string>
+    <string name="speed">Velocidade</string>
+    <string name="servers">Servidores</string>
+    <string name="countries">Países</string>
+    <string name="encryption_server">Criptografia</string>
+    <string name="video_streaming">Transmissão de vídeo</string>
+    <string name="unblock_all_content">Desbloquear todo o conteúdo</string>
+    <string name="encrypted_connection">Conexão criptografada</string>
+    <string name="safe_hotspot_usage">Uso seguro do ponto de acesso</string>
+    <string name="unlimited_traffic">Tráfego ilimitado</string>
+    <string name="upgrade">ATUALIZAÇÃO</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Avançado</string>
+    <string name="STANDARD">Padrão</string>
+    <string name="ALL_SERVERS">Todos os servidores</string>
+    <string name="unlock">Desbloqueio</string>
+    <string name="filter">Filtros</string>
+
+    <string name="format_server">Servidor %d</string>
+
+
+    <string name="widget_label_small">Widget pequeno da Shellfire VPN</string>
+    <string name="widget_label_medium">Widget médio da Shellfire VPN</string>
+    <string name="widget_label_large">Widget grande da Shellfire VPN</string>
+
+    <string name="pref_title_mode_connection">Modo de conexão</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Para ativar sua conta, clique no link do e-mail que acabamos de lhe enviar.</string>
+    <string name="email_validation_required_title">A conta precisa ser ativada</string>
+    <string name="sending_log">Enviando registro...</string>
+    <string name="loading_one">Carregando UM</string>
+    <string name="loading_two">Carregando DOIS</string>
+    <string name="logout">Sair</string>
+    <string name="action_connection_mode">Modo de conexão</string>
+    <string name="action_select_vpn">Selecione VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Dar feedback</string>
+    <string name="title_activity_log">Enviar feedback para Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Avalie nosso aplicativo</string>
+    <string name="initial_dialog_message">Você gosta do nosso aplicativo\?</string>
+    <string name="initial_dialog_positive">Sim</string>
+    <string name="initial_dialog_negative">Não</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Avalie nosso aplicativo</string>
+    <string name="rate_dialog_message">Gostaria de avaliar nosso aplicativo\?</string>
+    <string name="rate_dialog_positive">Sim, eu adoro!</string>
+    <string name="rate_dialog_negative">Não, obrigado</string>
+    <string name="rate_dialog_neutral">Talvez mais tarde</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Fornecer feedback</string>
+    <string name="feedback_dialog_message">Você gostaria de fornecer feedback\?</string>
+    <string name="feedback_dialog_positive">Sim, quero dar feedback</string>
+    <string name="feedback_dialog_negative">Não, obrigado</string>
+
+    <string name="send_feedback_progress">Enviando feedback...</string>
+    <string name="feedback_sent_successfully">Feedback enviado com sucesso</string>
+    <string name="feedback_not_sent">Não foi possível enviar feedback</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Forneça seus comentários abaixo. Se desejar, você também pode incluir logs de aplicativos e do sistema para nos ajudar a entender melhor os problemas.</string>
+    <string name="include_application_and_system_logs">Incluir registros de aplicativos e do sistema</string>
+    <string name="send_feedback">Enviar feedback</string>
+    <string name="abort">Abortar</string>
+    <string name="serverchange_timeout">A operação de alteração do servidor atingiu o tempo limite. Tente novamente.</string>
+    <string name="protocol_is_being_changed">O protocolo está sendo alterado. Isso pode demorar um pouco...</string>
+    <string name="protocol_change_timeout">A operação de alteração do servidor atingiu o tempo limite. Tente novamente.</string>
+    <string name="app_name">VPN Shellfire</string>
+    <string name="login_progress_signing_in">Fazendo login...</string>
+    <string name="login_with_existing_account">Faça login com uma conta existente</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="login">Login</string>
+    <string name="lostAccountData">Dados perdidos da conta</string>
+    <string name="register_new_account">Registrar nova conta</string>
+    <string name="welcomeText">Bem-vindo à Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Registrar nova conta</string>
+    <string name="prompt_email_only">E-mail</string>
+    <string name="subscribeNewsletter">Assine o boletim informativo</string>
+    <string name="register">Registro</string>
+    <string name="i_have_an_account">Eu já tenho uma conta Shellfire</string>
+    <string name="greeting_text">Bem-vindo à Shellfire VPN! Faça login ou registre-se para continuar.</string>
+    <string name="slow">Lento</string>
+    <string name="brilliant">Brilhante</string>
+    <string name="back">Voltar</string>
+    <string name="failed_to_change_server">Falha ao alterar o servidor</string>
+    <string name="sign_in_with_google">Faça login com o Google</string>
+    <string name="google_sign_in_confirmation_title">Confirmação de login do Google</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirmar</string>
+    <string name="try_out_for_7_days">Experimente por 7 dias gratuitamente.</string>
+    <string name="then_get_discount">Em seguida, ganhe %1$s de desconto.</string>
+    <string name="one_year">1 ano</string>
+    <string name="price_yearly_per_year">%1$s / ano</string>
+    <string name="price_yearly_per_month_all_subs">1 ano - %1$s / mês</string>
+    <string name="discount_also_in_subsequent_years">Desconto de %1$s (também nos anos subsequentes)</string>
+    <string name="first_seven_days_free_explain_text">Gratuito nos primeiros 7 dias.\nÉ assim que funciona o teste gratuito.</string>
+    <string name="price_monthly_per_month_all_subs">1 mês - %1$s / mês</string>
+    <string name="price_per_month_selected_sub">%1$s para %2$s</string>
+    <string name="price_info_yearly_per_year_trial_explainer">7 dias grátis, depois %1$s / ano (corresponde a %2$s / mês).</string>
+    <string name="one_month">1 mês</string>
+    <string name="twelve_months">12 meses</string>
+    <string name="get_premium_plus">Obtenha a Shellfire VPN Premium Plus</string>
+    <string name="try_now_for_free">Experimente agora gratuitamente</string>
+    <string name="start_now">Comece agora</string>
+    <string name="best_price_per_month">Melhor preço por mês</string>
+    <string name="seven_days_free">Gratuito nos primeiros 7 dias</string>
+    <string name="cancel_monthly">Cancelar a qualquer momento</string>
+    <string name="no_longterm_commitment">Sem compromisso de longo prazo</string>
+    <string name="show_all_subscriptions">Mostrar todas as assinaturas</string>
+    <string name="choose_subscription">Escolha sua assinatura</string>
+    <string name="access_all_features_and_protect_five_devices">Acesse todos os recursos Premium e proteja 5 dispositivos</string>
+    <string name="first_payment_info_today">O primeiro pagamento deve ser feito agora. Essa assinatura é renovada automaticamente até que seja cancelada.</string>
+    <string name="first_payment_info_seven_days">O primeiro pagamento deve ser feito em 7 dias. Essa assinatura é renovada automaticamente até ser cancelada.</string>
+    <string name="trial_link_text">Experimente por 7 dias gratuitamente - é assim que funciona.</string>
+    <string name="trial_info">Comece a pagar após 7 dias. Após o período inicial, a assinatura será renovada automaticamente a cada ano até que você a cancele.</string>
+    <!-- General -->
+    <string name="close_button_text">Fechar</string>
+    <string name="cta_button_text">Experimente gratuitamente agora</string>
+
+    <!-- Trial Explainer Card -->
+    <string name="trial_explainer_title">Como funciona a avaliação gratuita de 7 dias</string>
+    <string name="trial_step1_title">Hoje: Acesso total a todos os recursos premium</string>
+    <string name="trial_step1_description">Explore todos os recursos premium e teste toda a funcionalidade do aplicativo.</string>
+    <string name="trial_step2_title">Dia 5: E-mail de lembrete sobre o fim do teste</string>
+    <string name="trial_step2_description">Enviaremos um e-mail para lembrá-lo de que o período de avaliação será encerrado em breve.</string>
+    <string name="trial_step3_title">Dia 7: A avaliação termina, sua assinatura começa</string>
+    <string name="trial_step3_description">O pagamento do primeiro ano será processado automaticamente se você não tiver cancelado até essa data.</string>
+    <string name="no_browser_available_to_open_the_link">Nenhum navegador disponível para abrir o link.</string>
+
+
+</resources>

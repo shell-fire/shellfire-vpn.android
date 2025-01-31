@@ -1,0 +1,490 @@
+<resources>
+    <string name="channel_name_userreq">ユーザーとの対話が必要</string>
+    <string name="channel_description_userreq">OpenVPN接続には、二要素認証などのユーザー入力が必要です。
+    </string>
+    <string name="channel_name_background">接続統計</string>
+    <string name="channel_description_background">確立されたOpenVPN接続の継続的な統計</string>
+    <string name="channel_name_status">接続ステータスの変更</string>
+    <string name="channel_description_status">OpenVPN接続のステータス変更（接続中、認証中、...）</string>
+	<string name="save_password">パスワードの保存</string>
+	<string name="show_password">パスワードを表示する</string>
+	<string name="auth_username">ユーザー名</string>
+	<string name="remote_trust">私はこのアプリケーションを信頼している。</string>
+	<string name="remote_warning">続行することで、あなたはアプリケーションにAndroid用OpenVPNを完全に制御し、すべてのネットワークトラフィックを傍受する許可を与えることになります。<b>信頼できる申請書でない限り、受理しないでください。</b>そうでなければ、悪意のあるソフトウェアによってデータが危険にさらされる危険性がある\"</string>
+	<string name="permission_icon_app">AndroidでOpenVPNを使用しようとするアプリのアイコン</string>
+	<string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+	<string name="config_error_found">設定のエラー</string>
+	<string name="nought_alwayson_warning"><![CDATA[VPNの確認ダイアログが表示されなかった場合、別のアプリで「Always on VPN」が有効になっています。この場合、そのアプリだけがVPNに接続できます。設定→ネットワーク→VPNSで確認してください。]]></string>
+	<string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+	<string name="pw_request_dialog_title">1$sが必要</string>
+    <string name="pw_request_dialog_prompt">プロファイル %1$s のパスワードを入力してください。</string>
+	<string name="shortcut_profile_notfound">ショートカットで指定したプロファイルが見つかりません</string>
+	<string name="app">Android用Shellfire VPN</string>
+	<string name="prompt">1$sは%2$sをコントロールしようとしている。</string>
+	<string name="all_app_prompt">外部アプリが %s を制御しようとしています。アクセスを要求しているアプリを特定できません。このアプリを許可すると、すべてのアプリにアクセスが許可されます。</string>
+	<string name="screen_nopersistenttun">警告：このVPNではPersistent tunが有効になっていません。スクリーンがオフの場合、トラフィックは通常のインターネット接続を使用します。</string>
+	<string name="private_key_password">秘密鍵パスワード</string>
+	<string name="pkcs12_file_encryption_key">PKCS12ファイル暗号化キー</string>
+	<string name="no_error_found">エラーなし</string>
+	<string name="no_orbotfound">Orbotアプリケーションが見つかりません。Orbotをインストールするか、手動でSocks v5を統合してください。</string>
+	<string name="error_orbot_and_proxy_options">余分なhttp-proxy-optionステートメントとOrbot統合を同時に使用することはできません。</string>
+	<string name="openvpn3_socksproxy">OpenVPN 3 C++の実装はSocksプロキシ経由の接続をサポートしない</string>
+	<string name="openvpn3_nostatickeys">OpenVPN 3 C++ の実装は静的キーをサポートしていません。一般設定で OpenVPN 2.x に変更してください。</string>
+    <string name="openvpn3_pkcs12">OpenVPN 3 C++ 実装で PKCS12 ファイルを直接使用することはサポートされていません。pkcs12 ファイルを Android keystore にインポートするか、一般設定で OpenVPN 2.x に変更してください。</string>
+	<string name="remote_no_server_selected">少なくとも1つのリモートサーバーを定義し、有効にする必要があります。</string>
+	<string name="missing_tlsauth">tls-authファイルがありません。</string>
+    <string name="missing_certificates">ユーザー証明書またはユーザー証明書キーファイルがない</string>
+    <string name="missing_ca_certificate">CA 証明書が見つからない</string>
+	<string name="custom_route_format_error">カスタムルートの解析エラー</string>
+	<string name="ipv4_format_error">IPv4アドレスの解析エラー</string>
+	<string name="deprecated_tls_remote">2.3で非推奨となり、2.4で最終的に削除されたtls-remoteオプションを使用しています。</string>
+	<string name="no_ca_cert_selected">CA証明書を選択するか、ピアフィンガープリントチェックを有効にする必要があります。</string>
+	<string name="no_keystore_cert_selected">ユーザー証明書を選択する必要があります。</string>
+	<string name="keyChainAccessError">KeyChain アクセス・エラー: %s</string>
+	<string name="cannotparsecert">証明書情報を表示できない</string>
+	<string name="crtext_requested">VPN認証を継続するためのチャレンジに答える</string>
+	<string name="openurl_requested">VPN認証を続けるためにURLを開く</string>
+	<string name="ip_looks_like_subnet">Vpnのトポロジーに\"%3$s \"が指定されたが、ifconfig %1$s %2$sはネットワーク・マスク付きIPアドレスのように見える。subnet \"トポロジーを想定。</string>
+	<string name="allowed_vpn_apps_info">許可されたVPNアプリ: %1$s</string>
+	<string name="disallowed_vpn_apps_info">許可されていない VPN アプリ: %1$s</string>
+	<string name="app_no_longer_exists">パッケージ %s がインストールされなくなったので、アプリの許可/不許可リストから削除します。</string>
+	<string name="no_allowed_app">許可されたアプリが追加されていません。すべてのアプリを許可しないために、許可されたアプリのリストに少なくとも1つのアプリを持つように自分自身(%s)を追加する</string>
+	<string name="ignore_multicast_route">マルチキャスト・ルートを無視しています: %s</string>
+	<string name="routes_debug">インストールされた VpnService ルート: %1$s %2$s</string>
+	<string name="state_auth_failed">認証に失敗</string>
+	<string name="password">パスワード</string>
+	<string name="state_waitorbot">オルボットのスタートを待つ</string>
+	<string name="service_restarted">OpenVPNサービスを再起動する。</string>
+	<string name="notifcation_title_notconnect">未接続</string>
+	<string name="permission_revoked">OSによりVPNの許可が取り消され（例：他のVPNプログラムが起動）、VPNが停止する。</string>
+	<string name="keychain_nocacert">Android keystore からの読み取り中に CA 証明書が返されませんでした。認証はおそらく失敗します。</string>
+	<string name="abi_mismatch">このデバイスの優先ネイティブ ABI 優先順位 (%1$s) とネイティブ・ライブラリが報告する ABI (%2$s) が不一致です。</string>
+	<string name="jelly_keystore_alphanumeric_bug">Android 4.1の一部のバージョンでは、キーストア証明書の名前に英数字以外の文字（スペース、アンダースコア、ダッシュなど）が含まれていると問題が発生します。特殊文字を含まない証明書を再インポートしてみてください。</string>
+	<string name="keychain_access">Android Keychain証明書にアクセスできない。これは、ファームウェアのアップグレード、またはアプリ/アプリ設定のバックアップの復元によって発生する可能性があります。VPNを編集し、基本設定で証明書を再選択して、証明書へのアクセス許可を再作成してください。</string>
+	<string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">0.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">GB</string>	
+	<string name="bits_per_second">ビット/秒</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">1f Mbit/s</string>
+    <string name="gbits_per_second">Gbit/s</string>
+	<string name="state_auth_pending">認証保留</string>
+	<string name="reread_log">ログ・キャッシュ・ファイルから (%d) ログ項目を再読み取りしています。</string>
+	<string name="state_waitconnectretry">接続試行までの待ち時間 %ss 秒</string>
+	<string name="unhandled_exception">未処理の例外： %1$sn</string>
+	<string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">ルート: %1$s %2$s</string>
+    <string name="routes_info_excl">除外されたルート1$s %2$s</string>
+    <string name="title_activity_login">ログイン</string>
+    <string name="action_forgot_password">パスワードを忘れた</string>
+    <string name="register_process_registering">登録...</string>
+    <string name="error_invalid_password">パスワードが短すぎる</string>
+    <string name="error_passwords_dont_match">パスワードが一致しない</string>
+    <string name="error_field_required">このフィールドは必須です。</string>
+    <string name="action_settings">設定</string>
+    <string name="title_connect">ステータス</string>
+    <string name="title_serverlist">サーバー一覧</string>
+    <string name="title_locations">所在地</string>
+    <string name="title_log">ログ</string>
+    <string name="title_billing">プレミアム</string>
+    <string name="connect">接続</string>
+    <string name="route_rejected">アンドロイドに拒否されたルート</string>
+    <string name="tun_error_helpful">一部のカスタムICSイメージでは、/dev/tunのパーミッションが間違っているか、tunモジュールが完全に欠落している可能性があります。CM9イメージの場合、一般設定の所有権の修正オプションを試してください。</string>
+    <string name="tun_open_error">チューン・インターフェースのオープンに失敗</string>
+    <string name="error">「エラー：\"</string>
+    <string name="last_openvpn_tun_config">チューン・インターフェースを開く：</string>
+    <string name="local_ip_info">ローカル IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">DNS サーバー：1$s、ドメイン: %2$s</string>
+    <string name="routes_info">ルート: %s</string>
+    <string name="routes_info6">IPv6 ルート: %s</string>
+    <string name="ip_not_cidr">インタフェース情報 %1$s と %2$s を取得しました。2 番目のアドレスはリモートのピアアドレスです。ローカル IP に /32 ネットマスクを使用。OpenVPN で指定されたモードは \\"%3$s\" です。</string>
+    <string name="route_not_cidr">CIDR ネットマスクを持つ IP ルートとして、/32 をネットマスクとして使用している %1$s と %2$s を理解できません。</string>
+    <string name="route_not_netip">ルート %1$s/%2$s を %3$s/%2$s に修正しました。</string>
+    <string name="no_vpn_support_image">あなたの画像はVPNService APIをサポートしていません。</string>
+    <string name="encryption">-暗号化</string>
+    <string name="opentun_no_ipaddr">IP情報のないチューン・デバイスのオープンを拒否</string>
+    <string name="building_configration">建物構成...</string>
+    <string name="netstatus">ネットワーク・ステータス: %s</string>
+    <string name="mobile_info">1$s (%2$s) %3$s、Android API %4$d で実行中です。</string>
+    <string name="error_rsa_sign">Android keystore key %1$s: %2$s での署名エラー。</string>
+    <string name="warn_no_dns">DNSサーバーが使用されていない。名前解決が機能しない可能性があります。カスタムDNSサーバーの設定をご検討ください。また、DNSサーバーが設定されていない場合、Androidはモバイル/Wi-Fi接続に指定されたプロキシ設定を使用し続けることにご注意ください。</string>
+    <string name="dns_add_error">DNSサーバを追加できませんでした。</string>
+    <string name="ip_add_error">IP Addressを設定できませんでした。</string>
+    <string name="getproxy_error">プロキシ設定の取得エラー: %s</string>
+    <string name="using_proxy">プロキシ %1$s %2$d を使用しています。</string>
+    <string name="minidump_generated">OpenVPN が予期せずクラッシュしました。メインメニューの Minidump 送信オプションの使用を検討してください。</string>
+    <string name="session_ipv4string">1$s - %2$s</string>
+    <string name="session_ipv6string">1$s - %3$s, %2$s</string>
+    <string name="state_connecting">接続</string>
+    <string name="state_wait">サーバーからの返信を待つ</string>
+    <string name="state_auth">認証</string>
+    <string name="state_get_config">クライアント設定の取得</string>
+    <string name="state_assign_ip">IPアドレスの割り当て</string>
+    <string name="state_add_routes">ルートの追加</string>
+    <string name="state_connected">接続済み</string>
+    <string name="state_disconnected">切断</string>
+    <string name="state_reconnecting">再接続</string>
+    <string name="state_exiting">退場</string>
+    <string name="state_noprocess">走っていない</string>
+    <string name="state_resolve">ホスト名の解決</string>
+    <string name="state_tcp_connect">接続中（TCP）</string>
+    <string name="unknown_state">不明</string>
+    <string name="state_nonetwork">使用可能なネットワークを待つ</string>
+    <string name="statusline_bytecount">↓2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">VPN %s に接続しています。</string>
+    <string name="start_vpn_ticker">VPN %s に接続しています。</string>
+    <string name="mobile_info_extended">1$s (%2$s) %3$s、Android API %4$d、バージョン %5$s、%6$s で実行中です。</string>
+    <string name="built_by">によって構築された %s</string>
+    <string name="debug_build">デバッグビルド</string>
+    <string name="official_build">公式ビルド</string>
+    <string name="screenoff_pause">画面オフ状態で接続を一時停止しています: %2$ss で %1$s 未満です。</string>
+    <string name="state_userpause">ユーザーによって要求されたVPNの一時停止</string>
+    <string name="state_screenoff">VPN一時停止 - 画面オフ</string>
+    <string name="defaultServerName">サーバー XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">プレミアム・プラス</string>
+
+
+    <string name="title_activity_select_vpn">VPNを選択</string>
+    <string name="vpnSelectReason">Shellfireアカウントに複数のVPNが見つかりました。どれを使用するか選択してください。</string>
+    <string name="rememberVpnSelection">選択を保存</string>
+    <string name="remember_vpn_summary">複数のVPNが存在する場合、ログインのたびにVPNを選択する必要はない。</string>
+    <string name="remember_vpn_title">選択したVPNを保存</string>
+    <string name="show_log_sum">ログを永続的に表示すると、パフォーマンスが低下する可能性があります（アプリの再起動が必要です）。</string>
+    <string name="show_log">表示ログ</string>
+    <string name="default_product_type">無料</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">かそうへいいきもう</string>
+    <string name="selected_server">サーバー</string>
+    <string name="connectionAdvice">選択したサーバーに接続します。サーバーを変更するには、右にスワイプします。</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">アプリケーションログ</string>
+    <string name="connectionState">ステータス</string>
+    <string name="disconnected">切断</string>
+    <string name="noAccountData">未登録ですか？</string>
+    <string name="title_activity_register">登録</string>
+    <string name="buyDailyPremium">0.99ユーロ/24時間</string>
+    <string name="buyDailyPremiumPlus">1,99ユーロ/24時間</string>
+    <string name="buyMonthlyPremium">3.49ユーロ/月</string>
+    <string name="buyMonthlyPremiumPlus">7.95ユーロ/月</string>
+    <string name="buyYearlyPremium">39,90ユーロ／年</string>
+    <string name="buyYearlyPremiumPlus">84,90ユーロ／年</string>
+    <string name="premiumUntil">プレミアムまで：</string>
+    <string name="sendToShellfire">Shellfireにログを送信</string>
+    <string name="verifying_purchase">購入の確認中...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">プレミアムアップグレードに成功しました。サーバーリストを表示しますか？</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="YES">イエス</string>
+    <string name="upgrade_not_successful_check_log">アップグレードに失敗しました！</string>
+    <string name="problem_setting_up_in_app_billing">\"アプリ内課金の設定に問題がある：\"</string>
+    <string name="loading">読み込み中...</string>
+    <string name="send_log_to_shellfire">Shellfireにログを送信</string>
+    <string name="log_send_succesfully">Shellfireへのログ送信成功</string>
+    <string name="log_could_not_be_sent">ログを送信できませんでした</string>
+    <string name="connecting">接続...</string>
+    <string name="cansel">キャンセル</string>
+    <string name="disconnect">切断</string>
+    <string name="connected">接続済み</string>
+    <string name="loading_certificates">証明書の読み込み</string>
+    <string name="switching_from_udp_to_tcp">UDPからTCPへの切り替え</string>
+    <string name="switching_from_tcp_to_udp">TCPからUDPへの切り替え</string>
+    <string name="item_already_owned_consuming">所有アイテム - 消費中</string>
+    <string name="item_consumed">消費アイテム</string>
+    <string name="already_on_this_server_doing_nothing">すでにこのサーバーにいる - 何もしていない</string>
+    <string name="not_showing_premium_info">プレミアム情報が表示されない</string>
+    <string name="you_are_not_eligible_to_use_this_server">アップグレードが必要です。
+\もっと情報が必要ですか？</string>
+    <string name="you_are_currently_connecting_disconnect">現在接続中です。サーバーを変更する前に切断する必要があります。今すぐ切断しますか？</string>
+    <string name="not_changing_server">サーバー変更中止</string>
+    <string name="sure_to_change_server">本当にサーバーを変更したいのですか？</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">サーバーが変更されました。これには時間がかかります。</string>
+    <string name="server_selection_succesfully_performed_on_backend">サーバーの変更に成功しました。</string>
+    <string name="server_selection_could_not_be_changed">サーバーを変更できませんでした。詳細はログを確認してください。</string>
+    <string name="connecting_please_wait">接続処理中です。</string>
+    <string name="action_about">Shellfire VPNについて</string>
+
+    <string name="country">カントリー</string>
+    <string name="title_activity_about">Shellfire VPNについて</string>
+    <string name="hello_world">こんにちは！</string>
+    <string name="copyright_shellfire">© 2014 by Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">バウンシー・キャッスルの暗号API</string>
+    <string name="copyright_openssl">本製品には、OpenSSL Toolkitで使用するためにOpenSSL Projectによって開発されたソフトウェアが含まれています。
+        Copyright © 1998-2008 The OpenSSL Project.All rights reserved.
+        本製品には、Eric Young (eay\@cryptsoft.com)によって書かれた暗号化ソフトウェアが含まれています。
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) All rights reserved.</string>
+    <string name="openssl">オープンSSL</string>
+    <string name="lzo_copyright">著作権 © 1996 - 2011 マルクス・フランツ・クサヴァー・ヨハネス・オーバーフューマー</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">ライセンスの詳細についてはソースコードをご覧ください（https://code.google.com/p/shellfirevpn4a/）。</string>
+    <string name="copyright_arne">ics-openvpn project, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) available at: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">オープンVPN</string>
+    <string name="opevpn_copyright"><![CDATA[著作権 © 2002-2010 OpenVPN Technologies, Inc.<sales\@openvpn.net>n
+
+	  「OpenVPN」は、OpenVPN Technologies, Inc.の商標です。]]></string>
+    <string name="copyright_bouncycastle">著作権 © 2000-2012 バウンシー・キャッスル軍団 (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">まで</string>
+    <string name="state_user_vpn_password">ユーザーVPNのパスワード待ち</string>
+    <string name="state_user_vpn_permission_cancelled">VPN API許可ダイアログがキャンセルされた</string>
+    <string name="account_created_succesfully">アカウントが正常に作成されました。</string>
+    <string name="free">無料</string>
+    <string name="premium">プレミアム</string>
+    <string name="premiumplus">ShellfirenVPN</string>
+    <string name="hours24">24時間</string>
+    <string name="month_1">1ヶ月</string>
+    <string name="monthly">毎月</string>
+    <string name="yearly">毎年</string>
+    <string name="cents99">0.99 ユーロ</string>
+    <string name="cents199">1.99ユーロ</string>
+    <string name="cents495">4.95 ユーロ</string>
+    <string name="cents995">9.95 ユーロ</string>
+    <string name="cents395">3.95 ユーロ</string>
+    <string name="cents795">7.95ユーロ</string>
+    <string name="cents3990">39.90 ユーロ</string>
+    <string name="cents8490">84.90 ユーロ</string>
+    <string name="buy">購入</string>
+    <string name="compare">比較する</string>
+    <string name="singlePayment">シングルペイメント</string>
+    <string name="subscription">サブスクリプション</string>
+    <string name="note_payment_types">* クレジットカードは必要ありません。
+** クレジットカードが必要です。\˶´⚰︎`˵
+\i.
+Paypalで支払う: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">VPNの選択...</string>
+    <string name="cobiCodeEnter">COMPUTER BILD キャンペーン</string>
+    <string name="cobiClickHere">コードを入力</string>
+
+    <string name="enter_cobi_code">ここにCOMPUTERBILDコードを入力してください：</string>
+    <string name="action_share">このアプリを共有する</string>
+    <string name="share_with">シェアする</string>
+    <string name="share_text">ハッカーからデータを保護し、検閲されたコンテンツのブロックを解除するために、私はShellfire #VPNアプリを使っています: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">レート</string>
+    <string name="rate_this_app">レート</string>
+    <string name="rate_explanation">このアプリにご納得いただけましたか？Google Playで私たちのアプリを評価していただけるととても嬉しいです。ご協力ありがとうございました！</string>
+    <string name="rate_now">レート</string>
+    <string name="rate_later">後日</string>
+    <string name="rate_never">いいえ、結構です</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">私の計画</string>
+    <string name="current_plan">現在の計画</string>
+    <string name="PAID_UNTIL">支払期限</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">アカウントをアップグレードしてより多くの機能を利用</string>
+
+
+    <string name="retry">リトライ</string>
+    <string name="network_problem_title">ネットワーク問題</string>
+    <string name="network_problem_message">現在インターネットに接続されていません。Shellfire VPNをご利用いただくには、インターネット接続が必要です。</string>
+    <string name="login_error">ログインに失敗しました。</string>
+    <string name="serverLoad">負荷</string>
+    <string name="reloadServerList">リロード</string>
+    <string name="upgrade_not_successful">アップグレードに失敗</string>
+
+    <string name="new_version_available_title">新バージョン</string>
+    <string name="new_version_available_message">Shellfire VPNの新バージョンがGoogle Playストアで公開されています。このバージョンは正常に動作しなくなったり、セキュリティ上の問題が含まれている可能性があるため、すぐにインストールする必要があります。
+
+今すぐPlayストアにアクセスしてアップデートしますか？
+
+注意: 最新バージョンを入手するには、アンインストール/再インストールが必要な場合があります。</string>
+
+    <string name="dontshowagain">いいえ、二度と来ないでください</string>
+    <string name="not_now">今ではない</string>
+    <string name="server">サーバー</string>
+
+    <string name="_128bit">128ビット暗号化</string>
+    <string name="_192bit">192ビット暗号化</string>
+    <string name="_256bit">256ビット暗号化</string>
+
+    <string name="upto786">最大786kビット/秒</string>
+    <string name="upto10000">最大10,000 kビット/秒</string>
+    <string name="unlimited">無制限kビット/秒</string>
+
+    <string name="php_invalid_email">有効なEメールアドレスを入力してください。</string>
+    <string name="php_account_exists">そのメールアドレスの登録アカウントはすでに存在しています。</string>
+
+
+    <string name="php_signature">Shellfireチームより
+
+追伸新しくなりました：Shellfireでお金を稼ぎましょう！新規顧客を獲得すると、最大100％のコミッションをお支払いします。https://www.shellfire.net/affiliate-center/
+
+追伸ツイッターをフォローしてください：http://twitter.com/#!/shellfire_ja
+
+シェルファイア ガットゥング＆ベーアGbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+シェルファイア ガットゥング＆ベーア GbR
+経営陣フロリアン・ガットゥング、マクシミリアン・ベーア
+ドイツ、バート・ヴィルベルに本拠を置く民法上のパートナーシップ</string>
+
+    <string name="php_surf_anonym">匿名でネットサーフィン</string>
+    <string name="php_hide_ip">自分のIPアドレスを隠す</string>
+    <string name="php_encrypt_internet">暗号化されたインターネット接続</string>
+    <string name="php_secure_wifi">公衆無線LANホットスポットを安全に利用する</string>
+    <string name="php_unlimited">無制限</string>
+    <string name="php_traffic">トラフィック／データ量</string>
+    <string name="php_speed_generic">1$s kビット/秒</string>
+    <string name="php_speed">スピード</string>
+    <string name="php_server_in_generic">1$s のサーバ</string>
+    <string name="php_change_location">常に場所を変える</string>
+    <string name="php_streaming_websites">ストリーミング・ウェブサイト</string>
+
+
+    <string name="play_product_description">Shellfire VPN - 簡単、安全、つながる。登録不要。
+
+Shellfire VPNは無料です。トラフィック無制限、時間無制限！
+
+Shellfire VPNはあなたのIPアドレスを隠し、インターネットのブロックを解除し、どんなサイトにも自由に匿名でアクセスできるようにします。Shellfire VPNを使えば、どんなサイトにも安心して接続できます。インターネット検閲のある国でのスカイプ、フェイスブック、ツイッター、ユーチューブなどのブロックを解除し、海外から自国のテレビやラジオにアクセスすることもできます。
+
+Shellfire VPNは、ハッカーやNSAなどの脅威からあなたのデータを守るため、安全でない公衆無線LANネットワークでも超強力な暗号化を提供します！
+
+プレミアムにアップグレードすると
+ - より高速
+ - より強力な暗号化。
+ - オーストリア、カナダ、フランス、ドイツ
+オーストリア、カナダ、フランス、ドイツ、香港、イタリア、オランダ、ポーランド、ルーマニア、ロシア、スペイン、スウェーデン、スイス、英国、米国
+- PremiumPlusをご利用のお客様は、以下のサーバーをご利用いただけます：
+チリ、アイスランド、マン島（オフショア）、リヒテンシュタイン
+
+Shellfire VPN - Android用の究極のVPNクライアント。
+
+Shellfire VPNはWindows、Mac OS、iOS、Linuxでもご利用いただけます！詳しくは https://www.shellfire.net/vpn/ をご覧ください。
+
+最新情報はフェイスブックとツイッターで。
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">匿名でネットサーフィン - 暗号化された接続 - HuluやYoutubeにどこからでもアクセス可能</string>
+
+    <string name="play_product_description_generic">1$sビットの暗号化
+最大 %2$s kbit/s の転送速度
+世界3カ国にサーバー</string>
+
+    <string name="hosting_since_2002">2002年からホスティング</string>
+    <string name="vision">ビジョン</string>
+    <string name="vision_data">私たちは、インターネットへの安全で自由なアクセスは、この地球上のすべての人にとって基本的な権利であると信じています。そのため、私たちの使命は、インターネットを自由の場所であると同時に、あなたの個人データのための安全な場所に保つことです。私たちは、暗号化されたVPNトンネルと音声サーバーを通じて、盗聴者やハッカーからの保護を提供することによって、それを行います。</string>
+    <string name="hotspot">ホットスポット</string>
+    <string name="hotspot_data_p1">近年、私たちはすでに50万人以上のユーザーがオンラインでプライバシーを保護し、検閲を克服するのに役立っています。Shellfireは、Made in Germanyの高いサービスとセキュリティ基準により、今日のVPN市場で最高のアドレスの一つとなっています。</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">今すぐ購入</string>
+    <string name="tv_single_pay">シングル・ペイメント</string>
+    <string name="tv_subscription_pay">サブスクリプション</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1ヶ月</string>
+    <string name="subs_month">月</string>
+    <string name="subs_year">年</string>
+    <string name="plan_premium">プレミアム</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">地図</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">サーバーの変更に成功しました。</string>
+    <string name="saotomeandprincipe">サントメ・プリンシペ</string>
+    <string name="hosting_data">Shellfire GmbHは、フランクフルト・アム・マイン近郊のシュミテンに本拠を置くホスティング・プロバイダーです。Shellfireは2002年にFlorian GattungとMaximilian Behrによって設立されました。</string>
+
+    <string name="enter_your_message_to_Shellfire_here">シェルファイアへのメッセージをここに入力...</string>
+    <string name="load">ロード：</string>
+    <string name="choose_a_plan">プランの選択</string>
+    <string name="speed">スピード</string>
+    <string name="servers">サーバー</string>
+    <string name="countries">国名</string>
+    <string name="encryption_server">暗号化</string>
+    <string name="video_streaming">ビデオストリーミング</string>
+    <string name="unblock_all_content">すべてのコンテンツのブロックを解除する</string>
+    <string name="encrypted_connection">暗号化接続</string>
+    <string name="safe_hotspot_usage">ホットスポットの安全な利用</string>
+    <string name="unlimited_traffic">無制限トラフィック</string>
+    <string name="upgrade">アップグレード</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">上級</string>
+    <string name="STANDARD">スタンダード</string>
+    <string name="ALL_SERVERS">全サーバー</string>
+    <string name="unlock">ロック解除</string>
+    <string name="filter">フィルター</string>
+
+    <string name="format_server">サーバ %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN スモールウィジェット</string>
+    <string name="widget_label_medium">Shellfire VPN ミディアムウィジェット</string>
+    <string name="widget_label_large">シェルファイアVPN大型ウィジェット</string>
+
+    <string name="pref_title_mode_connection">接続モード</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">アカウントを有効化するには、先ほどお送りしたメールに記載されているリンクをクリックしてください。</string>
+    <string name="email_validation_required_title">アカウントの有効化が必要</string>
+    <string name="sending_log">ログを送信...</string>
+    <string name="loading_one">ローディング ONE</string>
+    <string name="loading_two">ローディング TWO</string>
+    <string name="logout">ログアウト</string>
+    <string name="action_connection_mode">接続モード</string>
+    <string name="action_select_vpn">VPNを選択</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">フィードバック</string>
+    <string name="title_activity_log">シェルファイアへのフィードバックを送信</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">アプリの評価</string>
+    <string name="initial_dialog_message">私たちのアプリは気に入っていただけましたか？</string>
+    <string name="initial_dialog_positive">はい</string>
+    <string name="initial_dialog_negative">いいえ</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">アプリの評価</string>
+    <string name="rate_dialog_message">私たちのアプリを評価しますか？</string>
+    <string name="rate_dialog_positive">そう、大好きなんだ！</string>
+    <string name="rate_dialog_negative">いいえ、結構です</string>
+    <string name="rate_dialog_neutral">たぶん後で</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">フィードバックの提供</string>
+    <string name="feedback_dialog_message">ご意見をお聞かせください。</string>
+    <string name="feedback_dialog_positive">はい。</string>
+    <string name="feedback_dialog_negative">いいえ、結構です</string>
+
+    <string name="send_feedback_progress">フィードバックを送る</string>
+    <string name="feedback_sent_successfully">フィードバックの送信に成功</string>
+    <string name="feedback_not_sent">フィードバックを送信できませんでした</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">以下にフィードバックをご記入ください。また、ご希望であれば、アプリケーションやシステムのログもご記入ください。</string>
+    <string name="include_application_and_system_logs">アプリケーションとシステムのログを含む</string>
+    <string name="send_feedback">フィードバックを送る</string>
+    <string name="abort">中止</string>
+    <string name="serverchange_timeout">サーバー変更操作がタイムアウトしました。再試行してください。</string>
+    <string name="protocol_is_being_changed">プロトコルを変更中です。これには時間がかかります。</string>
+    <string name="protocol_change_timeout">サーバー変更操作がタイムアウトしました。再試行してください。</string>
+    <string name="app_name">シェルファイアVPN</string>
+    <string name="login_progress_signing_in">サインイン...</string>
+    <string name="login_with_existing_account">既存のアカウントでログイン</string>
+    <string name="prompt_email">電子メール</string>
+    <string name="prompt_password">パスワード</string>
+    <string name="action_sign_in_short">サインイン</string>
+    <string name="login">ログイン</string>
+    <string name="lostAccountData">口座データの紛失</string>
+    <string name="register_new_account">新規アカウント登録</string>
+    <string name="welcomeText">Shellfire VPNへようこそ！</string>
+    <string name="needToAcceptAndRegister">新規アカウント登録</string>
+    <string name="prompt_email_only">電子メール</string>
+    <string name="subscribeNewsletter">ニュースレターを購読する</string>
+    <string name="register">登録</string>
+    <string name="i_have_an_account">すでにShellfireのアカウントを持っている</string>
+    <string name="greeting_text">Shellfire VPNへようこそ！続けるにはログインするか登録してください。</string>
+    <string name="slow">遅い</string>
+    <string name="brilliant">ブリリアント</string>
+    <string name="back">バック</string>
+
+</resources>

@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/border" />
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/cz" /> <!-- Placeholder image -->
+    </item>
+</layer-list>

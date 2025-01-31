@@ -1,0 +1,490 @@
+<resources>
+    <string name="channel_name_userreq">Interaksi pengguna diperlukan</string>
+    <string name="channel_description_userreq">Sambungan OpenVPN memerlukan input pengguna, misalnya autentikasi dua faktor
+    </string>
+    <string name="channel_name_background">Statistik koneksi</string>
+    <string name="channel_description_background">Statistik yang sedang berlangsung dari koneksi OpenVPN yang telah dibuat</string>
+    <string name="channel_name_status">Perubahan status koneksi</string>
+    <string name="channel_description_status">Perubahan status koneksi OpenVPN (Menghubungkan, mengautentikasi,...)</string>
+	<string name="save_password">Simpan Kata Sandi</string>
+	<string name="show_password">Tampilkan kata sandi</string>
+	<string name="auth_username">Nama pengguna</string>
+	<string name="remote_trust">Saya mempercayai aplikasi ini.</string>
+	<string name="remote_warning">Dengan melanjutkan, Anda memberikan izin kepada aplikasi untuk mengontrol sepenuhnya OpenVPN untuk Android dan mencegat semua lalu lintas jaringan.<b>JANGAN menerima kecuali Anda mempercayai aplikasi tersebut.</b> Jika tidak, Anda berisiko data Anda disusupi perangkat lunak berbahaya.\"</string>
+	<string name="permission_icon_app">Ikon aplikasi yang mencoba menggunakan OpenVPN untuk Android</string>
+	<string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+	<string name="config_error_found">Kesalahan dalam Konfigurasi</string>
+	<string name="nought_alwayson_warning"><![CDATA[Jika Anda tidak mendapatkan dialog konfirmasi VPN, berarti Anda telah mengaktifkan \"Always on VPN\" untuk aplikasi lain. Dalam hal ini, hanya aplikasi tersebut yang diizinkan untuk tersambung ke VPN. Periksa di bawah Pengaturan-> Jaringan lainnya... -> VPN]]></string>
+	<string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+	<string name="pw_request_dialog_title">Perlu %1 $ s</string>
+    <string name="pw_request_dialog_prompt">Masukkan kata sandi untuk profil %1$s</string>
+	<string name="shortcut_profile_notfound">Profil yang ditentukan dalam pintasan tidak ditemukan</string>
+	<string name="app">Shellfire VPN untuk Android</string>
+	<string name="prompt">Upaya %1 untuk mengendalikan %2</string>
+	<string name="all_app_prompt">Aplikasi eksternal mencoba mengontrol %s. Aplikasi yang meminta akses tidak dapat ditentukan. Mengizinkan aplikasi ini akan memberikan akses kepada SEMUA aplikasi.</string>
+	<string name="screen_nopersistenttun">Peringatan: Persistent tun tidak diaktifkan untuk VPN ini. Lalu lintas akan menggunakan koneksi Internet normal saat layar mati.</string>
+	<string name="private_key_password">Kata Sandi Kunci Pribadi</string>
+	<string name="pkcs12_file_encryption_key">Kunci Enkripsi File PKCS12</string>
+	<string name="no_error_found">Tidak ditemukan kesalahan</string>
+	<string name="no_orbotfound">Aplikasi Orbot tidak dapat ditemukan. Silakan instal Orbot atau gunakan integrasi Socks v5 manual.</string>
+	<string name="error_orbot_and_proxy_options">Tidak dapat menggunakan pernyataan opsi http-proxy-option tambahan dan integrasi Orbot secara bersamaan</string>
+	<string name="openvpn3_socksproxy">Implementasi OpenVPN 3 C++ tidak mendukung koneksi melalui proxy Socks</string>
+	<string name="openvpn3_nostatickeys">Implementasi OpenVPN 3 C++ tidak mendukung kunci statis. Harap ubah ke OpenVPN 2.x di bawah pengaturan umum.</string>
+    <string name="openvpn3_pkcs12">Menggunakan file PKCS12 secara langsung dengan implementasi OpenVPN 3 C++ tidak didukung. Silakan impor file pkcs12 ke dalam keystore Android atau ubah ke OpenVPN 2.x dalam pengaturan umum.</string>
+	<string name="remote_no_server_selected">Anda perlu menentukan dan mengaktifkan setidaknya satu server jarak jauh.</string>
+	<string name="missing_tlsauth">file tls-auth hilang</string>
+    <string name="missing_certificates">Sertifikat pengguna atau file kunci sertifikat pengguna yang hilang</string>
+    <string name="missing_ca_certificate">Sertifikat CA yang hilang</string>
+	<string name="custom_route_format_error">Kesalahan penguraian rute khusus</string>
+	<string name="ipv4_format_error">Kesalahan penguraian alamat IPv4</string>
+	<string name="deprecated_tls_remote">Config menggunakan opsi tls-remote yang sudah tidak digunakan lagi pada 2.3 dan akhirnya dihapus pada 2.4</string>
+	<string name="no_ca_cert_selected">Anda harus memilih sertifikat CA atau mengaktifkan pemeriksaan sidik jari rekan</string>
+	<string name="no_keystore_cert_selected">Anda harus memilih sertifikat Pengguna</string>
+	<string name="keyChainAccessError">Kesalahan Akses Rantai Kunci: %s</string>
+	<string name="cannotparsecert">Tidak dapat menampilkan informasi sertifikat</string>
+	<string name="crtext_requested">Menjawab tantangan untuk melanjutkan autentikasi VPN</string>
+	<string name="openurl_requested">Buka URL untuk melanjutkan autentikasi VPN</string>
+	<string name="ip_looks_like_subnet">Topologi VPN \\"%3$s\\" yang ditentukan tetapi ifconfig %1$s %2$s lebih terlihat seperti alamat IP dengan mask jaringan. Dengan asumsi topologi \"subnet\".</string>
+	<string name="allowed_vpn_apps_info">Aplikasi VPN yang diizinkan: %1$s</string>
+	<string name="disallowed_vpn_apps_info">Aplikasi VPN yang dilarang: %1$s</string>
+	<string name="app_no_longer_exists">Paket %s tidak lagi terinstal, menghapusnya dari daftar izinkan/tidak izinkan aplikasi</string>
+	<string name="no_allowed_app">Tidak ada aplikasi yang diizinkan ditambahkan. Menambahkan diri kita sendiri (%s) untuk memiliki setidaknya satu aplikasi dalam daftar aplikasi yang diizinkan untuk tidak mengizinkan semua aplikasi</string>
+	<string name="ignore_multicast_route">Mengabaikan rute multicast: %s</string>
+	<string name="routes_debug">Rute VpnService yang diinstal: %1$s %2$s</string>
+	<string name="state_auth_failed">Otentikasi gagal</string>
+	<string name="password">Kata sandi</string>
+	<string name="state_waitorbot">Menunggu Orbot untuk memulai</string>
+	<string name="service_restarted">Memulai Ulang Layanan OpenVPN (Aplikasi macet mungkin macet atau mati karena tekanan memori)</string>
+	<string name="notifcation_title_notconnect">Tidak terhubung</string>
+	<string name="permission_revoked">Izin VPN dicabut oleh OS (mis. program VPN lain dimulai), menghentikan VPN</string>
+	<string name="keychain_nocacert">Tidak ada Sertifikat CA yang dikembalikan saat membaca dari keystore Android. Otentikasi mungkin akan gagal.</string>
+	<string name="abi_mismatch">Prioritas ABI asli yang lebih disukai dari perangkat ini (%1$s) dan ABI yang dilaporkan oleh perpustakaan asli (%2$s) tidak cocok</string>
+	<string name="jelly_keystore_alphanumeric_bug">Beberapa versi Android 4.1 memiliki masalah jika nama sertifikat keystore berisi karakter bukan alfanumerik (seperti spasi, garis bawah, atau tanda hubung). Cobalah untuk mengimpor ulang sertifikat tanpa karakter khusus</string>
+	<string name="keychain_access">Tidak dapat mengakses Sertifikat Rantai Kunci Android. Hal ini dapat disebabkan oleh peningkatan firmware atau dengan memulihkan cadangan pengaturan aplikasi/penggunaan. Silakan edit VPN dan pilih kembali sertifikat di bawah pengaturan dasar untuk membuat ulang izin untuk mengakses sertifikat.</string>
+	<string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>	
+	<string name="bits_per_second">%.0f bit / s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+	<string name="state_auth_pending">Otentikasi tertunda</string>
+	<string name="reread_log">Baca ulang (%d) item log dari file cache log</string>
+	<string name="state_waitconnectretry">Menunggu %ss detik antara upaya koneksi</string>
+	<string name="unhandled_exception">Pengecualian yang tidak ditangani: %1$s\n\n%2$s</string>
+	<string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Rute: %1$s %2$s</string>
+    <string name="routes_info_excl">Rute yang dikecualikan: %1$s %2$s</string>
+    <string name="title_activity_login">Masuk</string>
+    <string name="action_forgot_password">Lupa kata sandi</string>
+    <string name="register_process_registering">Daftar...</string>
+    <string name="error_invalid_password">Kata sandi terlalu pendek</string>
+    <string name="error_passwords_dont_match">Kata sandi tidak cocok</string>
+    <string name="error_field_required">Bidang ini wajib diisi</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="title_connect">Status</string>
+    <string name="title_serverlist">Daftar server</string>
+    <string name="title_locations">Lokasi</string>
+    <string name="title_log">Log</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Menghubungkan</string>
+    <string name="route_rejected">Rute ditolak oleh Android</string>
+    <string name="tun_error_helpful">Pada beberapa image ICS khusus, izin pada /dev/tun mungkin salah, atau modul tun mungkin tidak ada sama sekali. Untuk gambar CM9, cobalah opsi perbaiki kepemilikan di bawah pengaturan umum</string>
+    <string name="tun_open_error">Gagal membuka antarmuka tun</string>
+    <string name="error">\"Kesalahan: \"</string>
+    <string name="last_openvpn_tun_config">Membuka antarmuka tun:</string>
+    <string name="local_ip_info">IPv4 lokal: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">Server DNS: %1$s, Domain: %2$s</string>
+    <string name="routes_info">Rute: %s</string>
+    <string name="routes_info6">Rute IPv6: %s</string>
+    <string name="ip_not_cidr">Mendapat informasi antarmuka %1$s dan %2$s, dengan asumsi alamat kedua adalah alamat peer remote. Menggunakan netmask /32 untuk IP lokal. Mode yang diberikan oleh OpenVPN adalah \"%3$s\".</string>
+    <string name="route_not_cidr">Tidak dapat memahami %1$s dan %2$s sebagai rute IP dengan netmask CIDR, menggunakan /32 sebagai netmask.</string>
+    <string name="route_not_netip">Rute yang dikoreksi %1$s/%2$s ke %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Gambar Anda tidak mendukung API VPNService, maaf :(</string>
+    <string name="encryption">-Enkripsi</string>
+    <string name="opentun_no_ipaddr">Menolak membuka perangkat tun tanpa informasi IP</string>
+    <string name="building_configration">Konfigurasi bangunan...</string>
+    <string name="netstatus">Status Jaringan: %s</string>
+    <string name="mobile_info">Berjalan di %1$s (%2$s) %3$s, API Android %4$d</string>
+    <string name="error_rsa_sign">Kesalahan masuk dengan kunci toko kunci Android %1$s: %2$s</string>
+    <string name="warn_no_dns">Tidak ada server DNS yang digunakan. Resolusi nama mungkin tidak berfungsi. Pertimbangkan untuk mengatur Server DNS khusus. Harap perhatikan juga bahwa Android akan tetap menggunakan pengaturan proxy yang ditetapkan untuk koneksi seluler/Wi-Fi Anda ketika tidak ada server DNS yang ditetapkan.</string>
+    <string name="dns_add_error">Tidak dapat menambahkan Server DNS \\"%1$s\\", ditolak oleh sistem: %2$s</string>
+    <string name="ip_add_error">Tidak dapat mengkonfigurasi Alamat IP \\"%1$s\\", ditolak oleh sistem: %2$s</string>
+    <string name="getproxy_error">Kesalahan mendapatkan pengaturan proxy: %s</string>
+    <string name="using_proxy">Menggunakan proxy %1$s %2$d</string>
+    <string name="minidump_generated">OpenVPN macet secara tidak terduga. Harap pertimbangkan untuk menggunakan opsi kirim Minidump di menu utama</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Menghubungkan</string>
+    <string name="state_wait">Menunggu balasan dari server</string>
+    <string name="state_auth">Mengotentikasi</string>
+    <string name="state_get_config">Mendapatkan konfigurasi klien</string>
+    <string name="state_assign_ip">Menetapkan alamat IP</string>
+    <string name="state_add_routes">Menambahkan rute</string>
+    <string name="state_connected">Terhubung</string>
+    <string name="state_disconnected">Putuskan sambungan</string>
+    <string name="state_reconnecting">Menghubungkan kembali</string>
+    <string name="state_exiting">Keluar</string>
+    <string name="state_noprocess">Tidak berjalan</string>
+    <string name="state_resolve">Menyelesaikan nama host</string>
+    <string name="state_tcp_connect">Menghubungkan (TCP)</string>
+    <string name="unknown_state">Tidak diketahui</string>
+    <string name="state_nonetwork">Menunggu jaringan yang dapat digunakan</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Menghubungkan ke VPN %s</string>
+    <string name="start_vpn_ticker">Menghubungkan ke VPN %s</string>
+    <string name="mobile_info_extended">Berjalan di %1$s (%2$s) %3$s, API Android %4$d, versi %5$s, %6$s</string>
+    <string name="built_by">dibangun oleh %s</string>
+    <string name="debug_build">debug build</string>
+    <string name="official_build">bangunan resmi</string>
+    <string name="screenoff_pause">Menjeda koneksi dalam kondisi layar mati: kurang dari %1$s dalam %2$ss</string>
+    <string name="state_userpause">Jeda VPN yang diminta oleh pengguna</string>
+    <string name="state_screenoff">VPN dijeda - layar mati</string>
+    <string name="defaultServerName">Server XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Pilih VPN</string>
+    <string name="vpnSelectReason">Beberapa VPN ditemukan di Akun Shellfire Anda. Silakan pilih yang mana yang akan digunakan.</string>
+    <string name="rememberVpnSelection">Simpan pilihan</string>
+    <string name="remember_vpn_summary">Jika ada beberapa VPN, Anda tidak perlu memilih VPN pada setiap kali masuk.</string>
+    <string name="remember_vpn_title">Menyimpan VPN yang dipilih</string>
+    <string name="show_log_sum">Menampilkan log secara permanen dapat menyebabkan hilangnya kinerja (perlu memulai ulang aplikasi).</string>
+    <string name="show_log">Menampilkan log</string>
+    <string name="default_product_type">Gratis</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Server</string>
+    <string name="connectionAdvice">Menyambungkan ke server yang dipilih. Untuk mengubah server, usap ke kanan.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Log Aplikasi</string>
+    <string name="connectionState">Status:</string>
+    <string name="disconnected">Terputus</string>
+    <string name="noAccountData">Tidak terdaftar\?</string>
+    <string name="title_activity_register">Daftar</string>
+    <string name="buyDailyPremium">0,99 Euro / 24 jam.</string>
+    <string name="buyDailyPremiumPlus">1,99 Euro / 24 jam.</string>
+    <string name="buyMonthlyPremium">3,49 euro / bulan</string>
+    <string name="buyMonthlyPremiumPlus">7,95 euro / bulan</string>
+    <string name="buyYearlyPremium">39,90 euro / tahun</string>
+    <string name="buyYearlyPremiumPlus">84,90 euro / tahun</string>
+    <string name="premiumUntil">Premium sampai:</string>
+    <string name="sendToShellfire">Kirim Log ke Shellfire</string>
+    <string name="verifying_purchase">Pembelian sedang diverifikasi...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Upgrade Premium berhasil. Menampilkan daftar Server\?</string>
+    <string name="yes">Ya.</string>
+    <string name="no">Tidak.</string>
+    <string name="YES">YA</string>
+    <string name="upgrade_not_successful_check_log">Peningkatan tidak berhasil, periksa log!</string>
+    <string name="problem_setting_up_in_app_billing">\"Masalah pengaturan Penagihan Dalam Aplikasi: \"</string>
+    <string name="loading">Memuat...</string>
+    <string name="send_log_to_shellfire">Kirim log ke Shellfire</string>
+    <string name="log_send_succesfully">Log berhasil dikirim ke Shellfire</string>
+    <string name="log_could_not_be_sent">Log tidak dapat dikirim</string>
+    <string name="connecting">Menghubungkan...</string>
+    <string name="cansel">BATAL</string>
+    <string name="disconnect">Putuskan sambungan</string>
+    <string name="connected">Terhubung</string>
+    <string name="loading_certificates">Memuat Sertifikat</string>
+    <string name="switching_from_udp_to_tcp">Beralih dari UDP ke TCP</string>
+    <string name="switching_from_tcp_to_udp">Beralih dari TCP ke UDP</string>
+    <string name="item_already_owned_consuming">barang yang sudah dimiliki - mengkonsumsi</string>
+    <string name="item_consumed">barang yang dikonsumsi</string>
+    <string name="already_on_this_server_doing_nothing">Sudah ada di server ini - tidak melakukan apa pun</string>
+    <string name="not_showing_premium_info">Tidak menampilkan info premium</string>
+    <string name="you_are_not_eligible_to_use_this_server">Diperlukan peningkatan.
+\nApakah Anda ingin informasi lebih lanjut\?</string>
+    <string name="you_are_currently_connecting_disconnect">Anda saat ini sedang tersambung. Anda harus memutuskan sambungan sebelum perubahan server. Putuskan sambungan sekarang\?</string>
+    <string name="not_changing_server">Perubahan server dibatalkan</string>
+    <string name="sure_to_change_server">Apakah Anda yakin ingin mengubah server\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">Server sedang diubah. Hal ini dapat memakan waktu beberapa saat..</string>
+    <string name="server_selection_succesfully_performed_on_backend">Perubahan server berhasil.</string>
+    <string name="server_selection_could_not_be_changed">Server tidak dapat diubah. Silakan periksa log untuk detailnya.</string>
+    <string name="connecting_please_wait">Koneksi sedang diproses - harap tunggu</string>
+    <string name="action_about">Tentang Shellfire VPN</string>
+
+    <string name="country">negara</string>
+    <string name="title_activity_about">Tentang Shellfire VPN</string>
+    <string name="hello_world">Halo dunia!</string>
+    <string name="copyright_shellfire">© 2014 oleh Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">API Kastil Kripto Bouncy Castle</string>
+    <string name="copyright_openssl">Produk ini mencakup perangkat lunak yang dikembangkan oleh Proyek OpenSSL untuk digunakan dalam OpenSSL Toolkit\n
+        Hak Cipta © 1998-2008 Proyek OpenSSL. Hak cipta dilindungi undang-undang.\n\n
+        Produk ini mencakup perangkat lunak kriptografi yang ditulis oleh Eric Young (eay\@cryptsoft.com)\n
+        Hak Cipta © 1995-1998 Eric Young (eay\@cryptsoft.com) Semua hak cipta dilindungi undang-undang.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Hak Cipta © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Program ini menggunakan komponen-komponen berikut ini; lihat kode sumber untuk rincian lengkap tentang lisensi (tersedia di https://code.google.com/p/shellfirevpn4a/)</string>
+    <string name="copyright_arne">Proyek ics-openvpn, Hak Cipta 2012-2013 Arne Schwabe (arne\@rfc2549.org) tersedia di: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Hak Cipta © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" adalah merek dagang dari OpenVPN Technologies, Inc.\n]]></string>
+    <string name="copyright_bouncycastle">Hak Cipta © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">sampai</string>
+    <string name="state_user_vpn_password">Menunggu kata sandi VPN pengguna</string>
+    <string name="state_user_vpn_permission_cancelled">Dialog izin API VPN dibatalkan</string>
+    <string name="account_created_succesfully">Akun berhasil dibuat - silakan periksa email Anda untuk mendapatkan email aktivasi.</string>
+    <string name="free">Gratis</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 jam</string>
+    <string name="month_1">1 bulan</string>
+    <string name="monthly">bulanan</string>
+    <string name="yearly">tahunan</string>
+    <string name="cents99">0,99 Eur</string>
+    <string name="cents199">Eur 1,99</string>
+    <string name="cents495">4,95 Eur</string>
+    <string name="cents995">9,95 Eur</string>
+    <string name="cents395">3,95 Eur</string>
+    <string name="cents795">7,95 Eur</string>
+    <string name="cents3990">39,90 Eur</string>
+    <string name="cents8490">84,90 Eur</string>
+    <string name="buy">Beli</string>
+    <string name="compare">Bandingkan</string>
+    <string name="singlePayment">pembayaran tunggal *</string>
+    <string name="subscription">berlangganan **</string>
+    <string name="note_payment_types">* kartu kredit tidak diperlukan.\r\n
+** kartu kredit diperlukan; dapat dibatalkan kapan saja melalui Google Play. \r\n
+\r\n
+bayar dengan Paypal di situs web kami: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">Memilih VPN...</string>
+    <string name="cobiCodeEnter">Kampanye BILD KOMPUTER</string>
+    <string name="cobiClickHere">Masukkan kode</string>
+
+    <string name="enter_cobi_code">masukkan Kode COMPUTERBILD di sini:</string>
+    <string name="action_share">Bagikan Aplikasi ini</string>
+    <string name="share_with">Bagikan melalui</string>
+    <string name="share_text">Saya menggunakan Aplikasi #VPN Shellfire untuk mengamankan data saya dari peretas dan membuka blokir konten yang disensor: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Nilai</string>
+    <string name="rate_this_app">Nilai</string>
+    <string name="rate_explanation">Apakah aplikasi ini meyakinkan Anda\? Kami akan sangat senang jika Anda dapat menilai aplikasi kami di Google Play. Terima kasih atas dukungan Anda!</string>
+    <string name="rate_now">Beri peringkat sekarang</string>
+    <string name="rate_later">Kemudian</string>
+    <string name="rate_never">Tidak, terima kasih.</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Rencanaku</string>
+    <string name="current_plan">RENCANA SAAT INI</string>
+    <string name="PAID_UNTIL">Dibayar Sampai</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Tingkatkan akun Anda untuk mendapatkan lebih banyak fungsi</string>
+
+
+    <string name="retry">Coba lagi.</string>
+    <string name="network_problem_title">Masalah jaringan</string>
+    <string name="network_problem_message">Saat ini Anda tidak terhubung ke internet. Shellfire VPN membutuhkan koneksi internet yang aktif.</string>
+    <string name="login_error">kegagalan login.</string>
+    <string name="serverLoad">Memuat</string>
+    <string name="reloadServerList">Muat ulang</string>
+    <string name="upgrade_not_successful">Peningkatan tidak berhasil</string>
+
+    <string name="new_version_available_title">Versi baru tersedia</string>
+    <string name="new_version_available_message">Ada versi baru Shellfire VPN yang tersedia di Google Play Store. Anda harus segera menginstalnya, karena versi ini mungkin tidak berfungsi dengan baik lagi atau mengandung masalah keamanan.
+
+Pergi ke Play Store sekarang untuk memperbarui\?
+
+Catatan: Anda mungkin harus menghapus / menginstal ulang untuk menerima versi terbaru.</string>
+
+    <string name="dontshowagain">Tidak dan jangan tampilkan lagi</string>
+    <string name="not_now">Tidak sekarang.</string>
+    <string name="server">Server</string>
+
+    <string name="_128bit">Enkripsi 128 bit</string>
+    <string name="_192bit">Enkripsi 192 bit</string>
+    <string name="_256bit">Enkripsi 256 bit</string>
+
+    <string name="upto786">hingga 786 kbit/detik</string>
+    <string name="upto10000">hingga 10.000 kbit/detik</string>
+    <string name="unlimited">kbit/detik tak terbatas</string>
+
+    <string name="php_invalid_email">Masukkan alamat email yang valid.</string>
+    <string name="php_account_exists">Akun terdaftar untuk alamat email tersebut sudah ada.</string>
+
+
+    <string name="php_signature"><![CDATA[Salam hangat dari tim Shellfire
+
+P.S: Baru: Hasilkan uang dengan Shellfire! Ketika Anda mendapatkan pelanggan baru, kami akan membayar Anda hingga 100% komisi: https://www.shellfire.net/affiliate-center/
+
+P.PS: Ikuti kami di Twitter: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Manajemen Florian Gattung, Maximilian Behr
+Kemitraan di bawah Kitab Undang-Undang Hukum Perdata yang berbasis di Bad Vilbel, Jerman]]></string>
+
+    <string name="php_surf_anonym">Menjelajahi web secara anonim</string>
+    <string name="php_hide_ip">Menyembunyikan alamat IP Anda sendiri</string>
+    <string name="php_encrypt_internet">Koneksi internet terenkripsi</string>
+    <string name="php_secure_wifi">Menggunakan hotspot wifi publik dengan aman</string>
+    <string name="php_unlimited">tidak terbatas</string>
+    <string name="php_traffic">Volume lalu lintas / data</string>
+    <string name="php_speed_generic">%1$s kbit/detik</string>
+    <string name="php_speed">Kecepatan</string>
+    <string name="php_server_in_generic">Server dalam %1$s</string>
+    <string name="php_change_location">Ubah lokasi setiap saat</string>
+    <string name="php_streaming_websites">Situs web streaming</string>
+
+
+    <string name="play_product_description"><![CDATA[Shellfire VPN - mudah. aman. terhubung. Tanpa registrasi.
+
+Shellfire VPN GRATIS dan tidak akan pernah membebani Anda sepeser pun. Lalu Lintas Tak Terbatas, Waktu Tak Terbatas!
+
+Shellfire VPN menyembunyikan alamat IP Anda, membuka blokir Internet dan memberi Anda kemampuan untuk secara bebas dan anonim mengakses situs apa pun yang Anda inginkan. Dengan Shellfire VPN, Anda dapat terhubung ke situs web apa pun dengan percaya diri karena mengetahui bahwa Anda sedang menyamar. Kami membuka blokir Skype, Facebook, Twitter, YouTube, dll. di negara-negara dengan sensor Internet dan bahkan memberi Anda akses ke layanan TV dan radio negara asal Anda dari luar negeri.
+
+Shellfire VPN memberi Anda enkripsi super kuat untuk melindungi data Anda dari peretas, NSA, dan ancaman lainnya, bahkan di jaringan wifi publik yang tidak aman!
+
+Tingkatkan ke Premium untuk mendapatkan
+ - Kecepatan yang lebih tinggi.
+ - Enkripsi yang lebih kuat.
+ - Pilihan gratis dari server kami di:
+Austria, Kanada, Prancis, Jerman, Hong Kong, Italia, Belanda, Polandia, Rumania, Rusia, Spanyol, Swedia, Swiss, Inggris, dan Amerika Serikat
+- Pelanggan PremiumPlus mendapatkan akses eksklusif ke server di:
+Chili, Islandia, Isle of Man (lepas pantai), dan Liechtenstein
+
+Shellfire VPN - klien VPN terbaik untuk Android.
+
+Shellfire VPN juga berjalan pada Windows, Mac OS, iOS atau Linux! Kunjungi https://www.shellfire.net/vpn/ untuk informasi lebih lanjut.
+
+Untuk informasi terbaru, ikuti kami di Facebook & Twitter
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en]]></string>
+
+    <string name="play_promo_text">Berselancar secara anonim - Koneksi terenkripsi - Akses Hulu, Youtube... dari mana saja</string>
+
+    <string name="play_product_description_generic">Enkripsi bit %1$s
+Kecepatan transfer hingga %2$ kbit/s
+Server di %3 negara di seluruh dunia</string>
+
+    <string name="hosting_since_2002">Hosting sejak tahun 2002</string>
+    <string name="vision">Visi</string>
+    <string name="vision_data">Kami percaya, bahwa akses yang aman dan bebas ke internet adalah hak mendasar bagi setiap orang di planet ini. Itu sebabnya, misi kami adalah untuk menjaga internet sebagai tempat kebebasan dan juga tempat yang aman untuk data pribadi Anda. Kami melakukannya dengan memberi Anda perlindungan dari penyadap dan peretas melalui terowongan VPN terenkripsi dan server suara kami.</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="hotspot_data_p1">Dalam beberapa tahun terakhir, kami telah membantu lebih dari 500.000 pengguna melindungi privasi mereka secara online dan mengatasi penyensoran. Standar layanan dan keamanan kami yang tinggi \"Buatan Jerman\" menjadikan Shellfire salah satu alamat terbaik di pasar VPN saat ini.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Beli Sekarang</string>
+    <string name="tv_single_pay">Pembayaran Tunggal</string>
+    <string name="tv_subscription_pay">Berlangganan</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 bulan</string>
+    <string name="subs_month">bulan</string>
+    <string name="subs_year">tahun</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Peta</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Perubahan server berhasil - apakah Anda ingin terhubung sekarang\?</string>
+    <string name="saotomeandprincipe">São Tomé dan Príncipe</string>
+    <string name="hosting_data">Shellfire GmbH adalah penyedia hosting yang berbasis di Schmitten dekat Frankfurt am Main. Shellfire didirikan pada tahun 2002 oleh Florian Gattung dan Maximilian Behr, yang telah bertindak sebagai mitra pengelola sejak saat itu</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Masukkan pesan Anda ke Shellfire di sini...</string>
+    <string name="load">BEBAN:</string>
+    <string name="choose_a_plan">Pilih Paket</string>
+    <string name="speed">Kecepatan</string>
+    <string name="servers">Server</string>
+    <string name="countries">Negara</string>
+    <string name="encryption_server">Enkripsi</string>
+    <string name="video_streaming">Streaming Video</string>
+    <string name="unblock_all_content">Buka blokir semua konten</string>
+    <string name="encrypted_connection">Koneksi terenkripsi</string>
+    <string name="safe_hotspot_usage">Penggunaan hotspot yang aman</string>
+    <string name="unlimited_traffic">Lalu Lintas Tak Terbatas</string>
+    <string name="upgrade">TINGKATKAN</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Lanjutan</string>
+    <string name="STANDARD">Standar</string>
+    <string name="ALL_SERVERS">Semua Server</string>
+    <string name="unlock">Membuka kunci</string>
+    <string name="filter">Filter</string>
+
+    <string name="format_server">Server %d</string>
+
+
+    <string name="widget_label_small">Widget Kecil VPN Shellfire</string>
+    <string name="widget_label_medium">Widget Sedang VPN Shellfire</string>
+    <string name="widget_label_large">Widget Besar VPN Shellfire</string>
+
+    <string name="pref_title_mode_connection">Mode Koneksi</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Untuk mengaktifkan akun Anda, silakan klik tautan di email yang baru saja kami kirimkan.</string>
+    <string name="email_validation_required_title">Akun perlu diaktivasi</string>
+    <string name="sending_log">Mengirim Log...</string>
+    <string name="loading_one">Memuat SATU</string>
+    <string name="loading_two">Memuat DUA</string>
+    <string name="logout">Keluar</string>
+    <string name="action_connection_mode">Mode Koneksi</string>
+    <string name="action_select_vpn">Pilih VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Berikan Umpan Balik</string>
+    <string name="title_activity_log">Kirim Umpan Balik ke Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Beri Nilai Aplikasi Kami</string>
+    <string name="initial_dialog_message">Apakah Anda menyukai aplikasi kami\?</string>
+    <string name="initial_dialog_positive">Ya.</string>
+    <string name="initial_dialog_negative">Tidak.</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Beri Nilai Aplikasi Kami</string>
+    <string name="rate_dialog_message">Apakah Anda ingin menilai aplikasi kami\?</string>
+    <string name="rate_dialog_positive">Ya, saya menyukainya!</string>
+    <string name="rate_dialog_negative">Tidak, terima kasih.</string>
+    <string name="rate_dialog_neutral">Mungkin nanti</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Berikan Umpan Balik</string>
+    <string name="feedback_dialog_message">Apakah Anda ingin memberikan umpan balik\?</string>
+    <string name="feedback_dialog_positive">Ya, saya ingin memberikan umpan balik</string>
+    <string name="feedback_dialog_negative">Tidak, terima kasih.</string>
+
+    <string name="send_feedback_progress">Mengirim umpan balik...</string>
+    <string name="feedback_sent_successfully">Umpan balik berhasil dikirim</string>
+    <string name="feedback_not_sent">Tidak dapat mengirim umpan balik</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Silakan berikan tanggapan Anda di bawah ini. Jika mau, Anda juga dapat menyertakan log aplikasi dan sistem untuk membantu kami memahami masalah dengan lebih baik.</string>
+    <string name="include_application_and_system_logs">Menyertakan log aplikasi dan sistem</string>
+    <string name="send_feedback">Kirim umpan balik</string>
+    <string name="abort">Batalkan</string>
+    <string name="serverchange_timeout">Operasi perubahan server telah habis waktunya. Silakan coba lagi.</string>
+    <string name="protocol_is_being_changed">Protokol sedang diubah. Ini bisa memakan waktu beberapa saat..</string>
+    <string name="protocol_change_timeout">Operasi perubahan server telah habis waktunya. Silakan coba lagi.</string>
+    <string name="app_name">VPN Shellfire</string>
+    <string name="login_progress_signing_in">Masuk...</string>
+    <string name="login_with_existing_account">Masuk dengan akun yang sudah ada</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Kata sandi</string>
+    <string name="action_sign_in_short">Masuk</string>
+    <string name="login">Masuk</string>
+    <string name="lostAccountData">Data Akun yang Hilang</string>
+    <string name="register_new_account">Daftarkan Akun Baru</string>
+    <string name="welcomeText">Selamat datang di Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Daftarkan akun baru</string>
+    <string name="prompt_email_only">Email</string>
+    <string name="subscribeNewsletter">Berlangganan Buletin</string>
+    <string name="register">Daftar</string>
+    <string name="i_have_an_account">Saya sudah memiliki akun Shellfire</string>
+    <string name="greeting_text">Selamat datang di Shellfire VPN! Silakan masuk atau daftar untuk melanjutkan.</string>
+    <string name="slow">Lambat</string>
+    <string name="brilliant">Brilian.</string>
+    <string name="back">Kembali</string>
+
+</resources>

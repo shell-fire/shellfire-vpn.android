@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/textAcceptRulesRegs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/log_txt_size"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/log_margin"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAcceptRulesRegs"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewAppLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="@string/empty"
+            android:textSize="@dimen/small"
+            android:textColor="@color/gray_text_color"
+            android:visibility="gone"/>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/msg_from_user"
+        android:layout_width="565dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:inputType="textMultiLine"
+        android:maxLines="100"
+        android:hint="@string/enter_your_message_to_Shellfire_here"
+        android:background="@android:color/transparent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_ok"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/sendLogToShellfire"
+        android:layout_width="565dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickSendLogToShellfire"
+        android:text="@string/sendToShellfire"
+        android:textSize="@dimen/big"
+        android:background="@drawable/btn_upgrade"
+        android:drawableLeft="@drawable/ic_fly"
+        android:paddingRight="@dimen/log_intent_25"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.4"
+        android:enabled="false"/>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_blue_color">#007aff</color>
+    <color name="base_blue_color_light">#578fff</color>
+    <color name="gray_text_color">#666f78</color>
+    <color name="light_gray_color">#a6afb7</color>
+    <color name="filter_rate_light_gray_bg">#e3e6e9</color>
+    <color name="premium_bg">#f2f4f6</color>
+    <color name="premium_text_color">#666f78</color>
+    <color name="green_connect">#39e88d</color>
+    <color name="red_disconnect">#cB6676</color>
+    <color name="btn_buy">#45d961</color>
+    <color name="text_payment_screen">#707880</color>
+    <color name="rb_checked">#4581f8</color>
+    <color name="color_per_period_pay">#4a9df2</color>
+    <color name="background_grey">#f2f4f6</color>
+    <color name="white">#ffffff</color>
+    <color name="black_text">#000000</color>
+    <color name="grey_line">#dacccccc</color>
+    <color name="continent_bg">#293a4a</color>
+    <color name="semi_transparent_overlay">#88000000</color>
+    <color name="not_connected">#FF0000</color>
+    <color name="connected">#00FF00</color>
+    <!-- <color name="connecting2">#BBBBBB</color> -->
+    <color name="selected">#23718e</color>
+    <color name="vpntable_header_bg">#12ACE5</color>
+    <color name="vpntable_header_text">#FFFFFF</color>
+    <color name="vpntable_row_even_bg">#EEEEEE</color>
+    <color name="vpntable_row_text">#404549</color>
+    <color name="vpntable_row_uneven_bg">#FFFFFF</color>
+    <color name="shimmer_placeholder_color">#578fff</color>
+
+</resources>

@@ -1,0 +1,536 @@
+<resources>
+    <string name="channel_name_userreq">Este necesară interacțiunea cu utilizatorul</string>
+    <string name="channel_description_userreq">Conexiunea OpenVPN necesită intrarea unui utilizator, de exemplu autentificarea cu doi factori
+    </string>
+    <string name="channel_name_background">Statistici de conectare</string>
+    <string name="channel_description_background">Statistici continue ale conexiunii OpenVPN stabilite</string>
+    <string name="channel_name_status">Schimbarea stării conexiunii</string>
+    <string name="channel_description_status">Modificări de stare ale conexiunii OpenVPN (Conectare, autentificare,...)</string>
+    <string name="save_password">Salvare parolă</string>
+    <string name="show_password">Afișați parola</string>
+    <string name="auth_username">Nume utilizator</string>
+    <string name="remote_trust">Am încredere în această aplicație.</string>
+    <string name="remote_warning">Procedând, acordați aplicației permisiunea de a controla complet OpenVPN pentru Android și de a intercepta tot traficul de rețea.<b>NU acceptați decât dacă aveți încredere în aplicație.</b> În caz contrar, riscați ca datele dvs. să fie compromise de un software rău intenționat.\"</string>
+    <string name="permission_icon_app">Pictograma aplicației care încearcă să utilizeze OpenVPN pentru Android</string>
+    <string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+    <string name="config_error_found">Eroare în configurare</string>
+    <string name="nought_alwayson_warning"><![CDATA[Dacă nu ați primit o fereastră de dialog de confirmare a VPN-ului, ați activat \\"Always on VPN\\" pentru o altă aplicație. În acest caz, numai aplicația respectivă are permisiunea de a se conecta la un VPN. Verificați în Settings-> Networks more ... -> VPNS]]></string>
+    <string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+    <string name="pw_request_dialog_title">Aveți nevoie de %1$s</string>
+    <string name="pw_request_dialog_prompt">Vă rugăm să introduceți parola pentru profilul %1$s</string>
+    <string name="shortcut_profile_notfound">Profilul specificat în comandă rapidă nu a fost găsit</string>
+    <string name="app">Shellfire VPN pentru Android</string>
+    <string name="prompt">%1$s încearcă să controleze %2$s</string>
+    <string name="all_app_prompt">O aplicație externă încearcă să controleze %s. Aplicația care solicită accesul nu poate fi determinată. Autorizarea acestei aplicații acordă acces tuturor aplicațiilor.</string>
+    <string name="screen_nopersistenttun">Avertizare: Persistent tun nu este activat pentru acest VPN. Traficul va utiliza conexiunea normală la internet atunci când ecranul este oprit.</string>
+    <string name="private_key_password">Cheie privată Parolă</string>
+    <string name="pkcs12_file_encryption_key">Cheie de criptare fișier PKCS12</string>
+    <string name="no_error_found">Nu s-a găsit nicio eroare</string>
+    <string name="no_orbotfound">Aplicația Orbot nu poate fi găsită. Vă rugăm să instalați Orbot sau să utilizați integrarea manuală Socks v5.</string>
+    <string name="error_orbot_and_proxy_options">Nu se poate utiliza în același timp declarația extra http-proxy-option și integrarea Orbot</string>
+    <string name="openvpn3_socksproxy">Implementarea OpenVPN 3 C++ nu acceptă conectarea prin proxy Socks</string>
+    <string name="openvpn3_nostatickeys">Implementarea OpenVPN 3 C++ nu acceptă chei statice. Vă rugăm să treceți la OpenVPN 2.x în setările generale.</string>
+    <string name="openvpn3_pkcs12">Utilizarea fișierelor PKCS12 direct cu implementarea OpenVPN 3 C++ nu este acceptată. Importați fișierele pkcs12 în depozitul de chei Android sau treceți la OpenVPN 2.x în setările generale.</string>
+    <string name="remote_no_server_selected">Trebuie să definiți și să activați cel puțin un server la distanță.</string>
+    <string name="missing_tlsauth">lipsește fișierul tls-auth</string>
+    <string name="missing_certificates">Lipsește certificatul de utilizator sau fișierul cheie de certificare a utilizatorului</string>
+    <string name="missing_ca_certificate">Lipsește certificatul CA</string>
+    <string name="custom_route_format_error">Eroare de analiză a rutelor personalizate</string>
+    <string name="ipv4_format_error">Eroare de analiză a adresei IPv4</string>
+    <string name="deprecated_tls_remote">Config utilizează opțiunea tls-remote care a fost depreciată în 2.3 și eliminată definitiv în 2.4</string>
+    <string name="no_ca_cert_selected">Trebuie să selectați un certificat CA sau să activați verificarea amprentei peer</string>
+    <string name="no_keystore_cert_selected">Trebuie să selectați un certificat de utilizator</string>
+    <string name="keyChainAccessError">Eroare de acces KeyChain: %s</string>
+    <string name="cannotparsecert">Nu se pot afișa informații despre certificat</string>
+    <string name="crtext_requested">Răspundeți la provocare pentru a continua autentificarea VPN</string>
+    <string name="openurl_requested">Deschideți URL pentru a continua autentificarea VPN</string>
+    <string name="ip_looks_like_subnet">Topologia Vpn \\"%3$s\\" specificată, dar ifconfig %1$s %2$s arată mai mult ca o adresă IP cu o mască de rețea. Presupunând topologia \\"subnet\\".</string>
+    <string name="allowed_vpn_apps_info">Aplicații VPN permise: %1$s</string>
+    <string name="disallowed_vpn_apps_info">Aplicații VPN interzise: %1$s</string>
+    <string name="app_no_longer_exists">Pachetul %s nu mai este instalat, eliminându-l din lista de aplicații permise/nepermise</string>
+    <string name="no_allowed_app">Nu s-a adăugat nicio aplicație permisă. Adăugăm noi înșine (%s) pentru a avea cel puțin o aplicație în lista de aplicații permise pentru a nu permite toate aplicațiile</string>
+    <string name="ignore_multicast_route">Ignorarea rutei multicast: %s</string>
+    <string name="routes_debug">Rute VpnService instalate: %1$s %2$s</string>
+    <string name="state_auth_failed">Autentificarea a eșuat</string>
+    <string name="password">Parolă</string>
+    <string name="state_waitorbot">Aștept ca Orbot să înceapă</string>
+    <string name="service_restarted">Repornirea serviciului OpenVPN (Aplicația s-a blocat, probabil s-a blocat sau a fost ucisă din cauza presiunii memoriei)</string>
+    <string name="notifcation_title_notconnect">Nu este conectat</string>
+    <string name="permission_revoked">permisiunea VPN revocată de sistemul de operare (de exemplu, alt program VPN pornit), oprirea VPN</string>
+    <string name="keychain_nocacert">Nu a fost returnat niciun certificat CA în timpul citirii din depozitul de chei Android. Autentificarea va eșua probabil.</string>
+    <string name="abi_mismatch">Precedența ABI nativ preferat al acestui dispozitiv (%1$s) și ABI raportat de bibliotecile native (%2$s) nu corespund</string>
+    <string name="jelly_keystore_alphanumeric_bug">Unele versiuni de Android 4.1 au probleme dacă numele certificatului depozitului de chei conține caractere care nu sunt alfanumerice (cum ar fi spații, sublinieri sau liniuțe). Încercați să reimportați certificatul fără caractere speciale</string>
+    <string name="keychain_access">Nu puteți accesa certificatele Android Keychain. Acest lucru poate fi cauzat de o actualizare de firmware sau de restaurarea unei copii de rezervă a setărilor aplicației/aplicației. Vă rugăm să editați VPN-ul și să selectați din nou certificatul în setările de bază pentru a recrea permisiunea de a accesa certificatul.</string>
+    <string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>
+    <string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+    <string name="state_auth_pending">Autentificare în așteptare</string>
+    <string name="reread_log">Reluarea (%d) elementelor de jurnal din fișierul cache de jurnal</string>
+    <string name="state_waitconnectretry">Așteptare %ss secunde între încercările de conectare</string>
+    <string name="unhandled_exception">Excepție negestionată: %1$s\n\n%2$s</string>
+    <string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Rute: %1$s %2$s</string>
+    <string name="routes_info_excl">Rute excluse: %1$s %2$s</string>
+    <string name="title_activity_login">Conectați-vă</string>
+    <string name="action_forgot_password">Am uitat parola</string>
+    <string name="register_process_registering">Înregistrare...</string>
+    <string name="error_invalid_password">Parola este prea scurtă</string>
+    <string name="error_passwords_dont_match">Parolele nu se potrivesc</string>
+    <string name="error_field_required">Acest câmp este obligatoriu</string>
+    <string name="action_settings">Setări</string>
+    <string name="title_connect">Statut</string>
+    <string name="title_serverlist">Lista de servere</string>
+    <string name="title_locations">Locații</string>
+    <string name="title_log">Jurnal</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Conectare</string>
+    <string name="route_rejected">Ruta respinsă de Android</string>
+    <string name="tun_error_helpful">Pe unele imagini ICS personalizate, permisiunea pe /dev/tun poate fi greșită sau modulul tun poate lipsi complet. Pentru imaginile CM9, încercați opțiunea de fixare a proprietății din setările generale</string>
+    <string name="tun_open_error">Eșec la deschiderea interfeței tun</string>
+    <string name="error">\"Eroare: \"</string>
+    <string name="last_openvpn_tun_config">Deschiderea interfeței tun:</string>
+    <string name="local_ip_info">IPv4 local: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">Server DNS: %1$s, Domeniu: %2$s</string>
+    <string name="routes_info">Rute: %s</string>
+    <string name="routes_info6">Rute IPv6: %s</string>
+    <string name="ip_not_cidr">Am obținut informații de interfață %1$s și %2$s, presupunând că a doua adresă este adresa peer de la distanță. Se utilizează masca de rețea /32 pentru IP-ul local. Modul oferit de OpenVPN este \\"%3$s\\".</string>
+    <string name="route_not_cidr">Nu poate fi înțeles %1$s și %2$s ca rută IP cu mască de rețea CIDR, folosind /32 ca mască de rețea.</string>
+    <string name="route_not_netip">Ruta corectată %1$s/%2$s la %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Imaginea dvs. nu acceptă API-ul VPNService, îmi pare rău :(</string>
+    <string name="encryption">-Criptare</string>
+    <string name="opentun_no_ipaddr">Refuzul de a deschide dispozitivul tun fără informații IP</string>
+    <string name="building_configration">Configurația clădirii...</string>
+    <string name="netstatus">Starea rețelei: %s</string>
+    <string name="mobile_info">Rulează pe %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Eroare la semnarea cu cheia depozitului de chei Android %1$s: %2$s</string>
+    <string name="warn_no_dns">Nu sunt utilizate servere DNS. Este posibil ca rezoluția numelui să nu funcționeze. Luați în considerare setarea serverelor DNS personalizate. De asemenea, rețineți că Android va continua să utilizeze setările proxy specificate pentru conexiunea dvs. mobilă/Wi-Fi atunci când nu sunt setate servere DNS.</string>
+    <string name="dns_add_error">Nu s-a putut adăuga serverul DNS \\"%1$s\\", respins de sistem: %2$s</string>
+    <string name="ip_add_error">Nu s-a putut configura adresa IP \\"%1$s\\", respinsă de sistem: %2$s</string>
+    <string name="getproxy_error">Eroare în obținerea setărilor proxy: %s</string>
+    <string name="using_proxy">Utilizarea proxy-ului %1$s %2$d</string>
+    <string name="minidump_generated">OpenVPN s-a blocat în mod neașteptat. Vă rugăm să luați în considerare utilizarea opțiunii send Minidump din meniul principal</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Conectarea</string>
+    <string name="state_wait">Aștept răspunsul serverului</string>
+    <string name="state_auth">Autentificare</string>
+    <string name="state_get_config">Obținerea configurației clientului</string>
+    <string name="state_assign_ip">Atribuirea adreselor IP</string>
+    <string name="state_add_routes">Adăugarea de rute</string>
+    <string name="state_connected">Conectat</string>
+    <string name="state_disconnected">Deconectați</string>
+    <string name="state_reconnecting">Reconectarea</string>
+    <string name="state_exiting">Ieșire</string>
+    <string name="state_noprocess">Nu funcționează</string>
+    <string name="state_resolve">Rezolvarea numelor de gazde</string>
+    <string name="state_tcp_connect">Conectare (TCP)</string>
+    <string name="unknown_state">Necunoscut</string>
+    <string name="state_nonetwork">În așteptarea unei rețele utilizabile</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Conectarea la VPN %s</string>
+    <string name="start_vpn_ticker">Conectarea la VPN %s</string>
+    <string name="mobile_info_extended">Rulează pe %1$s (%2$s) %3$s, Android API %4$d, versiunea %5$s, %6$s</string>
+    <string name="built_by">construit de %s</string>
+    <string name="debug_build">depanare construi</string>
+    <string name="official_build">construcție oficială</string>
+    <string name="screenoff_pause">Întreruperea conexiunii în starea de ecran oprit: mai puțin de %1$s în %2$ss</string>
+    <string name="state_userpause">Pauză VPN solicitată de utilizator</string>
+    <string name="state_screenoff">VPN în pauză - ecran oprit</string>
+    <string name="defaultServerName">Server XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Selectați VPN</string>
+    <string name="vpnSelectReason">Mai multe VPN-uri găsite în contul dvs. Shellfire. Vă rugăm să alegeți pe care să îl utilizați.</string>
+    <string name="rememberVpnSelection">Salvare selecție</string>
+    <string name="remember_vpn_summary">În cazul în care sunt prezente mai multe VPN-uri, nu trebuie să selectați VPN-ul la fiecare autentificare.</string>
+    <string name="remember_vpn_title">Salvați VPN-ul selectat</string>
+    <string name="show_log_sum">Afișarea permanentă a jurnalului poate duce la pierderi de performanță (necesită repornirea aplicației).</string>
+    <string name="show_log">Afișați jurnalul</string>
+    <string name="default_product_type">Gratuit</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Server</string>
+    <string name="connectionAdvice">Se conectează la serverul selectat. Pentru a schimba serverele, glisați spre dreapta.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Jurnalul de aplicații</string>
+    <string name="connectionState">Statutul:</string>
+    <string name="disconnected">Deconectat</string>
+    <string name="noAccountData">Nu sunteți înregistrat\?</string>
+    <string name="title_activity_register">Înregistrare</string>
+    <string name="buyDailyPremium">0.99 Euro / 24 ore.</string>
+    <string name="buyDailyPremiumPlus">1,99 Euro / 24 ore.</string>
+    <string name="buyMonthlyPremium">3,49 euro / lună</string>
+    <string name="buyMonthlyPremiumPlus">7,95 euro / lună</string>
+    <string name="buyYearlyPremium">39,90 euro / an</string>
+    <string name="buyYearlyPremiumPlus">84,90 euro / an</string>
+    <string name="premiumUntil">Premium până la:</string>
+    <string name="sendToShellfire">Trimiteți jurnalul la Shellfire</string>
+    <string name="verifying_purchase">Achiziția este în curs de verificare...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Actualizarea Premium a avut succes. Afișați lista de servere\?</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
+    <string name="YES">DA</string>
+    <string name="upgrade_not_successful_check_log">Actualizarea nu a reușit, verificați jurnalul!</string>
+    <string name="problem_setting_up_in_app_billing">\"Problemă la configurarea facturării în aplicație: \"</string>
+    <string name="loading">Încărcare...</string>
+    <string name="send_log_to_shellfire">Trimite jurnal la Shellfire</string>
+    <string name="log_send_succesfully">Jurnal trimis cu succes la Shellfire</string>
+    <string name="log_could_not_be_sent">Jurnalul nu a putut fi trimis</string>
+    <string name="connecting">Conectarea...</string>
+    <string name="cansel">ANULARE</string>
+    <string name="disconnect">Deconectați</string>
+    <string name="connected">Conectat</string>
+    <string name="loading_certificates">Încărcarea certificatelor</string>
+    <string name="switching_from_udp_to_tcp">Trecerea de la UDP la TCP</string>
+    <string name="switching_from_tcp_to_udp">Trecerea de la TCP la UDP</string>
+    <string name="item_already_owned_consuming">articol deja deținut - consumatoare</string>
+    <string name="item_consumed">element consumat</string>
+    <string name="already_on_this_server_doing_nothing">Deja pe acest server - nu face nimic</string>
+    <string name="not_showing_premium_info">Nu se afișează informațiile privind primele</string>
+    <string name="you_are_not_eligible_to_use_this_server">Actualizarea este necesară.
+\nDoriți mai multe informații\?</string>
+    <string name="you_are_currently_connecting_disconnect">În prezent sunteți conectat. Trebuie să vă deconectați înainte de schimbarea serverului. Vă deconectați acum\?</string>
+    <string name="not_changing_server">Schimbarea serverului anulată</string>
+    <string name="sure_to_change_server">Sunteți sigur că doriți să schimbați serverul\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.Serverul este schimbat. Acest lucru poate dura un moment..</string>
+    <string name="server_selection_succesfully_performed_on_backend">Schimbarea serverului a avut succes.</string>
+    <string name="server_selection_could_not_be_changed">Serverul nu a putut fi schimbat. Vă rugăm să verificați jurnalul pentru detalii.</string>
+    <string name="connecting_please_wait">Conexiunea este în curs de procesare - vă rugăm să așteptați</string>
+    <string name="action_about">Despre Shellfire VPN</string>
+
+    <string name="country">țară</string>
+    <string name="title_activity_about">Despre Shellfire VPN</string>
+    <string name="hello_world">Bună ziua lume!</string>
+    <string name="copyright_shellfire">© 2014 de Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">API-uri Crypto Bouncy Castle</string>
+    <string name="copyright_openssl">Acest produs include software dezvoltat de OpenSSL Project pentru a fi utilizat în OpenSSL Toolkit\n
+        Copyright © 1998-2008 The OpenSSL Project. Toate drepturile rezervate.\n\n
+        Acest produs include software criptografic scris de Eric Young (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Toate drepturile rezervate.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Copyright © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Acest program utilizează următoarele componente; consultați codul sursă pentru detalii complete privind licențele (disponibil la https://code.google.com/p/shellfirevpn4a/)</string>
+    <string name="copyright_arne">Proiectul ics-openvpn, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org) disponibil la: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Copyright © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" este o marcă comercială a OpenVPN Technologies, Inc.\n]]></string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 Legiunea Castelului gonflabil (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">până când</string>
+    <string name="state_user_vpn_password">Așteptarea parolei utilizatorului VPN</string>
+    <string name="state_user_vpn_permission_cancelled">Dialogul de autorizare VPN API anulat</string>
+    <string name="account_created_succesfully">Cont creat cu succes - vă rugăm să verificați e-mailurile pentru e-mailul de activare.</string>
+    <string name="free">Gratuit</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 de ore</string>
+    <string name="month_1">1 lună</string>
+    <string name="monthly">lunar</string>
+    <string name="yearly">anual</string>
+    <string name="cents99">0.99 Eur</string>
+    <string name="cents199">Eur 1.99</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9.95 Eur</string>
+    <string name="cents395">3.95 Eur</string>
+    <string name="cents795">7.95 Eur</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Cumpărați</string>
+    <string name="compare">Comparați</string>
+    <string name="singlePayment">plată unică *</string>
+    <string name="subscription">abonament **</string>
+    <string name="note_payment_types">* card de credit nu este necesar.\r\n
+** card de credit necesar; poate fi anulat oricând prin Google Play. \r\n
+\r\n
+plătiți cu Paypal pe site-ul nostru: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">Selectarea VPN...</string>
+    <string name="cobiCodeEnter">Campania COMPUTER BILD</string>
+    <string name="cobiClickHere">Introduceți codul</string>
+
+    <string name="enter_cobi_code">introduceți codul COMPUTERBILD aici:</string>
+    <string name="action_share">Partajați această aplicație</string>
+    <string name="share_with">Share via</string>
+    <string name="share_text">Folosesc aplicația Shellfire #VPN pentru a-mi proteja datele de hackeri și pentru a debloca conținutul cenzurat: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Rata</string>
+    <string name="rate_this_app">Rata</string>
+    <string name="rate_explanation">V-a convins această aplicație\? Ne-am bucura foarte mult dacă ați putea evalua aplicația noastră pe Google Play. Vă mulțumim pentru sprijin!</string>
+    <string name="rate_now">Evaluați acum</string>
+    <string name="rate_later">Mai târziu</string>
+    <string name="rate_never">Nu, mulțumesc</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Planul meu</string>
+    <string name="current_plan">PLAN CURENT</string>
+    <string name="PAID_UNTIL">Plătit până la</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Actualizați-vă contul pentru mai multe funcții</string>
+
+
+    <string name="retry">Reîncercare</string>
+    <string name="network_problem_title">Problemă de rețea</string>
+    <string name="network_problem_message">Momentan nu sunteți conectat la internet. Shellfire VPN necesită o conexiune activă la internet.</string>
+    <string name="login_error">eroare de conectare.</string>
+    <string name="serverLoad">Încărcare</string>
+    <string name="reloadServerList">Reîncărcare</string>
+    <string name="upgrade_not_successful">Actualizarea nu a reușit</string>
+
+    <string name="new_version_available_title">Versiune nouă disponibilă</string>
+    <string name="new_version_available_message">Există o versiune nouă a Shellfire VPN disponibilă în Magazinul Google Play. Ar trebui să o instalați în curând, deoarece este posibil ca această versiune să nu mai funcționeze corect sau să conțină probleme de securitate.
+
+Accesați Play Store acum pentru a actualiza\?
+
+Notă: Este posibil să trebuiască să dezinstalați / reinstalați pentru a primi cea mai nouă versiune.</string>
+
+    <string name="dontshowagain">Nu și nu se mai arată</string>
+    <string name="not_now">Nu acum</string>
+    <string name="server">Server</string>
+
+    <string name="_128bit">Criptare de 128 de biți</string>
+    <string name="_192bit">Criptare de 192 de biți</string>
+    <string name="_256bit">Criptare de 256 de biți</string>
+
+    <string name="upto786">până la 786 kbit/sec</string>
+    <string name="upto10000">până la 10.000 kbit/sec</string>
+    <string name="unlimited">nelimitat kbit/sec</string>
+
+    <string name="php_invalid_email">Vă rugăm să introduceți o adresă de e-mail validă.</string>
+    <string name="php_account_exists">Există deja un cont înregistrat pentru această adresă de e-mail.</string>
+
+
+    <string name="php_signature"><![CDATA[Salutări din partea echipei Shellfire
+
+P.S.: Nou: Câștigați bani cu Shellfire! Când ne aduci clienți noi, îți plătim până la 100%% comision: https://www.shellfire.net/affiliate-center/
+
+P.P.S.: Urmăriți-ne pe Twitter: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Management: Florian Gattung, Maximilian Behr
+Parteneriat în temeiul Codului civil cu sediul în Bad Vilbel, Germania]]></string>
+
+    <string name="php_surf_anonym">Navigați anonim pe internet</string>
+    <string name="php_hide_ip">Ascundeți-vă propria adresă IP</string>
+    <string name="php_encrypt_internet">Conexiune criptată la internet</string>
+    <string name="php_secure_wifi">Utilizați în siguranță hotspoturile wifi publice</string>
+    <string name="php_unlimited">nelimitat</string>
+    <string name="php_traffic">Trafic / volum de date</string>
+    <string name="php_speed_generic">%1$s kbit/sec</string>
+    <string name="php_speed">Viteza</string>
+    <string name="php_server_in_generic">Server în %1$s</string>
+    <string name="php_change_location">Schimbați locația în orice moment</string>
+    <string name="php_streaming_websites">Site-uri de streaming</string>
+
+
+    <string name="play_product_description">Shellfire VPN - ușor. sigur. conectat. Fără înregistrare.
+
+Shellfire VPN este GRATUIT și nu vă va costa niciodată un ban. Trafic nelimitat, timp nelimitat!
+
+Shellfire VPN vă ascunde adresa IP, deblochează Internetul și vă oferă posibilitatea de a accesa liber și anonim orice site doriți. Cu Shellfire VPN, vă puteți conecta la orice site cu încrederea de a ști că sunteți sub acoperire. Noi deblocăm Skype, Facebook, Twitter, YouTube etc. în țările cu cenzură pe internet și chiar vă oferim acces la serviciile TV și radio ale țării dvs. de origine din străinătate.
+
+Shellfire VPN vă oferă criptare foarte puternică pentru a vă proteja datele de hackeri, NSA și alte amenințări, chiar și în rețelele wifi publice nesigure!
+
+Actualizați la Premium pentru a obține
+ - Viteză mai mare.
+ - Criptare mai puternică.
+ - Alegerea liberă de pe serverele noastre din:
+Austria, Canada, Franța, Germania, Hong Kong, Italia, Olanda, Polonia, România, Rusia, Spania, Suedia, Elveția, Regatul Unit și SUA
+- Clienții PremiumPlus primesc acces exclusiv la serverele din:
+Chile, Islanda, Insula Man (offshore) și Liechtenstein
+
+Shellfire VPN - cel mai bun client VPN pentru Android.
+
+Shellfire VPN funcționează și pe Windows, Mac OS, iOS sau Linux! Vizitați https://www.shellfire.net/vpn/ pentru mai multe detalii.
+
+Pentru actualizări instantanee, urmăriți-ne pe Facebook și Twitter
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Navigați anonim - Conexiune criptată - Accesați Hulu, Youtube... de oriunde</string>
+
+    <string name="play_product_description_generic">Criptare %1$s bit
+Rata de transfer de până la %2$s kbit/s
+Server în %3$s țări din întreaga lume</string>
+
+    <string name="hosting_since_2002">Gazduire din 2002</string>
+    <string name="vision">Viziune</string>
+    <string name="vision_data">Noi credem că accesul liber și sigur la internet este un drept fundamental al fiecărei persoane de pe această planetă. De aceea, misiunea noastră este de a păstra internetul un loc de libertate, precum și un loc sigur pentru datele dvs. private. Facem acest lucru oferindu-vă protecție împotriva spionilor și hackerilor prin tunelurile noastre VPN criptate și serverele de voce.</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="hotspot_data_p1">În ultimii ani, am ajutat deja mai mult de 500.000 de utilizatori să-și protejeze confidențialitatea online și să depășească cenzura. Serviciile noastre înalte și standardele de securitate \\"Made in Germany\\" fac din Shellfire una dintre cele mai bune adrese de pe piața VPN de astăzi.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Cumpărați acum</string>
+    <string name="tv_single_pay">Plată unică</string>
+    <string name="tv_subscription_pay">Abonament</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 lună</string>
+    <string name="subs_month">lună</string>
+    <string name="subs_year">an</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Harta</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Schimbarea serverului a avut succes - doriți să vă conectați acum\?</string>
+    <string name="saotomeandprincipe">São Tomé și Principe</string>
+    <string name="hosting_data">Shellfire GmbH este un furnizor de hosting cu sediul în Schmitten, lângă Frankfurt pe Main. Shellfire a fost fondată în 2002 de către Florian Gattung și Maximilian Behr, care au acționat ca parteneri de management din acel moment</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Introduceți mesajul dvs. pentru Shellfire aici...</string>
+    <string name="load">LOAD:</string>
+    <string name="choose_a_plan">Alegeți un plan</string>
+    <string name="speed">Viteza</string>
+    <string name="servers">Servere</string>
+    <string name="countries">Țări</string>
+    <string name="encryption_server">Criptare</string>
+    <string name="video_streaming">Streaming video</string>
+    <string name="unblock_all_content">Deblocați tot conținutul</string>
+    <string name="encrypted_connection">Conexiune criptată</string>
+    <string name="safe_hotspot_usage">Utilizarea în siguranță a hotspotului</string>
+    <string name="unlimited_traffic">Trafic nelimitat</string>
+    <string name="upgrade">UPGRADE</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Avansat</string>
+    <string name="STANDARD">Standard</string>
+    <string name="ALL_SERVERS">Toate serverele</string>
+    <string name="unlock">Deblocare</string>
+    <string name="filter">Filtre</string>
+
+    <string name="format_server">Server %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN Widget mic</string>
+    <string name="widget_label_medium">Shellfire VPN Widget mediu</string>
+    <string name="widget_label_large">Shellfire VPN Widget mare</string>
+
+    <string name="pref_title_mode_connection">Mod de conectare</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Pentru a vă activa contul, vă rugăm să faceți clic pe link-ul din e-mailul pe care tocmai vi l-am trimis.</string>
+    <string name="email_validation_required_title">Contul trebuie activat</string>
+    <string name="sending_log">Trimiterea jurnalului...</string>
+    <string name="loading_one">Încărcare ONE</string>
+    <string name="loading_two">Încărcarea TWO</string>
+    <string name="logout">Ieșire</string>
+    <string name="action_connection_mode">Mod de conectare</string>
+    <string name="action_select_vpn">Selectați VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Oferiți feedback</string>
+    <string name="title_activity_log">Trimiteți feedback la Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Evaluați aplicația noastră</string>
+    <string name="initial_dialog_message">Vă place aplicația noastră\?</string>
+    <string name="initial_dialog_positive">Da</string>
+    <string name="initial_dialog_negative">Nu</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Evaluați aplicația noastră</string>
+    <string name="rate_dialog_message">Doriți să evaluați aplicația noastră\?</string>
+    <string name="rate_dialog_positive">Da, îmi place!</string>
+    <string name="rate_dialog_negative">Nu, mulțumesc</string>
+    <string name="rate_dialog_neutral">Poate mai târziu</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Oferiți feedback</string>
+    <string name="feedback_dialog_message">Doriți să oferiți feedback\?</string>
+    <string name="feedback_dialog_positive">Da, vreau să ofer feedback</string>
+    <string name="feedback_dialog_negative">Nu, mulțumesc</string>
+
+    <string name="send_feedback_progress">Trimiterea de feedback...</string>
+    <string name="feedback_sent_successfully">Feedback trimis cu succes</string>
+    <string name="feedback_not_sent">Nu s-a putut trimite feedback</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Vă rugăm să furnizați feedback-ul dvs. mai jos. Dacă doriți, puteți include, de asemenea, jurnale de aplicații și de sistem pentru a ne ajuta să înțelegem mai bine orice probleme.</string>
+    <string name="include_application_and_system_logs">Includeți jurnalele de aplicații și de sistem</string>
+    <string name="send_feedback">Trimiteți feedback</string>
+    <string name="abort">Abandonați</string>
+    <string name="serverchange_timeout">Operațiunea de schimbare a serverului a expirat. Vă rugăm să încercați din nou.</string>
+    <string name="protocol_is_being_changed">Protocolul este în curs de modificare. Acest lucru poate dura un moment..</string>
+    <string name="protocol_change_timeout">Operațiunea de schimbare a serverului a expirat. Vă rugăm să încercați din nou.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Conectarea...</string>
+    <string name="login_with_existing_account">Conectați-vă cu contul existent</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Parolă</string>
+    <string name="action_sign_in_short">Înregistrează-te</string>
+    <string name="login">Autentificare</string>
+    <string name="lostAccountData">Date de cont pierdute</string>
+    <string name="register_new_account">Înregistrare cont nou</string>
+    <string name="welcomeText">Bine ați venit la Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Înregistrare cont nou</string>
+    <string name="prompt_email_only">E-mail</string>
+    <string name="subscribeNewsletter">Abonare la newsletter</string>
+    <string name="register">Înregistrare</string>
+    <string name="i_have_an_account">Am deja un cont Shellfire</string>
+    <string name="greeting_text">Bine ați venit la Shellfire VPN! Vă rugăm să vă autentificați sau să vă înregistrați pentru a continua.</string>
+    <string name="slow">Încet</string>
+    <string name="brilliant">Strălucitoare</string>
+    <string name="back">Înapoi</string>
+    <string name="failed_to_change_server">A eșuat schimbarea serverului</string>
+    <string name="sign_in_with_google">Conectați-vă cu Google</string>
+    <string name="google_sign_in_confirmation_title">Confirmarea autentificării Google</string>
+    <string name="cancel">Anulează</string>
+    <string name="confirm">Confirmați</string>
+    <string name="try_out_for_7_days">Încearcă 7 zile gratuit.</string>
+    <string name="then_get_discount">Apoi obțineți o reducere de %1$s.</string>
+    <string name="one_year">1 an</string>
+    <string name="price_yearly_per_month">corespunde la %1$s / lună</string>
+    <string name="price_yearly_per_year">%1$s / an</string>
+    <string name="price_yearly_per_month_all_subs">1 an - %1$s / lună</string>
+    <string name="discount_also_in_next_two_years">%1$s reducere (pentru primii 2 ani)</string>
+    <string name="first_seven_days_free_explain_text">Gratuit pentru primele 7 zile.\nAsta este modul în care funcționează testul gratuit.</string>
+    <string name="price_monthly_per_month_all_subs">1 lună - %1$s / lună</string>
+    <string name="price_per_month_selected_sub">%1$s pentru %2$s</string>
+    <string name="price_info_yearly_per_year_trial_explainer">7 zile gratuite, apoi %1$s / an (corespunde la %2$s / lună).</string>
+    <string name="one_month">1 lună</string>
+    <string name="twelve_months">12 luni</string>
+    <string name="get_premium_plus">Obțineți Shellfire VPN Premium Plus</string>
+    <string name="try_now_for_free">Încearcă acum gratuit</string>
+    <string name="start_now">Începeți acum</string>
+    <string name="best_price_per_month">Cel mai bun preț pe lună</string>
+    <string name="seven_days_free">Gratuit pentru primele 7 zile</string>
+    <string name="cancel_monthly">Anulează oricând</string>
+    <string name="no_longterm_commitment">Niciun angajament pe termen lung</string>
+    <string name="show_all_subscriptions">Afișați toate abonamentele</string>
+    <string name="choose_subscription">Alegeți abonamentul dvs.</string>
+    <string name="access_all_features_and_protect_five_devices">Accesați toate funcțiile Premium și protejați 5 dispozitive</string>
+    <string name="first_payment_info_today">Prima plată este scadentă acum. Acest abonament se reînnoiește automat până când este anulat.</string>
+    <string name="first_payment_info_seven_days">Prima plată este scadentă în 7 zile. Acest abonament se reînnoiește automat până când este anulat.</string>
+    <string name="trial_link_text">Încearcă 7 zile gratuit - iată cum funcționează.</string>
+    <string name="trial_info">Începeți să plătiți după 7 zile. După perioada inițială, abonamentul se reînnoiește automat în fiecare an până când îl anulați.</string>
+    <!-- General -->
+    <string name="close_button_text">Închidere</string>
+    <string name="cta_button_text">Încearcă gratuit acum</string>
+
+    <!-- Trial Explainer Card -->
+    <string name="trial_explainer_title">Cum funcționează testul gratuit de 7 zile</string>
+    <string name="trial_step1_title">Astăzi: Acces complet la toate funcțiile Premium</string>
+    <string name="trial_step1_description">Explorați toate caracteristicile premium și testați funcționalitatea completă a aplicației.</string>
+    <string name="trial_step2_title">Ziua 5: E-mail de reamintire cu privire la sfârșitul procesului</string>
+    <string name="trial_step2_description">Vă vom trimite un e-mail pentru a vă reaminti că procesul se încheie în curând.</string>
+    <string name="trial_step3_title">Ziua 7: Perioada de testare se încheie, începe abonamentul dvs.</string>
+    <string name="trial_step3_description">Plata pentru primul an va fi procesată automat dacă nu ați anulat până în această zi.</string>
+    <string name="for_the_first_two_years">(pentru primii doi ani)</string>
+    <string name="no_browser_available_to_open_the_link">Nu există niciun browser disponibil pentru a deschide link-ul.</string>
+
+</resources>

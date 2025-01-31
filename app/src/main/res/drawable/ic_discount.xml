@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Top Circle as Path -->
+    <path
+        android:fillColor="@color/base_blue_color"
+        android:pathData="M10,7a3,3 0 1,1 -6,0 3,3 0 1,1 6,0z" />
+
+    <!-- Bottom Circle as Path -->
+    <path
+        android:fillColor="@color/base_blue_color"
+        android:pathData="M20,17a3,3 0 1,1 -6,0 3,3 0 1,1 6,0z" />
+
+    <!-- Diagonal Slash -->
+    <path
+        android:fillColor="@color/base_blue_color"
+        android:pathData="M6,18L18,6"
+        android:strokeWidth="2"
+        android:strokeColor="@color/base_blue_color" />
+</vector>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/premium_bg"
+  android:orientation="vertical">
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:gravity="center"
+    android:text="@string/choose_a_plan"
+    android:textColor="@color/premium_text_color"
+    android:textSize="24sp"/>
+
+  <HorizontalScrollView
+    android:id="@+id/scroll_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:orientation="horizontal">
+
+      <fragment
+        android:id="@+id/fragment3"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:name="de.shellfire.vpn.android.PremiumPlusPlanFragment"
+        android:tag="PremiumPlusPlanFragment"/>
+    </LinearLayout>
+  </HorizontalScrollView>
+
+  <!--Items below don't use///////////////////////////////////////////////////////// -->
+
+  <LinearLayout
+      android:id="@+id/freeVpnPresentPremium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:visibility="gone">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+          <TableRow
+              android:id="@+id/TableRow02"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/vpntable_header_bg">
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="@string/cobiCodeEnter"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tableRow12"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/vpntable_header_bg">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tableRow5"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="right"
+              android:background="@color/vpntable_row_even_bg">
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/singlePayment"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/vpntable_row_text"
+                android:textSize="@dimen/mediumbig"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TextView06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/premium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/vpntable_row_text"
+                android:textSize="@dimen/mediumbig" />
+
+            <TextView
+                android:id="@+id/TextView07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/premiumplus"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/vpntable_row_text"
+                android:textSize="@dimen/mediumbig" />
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tableRow6"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TextView05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/hours24"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/buttonBuyDayPremium"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cents99" />
+
+            <Button
+                android:id="@+id/buttonBuyDayPremiumPlus"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickBuyDayPremiumPlus"
+                android:text="@string/cents199" />
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tableRow8"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TextView08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/month_1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/buttonBuyMonthPremium"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickBuyMonthPremium"
+                android:text="@string/cents495" />
+
+            <Button
+                android:id="@+id/buttonBuyMonthPremiumPlus"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickBuyMonthPremiumPlus"
+                android:text="@string/cents995" />
+
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tableRow9"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/vpntable_row_even_bg">
+
+            <TextView
+                android:id="@+id/TextView09"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/subscription"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/vpntable_row_text"
+                android:textSize="@dimen/mediumbig"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/premium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/vpntable_row_text"
+                android:textSize="@dimen/mediumbig" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/premiumplus"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/vpntable_row_text"
+                android:textSize="@dimen/mediumbig" />
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tblRowCobiButton"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TextView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/monthly"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/buttonBuyMonthlyPremium"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickBuyMonthlyPremium"
+                android:text="@string/cents395" />
+
+            <Button
+                android:id="@+id/buttonBuyMonthlyPremiumPlus"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickBuyMonthlyPremiumPlus"
+                android:text="@string/cents795" />
+
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tableRow11"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TextView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/yearly"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/buttonBuyYearlyPremium"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickBuyYearlyPremium"
+                android:text="@string/cents3990" />
+
+            <Button
+                android:id="@+id/buttonBuyYearlyPremiumPlus"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickBuyYearlyPremiumPlus"
+                android:text="@string/cents8490" />
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tableRow14"
+              android:layout_width="match_parent"
+              android:background="@color/vpntable_row_even_bg">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:autoLink="web"
+                android:text="@string/note_payment_types"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/vpntable_row_text"
+                android:textSize="@dimen/small" />
+
+          </TableRow>
+
+          <TableRow
+              android:id="@+id/tableRow13"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/vpntable_header_bg">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compare"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+          </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/premiumInfoTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="0"
+            android:stretchColumns="0" />
+      </LinearLayout>
+    </ScrollView>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/premiumAccountShowInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+      android:id="@+id/TextView02111"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/selected_vpn"
+      android:textSize="@dimen/verybig"/>
+
+    <include
+      android:id="@+id/includeViewSelectedVpnPremium"
+      layout="@layout/vpn_list_item"
+      android:visibility="gone"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/textViewPremiumType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/big"/>
+
+      <TextView
+        android:id="@+id/random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/until"
+        android:textSize="@dimen/big"/>
+
+      <TextView
+        android:id="@+id/textViewPremiumUntil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/big"/>
+    </LinearLayout>
+  </LinearLayout>
+
+  <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+
+    <TableRow
+      android:id="@+id/tableRow1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"></TableRow>
+
+    <TableRow
+      android:id="@+id/tableRow2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"></TableRow>
+
+    <TableRow
+      android:id="@+id/tableRow3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"></TableRow>
+
+    <TableRow
+      android:id="@+id/tableRow4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"></TableRow>
+  </TableLayout>
+</LinearLayout>

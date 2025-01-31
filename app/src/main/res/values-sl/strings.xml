@@ -1,0 +1,536 @@
+<resources>
+    <string name="channel_name_userreq">Potrebna je interakcija z uporabnikom</string>
+    <string name="channel_description_userreq">Povezava OpenVPN zahteva vnos uporabnika, npr. dvostopenjsko preverjanje pristnosti.
+    </string>
+    <string name="channel_name_background">Statistika povezav</string>
+    <string name="channel_description_background">tekoča statistika vzpostavljene povezave OpenVPN</string>
+    <string name="channel_name_status">Sprememba stanja povezave</string>
+    <string name="channel_description_status">Spremembe stanja povezave OpenVPN (povezava, preverjanje pristnosti,...)</string>
+    <string name="save_password">Shrani geslo</string>
+    <string name="show_password">Prikaži geslo</string>
+    <string name="auth_username">Uporabniško ime</string>
+    <string name="remote_trust">Zaupam tej aplikaciji.</string>
+    <string name="remote_warning">S tem aplikaciji dovolite, da v celoti nadzoruje OpenVPN za Android in prestreza ves omrežni promet.<b>NE sprejmite, če ne zaupate vlogi.</b> V nasprotnem primeru tvegate, da bo zlonamerna programska oprema ogrozila vaše podatke.\"</string>
+    <string name="permission_icon_app">Ikona aplikacije, ki poskuša uporabljati OpenVPN za Android</string>
+    <string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+    <string name="config_error_found">Napaka v konfiguraciji</string>
+    <string name="nought_alwayson_warning"><![CDATA[Če niste dobili potrditvenega pogovornega okna VPN, imate za drugo aplikacijo omogočeno funkcijo \\"Vedno vklopljeno VPN\\". V tem primeru se lahko samo ta aplikacija poveže z omrežjem VPN. Preverite v razdelku Nastavitve-> Omrežja več ... -> VPNS]]></string>
+    <string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+    <string name="pw_request_dialog_title">Potrebujete %1$s</string>
+    <string name="pw_request_dialog_prompt">Vnesite geslo za profil %1$s</string>
+    <string name="shortcut_profile_notfound">Profil, določen v bližnjici, ni najden</string>
+    <string name="app">Shellfire VPN za Android</string>
+    <string name="prompt">%1$s poskuša nadzorovati %2$s</string>
+    <string name="all_app_prompt">Zunanja aplikacija poskuša nadzorovati %s. Aplikacije, ki zahteva dostop, ni mogoče določiti. Če tej aplikaciji dovolite dostop, bo dostop omogočen VSEH aplikacijam.</string>
+    <string name="screen_nopersistenttun">Opozorilo: Za to omrežje VPN ni omogočen trajni tun. Ko je zaslon ugasnjen, promet uporablja običajno internetno povezavo.</string>
+    <string name="private_key_password">Geslo zasebnega ključa</string>
+    <string name="pkcs12_file_encryption_key">Ključ šifriranja datotek PKCS12</string>
+    <string name="no_error_found">Napaka ni bila najdena</string>
+    <string name="no_orbotfound">Aplikacije Orbot ni mogoče najti. Namestite aplikacijo Orbot ali uporabite ročno integracijo Socks v5.</string>
+    <string name="error_orbot_and_proxy_options">Ne morete hkrati uporabiti dodatne izjave http-proxy-option in integracije Orbot</string>
+    <string name="openvpn3_socksproxy">Implementacija OpenVPN 3 C++ ne podpira povezovanja prek posredniškega strežnika Socks</string>
+    <string name="openvpn3_nostatickeys">Implementacija OpenVPN 3 C++ ne podpira statičnih ključev. V splošnih nastavitvah preklopite na OpenVPN 2.x.</string>
+    <string name="openvpn3_pkcs12">Uporaba datotek PKCS12 neposredno z implementacijo OpenVPN 3 C++ ni podprta. Datoteke pkcs12 uvozite v shrambo ključev sistema Android ali pa v splošnih nastavitvah spremenite OpenVPN 2.x.</string>
+    <string name="remote_no_server_selected">Opredeliti in omogočiti morate vsaj en oddaljeni strežnik.</string>
+    <string name="missing_tlsauth">manjka datoteka tls-auth</string>
+    <string name="missing_certificates">Manjka uporabniško potrdilo ali datoteka s ključem uporabniškega potrdila</string>
+    <string name="missing_ca_certificate">Manjkajoče potrdilo CA</string>
+    <string name="custom_route_format_error">Napaka pri razčlenjevanju poti po meri</string>
+    <string name="ipv4_format_error">Napaka pri razčlenjevanju naslova IPv4</string>
+    <string name="deprecated_tls_remote">Konfiguracija uporablja možnost tls-remote, ki je bila odpravljena v različici 2.3 in dokončno odstranjena v različici 2.4</string>
+    <string name="no_ca_cert_selected">Izbrati morate potrdilo CA ali omogočiti preverjanje prstnih odtisov</string>
+    <string name="no_keystore_cert_selected">Izbrati morate potrdilo uporabnika</string>
+    <string name="keyChainAccessError">Napaka pri dostopu do verige ključev: %s</string>
+    <string name="cannotparsecert">Ni mogoče prikazati informacij o potrdilu</string>
+    <string name="crtext_requested">Odgovorite na izziv za nadaljevanje avtentikacije VPN</string>
+    <string name="openurl_requested">Odprite URL za nadaljevanje preverjanja pristnosti VPN</string>
+    <string name="ip_looks_like_subnet">Vpn topologija \\"%3$s\\" je določena, vendar ifconfig %1$s %2$s izgleda bolj kot naslov IP z omrežno masko. Predpostavlja topologijo \\"podomrežje\\".</string>
+    <string name="allowed_vpn_apps_info">Dovoljene aplikacije VPN: %1$s</string>
+    <string name="disallowed_vpn_apps_info">Prepovedane aplikacije VPN: %1$s</string>
+    <string name="app_no_longer_exists">Paket %s ni več nameščen, zato ga odstranite s seznama dovoljenih/ne dovoljenih aplikacij</string>
+    <string name="no_allowed_app">Dodana ni nobena dovoljena aplikacija. Dodajamo sami (%s), da bi imeli vsaj eno aplikacijo na seznamu dovoljenih aplikacij, da ne bi dovolili vseh aplikacij.</string>
+    <string name="ignore_multicast_route">Ignoriranje poti večpredstavnostnega oddajanja: %s</string>
+    <string name="routes_debug">Nameščene poti storitve VpnService: %1$s %2$s</string>
+    <string name="state_auth_failed">Preverjanje pristnosti ni uspelo</string>
+    <string name="password">Geslo</string>
+    <string name="state_waitorbot">Čakanje na začetek Orbota</string>
+    <string name="service_restarted">Ponovni zagon storitve OpenVPN (aplikacija je verjetno propadla ali je bila ubita zaradi pritiska na pomnilnik)</string>
+    <string name="notifcation_title_notconnect">Ni povezano</string>
+    <string name="permission_revoked">OS prekliče dovoljenje VPN (npr. zaženjen drug program VPN), kar ustavi VPN</string>
+    <string name="keychain_nocacert">Med branjem iz shrambe ključev sistema Android ni bilo vrnjeno nobeno potrdilo CA. Preverjanje pristnosti bo verjetno neuspešno.</string>
+    <string name="abi_mismatch">Prednostna prioriteta ABI te naprave (%1$s) in ABI, o katerem poročajo nativne knjižnice (%2$s), se ne ujemata</string>
+    <string name="jelly_keystore_alphanumeric_bug">Nekatere različice sistema Android 4.1 imajo težave, če ime potrdila shrambe ključev vsebuje nealfanumerične znake (kot so presledki, podčrtaji ali črtice). Poskusite ponovno uvoziti potrdilo brez posebnih znakov</string>
+    <string name="keychain_access">Ne morete dostopati do potrdil iz Ključavnice sistema Android. To lahko povzroči nadgradnja vdelane programske opreme ali ponovna vzpostavitev varnostne kopije nastavitev aplikacije/aplikacije. Uredite VPN in ponovno izberite certifikat v osnovnih nastavitvah, da ponovno ustvarite dovoljenje za dostop do certifikata.</string>
+    <string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>
+    <string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+    <string name="state_auth_pending">Preverjanje pristnosti v postopku</string>
+    <string name="reread_log">Ponovno branje (%d) elementov dnevnika iz predpomnilniške datoteke dnevnika</string>
+    <string name="state_waitconnectretry">Čakanje %ss sekund med poskusom vzpostavitve povezave</string>
+    <string name="unhandled_exception">Neobdelana izjema: %1$s\n\n%2$s</string>
+    <string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Poti: %1$s %2$s</string>
+    <string name="routes_info_excl">Izključene poti: %1$s %2$s</string>
+    <string name="title_activity_login">Prijavite se</string>
+    <string name="action_forgot_password">Pozabljeno geslo</string>
+    <string name="register_process_registering">Registrirajte se...</string>
+    <string name="error_invalid_password">Geslo je prekratko</string>
+    <string name="error_passwords_dont_match">Gesla se ne ujemajo</string>
+    <string name="error_field_required">To polje je obvezno</string>
+    <string name="action_settings">Nastavitve</string>
+    <string name="title_connect">Status</string>
+    <string name="title_serverlist">Seznam strežnikov</string>
+    <string name="title_locations">Lokacije</string>
+    <string name="title_log">Dnevnik</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Povežite</string>
+    <string name="route_rejected">Pot, ki jo je zavrnil sistem Android</string>
+    <string name="tun_error_helpful">Pri nekaterih slikah ICS po meri je lahko dovoljenje za /dev/tun napačno ali pa modul tun popolnoma manjka. Pri slikah CM9 poskusite z možnostjo popraviti lastništvo v splošnih nastavitvah.</string>
+    <string name="tun_open_error">Ni uspelo odpreti vmesnika tun</string>
+    <string name="error">\"Napaka: \"</string>
+    <string name="last_openvpn_tun_config">Odpiranje vmesnika tun:</string>
+    <string name="local_ip_info">Lokalni IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">Strežnik DNS: %1$s, domena: %2$s</string>
+    <string name="routes_info">Poti: %s</string>
+    <string name="routes_info6">Poti IPv6: %s</string>
+    <string name="ip_not_cidr">Dobil sem informacije o vmesniku %1$s in %2$s, pri čemer je drugi naslov enakovreden naslov oddaljenega omrežja. Za lokalni IP uporablja mrežno masko /32. Način, ki ga navaja OpenVPN, je \\"%3$s\\".</string>
+    <string name="route_not_cidr">%1$s in %2$s ne morete uporabiti kot poti IP z mrežno masko CIDR, pri čemer kot mrežno masko uporabite /32.</string>
+    <string name="route_not_netip">Popravljena pot %1$s/%2$s na %3$s/%2$s</string>
+    <string name="no_vpn_support_image">Vaša slika ne podpira API storitve VPNService, žal :(</string>
+    <string name="encryption">-Šifriranje</string>
+    <string name="opentun_no_ipaddr">Zavračanje odprtja naprave tun brez podatkov IP</string>
+    <string name="building_configration">Konfiguracija stavbe...</string>
+    <string name="netstatus">Stanje omrežja: %s</string>
+    <string name="mobile_info">Teče na %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Napaka pri podpisovanju s ključem skladišča ključev za Android %1$s: %2$s</string>
+    <string name="warn_no_dns">Ne uporablja se noben strežnik DNS. Razreševanje imen morda ne bo delovalo. Razmislite o nastavitvi strežnikov DNS po meri. Upoštevajte tudi, da bo sistem Android še naprej uporabljal nastavitve posrednika, določene za mobilno povezavo/Wi-Fi, če niso nastavljeni strežniki DNS.</string>
+    <string name="dns_add_error">Ni bilo mogoče dodati strežnika DNS \\"%1$s\\", sistem ga je zavrnil: %2$s</string>
+    <string name="ip_add_error">Ni bilo mogoče konfigurirati naslova IP \\"%1$s\\", sistem ga je zavrnil: %2$s</string>
+    <string name="getproxy_error">Napaka pri pridobivanju nastavitev posredniškega strežnika: %s</string>
+    <string name="using_proxy">Uporaba posrednika %1$s %2$d</string>
+    <string name="minidump_generated">OpenVPN se je nepričakovano zrušil. Razmislite o uporabi možnosti Pošlji Minidump v glavnem meniju</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Povezovanje</string>
+    <string name="state_wait">Čakanje na odgovor strežnika</string>
+    <string name="state_auth">Preverjanje pristnosti</string>
+    <string name="state_get_config">Pridobivanje konfiguracije odjemalca</string>
+    <string name="state_assign_ip">Dodeljevanje naslovov IP</string>
+    <string name="state_add_routes">Dodajanje poti</string>
+    <string name="state_connected">Povezano</string>
+    <string name="state_disconnected">Odklop</string>
+    <string name="state_reconnecting">Ponovna vzpostavitev povezave</string>
+    <string name="state_exiting">Izhod iz</string>
+    <string name="state_noprocess">Ne deluje</string>
+    <string name="state_resolve">Reševanje imen gostiteljev</string>
+    <string name="state_tcp_connect">Vzpostavljanje povezave (TCP)</string>
+    <string name="unknown_state">Neznano</string>
+    <string name="state_nonetwork">Čakanje na uporabno omrežje</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Vzpostavljanje povezave z omrežjem VPN %s</string>
+    <string name="start_vpn_ticker">Vzpostavljanje povezave z omrežjem VPN %s</string>
+    <string name="mobile_info_extended">Deluje na %1$s (%2$s) %3$s, Android API %4$d, različica %5$s, %6$s</string>
+    <string name="built_by">izdelal %s</string>
+    <string name="debug_build">odpravljanje napak pri gradnji</string>
+    <string name="official_build">uradna sestava</string>
+    <string name="screenoff_pause">Prekinitev povezave v stanju izklopljenega zaslona: manj kot %1$s v %2$ss</string>
+    <string name="state_userpause">Prekinitev VPN, ki jo zahteva uporabnik</string>
+    <string name="state_screenoff">VPN ustavljen - izklop zaslona</string>
+    <string name="defaultServerName">Strežnik XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Izberite VPN</string>
+    <string name="vpnSelectReason">V vašem računu Shellfire je bilo najdenih več omrežij VPN. Izberite, katerega želite uporabljati.</string>
+    <string name="rememberVpnSelection">Shranjevanje izbire</string>
+    <string name="remember_vpn_summary">Če je na voljo več omrežij VPN, vam ob vsaki prijavi ni treba izbrati omrežja VPN.</string>
+    <string name="remember_vpn_title">Shrani izbrano omrežje VPN</string>
+    <string name="show_log_sum">Trajno prikazovanje dnevnika lahko povzroči zmanjšanje zmogljivosti (zahteva ponovni zagon aplikacije).</string>
+    <string name="show_log">Prikaz dnevnika</string>
+    <string name="default_product_type">Brezplačno</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Strežnik</string>
+    <string name="connectionAdvice">Vzpostavi povezavo z izbranim strežnikom. Če želite zamenjati strežnike, podrsnite v desno.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Dnevnik aplikacij</string>
+    <string name="connectionState">Status:</string>
+    <string name="disconnected">Odklopljena stran</string>
+    <string name="noAccountData">Niste registrirani\?</string>
+    <string name="title_activity_register">Register</string>
+    <string name="buyDailyPremium">0,99 Euro / 24 ur.</string>
+    <string name="buyDailyPremiumPlus">1,99 Euro / 24 ur.</string>
+    <string name="buyMonthlyPremium">3,49 evra / mesec</string>
+    <string name="buyMonthlyPremiumPlus">7,95 evrov / mesec</string>
+    <string name="buyYearlyPremium">39,90 evrov / leto</string>
+    <string name="buyYearlyPremiumPlus">84,90 evrov / leto</string>
+    <string name="premiumUntil">Premium do:</string>
+    <string name="sendToShellfire">Pošlji dnevnik na Shellfire</string>
+    <string name="verifying_purchase">Nakup se preverja...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Nadgradnja Premium je bila uspešna. Prikaz seznama strežnikov\?</string>
+    <string name="yes">Da</string>
+    <string name="no">Ne</string>
+    <string name="YES">DA</string>
+    <string name="upgrade_not_successful_check_log">Nadgradnja ni bila uspešna, preverite dnevnik!</string>
+    <string name="problem_setting_up_in_app_billing">\"Težava z nastavitvijo zaračunavanja v aplikaciji: \"</string>
+    <string name="loading">Nalaganje...</string>
+    <string name="send_log_to_shellfire">Pošlji dnevnik na Shellfire</string>
+    <string name="log_send_succesfully">Dnevnik uspešno poslan v Shellfire</string>
+    <string name="log_could_not_be_sent">Dnevnika ni bilo mogoče poslati</string>
+    <string name="connecting">Povezovanje...</string>
+    <string name="cansel">ODPOVEDI</string>
+    <string name="disconnect">Odklop</string>
+    <string name="connected">Povezano</string>
+    <string name="loading_certificates">Nalaganje potrdil</string>
+    <string name="switching_from_udp_to_tcp">Prehod z UDP na TCP</string>
+    <string name="switching_from_tcp_to_udp">Prehod s TCP na UDP</string>
+    <string name="item_already_owned_consuming">predmet je že v lasti - potrošnja</string>
+    <string name="item_consumed">porabljen element</string>
+    <string name="already_on_this_server_doing_nothing">Že na tem strežniku - ne počne ničesar</string>
+    <string name="not_showing_premium_info">Ne prikazuje informacij o premiji</string>
+    <string name="you_are_not_eligible_to_use_this_server">Potrebna je nadgradnja.
+\nŽelite več informacij\?</string>
+    <string name="you_are_currently_connecting_disconnect">Trenutno ste povezani. Pred spremembo strežnika se morate odklopiti. Se zdaj odklopite\?</string>
+    <string name="not_changing_server">Sprememba strežnika preklicana</string>
+    <string name="sure_to_change_server">Ste prepričani, da želite spremeniti strežnik\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.Server se spremeni. To lahko traja nekaj časa.</string>
+    <string name="server_selection_succesfully_performed_on_backend">Sprememba strežnika je bila uspešna.</string>
+    <string name="server_selection_could_not_be_changed">Strežnika ni bilo mogoče spremeniti. Za podrobnosti preverite dnevnik.</string>
+    <string name="connecting_please_wait">Povezava se obdeluje - počakajte.</string>
+    <string name="action_about">O podjetju Shellfire VPN</string>
+
+    <string name="country">država</string>
+    <string name="title_activity_about">O podjetju Shellfire VPN</string>
+    <string name="hello_world">Pozdravljen svet!</string>
+    <string name="copyright_shellfire">© 2014 by Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">API-ji za kriptografijo Bouncy Castle</string>
+    <string name="copyright_openssl">Ta izdelek vključuje programsko opremo, ki jo je razvil projekt OpenSSL za uporabo v OpenSSL Toolkit\n
+        Avtorske pravice © 1998-2008 Projekt OpenSSL. Vse pravice pridržane.\n\n
+        Ta izdelek vključuje kriptografsko programsko opremo, ki jo je napisal Eric Young (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Vse pravice pridržane.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Avtorske pravice © 1996 - 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">Ta program uporablja naslednje komponente; za vse podrobnosti o licencah si oglejte izvorno kodo (na voljo na spletnem naslovu https://code.google.com/p/shellfirevpn4a/).</string>
+    <string name="copyright_arne">Projekt ics-openvpn, avtorske pravice 2012-2013 Arne Schwabe (arne\@rfc2549.org) na voljo na: https://code.google.com/p/ics-openvpn/</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Avtorske pravice © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" je blagovna znamka družbe OpenVPN Technologies, Inc.\n]]></string>
+    <string name="copyright_bouncycastle">Avtorske pravice © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">do .</string>
+    <string name="state_user_vpn_password">Čakanje na uporabniško geslo VPN</string>
+    <string name="state_user_vpn_permission_cancelled">Pogovorno okno za dovoljenje API VPN je preklicano</string>
+    <string name="account_created_succesfully">Račun je bil uspešno ustvarjen - preverite e-poštna sporočila za aktivacijsko e-pošto.</string>
+    <string name="free">Brezplačno</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 ur</string>
+    <string name="month_1">1 mesec</string>
+    <string name="monthly">mesečno</string>
+    <string name="yearly">letno</string>
+    <string name="cents99">0,99 Eur</string>
+    <string name="cents199">Eur 1,99</string>
+    <string name="cents495">4,95 Eur</string>
+    <string name="cents995">9,95 Eur</string>
+    <string name="cents395">3,95 Eur</string>
+    <string name="cents795">7,95 Eur</string>
+    <string name="cents3990">39,90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Kupite</string>
+    <string name="compare">Primerjaj</string>
+    <string name="singlePayment">enkratno plačilo *</string>
+    <string name="subscription">naročnina **</string>
+    <string name="note_payment_types">* kreditna kartica ni potrebna.\r\n
+** Kreditna kartica ni potrebna; prek Google Play jo lahko kadar koli prekličete. \r\n
+\r\n
+plačajte s Paypalom na naši spletni strani: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">Izbira omrežja VPN...</string>
+    <string name="cobiCodeEnter">Kampanja COMPUTER BILD</string>
+    <string name="cobiClickHere">Vnesite kodo</string>
+
+    <string name="enter_cobi_code">vnesite COMPUTERBILD kodo tukaj:</string>
+    <string name="action_share">Deljenje te aplikacije</string>
+    <string name="share_with">Delite prek</string>
+    <string name="share_text">Uporabljam aplikacijo Shellfire #VPN za zaščito podatkov pred hekerji in odblokiranje cenzurirane vsebine: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Stopnja</string>
+    <string name="rate_this_app">Stopnja</string>
+    <string name="rate_explanation">Vas je ta aplikacija prepričala\? Zelo bi bili veseli, če bi lahko ocenili našo aplikacijo na Google Play. Hvala za vašo podporo!</string>
+    <string name="rate_now">Ocenite zdaj</string>
+    <string name="rate_later">Pozneje</string>
+    <string name="rate_never">Ne, hvala.</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Moj načrt</string>
+    <string name="current_plan">TRENUTNI NAČRT</string>
+    <string name="PAID_UNTIL">Plačano do</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Nadgradite svoj račun za več funkcij</string>
+
+
+    <string name="retry">Ponovitev</string>
+    <string name="network_problem_title">Težava z omrežjem</string>
+    <string name="network_problem_message">Trenutno niste povezani z internetom. Shellfire VPN zahteva aktivno internetno povezavo.</string>
+    <string name="login_error">neuspešna prijava.</string>
+    <string name="serverLoad">Obremenitev</string>
+    <string name="reloadServerList">Ponovno polnjenje</string>
+    <string name="upgrade_not_successful">Nadgradnja ni bila uspešna</string>
+
+    <string name="new_version_available_title">Na voljo je nova različica</string>
+    <string name="new_version_available_message">V trgovini Google Play je na voljo nova različica programa Shellfire VPN. Kmalu jo morate namestiti, saj ta različica morda ne deluje več pravilno ali vsebuje varnostne težave.
+
+Če želite posodobiti različico, pojdite v Trgovino Play\?
+
+Opomba: Morda boste morali odstraniti/ponovno namestiti najnovejšo različico, da jo prejmete.</string>
+
+    <string name="dontshowagain">Ne in ne pokažite več</string>
+    <string name="not_now">Ne zdaj</string>
+    <string name="server">Strežnik</string>
+
+    <string name="_128bit">128-bitno šifriranje</string>
+    <string name="_192bit">192-bitno šifriranje</string>
+    <string name="_256bit">256-bitno šifriranje</string>
+
+    <string name="upto786">do 786 kbit/s</string>
+    <string name="upto10000">do 10.000 kbit/s</string>
+    <string name="unlimited">neomejeno kbit/sec</string>
+
+    <string name="php_invalid_email">Vnesite veljaven e-poštni naslov.</string>
+    <string name="php_account_exists">Za ta e-poštni naslov že obstaja registriran račun.</string>
+
+
+    <string name="php_signature"><![CDATA[Lep pozdrav od ekipe Shellfire
+
+P.S.: Novo: Zasluži denar s Shellfire! Ko nam pridobite nove stranke, vam izplačamo do 100 % provizijo: https://www.shellfire.net/affiliate-center/
+
+P.P.S.: Sledite nam na Twitterju: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Vodstvo: Florian Gattung, Maximilian Behr
+Družba po civilnem zakoniku s sedežem v Bad Vilbelu, Nemčija]]></string>
+
+    <string name="php_surf_anonym">Anonimno brskanje po spletu</string>
+    <string name="php_hide_ip">Skrijte svoj naslov IP</string>
+    <string name="php_encrypt_internet">Šifrirana internetna povezava</string>
+    <string name="php_secure_wifi">Varna uporaba javnih dostopnih točk wifi</string>
+    <string name="php_unlimited">neomejeno</string>
+    <string name="php_traffic">Obseg prometa/podatkov</string>
+    <string name="php_speed_generic">%1$s kbit/s</string>
+    <string name="php_speed">Hitrost</string>
+    <string name="php_server_in_generic">Strežnik v %1$s</string>
+    <string name="php_change_location">Spremeni lokacijo v vsakem trenutku</string>
+    <string name="php_streaming_websites">Spletne strani za pretakanje</string>
+
+
+    <string name="play_product_description">Shellfire VPN - enostavno. varno. povezano. Brez registracije.
+
+Shellfire VPN je BREZPLAČEN in vas nikoli ne bo stal niti centa. Neomejen promet, neomejen čas!
+
+Shellfire VPN skriva vaš naslov IP, odblokira internet in vam omogoča prost in anonimen dostop do vseh želenih spletnih mest. Z omrežjem Shellfire VPN se lahko povežete s katerim koli spletnim mestom z gotovostjo, da ste pod krinko. V državah z internetno cenzuro odblokirate Skype, Facebook, Twitter, YouTube itd., iz tujine pa lahko dostopate celo do televizijskih in radijskih storitev v domači državi.
+
+Shellfire VPN vam omogoča izjemno močno šifriranje, s katerim svoje podatke zaščitite pred hekerji, NSA in drugimi grožnjami, tudi v nezavarovanih javnih omrežjih wifi!
+
+Nadgradite na Premium in pridobite
+ - Večjo hitrost.
+ - Močnejše šifriranje.
+ - Brezplačna izbira iz naših strežnikov v:
+Avstriji, Franciji, Hongkongu, Italiji, Kanadi, Nemčiji, Nizozemski, Poljski, Romuniji, Rusiji, Španiji, Švedski, Švici, Združenem kraljestvu in ZDA.
+- Stranke PremiumPlus imajo ekskluzivni dostop do strežnikov v:
+Čilu, Islandiji, otoku Man (offshore) in Lihtenštajnu.
+
+Shellfire VPN - najboljši odjemalec VPN za Android.
+
+Shellfire VPN deluje tudi v operacijskih sistemih Windows, Mac OS, iOS ali Linux! Za več podrobnosti obiščite spletno stran https://www.shellfire.net/vpn/.
+
+Za takojšnje posodobitve nam sledite na Facebooku in Twitterju
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Anonimno deskanje - šifrirana povezava - dostopajte do storitev Hulu, Youtube... od koderkoli</string>
+
+    <string name="play_product_description_generic">%1$s bitno šifriranje
+Hitrost prenosa do %2$s kbit/s
+Strežnik v %3$s državah po vsem svetu</string>
+
+    <string name="hosting_since_2002">Gostovanje od leta 2002</string>
+    <string name="vision">Vizija</string>
+    <string name="vision_data">Prepričani smo, da je varen in brezplačen dostop do interneta temeljna pravica vsakega posameznika na tem planetu. Zato je naše poslanstvo, da internet ostane prostor svobode in varen prostor za vaše zasebne podatke. To počnemo tako, da vam z našimi šifriranimi tuneli VPN in govornimi strežniki zagotavljamo zaščito pred prisluškovalci in hekerji.</string>
+    <string name="hotspot">Vroča točka</string>
+    <string name="hotspot_data_p1">V zadnjih letih smo že več kot 500.000 uporabnikom pomagali zaščititi zasebnost na spletu in premagati cenzuro. Zaradi naših visokih standardov storitev in varnosti \\"Made in Germany\\" je Shellfire danes eden najboljših naslovov na trgu VPN.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Kupi zdaj</string>
+    <string name="tv_single_pay">Enkratno plačilo</string>
+    <string name="tv_subscription_pay">Naročnina</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 mesec</string>
+    <string name="subs_month">mesec</string>
+    <string name="subs_year">leto</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Zemljevid</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Sprememba strežnika je bila uspešna - se želite zdaj povezati\?</string>
+    <string name="saotomeandprincipe">Sao Tome in Principe</string>
+    <string name="hosting_data">Shellfire GmbH je ponudnik gostovanja s sedežem v mestu Schmitten blizu Frankfurta na Majni. Podjetje Shellfire sta leta 2002 ustanovila Florian Gattung in Maximilian Behr, ki od takrat delujeta kot poslovodna partnerja.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Tukaj vnesite svoje sporočilo za Shellfire...</string>
+    <string name="load">NALAGANJE:</string>
+    <string name="choose_a_plan">Izberite načrt</string>
+    <string name="speed">Hitrost</string>
+    <string name="servers">Strežniki</string>
+    <string name="countries">Države</string>
+    <string name="encryption_server">Šifriranje</string>
+    <string name="video_streaming">Prenašanje videoposnetkov</string>
+    <string name="unblock_all_content">Odblokiranje vseh vsebin</string>
+    <string name="encrypted_connection">Šifrirana povezava</string>
+    <string name="safe_hotspot_usage">Varna uporaba dostopne točke</string>
+    <string name="unlimited_traffic">Neomejen promet</string>
+    <string name="upgrade">NADGRADNJA</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Napredno</string>
+    <string name="STANDARD">Standard</string>
+    <string name="ALL_SERVERS">Vsi strežniki</string>
+    <string name="unlock">Odklepanje spletne strani</string>
+    <string name="filter">Filtri</string>
+
+    <string name="format_server">Strežnik %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN Majhen pripomoček</string>
+    <string name="widget_label_medium">Shellfire VPN Srednji pripomoček</string>
+    <string name="widget_label_large">Shellfire VPN Velik pripomoček</string>
+
+    <string name="pref_title_mode_connection">Način povezave</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Če želite aktivirati svoj račun, kliknite povezavo v e-poštnem sporočilu, ki smo vam ga pravkar poslali.</string>
+    <string name="email_validation_required_title">Račun je treba aktivirati</string>
+    <string name="sending_log">Pošiljanje dnevnika...</string>
+    <string name="loading_one">Nalaganje Eno</string>
+    <string name="loading_two">Nalaganje DVEH</string>
+    <string name="logout">Odjava</string>
+    <string name="action_connection_mode">Način povezave</string>
+    <string name="action_select_vpn">Izberite VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Podajte povratne informacije</string>
+    <string name="title_activity_log">Pošlji povratne informacije podjetju Shellfire</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Ocenite našo aplikacijo</string>
+    <string name="initial_dialog_message">Ali vam je všeč naša aplikacija\?</string>
+    <string name="initial_dialog_positive">Da</string>
+    <string name="initial_dialog_negative">Ne</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Ocenite našo aplikacijo</string>
+    <string name="rate_dialog_message">Želite oceniti našo aplikacijo\?</string>
+    <string name="rate_dialog_positive">Da, všeč mi je!</string>
+    <string name="rate_dialog_negative">Ne, hvala.</string>
+    <string name="rate_dialog_neutral">Morda pozneje</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Zagotovite povratne informacije</string>
+    <string name="feedback_dialog_message">Želite posredovati povratne informacije\?</string>
+    <string name="feedback_dialog_positive">Da, želim posredovati povratne informacije</string>
+    <string name="feedback_dialog_negative">Ne, hvala.</string>
+
+    <string name="send_feedback_progress">Pošiljanje povratnih informacij...</string>
+    <string name="feedback_sent_successfully">Povratne informacije so bile uspešno poslane</string>
+    <string name="feedback_not_sent">Ni bilo mogoče poslati povratnih informacij</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Spodaj pošljite svoje povratne informacije. Če želite, lahko vključite tudi dnevnike aplikacij in sistemov, da nam pomagate bolje razumeti morebitne težave.</string>
+    <string name="include_application_and_system_logs">Vključite dnevnike aplikacij in sistemov.</string>
+    <string name="send_feedback">Pošlji povratne informacije</string>
+    <string name="abort">Prekinitev</string>
+    <string name="serverchange_timeout">Operacija spremembe strežnika se je iztekla. Poskusite znova.</string>
+    <string name="protocol_is_being_changed">Protokol se spreminja. To lahko traja nekaj časa.</string>
+    <string name="protocol_change_timeout">Operacija spremembe strežnika se je iztekla. Poskusite znova.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Prijava...</string>
+    <string name="login_with_existing_account">Prijava z obstoječim računom</string>
+    <string name="prompt_email">E-pošta</string>
+    <string name="prompt_password">Geslo</string>
+    <string name="action_sign_in_short">Prijavite se</string>
+    <string name="login">Prijava</string>
+    <string name="lostAccountData">Izgubljeni podatki o računu</string>
+    <string name="register_new_account">Registracija novega računa</string>
+    <string name="welcomeText">Dobrodošli v omrežju Shellfire VPN!</string>
+    <string name="needToAcceptAndRegister">Registracija novega računa</string>
+    <string name="prompt_email_only">E-pošta</string>
+    <string name="subscribeNewsletter">Naročite se na novice</string>
+    <string name="register">Register</string>
+    <string name="i_have_an_account">Že imam račun Shellfire</string>
+    <string name="greeting_text">Dobrodošli v omrežju Shellfire VPN! Za nadaljevanje se prijavite ali registrirajte.</string>
+    <string name="slow">Počasi</string>
+    <string name="brilliant">Briljantno</string>
+    <string name="back">Nazaj</string>
+    <string name="failed_to_change_server">Ni uspelo spremeniti strežnika</string>
+    <string name="sign_in_with_google">Prijavite se z Googlom</string>
+    <string name="google_sign_in_confirmation_title">Potrditev prijave v Google</string>
+    <string name="cancel">Prekliči</string>
+    <string name="confirm">Potrdite</string>
+    <string name="try_out_for_7_days">Preizkusite 7 dni brezplačno.</string>
+    <string name="then_get_discount">Nato prejmite %1$s popusta.</string>
+    <string name="one_year">1 leto</string>
+    <string name="price_yearly_per_month">ustreza %1$s / mesec</string>
+    <string name="price_yearly_per_year">%1$s / leto</string>
+    <string name="price_yearly_per_month_all_subs">1 leto - %1$s / mesec</string>
+    <string name="discount_also_in_next_two_years">%1$s popust (za prvi dve leti)</string>
+    <string name="first_seven_days_free_explain_text">Prvih 7 dni je brezplačnih.\nTole je način delovanja brezplačnega preizkusa.</string>
+    <string name="price_monthly_per_month_all_subs">1 mesec - %1$s / mesec</string>
+    <string name="price_per_month_selected_sub">%1$s za %2$s</string>
+    <string name="price_info_yearly_per_year_trial_explainer">7 dni brezplačno, nato %1$s / leto (ustreza %2$s / mesec).</string>
+    <string name="one_month">1 mesec</string>
+    <string name="twelve_months">12 mesecev</string>
+    <string name="get_premium_plus">Pridobite Shellfire VPN Premium Plus</string>
+    <string name="try_now_for_free">Poskusite zdaj brezplačno</string>
+    <string name="start_now">Začnite zdaj</string>
+    <string name="best_price_per_month">Najboljša cena na mesec</string>
+    <string name="seven_days_free">Prvih 7 dni brezplačno</string>
+    <string name="cancel_monthly">Preklicati kadar koli</string>
+    <string name="no_longterm_commitment">Brez dolgoročnih obveznosti</string>
+    <string name="show_all_subscriptions">Prikaži vse naročnine</string>
+    <string name="choose_subscription">Izberite naročnino</string>
+    <string name="access_all_features_and_protect_five_devices">Dostop do vseh funkcij Premium in zaščita 5 naprav</string>
+    <string name="first_payment_info_today">Prvo plačilo je treba plačati zdaj. Ta naročnina se samodejno podaljšuje, dokler je ne prekličete.</string>
+    <string name="first_payment_info_seven_days">Prvo plačilo je treba opraviti v 7 dneh. Ta naročnina se samodejno podaljša, dokler je ne prekličete.</string>
+    <string name="trial_link_text">Preizkusite 7 dni brezplačno - tukaj je opisano, kako to deluje.</string>
+    <string name="trial_info">Plačevanje začnite po 7 dneh. Po začetnem obdobju se naročnina vsako leto samodejno podaljša, dokler je ne prekličete.</string>
+    <!-- General -->
+    <string name="close_button_text">Zapri</string>
+    <string name="cta_button_text">Poskusite brezplačno zdaj</string>
+
+    <!-- Trial Explainer Card -->
+    <string name="trial_explainer_title">Kako deluje 7-dnevna brezplačna poskusna različica</string>
+    <string name="trial_step1_title">Danes: Polni dostop do vseh funkcij Premium</string>
+    <string name="trial_step1_description">Raziščite vse premijske funkcije in preizkusite celotno funkcionalnost aplikacije.</string>
+    <string name="trial_step2_title">5. dan: Elektronsko sporočilo z opomnikom o koncu preskušanja</string>
+    <string name="trial_step2_description">Poslali vam bomo e-poštno sporočilo, v katerem vas bomo opozorili, da se preskušanje kmalu konča.</string>
+    <string name="trial_step3_title">7. dan: Konec poskusnega obdobja, začetek naročnine</string>
+    <string name="trial_step3_description">Plačilo za prvo leto bo samodejno obdelano, če ga do tega dne ne boste odpovedali.</string>
+    <string name="for_the_first_two_years">(prvi dve leti)</string>
+    <string name="no_browser_available_to_open_the_link">Za odprtje povezave ni na voljo nobenega brskalnika.</string>
+
+</resources>

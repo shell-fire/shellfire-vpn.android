@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_labels_mode_connection">
+        <item>@string/pref_label_mode_connection_udp</item>
+        <item>@string/pref_label_mode_connection_tcp</item>
+    </array>
+
+    <array name="pref_values_mode_connection">
+        <item>@string/pref_value_mode_connection_udp</item>
+        <item>@string/pref_value_mode_connection_tcp</item>
+    </array>
+
+</resources>

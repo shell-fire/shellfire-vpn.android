@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:padding="@dimen/widget_margin">
+
+    <ImageView
+        android:id="@+id/widget_map_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/widget_bg_disconnected"
+        android:scaleType="centerCrop"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:elevation="4dp"
+            android:translationZ="4dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="4dp"
+            android:outlineProvider="bounds">
+
+            <ImageView
+                android:id="@+id/widget_line_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/red_disconnect"
+                android:alpha="0.8"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/widget_indent_8"
+                android:paddingEnd="@dimen/widget_indent_8"
+                android:paddingTop="@dimen/widget_indent_4">
+
+                <ImageView
+                    android:id="@+id/widget_flag"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:alpha="1" />
+
+                <TextView
+                    android:id="@+id/widget_city"
+                    style="@style/widget_text_bold"
+                    android:alpha="1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/widget_country"
+                    style="@style/widget_text_bold_ellipsized"
+                    android:alpha="1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/widget_connection_status"
+                    style="@style/widget_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1"
+                    android:text="@string/disconnected"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textAllCaps="true"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:indeterminate="true"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/status_btn_connect_height"
+        android:layout_marginLeft="@dimen/widget_indent_8"
+        android:layout_marginStart="@dimen/widget_indent_8"
+        android:layout_marginBottom="@dimen/widget_indent_8"
+        android:layout_marginTop="@dimen/widget_indent_8"
+        android:layout_gravity="start|bottom"
+        android:background="@drawable/connect_btn_selector"
+        android:text="@string/connect"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="@dimen/status_txt_size_12"
+        android:paddingTop="@dimen/status_intend_8"
+        android:paddingBottom="@dimen/status_intend_8"
+        android:paddingRight="@dimen/status_intend_8"
+        android:paddingLeft="@dimen/status_intend_8"
+        android:elevation="4dp"
+        android:translationZ="4dp"/>
+
+
+    <ImageView
+        android:id="@+id/update_vpn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="@dimen/widget_indent_4"
+        android:layout_marginEnd="@dimen/widget_indent_4"
+        android:layout_marginBottom="@dimen/widget_indent_8"
+        android:layout_marginTop="@dimen/widget_indent_4"
+        android:src="@drawable/logo"
+        android:scaleType="centerInside"
+        android:layout_gravity="end|bottom"/>
+
+</FrameLayout>

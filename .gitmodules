@@ -1,0 +1,9 @@
+[submodule "app/src/main/native/breakpad"]
+	path = app/src/main/native/breakpad
+	url = https://github.com/schwabe/breakpad.git
+[submodule "app/src/main/native/openssl"]
+	path = app/src/main/native/openssl
+	url = https://github.com/schwabe/platform_external_openssl.git
+[submodule "app/src/main/native/openvpn"]
+	path = app/src/main/native/openvpn
+	url = https://github.com/schwabe/openvpn.git

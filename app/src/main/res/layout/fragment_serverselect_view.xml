@@ -1,0 +1,278 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/server_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/search" />
+
+                <EditText
+                    android:id="@+id/search_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/server_list_indent_5"
+                    android:layout_marginRight="@dimen/server_list_indent_5"
+                    android:layout_toLeftOf="@+id/load"
+                    android:layout_toRightOf="@+id/search"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:visibility="gone"/>
+
+                <!--android:imeActionLabel="Search"
+                android:inputType="text"
+                android:maxLines="1"-->
+
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/ALL_SERVERS"
+                    android:textColor="@color/gray_text_color"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/load"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/load_off" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:smoothScrollbar="true"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/buttonReloadServerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/base_blue_color"
+                android:onClick="onClickRefreshServerLoad"
+                android:text="@string/reloadServerList"
+                android:layout_margin="5dp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:padding="@dimen/server_list_indent_10">
+
+
+                <Button
+                    android:id="@+id/advanced_mode_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/btn_upgrade"
+                    android:minHeight="48dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/ADVANCED"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/filter_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/divider_one"
+                        android:text="@string/filter"
+                        android:textColor="@color/light_gray_color" />
+
+                    <View
+                        android:id="@+id/divider_one"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@+id/rate_one"
+                        android:background="@color/filter_rate_light_gray_bg" />
+
+                    <LinearLayout
+                        android:id="@+id/rate_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/divider_two"
+                        android:background="@drawable/rate_light_gray_bg"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/ic_crown" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider_two"
+                        android:layout_width="1dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@+id/rate_two"
+                        android:background="@color/filter_rate_light_gray_bg" />
+
+                    <LinearLayout
+                        android:id="@+id/rate_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/divider_three"
+                        android:background="@drawable/rate_light_gray_bg"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/ic_crown" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/ic_crown" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider_three"
+                        android:layout_width="1dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@+id/rate_three"
+                        android:background="@color/filter_rate_light_gray_bg" />
+
+                    <LinearLayout
+                        android:id="@+id/rate_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rate_light_gray_bg"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/ic_crown" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/ic_crown" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/ic_crown" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/load_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/filter_rate_light_gray_bg" />
+
+                <TextView
+                    android:id="@+id/load_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/server_list_indent_10"
+                    android:text="@string/load" />
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/server_list_indent_5"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/server_list_indent_5"
+                    android:layout_toRightOf="@+id/load_txt"
+                    android:maxHeight="10dp"
+                    android:minHeight="5dp"
+                    android:progress="100"
+                    android:progressTint="@color/base_blue_color"
+                    android:thumb="@drawable/seekbar_thumb" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

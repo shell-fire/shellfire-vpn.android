@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme"  parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="displayOptions">showHome|useLogo|showTitle</item>
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="Theme.ShellfireVPN.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="myActionBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:backgroundStacked">#AAAAAA</item>
+        <item name="android:backgroundSplit">#000000</item>
+    </style>
+
+    <style name="myActionBarTabTextStyle" parent="Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="PreferencesTheme" parent="Theme.AppCompat.Light">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColorSecondary">#000000</item>
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+
+    <style name="Premium"/>
+
+    <style name="Premium.ParameterHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray_text_color</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Premium.ParameterHeader.TextData">
+        <item name="android:textColor">@color/base_blue_color</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentLeft">false</item>
+    </style>
+
+    <style name="Premium.ParameterHeader.ItemHeader">
+        <item name="android:layout_centerVertical">false</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="Premium.Images">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="Premium.Images.Checked">
+        <item name="android:layout_alignParentLeft">false</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+    </style>
+
+    <style name="Theme.Action_bar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_action_bar</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Action_bar</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Action_bar</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Action_bar</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Action_bar</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Action_bar</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_action_bar</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_action_bar</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Action_bar</item>
+    </style>
+
+    <style name="ActionBar.Solid.Action_bar" parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_background_textured_action_bar</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_action_bar</item>
+        <item name="android:backgroundSplit">@drawable/ab_background_textured_action_bar</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Action_bar</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Action_bar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_action_bar</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Action_bar</item>
+    </style>
+
+    <style name="PopupMenu.Action_bar" parent="Widget.AppCompat.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_action_bar</item>
+    </style>
+
+    <style name="DropDownListView.Action_bar" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_action_bar</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Action_bar" parent="Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_action_bar</item>
+    </style>
+
+    <style name="DropDownNav.Action_bar" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_action_bar</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_action_bar</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_action_bar</item>
+    </style>
+
+    <style name="ProgressBar.Action_bar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_action_bar</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Action_bar" parent="Widget.AppCompat.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_action_bar</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Action_bar.Widget" parent="Theme.AppCompat">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Action_bar</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Action_bar</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <!-- Theme for popup overlays, such as dropdown menus and dialogs -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat">
+
+    </style>
+
+    <style name="continent_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="widget_text_bold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/widget_indent_8</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="widget_text_bold_ellipsized">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/widget_indent_8</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="widget_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/widget_indent_8</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="widget_text_end_gravity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right|end|center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">@dimen/widget_indent_8</item>
+    </style>
+
+    <style name="widget_connect_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/status_btn_connect_height</item>
+        <item name="android:layout_marginLeft">@dimen/widget_indent_8</item>
+        <item name="android:layout_marginBottom">@dimen/widget_indent_8</item>
+        <item name="android:layout_marginTop">@dimen/widget_indent_8</item>
+        <item name="android:layout_gravity">start|bottom</item>
+        <item name="android:background">@drawable/connect_btn_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/status_txt_size_12</item>
+        <item name="android:paddingTop">@dimen/status_intend_8</item>
+        <item name="android:paddingBottom">@dimen/status_intend_8</item>
+        <item name="android:paddingRight">@dimen/status_intend_8</item>
+        <item name="android:paddingLeft">@dimen/status_intend_8</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:translationZ">4dp</item>
+    </style>
+
+    <style name="main_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_gravity">center_horizontal|bottom</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/btn_upgrade</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/premium_txt_size</item>
+    </style>
+
+    <style name="payment_radio_button_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/payment_dialog_indent_4</item>
+        <item name="android:textColor">@color/color_per_period_pay</item>
+        <item name="android:textSize">@dimen/payment_dialog_text_size_17</item>
+    </style>
+
+    <style name="payment_arrow_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="MyToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">#000000</item>
+        <item name="subtitleTextColor">#000000</item>
+    </style>
+
+
+</resources>

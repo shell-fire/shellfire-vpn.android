@@ -1,0 +1,47 @@
+3;Austria;Vienna;﻿Austria;﻿Vienna;Server 3;at.01.shellfirevpn.com;Premium;16.366667;48.2;14;192;10000;37.235.1.182;Europe
+4;Germany;Nuremberg;﻿Germany;﻿Nuremberg;Server 4;de.01.shellfirevpn.com;Premium;11.167721;49.406841;38;192;10000;213.239.207.252;Europe
+5;Switzerland;Zug;﻿Switzerland;Train;Server 5;ch.01.shellfirevpn.com;Premium;8.516663;47.169441;36;192;10000;185.150.28.29;Europe
+6;Germany;Frankfurt;﻿Germany;Frankfurt;Server 6;de.02.shellfirevpn.com;Free;8.6854326725006;50.1106368367143;14;128;768;176.57.129.88;Europe
+7;Belgium;Bruges;﻿Belgium;﻿Bruges;Server 7;be.01.shellfirevpn.com;Premium;3.233333;51.216667;5;192;10000;192.71.249.26;Europe
+8;Sweden;Stockholm;﻿Sweden;Stockholm;Server 8;se.01.shellfirevpn.com;Premium;18.068611;59.329444;12;192;10000;46.246.93.202;Europe
+9;Poland;Warsaw;﻿Poland;﻿Warsaw;Server 9;pl.01.shellfirevpn.com;Premium;21.016667;52.233333;5;192;10000;37.235.48.187;Europe
+10;Usa;Dallas;United States;Dallas;Server 10;us.02.shellfirevpn.com;PremiumPlus;-96.8;32.78;84;256;0;174.34.178.141;Americas
+11;Germany;Nuremberg;﻿Germany;﻿Nuremberg;Server 11;de.05.shellfirevpn.com;Premium;11.167721;49.406841;10;192;10000;176.9.16.216;Europe
+12;United Kingdom;Reading;﻿United Kingdom;Reading;Server 12;uk.01.shellfirevpn.com;Premium;-0.973056;51.454167;62;192;10000;94.76.223.69;Europe
+13;Usa;New York;United States;New York;Server 13;us.01.shellfirevpn.com;Premium;-74.044444;40.689167;6;192;10000;173.234.39.189;Americas
+14;Netherlands;Amsterdam;﻿Netherlands;Amsterdam;Server 14;nl.01.shellfirevpn.com;Premium;4.9;52.366667;12;192;10000;151.236.28.72;Europe
+15;Canada;Beauharnois;﻿Canada;Beauharnois;Server 15;ca.01.shellfirevpn.com;Premium;-73.866667;45.316667;6;192;10000;192.95.24.110;Americas
+16;France;Roubaix;﻿France;Roubaix;Server 16;fr.01.shellfirevpn.com;Premium;3.180833;50.689167;24;192;10000;94.23.27.103;Europe
+18;Usa;Chicago;United States;Chicago;Server 18;us.03.shellfirevpn.com;Free;-87.684722;41.836944;9;128;768;162.252.172.147;Americas
+19;Germany;Frankfurt;﻿Germany;Frankfurt;Server 19;de.04.shellfirevpn.com;PremiumPlus;8.6854326725006;50.1106368367143;82;256;0;176.57.141.93;Europe
+20;Iceland;Hafnarfjordur;﻿Iceland;Hafnarfjordur;Server 20;is.01.shellfirevpn.com;PremiumPlus;-21.954167;64.067833;18;256;0;37.235.49.49;Europe
+21;Hong Kong;Hong Kong;﻿Hong Kong;﻿Hong Kong;Server 21;hk.01.shellfirevpn.com;Premium;114.188;22.267;9;192;10000;158.255.208.212;Asia
+22;Spain;Madrid;﻿Spain;Madrid;Server 22;es.01.shellfirevpn.com;Premium;-3.683333;40.4;10;192;10000;151.236.23.76;Europe
+23;Italy;Milan;﻿Italy;﻿Milan;Server 23;it.01.shellfirevpn.com;Premium;9.183333;45.466667;6;192;10000;95.141.36.28;Europe
+24;Chile;Vina del Mar;Chile;ViÃ±a del Mar;Server 24;cl.01.shellfirevpn.com;PremiumPlus;-71.516667;-33;5;256;0;37.235.52.74;Americas
+25;Isle of Man;Douglas;Isle of man;Douglas;Server 25;im.01.shellfirevpn.com;PremiumPlus;-4.48172;54.14521;14;256;0;37.235.55.134;Europe
+26;Romania;Bucharest;﻿Romania;﻿Bucharest;Server 26;ro.01.shellfirevpn.com;Premium;26.103889;44.4325;1;192;10000;194.68.44.238;Europe
+27;Russian Federation;Moscow;﻿Russia;﻿Moscow;Server 27;ru.01.shellfirevpn.com;Premium;37.616667;55.75;7;192;10000;213.183.56.14;Europe
+28;Luxembourg;Luxembourg;﻿Luxembourg;﻿Luxembourg;Server 28;lu.01.shellfirevpn.com;PremiumPlus;6.116667;49.6;12;256;0;212.117.180.220;Europe
+29;Usa;Chicago;United States;Chicago;Server 29;us.04.shellfirevpn.com;Free;-87.684722;41.836944;13;128;768;162.252.172.111;Americas
+30;Germany;Frankfurt;Germany;Frankfurt;Server 30;de.06.shellfirevpn.com;Premium;8.6854326725006;50.1106368367143;18;192;10000;176.57.141.162;Europe
+31;Usa;Los Angeles;United States;Los Angeles;Server 31;us.05.shellfirevpn.com;Premium;-118.25;34.05;10;192;10000;23.110.53.139;Americas
+32;Singapore;Singapore;﻿Singapore;﻿Singapore;Server 32;sg.01.shellfirevpn.com;PremiumPlus;103.833333;1.283333;10;256;0;103.208.85.31;Asia
+33;Australia;Sydney;﻿Australia;Sydney;Server 33;au.01.shellfirevpn.com;PremiumPlus;151.209444;-33.865;2;256;0;103.75.116.112;Oceania
+34;Japan;Tokyo;Japan;﻿Tokyo;Server 34;jp.01.shellfirevpn.com;PremiumPlus;139.683333;35.683333;4;256;0;103.75.118.27;Asia
+35;Greece;Heraklion;﻿Greece;Heraklion;Server 35;gr.01.shellfirevpn.com;PremiumPlus;25.133333;35.333333;8;256;0;185.25.22.3;Europe
+36;Usa;Washington DC;United States;Washington DC;Server 36;us.06.shellfirevpn.com;PremiumPlus;-77.016389;38.904722;86;256;0;104.152.44.66;Americas
+37;Germany;Frankfurt;﻿Germany;Frankfurt;Server 37;de.07.shellfirevpn.com;PremiumPlus;8.6854326725006;50.1106368367143;87;256;0;176.57.141.209;Europe
+38;Switzerland;Zug;﻿Switzerland;Train;Server 38;ch.02.shellfirevpn.com;PremiumPlus;8.516663;47.169441;52;256;0;185.150.28.32;Europe
+39;Netherlands;Amsterdam;﻿Netherlands;Amsterdam;Server 39;nl.02.shellfirevpn.com;PremiumPlus;4.9;52.366667;22;256;0;151.236.14.50;Europe
+40;Germany;Nuremberg;﻿Germany;﻿Nuremberg;Server 40;de.08.shellfirevpn.com;PremiumPlus;11.167721;49.406841;85;256;0;88.198.16.212;Europe
+41;Finland;Helsinki;﻿Finland;Helsinki;Server 41;fi.01.shellfirevpn.com;PremiumPlus;24.9375;60.170833;30;256;0;185.100.86.106;Europe
+42;Denmark;Copenhagen;﻿Denmark;﻿Copenhagen;Server 42;dk.01.shellfirevpn.com;Premium;12.568333;55.676111;1;192;10000;185.186.79.121;Europe
+43;Turkey;Istanbul;﻿Turkey;Istanbul;Server 43;tr.01.shellfirevpn.com;Premium;28.955;41.013611;8;192;10000;185.123.101.19;Asia
+44;United Kingdom;London;﻿United Kingdom;London;Server 44;uk.02.shellfirevpn.com;PremiumPlus;0;51.507222;66;256;0;139.59.162.183;Europe
+45;Hungary;Budapest;﻿Hungary;Budapest;Server 45;hu.01.shellfirevpn.com;Premium;19.051389;47.4925;8;192;10000;91.219.237.198;Europe
+46;Ireland;Dublin;﻿Ireland;Dublin;Server 46;ie.01.shellfirevpn.com;PremiumPlus;-6.259722;53.347778;5;256;0;217.78.5.131;Europe
+47;South Africa;Johannesburg;﻿South Africa;﻿Johannesburg;Server 47;za.01.shellfirevpn.com;PremiumPlus;28.045556;-26.204444;10;256;0;129.232.222.72;Africa
+48;Switzerland;Zurich;﻿Switzerland;﻿Zurich;Server 48;ch.03.shellfirevpn.com;PremiumPlus;8.55;47.366667;40;256;0;178.209.50.217;Europe
+49;Portugal;Lisbon;﻿Portugal;﻿Lisbon;Server 49;pt.01.shellfirevpn.com;Premium;-9.139444;38.713889;7;192;10000;185.113.140.7;Europe
+50;India;Bangalore;﻿India;﻿Bangalore;Server 50;in.01.shellfirevpn.com;PremiumPlus;77.566667;12.966667;9;256;0;139.59.63.233;Asia

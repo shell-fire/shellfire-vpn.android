@@ -1,0 +1,489 @@
+<resources>
+    <string name="channel_name_userreq">Vajalik kasutaja interaktsioon</string>
+    <string name="channel_description_userreq">OpenVPN-ühendus nõuab kasutaja sisendit, nt kahetegurilist autentimist.</string>
+    <string name="channel_name_background">Ühendusstatistika</string>
+    <string name="channel_description_background">Jooksev statistika loodud OpenVPN-ühenduse kohta</string>
+    <string name="channel_name_status">Ühenduse oleku muutus</string>
+    <string name="channel_description_status">OpenVPN-ühenduse oleku muutused (Ühendamine, autentimine,...)</string>
+	<string name="save_password">Salvesta parool</string>
+	<string name="show_password">Näita parooli</string>
+	<string name="auth_username">Kasutajanimi</string>
+	<string name="remote_trust">Ma usaldan seda taotlust.</string>
+	<string name="remote_warning">Kui te jätkate, annate rakendusele loa kontrollida täielikult OpenVPN for Android\'i ja pealtkuulata kogu võrguliiklust.<b>ÄRGE võtke vastu, kui te ei usalda taotlust.</b> Vastasel juhul on oht, et pahatahtlik tarkvara võib teie andmeid ohustada.\"</string>
+	<string name="permission_icon_app">Rakenduse ikoon, mis üritab kasutada OpenVPNi Androidile</string>
+	<string name="state_user_vpn_permission" translatable="false">Waiting for user permission to use VPN API</string>
+	<string name="config_error_found">Viga konfiguratsioonis</string>
+	<string name="nought_alwayson_warning"><![CDATA[Kui te ei saanud VPN-i kinnituse dialoogiakent, siis on teil \\"Always on VPN\\" mõne teise rakenduse jaoks sisse lülitatud. Sellisel juhul on ainult sellel rakendusel lubatud VPN-iga ühendust luua. Kontrollige seadete-> Võrgud rohkem .. -> VPNS all.]]></string>
+	<string name="state_user_vpn_password_cancelled" translatable="false">VPN password input dialog cancelled</string>
+	<string name="pw_request_dialog_title">Need %1$s</string>
+    <string name="pw_request_dialog_prompt">Palun sisestage profiili %1$s parool</string>
+	<string name="shortcut_profile_notfound">Otsetees määratud profiili ei leitud</string>
+	<string name="app">Shellfire VPN Androidile</string>
+	<string name="prompt">%1$s üritab kontrollida %2$s</string>
+	<string name="all_app_prompt">Väline rakendus üritab kontrollida %s. Juurdepääsu taotlevat rakendust ei ole võimalik kindlaks teha. Selle rakenduse lubamine annab juurdepääsu KÕIGILE rakendustele.</string>
+	<string name="screen_nopersistenttun">Hoiatus: Selle VPN-i jaoks ei ole püsiv häälestus lubatud. Liiklus kasutab tavalist internetiühendust, kui ekraan on välja lülitatud.</string>
+	<string name="private_key_password">Privaatne võtme parool</string>
+	<string name="pkcs12_file_encryption_key">PKCS12 faili krüpteerimise võti</string>
+	<string name="no_error_found">Viga ei leitud</string>
+	<string name="no_orbotfound">Orbot rakendust ei leia. Palun installige Orbot või kasutage käsitsi Socks v5 integreerimist.</string>
+	<string name="error_orbot_and_proxy_options">Ei saa kasutada samaaegselt lisavõimalust http-proxy-optsioon ja Orbot integratsiooni</string>
+	<string name="openvpn3_socksproxy">OpenVPN 3 C++ rakendamine ei toeta Socks proxy kaudu ühendumist</string>
+	<string name="openvpn3_nostatickeys">OpenVPN 3 C++ rakendus ei toeta staatilisi võtmeid. Palun vahetage OpenVPN 2.x vastu üldiste seadete all.</string>
+    <string name="openvpn3_pkcs12">PKCS12-failide kasutamine otse OpenVPN 3 C++ rakendusega ei ole toetatud. Palun importige pkcs12-failid Androidi keystore\'i või muutke OpenVPN 2.x-ks üldiste seadete all.</string>
+	<string name="remote_no_server_selected">Te peate määratlema ja lubama vähemalt ühe kaugserveri.</string>
+	<string name="missing_tlsauth">tls-auth fail puudub</string>
+    <string name="missing_certificates">Puuduv kasutajasertifikaat või kasutaja sertifitseerimisvõtme faili puudumine</string>
+    <string name="missing_ca_certificate">Puuduv CA sertifikaat</string>
+	<string name="custom_route_format_error">Viga kohandatud marsruutide analüüsimisel</string>
+	<string name="ipv4_format_error">Viga IPv4-aadressi analüüsimisel</string>
+	<string name="deprecated_tls_remote">Config kasutab valikut tls-remote, mis kaotas kehtivuse 2.3-s ja lõpuks eemaldati 2.4-s.</string>
+	<string name="no_ca_cert_selected">Te peate valima CA-sertifikaadi või lubama vastavate sõrmejälgede kontrollimist.</string>
+	<string name="no_keystore_cert_selected">Te peate valima kasutajasertifikaadi</string>
+	<string name="keyChainAccessError">KeyChain Access error: %s</string>
+	<string name="cannotparsecert">Sertifikaadi teavet ei saa kuvada</string>
+	<string name="crtext_requested">Vastake väljakutsele, et jätkata VPN autentimist</string>
+	<string name="openurl_requested">Ava URL, et jätkata VPN autentimist</string>
+	<string name="ip_looks_like_subnet">Vpn-topoloogia \\"%3$s\\" on määratud, kuid ifconfig %1$s %2$s näeb pigem välja nagu IP-aadress koos võrgumaskiga. Eeldades \\"subnet\\" topoloogiat.</string>
+	<string name="allowed_vpn_apps_info">Lubatud VPN rakendused: %1$s</string>
+	<string name="disallowed_vpn_apps_info">Keelatud VPN rakendused: %1$s</string>
+	<string name="app_no_longer_exists">Pakett %s ei ole enam installitud, eemaldades selle rakenduse lubade/keelamise nimekirjast</string>
+	<string name="no_allowed_app">Lubatud rakendust ei ole lisatud. Lisame ise (%s), et vähemalt üks rakendus oleks lubatud rakenduste nimekirjas, et mitte lubada kõiki rakendusi.</string>
+	<string name="ignore_multicast_route">Multisaate marsruudi ignoreerimine: %s</string>
+	<string name="routes_debug">VpnService marsruudid paigaldatud: %1$s %2$s</string>
+	<string name="state_auth_failed">Autentimine ebaõnnestus</string>
+	<string name="password">Parool</string>
+	<string name="state_waitorbot">Orbot\'i käivitamist oodates</string>
+	<string name="service_restarted">OpenVPN teenuse taaskäivitamine (rakendus kukkus tõenäoliselt kokku või tapeti mälusurve tõttu)</string>
+	<string name="notifcation_title_notconnect">Ei ole ühendatud</string>
+	<string name="permission_revoked">VPN-loa tühistamine operatsioonisüsteemi poolt (nt teine VPN-programm käivitati), VPN-i peatamine.</string>
+	<string name="keychain_nocacert">Androidi võtmesalvestuse lugemisel ei tagastatud CA sertifikaati. Autentimine tõenäoliselt ebaõnnestub.</string>
+	<string name="abi_mismatch">Selle seadme eelistatud ABI eelisjärjekord (%1$s) ja ABI, mille on teatanud emakeelsed raamatukogud (%2$s), ei vasta üksteisele.</string>
+	<string name="jelly_keystore_alphanumeric_bug">Mõnes Android 4.1 versioonis on probleeme, kui võtmesalvestussertifikaadi nimi sisaldab muid kui tähtnumbrilisi sümboleid (näiteks tühikuid, alajaotusi või kriipsu). Proovige sertifikaati ilma erimärkideta uuesti importida.</string>
+	<string name="keychain_access">Ei saa juurdepääsu Androidi võtmehoidja sertifikaatidele. Selle põhjuseks võib olla püsivara uuendamine või rakenduse/rakenduse seadete varukoopia taastamine. Palun redigeerige VPN-i ja valige sertifikaat uuesti põhiseadete all, et taastada sertifikaadile juurdepääsu luba.</string>
+	<string name="notifcation_title" translatable="false">Shellfire VPN - %s</string>
+    <string name="volume_byte">%.0f B</string>
+    <string name="volume_kbyte">%.1f kB</string>
+    <string name="volume_mbyte">%.1f MB</string>
+    <string name="volume_gbyte">%.1f GB</string>	
+	<string name="bits_per_second">%.0f bit/s</string>
+    <string name="kbits_per_second">%.1f kbit/s</string>
+    <string name="mbits_per_second">%.1f Mbit/s</string>
+    <string name="gbits_per_second">%.1f Gbit/s</string>
+	<string name="state_auth_pending">Autentimine on pooleli</string>
+	<string name="reread_log">Loe uuesti (%d) logi elemente logi vahemälufailist</string>
+	<string name="state_waitconnectretry">Ootab %ss sekundit ühenduskatsete vahel</string>
+	<string name="unhandled_exception">Käsitlemata erand: %1$s\n\n%2$s</string>
+	<string name="unhandled_exception_context" translatable="false">%3$s: %s\n\n%2$s</string>
+    <string name="routes_info_incl">Marsruudid: %1$s %2$s</string>
+    <string name="routes_info_excl">Välja arvatud marsruudid: %1$s %2$s</string>
+    <string name="title_activity_login">Logi sisse</string>
+    <string name="action_forgot_password">Unustatud parool</string>
+    <string name="register_process_registering">Registreeri...</string>
+    <string name="error_invalid_password">Parool on liiga lühike</string>
+    <string name="error_passwords_dont_match">Paroolid ei vasta</string>
+    <string name="error_field_required">See väli on kohustuslik</string>
+    <string name="action_settings">Seaded</string>
+    <string name="title_connect">Staatus</string>
+    <string name="title_serverlist">Serveri nimekiri</string>
+    <string name="title_locations">Asukohad</string>
+    <string name="title_log">Logi</string>
+    <string name="title_billing">Premium</string>
+    <string name="connect">Ühendage</string>
+    <string name="route_rejected">Marsruut, mille Android on tagasi lükanud</string>
+    <string name="tun_error_helpful">Mõne kohandatud ICS-i kujutise puhul võivad õigused /dev/tun olla valed või tun-moodul võib täielikult puududa. CM9-i piltide puhul proovige üldiste seadete all olevat valikut fix ownership.</string>
+    <string name="tun_open_error">Tun-liidese avamine ebaõnnestus</string>
+    <string name="error">\"Viga: \"</string>
+    <string name="last_openvpn_tun_config">Avamine tun liides:</string>
+    <string name="local_ip_info">Kohalik IPv4: %1$s/%2$d IPv6: %3$s MTU: %4$d</string>
+    <string name="dns_server_info">DNS-server: %1$s, domeen: %2$s</string>
+    <string name="routes_info">Marsruudid: %s</string>
+    <string name="routes_info6">IPv6 marsruudid: %s</string>
+    <string name="ip_not_cidr">Saime liidese andmed %1$s ja %2$s, eeldades, et teine aadress on kaugkeskuse aadress. Kasutades /32 võrgumaski kohaliku IP jaoks. OpenVPNi antud režiim on \\"%3$s\\".</string>
+    <string name="route_not_cidr">Ei saa aru, et %1$s ja %2$s on IP marsruut CIDR võrgumaskiga, kasutades võrgumaskina /32.</string>
+    <string name="route_not_netip">Korrigeeritud marsruut %1$s/%2$s kuni %3$s/%2$s.</string>
+    <string name="no_vpn_support_image">Teie pilt ei toeta VPNService API-d, vabandust :(</string>
+    <string name="encryption">-Krüpteerimine</string>
+    <string name="opentun_no_ipaddr">Keeldumine avada tun seade ilma IP-teabeta</string>
+    <string name="building_configration">Hoone konfiguratsioon...</string>
+    <string name="netstatus">Võrgu staatus: %s</string>
+    <string name="mobile_info">Töötab %1$s (%2$s) %3$s, Android API %4$d</string>
+    <string name="error_rsa_sign">Viga Androidi võtmesalvestuse võtmega %1$s allkirjastamisel: %2$s</string>
+    <string name="warn_no_dns">DNS-servereid ei kasutata. Nimede lahendamine ei pruugi toimida. Kaaluge kohandatud DNS-serverite seadistamist. Pange ka tähele, et Android kasutab jätkuvalt teie mobiiltelefoni/Wi-Fi ühenduse jaoks määratud proxy seadeid, kui DNS-servereid ei ole määratud.</string>
+    <string name="dns_add_error">Ei saanud lisada DNS-serverit \\"%1$s\\", süsteem lükkas tagasi: %2$s</string>
+    <string name="ip_add_error">IP-aadressi \\"%1$s\\" ei saanud konfigureerida, süsteem lükkas tagasi: %2$s</string>
+    <string name="getproxy_error">Viga proxy seadete saamisel: %s</string>
+    <string name="using_proxy">Proxy %1$s %2$d kasutamine</string>
+    <string name="minidump_generated">OpenVPN kukkus ootamatult kokku. Palun kaaluge peamenüüst minidump\'i saatmise võimaluse kasutamist.</string>
+    <string name="session_ipv4string">%1$s - %2$s</string>
+    <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
+    <string name="state_connecting">Ühendamine</string>
+    <string name="state_wait">Ootan serveri vastust</string>
+    <string name="state_auth">Autentimine</string>
+    <string name="state_get_config">Kliendi konfiguratsiooni saamine</string>
+    <string name="state_assign_ip">IP-aadresside määramine</string>
+    <string name="state_add_routes">Marsruutide lisamine</string>
+    <string name="state_connected">Ühendatud</string>
+    <string name="state_disconnected">Lahutage</string>
+    <string name="state_reconnecting">Uuesti ühendamine</string>
+    <string name="state_exiting">Väljumine</string>
+    <string name="state_noprocess">Ei jookse</string>
+    <string name="state_resolve">Host-nimede lahendamine</string>
+    <string name="state_tcp_connect">Ühendamine (TCP)</string>
+    <string name="unknown_state">Teadmata</string>
+    <string name="state_nonetwork">Ootab kasutatavat võrku</string>
+    <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
+    <string name="start_vpn_title">Ühendumine VPN-iga %s</string>
+    <string name="start_vpn_ticker">Ühendumine VPN-iga %s</string>
+    <string name="mobile_info_extended">Töötab %1$s (%2$s) %3$s, Android API %4$d, versioon %5$s, %6$s.</string>
+    <string name="built_by">ehitatud %s poolt</string>
+    <string name="debug_build">debug build</string>
+    <string name="official_build">ametlik ülesehitus</string>
+    <string name="screenoff_pause">Ühenduse peatamine ekraani väljalülitatud olekus: vähem kui %1$s on %2$ss jooksul</string>
+    <string name="state_userpause">Kasutaja poolt taotletud VPN-paus</string>
+    <string name="state_screenoff">VPN peatatud - ekraan välja lülitatud</string>
+    <string name="defaultServerName">Server XX</string>
+    <string name="serverCityName" translatable="false">Frankfurt</string>
+    <string name="serverCountryName" translatable="false">Germany</string>
+    <string name="default_server_type">PremiumPlus</string>
+
+
+    <string name="title_activity_select_vpn">Valige VPN</string>
+    <string name="vpnSelectReason">Teie Shellfire\'i kontol on leitud mitu VPN-i. Palun valige, millist soovite kasutada.</string>
+    <string name="rememberVpnSelection">Salvesta valik</string>
+    <string name="remember_vpn_summary">Kui on olemas mitu VPN-i, ei pea te iga sisselogimise ajal VPN-i valima.</string>
+    <string name="remember_vpn_title">Valitud VPN-i salvestamine</string>
+    <string name="show_log_sum">Logi püsiv kuvamine võib põhjustada jõudluse vähenemist (nõuab rakenduse taaskäivitamist).</string>
+    <string name="show_log">Näita logi</string>
+    <string name="default_product_type">Tasuta</string>
+    <string name="default_vpn_name">sfxxxx</string>
+    <string name="selected_vpn">VPN</string>
+    <string name="selected_server">Server</string>
+    <string name="connectionAdvice">Ühendab valitud serveriga. Serverite vahetamiseks libistage paremale.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="log">Rakenduspäevik</string>
+    <string name="connectionState">Status:</string>
+    <string name="disconnected">Lahutatud</string>
+    <string name="noAccountData">Ei ole registreeritud\?</string>
+    <string name="title_activity_register">Registreeri</string>
+    <string name="buyDailyPremium">0,99 eurot / 24 tundi.</string>
+    <string name="buyDailyPremiumPlus">1,99 eurot / 24 tundi.</string>
+    <string name="buyMonthlyPremium">3,49 eurot / kuu</string>
+    <string name="buyMonthlyPremiumPlus">7,95 eurot / kuu</string>
+    <string name="buyYearlyPremium">39,90 eurot / aasta</string>
+    <string name="buyYearlyPremiumPlus">84,90 eurot / aasta</string>
+    <string name="premiumUntil">Premium kuni:</string>
+    <string name="sendToShellfire">Saada logi Shellfire\'ile</string>
+    <string name="verifying_purchase">Ostu kontrollitakse...</string>
+    <string name="premium_upgrade_succesful_show_serverlist">Premium Upgrade edukas. Kuva serveri nimekiri\?</string>
+    <string name="yes">Jah</string>
+    <string name="no">Ei</string>
+    <string name="YES">JAH</string>
+    <string name="upgrade_not_successful_check_log">Uuendamine ei õnnestunud, kontrollige logi!</string>
+    <string name="problem_setting_up_in_app_billing">\"Probleem rakendusesisese arvelduse seadistamisega: \"</string>
+    <string name="loading">Laadimine...</string>
+    <string name="send_log_to_shellfire">Saada logi Shellfire\'ile</string>
+    <string name="log_send_succesfully">Logi edukalt Shellfire\'ile saadetud</string>
+    <string name="log_could_not_be_sent">Logi ei saanud saata</string>
+    <string name="connecting">Ühendamine...</string>
+    <string name="cansel">CANCEL</string>
+    <string name="disconnect">Lahutage</string>
+    <string name="connected">Ühendatud</string>
+    <string name="loading_certificates">Sertifikaatide laadimine</string>
+    <string name="switching_from_udp_to_tcp">Üleminek UDP-lt TCP-le</string>
+    <string name="switching_from_tcp_to_udp">Üleminek TCP-lt UDP-le</string>
+    <string name="item_already_owned_consuming">juba omanduses olev toode - tarbimine</string>
+    <string name="item_consumed">tarbitud toode</string>
+    <string name="already_on_this_server_doing_nothing">Juba selles serveris - ei tee midagi</string>
+    <string name="not_showing_premium_info">Ei näita lisatasu infot</string>
+    <string name="you_are_not_eligible_to_use_this_server">Vajalik on uuendamine.
+\nKas soovite lisateavet\?</string>
+    <string name="you_are_currently_connecting_disconnect">Te olete praegu ühendatud. Enne serveri muutmist peate ühenduse katkestama. Ühendus katkestada nüüd\?</string>
+    <string name="not_changing_server">Serveri muutmine tühistatud</string>
+    <string name="sure_to_change_server">Kas olete kindel, et soovite serverit vahetada\?</string>
+    <string name="serverchange_is_being_processed_might_take_a_while">.server on muudetud. See võib võtta aega..</string>
+    <string name="server_selection_succesfully_performed_on_backend">Serveri muutmine õnnestus.</string>
+    <string name="server_selection_could_not_be_changed">Serverit ei saanud muuta. Palun kontrollige üksikasjade kohta logi.</string>
+    <string name="connecting_please_wait">Ühendust töödeldakse - palun oodake</string>
+    <string name="action_about">Shellfire VPN-i kohta</string>
+
+    <string name="country">riik</string>
+    <string name="title_activity_about">Shellfire VPN-i kohta</string>
+    <string name="hello_world">Tere maailm!</string>
+    <string name="copyright_shellfire">© 2014 by Shellfire Gattung u. Behr GbR</string>
+    <string name="bouncy_castle">Bouncy Castle krüpto APId</string>
+    <string name="copyright_openssl">See toode sisaldab OpenSSL-projekti poolt välja töötatud tarkvara, mis on mõeldud kasutamiseks OpenSSL Toolkit\'is.
+        Copyright © 1998-2008 The OpenSSL Project. Kõik õigused kaitstud.\n\n
+        See toode sisaldab krüptotarkvara, mille on kirjutanud Eric Young (eay\@cryptsoft.com)\n
+        Copyright © 1995-1998 Eric Young (eay\@cryptsoft.com) Kõik õigused kaitstud.</string>
+    <string name="openssl">OpenSSL</string>
+    <string name="lzo_copyright">Copyright © 1996 – 2011 Markus Franz Xaver Johannes Oberhumer</string>
+    <string name="lzo">LZO</string>
+    <string name="copyright_others">See programm kasutab järgmisi komponente; vaata lähtekoodi, et saada täielikku teavet litsentside kohta (saadaval aadressil https://code.google.com/p/shellfirevpn4a/).</string>
+    <string name="copyright_arne">Projekti ics-openvpn, Copyright 2012-2013 Arne Schwabe (arne\@rfc2549.org), kättesaadav aadressil: https://code.google.com/p/ics-openvpn/.</string>
+    <string name="openvpn">OpenVPN</string>
+    <string name="opevpn_copyright"><![CDATA[Copyright © 2002-2010 OpenVPN Technologies, Inc. <sales\@openvpn.net>\n
+
+	  \"OpenVPN\" on OpenVPN Technologies, Inc.\n kaubamärk.]]></string>
+    <string name="copyright_bouncycastle">Copyright © 2000-2012 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)</string>
+    <string name="ics_openvpn">ics-openvpn</string>
+    <string name="until">kuni</string>
+    <string name="state_user_vpn_password">Ootab kasutaja VPN parooli</string>
+    <string name="state_user_vpn_permission_cancelled">VPN API lubade dialoog tühistati</string>
+    <string name="account_created_succesfully">Konto on edukalt loodud - palun kontrollige oma e-kirju, et saada aktiveerimismeil.</string>
+    <string name="free">Tasuta</string>
+    <string name="premium">Premium</string>
+    <string name="premiumplus">Shellfire\nVPN</string>
+    <string name="hours24">24 tundi</string>
+    <string name="month_1">1 kuu</string>
+    <string name="monthly">igakuine</string>
+    <string name="yearly">igal aastal</string>
+    <string name="cents99">0.99 Eur</string>
+    <string name="cents199">Eur 1.99</string>
+    <string name="cents495">4.95 Eur</string>
+    <string name="cents995">9.95 Eur</string>
+    <string name="cents395">3.95 Eur</string>
+    <string name="cents795">7.95 Eur</string>
+    <string name="cents3990">39.90 Eur</string>
+    <string name="cents8490">84.90 Eur</string>
+    <string name="buy">Osta</string>
+    <string name="compare">Võrdle</string>
+    <string name="singlePayment">ühekordne makse *</string>
+    <string name="subscription">tellimus **</string>
+    <string name="note_payment_types">* krediitkaart ei ole nõutav.\r\n
+** krediitkaart on nõutav; saab igal ajal Google Play kaudu tühistada. \r\n
+\r\n
+makske Paypaliga meie kodulehel: https://www.shellfire.co.uk/vpn</string>
+    <string name="selecting_vpn">VPN-i valimine...</string>
+    <string name="cobiCodeEnter">COMPUTER BILDi kampaania</string>
+    <string name="cobiClickHere">Sisestage kood</string>
+
+    <string name="enter_cobi_code">sisestage COMPUTERBILD kood siia:</string>
+    <string name="action_share">Jaga seda rakendust</string>
+    <string name="share_with">Jaga läbi</string>
+    <string name="share_text">Kasutan Shellfire #VPN rakendust, et kaitsta oma andmeid häkkerite eest ja avada tsenseeritud sisu: http://bit.ly/1lu3Yyl</string>
+
+    <string name="action_rate">Hinda</string>
+    <string name="rate_this_app">Hinda</string>
+    <string name="rate_explanation">Kas see rakendus on teid veennud\? Oleksime väga õnnelikud, kui hindaksid meie rakendust Google Play\'s. Täname teie toetuse eest!</string>
+    <string name="rate_now">Hinda nüüd</string>
+    <string name="rate_later">Hiljem</string>
+    <string name="rate_never">Ei, aitäh.</string>
+
+    <!-- PlansActivity-->
+    <string name="plans">Minu plaan</string>
+    <string name="current_plan">PRAEGUNE KAVA</string>
+    <string name="PAID_UNTIL">Makstud kuni</string>
+    <string name="PAID_UNTIL_DATE" translatable="false">12/12/2017</string>
+    <string name="UPGRADE_YOUR_ACCOUNT_FOR_MORE_FUNCTIONS">Täienda oma kontot rohkemate funktsioonide jaoks</string>
+
+
+    <string name="retry">Uuesti proovida</string>
+    <string name="network_problem_title">Võrguprobleem</string>
+    <string name="network_problem_message">Te ei ole praegu internetti ühendatud. Shellfire VPN nõuab aktiivset internetiühendust.</string>
+    <string name="login_error">sisselogimise ebaõnnestumine.</string>
+    <string name="serverLoad">Koormus</string>
+    <string name="reloadServerList">Laadige uuesti</string>
+    <string name="upgrade_not_successful">Uuendamine ei õnnestunud</string>
+
+    <string name="new_version_available_title">Uus versioon saadaval</string>
+    <string name="new_version_available_message">Google Play poes on saadaval uus versioon Shellfire VPN-st. Te peaksite selle varsti installima, sest see versioon ei pruugi enam korralikult töötada või sisaldada turvaprobleeme.
+
+Mine nüüd Play Store\'i, et uuendada\?
+
+Märkus: Võimalik, et peate uusima versiooni saamiseks installima / uuesti installima.</string>
+
+    <string name="dontshowagain">Ei ja ei näita uuesti</string>
+    <string name="not_now">Mitte nüüd</string>
+    <string name="server">Server</string>
+
+    <string name="_128bit">128-bitine krüpteerimine</string>
+    <string name="_192bit">192-bitine krüpteerimine</string>
+    <string name="_256bit">256-bitine krüpteerimine</string>
+
+    <string name="upto786">kuni 786 kbit/s</string>
+    <string name="upto10000">kuni 10 000 kbit/s</string>
+    <string name="unlimited">piiramatu kbit/sek</string>
+
+    <string name="php_invalid_email">Palun sisestage kehtiv e-posti aadress.</string>
+    <string name="php_account_exists">Selle e-posti aadressi jaoks on juba registreeritud konto olemas.</string>
+
+
+    <string name="php_signature"><![CDATA[Parimad tervitused Shellfire\'i meeskonnalt
+
+P.S.: Uus: Shellfire\'iga raha teenida! Kui sa saad meile uusi kliente, maksame sulle kuni 100% komisjonitasu: https://www.shellfire.net/affiliate-center/.
+
+P.P.S.: Jälgi meid Twitteris: http://twitter.com/#!/shellfire_en
+
+Shellfire Gattung & Behr GbR
+http://www.shellfire.net
+mailto:hosting\@shellfire.de
+
+----------------------------------------------------------------------------
+Shellfire Gattung & Behr GbR
+Juhtkond: Florian Gattung, Maximilian Behr
+Tsiviilseadustiku alusel tegutsev osaühing, asukoht Bad Vilbel, Saksamaa.]]></string>
+
+    <string name="php_surf_anonym">Surfake veebis anonüümselt</string>
+    <string name="php_hide_ip">Peida oma IP-aadress</string>
+    <string name="php_encrypt_internet">Krüpteeritud internetiühendus</string>
+    <string name="php_secure_wifi">Avalike wifi hotspotide turvaline kasutamine</string>
+    <string name="php_unlimited">piiramatu</string>
+    <string name="php_traffic">Liiklus / andmemaht</string>
+    <string name="php_speed_generic">%1$s kbit/sek</string>
+    <string name="php_speed">Kiirus</string>
+    <string name="php_server_in_generic">Server %1$s</string>
+    <string name="php_change_location">Muuda alati asukohta</string>
+    <string name="php_streaming_websites">Streaming veebilehed</string>
+
+
+    <string name="play_product_description">Shellfire VPN - lihtne. turvaline. ühendatud. Ei registreerimist.
+
+Shellfire VPN on TASUTA ja ei maksa teile kunagi sentigi. Piiramatu liiklus, piiramatu aeg!
+
+Shellfire VPN peidab teie IP-aadressi, vabastab interneti blokeeringu ja annab teile võimaluse vabalt ja anonüümselt pääseda ligi kõikidele soovitud saitidele. Shellfire VPN-i abil saate luua ühenduse mis tahes veebisaidiga, teades kindlalt, et olete varjatud. Me vabastame Skype\'i, Facebooki, Twitteri, YouTube\'i jne. blokeeringu riikides, kus kehtib internetitsensuur, ja anname teile isegi juurdepääsu oma koduriigi televisiooni- ja raadioteenustele välismaalt.
+
+Shellfire VPN annab teile ülitugeva krüpteerimise, et kaitsta teie andmeid häkkerite, NSA ja muude ohtude eest, isegi ebaturvalistes avalikes wifi-võrkudes!
+
+Uuendage Premiumi tasemele, et saada
+ - Suurem kiirus.
+ - Tugevam krüpteerimine.
+ - Vaba valik meie serveritest:
+Austria, Kanada, Prantsusmaa, Saksamaa, Hong Kong, Itaalia, Holland, Poola, Rumeenia, Venemaa, Hispaania, Rootsi, Šveits, Ühendkuningriik ja USA.
+- PremiumPlus kliendid saavad eksklusiivse juurdepääsu serveritele järgmistes riikides:
+Tšiili, Island, Mani saar (offshore) ja Liechtenstein.
+
+Shellfire VPN - parim VPN-klient Androidile.
+
+Shellfire VPN töötab ka Windows, Mac OS, iOS või Linux! Külastage https://www.shellfire.net/vpn/ lisateabe saamiseks.
+
+Koheseid uuendusi jälgige meid Facebookis ja Twitteris.
+https://www.facebook.com/shellfire.de
+https://twitter.com/shellfire_en</string>
+
+    <string name="play_promo_text">Surfe anonüümselt - Krüpteeritud ühendus - Juurdepääs Hulule, Youtube\'ile... ükskõik kust.</string>
+
+    <string name="play_product_description_generic">%1$s bittne krüpteerimine
+Kuni %2$s kbit/s edastuskiirus
+Server %3$s riigis üle maailma</string>
+
+    <string name="hosting_since_2002">Hosting alates 2002. aastast</string>
+    <string name="vision">Visioon</string>
+    <string name="vision_data">Me usume, et turvaline ja vaba juurdepääs internetile on iga inimese põhiõigus sellel planeedil. Seepärast on meie missiooniks hoida internet nii vabaduse kui ka teie privaatsete andmete turvaline koht. Me teeme seda, pakkudes teile kaitset pealtkuulajate ja häkkerite eest meie krüpteeritud VPN-tunnelite ja kõneserverite kaudu.</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="hotspot_data_p1">Viimastel aastatel oleme aidanud juba rohkem kui 500 000 kasutajal kaitsta oma eraelu puutumatust internetis ja ületada tsensuuri. Meie kõrged teenindus- ja turvastandardid \\"Made in Germany\\" teevad Shellfire\'ist ühe parima aadressi VPN-i turul.</string>
+    <string name="hotspot_data_p2" translatable="false"> </string>
+
+    <string name="btn_buy">Osta nüüd</string>
+    <string name="tv_single_pay">Ühekordne makse</string>
+    <string name="tv_subscription_pay">Tellimus</string>
+    <string name="pay_24h">24h</string>
+    <string name="pay_month">1 kuu</string>
+    <string name="subs_month">kuu</string>
+    <string name="subs_year">aasta</string>
+    <string name="plan_premium">Premium</string>
+    <string name="plan_premium_plus" translatable="false">Shellfire VPN</string>
+    <string name="title_activity_maps">Kaart</string>
+    <string name="server_change_successful_Do_you_want_to_connect_now">Serveri muutmine õnnestus - kas soovite nüüd ühendust luua\?</string>
+    <string name="saotomeandprincipe">São Tomé ja Príncipe</string>
+    <string name="hosting_data">Shellfire GmbH on Frankfurdi Maini lähedal Schmittenis asuv hostinguteenuse pakkuja. Shellfire\'i asutasid 2002. aastal Florian Gattung ja Maximilian Behr, kes on sellest ajast alates tegutsenud juhtivate partneritena.</string>
+
+    <string name="enter_your_message_to_Shellfire_here">Sisestage oma sõnum Shellfire\'ile siia...</string>
+    <string name="load">LOAD:</string>
+    <string name="choose_a_plan">Vali plaan</string>
+    <string name="speed">Kiirus</string>
+    <string name="servers">Serverid</string>
+    <string name="countries">Riigid</string>
+    <string name="encryption_server">Krüpteerimine</string>
+    <string name="video_streaming">Video striimimine</string>
+    <string name="unblock_all_content">Kogu sisu blokeeringu tühistamine</string>
+    <string name="encrypted_connection">Krüpteeritud ühendus</string>
+    <string name="safe_hotspot_usage">Turvaline hotspot\'i kasutamine</string>
+    <string name="unlimited_traffic">Piiramatu liiklus</string>
+    <string name="upgrade">UPGRADE</string>
+    <bool name="isPhone">true</bool>
+    <string name="ADVANCED">Täiustatud</string>
+    <string name="STANDARD">Standard</string>
+    <string name="ALL_SERVERS">Kõik serverid</string>
+    <string name="unlock">Ava</string>
+    <string name="filter">Filtrid</string>
+
+    <string name="format_server">Server %d</string>
+
+
+    <string name="widget_label_small">Shellfire VPN väike vidin</string>
+    <string name="widget_label_medium">Shellfire VPN Medium Vidget</string>
+    <string name="widget_label_large">Shellfire VPN suur vidin</string>
+
+    <string name="pref_title_mode_connection">Ühendusrežiim</string>
+    <string name="pref_label_mode_connection_udp">UDP</string>
+    <string name="pref_label_mode_connection_tcp">TCP</string>
+
+    <string name="pref_mode_connection_key" translatable="false">MODE CONNECTION</string>
+
+    <string name="pref_value_mode_connection_udp" translatable="false">UDP</string>
+    <string name="pref_value_mode_connection_tcp" translatable="false">TCP</string>
+    <string name="email_validation_required">Konto aktiveerimiseks klõpsake palun lingile, mis on äsja saadetud e-kirjas.</string>
+    <string name="email_validation_required_title">Konto vajab aktiveerimist</string>
+    <string name="sending_log">Logi saatmine...</string>
+    <string name="loading_one">ÜKS laadimine</string>
+    <string name="loading_two">Laadimine KAKS</string>
+    <string name="logout">Väljalogimine</string>
+    <string name="action_connection_mode">Ühendusrežiim</string>
+    <string name="action_select_vpn">Valige VPN</string>
+    <string name="pref_mode_connection_default">UDP</string>
+    <string name="action_send_log">Andke tagasisidet</string>
+    <string name="title_activity_log">Saada tagasiside Shellfire\'ile</string>
+
+    <!-- Initial Dialog -->
+    <string name="initial_dialog_title">Hinda meie rakendust</string>
+    <string name="initial_dialog_message">Kas sulle meeldib meie rakendus\?</string>
+    <string name="initial_dialog_positive">Jah</string>
+    <string name="initial_dialog_negative">Ei</string>
+
+    <!-- Rate Dialog -->
+    <string name="rate_dialog_title">Hinda meie rakendust</string>
+    <string name="rate_dialog_message">Kas soovite meie rakendust hinnata\?</string>
+    <string name="rate_dialog_positive">Jah, mulle meeldib see!</string>
+    <string name="rate_dialog_negative">Ei, aitäh.</string>
+    <string name="rate_dialog_neutral">Võib-olla hiljem</string>
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_dialog_title">Tagasiside andmine</string>
+    <string name="feedback_dialog_message">Kas soovite anda tagasisidet\?</string>
+    <string name="feedback_dialog_positive">Jah, ma tahan anda tagasisidet</string>
+    <string name="feedback_dialog_negative">Ei, aitäh.</string>
+
+    <string name="send_feedback_progress">Tagasiside saatmine...</string>
+    <string name="feedback_sent_successfully">Tagasiside edukalt saadetud</string>
+    <string name="feedback_not_sent">Ei saanud tagasisidet saata</string>
+    <string name="small">12sp</string>
+    <string name="big">18sp</string>
+    <string name="medium">16sp</string>
+    <string name="provide_feedback_description">Palun andke oma tagasiside allpool. Soovi korral võite lisada ka rakendus- ja süsteemilogisid, et aidata meil paremini mõista võimalikke probleeme.</string>
+    <string name="include_application_and_system_logs">Kaasa arvatud rakendus- ja süsteemilogid</string>
+    <string name="send_feedback">Saada tagasiside</string>
+    <string name="abort">Katkesta</string>
+    <string name="serverchange_timeout">Serveri muutmise operatsioon on aegunud. Palun proovige uuesti.</string>
+    <string name="protocol_is_being_changed">Protokolli muudetakse. See võib võtta aega..</string>
+    <string name="protocol_change_timeout">Serveri muutmise operatsioon on aegunud. Palun proovige uuesti.</string>
+    <string name="app_name">Shellfire VPN</string>
+    <string name="login_progress_signing_in">Sisselogimine...</string>
+    <string name="login_with_existing_account">Logi sisse olemasoleva kontoga</string>
+    <string name="prompt_email">E-post</string>
+    <string name="prompt_password">Parool</string>
+    <string name="action_sign_in_short">Logi sisse</string>
+    <string name="login">Logi sisse</string>
+    <string name="lostAccountData">Kaotatud kontoandmed</string>
+    <string name="register_new_account">Registreeri uus konto</string>
+    <string name="welcomeText">Tere tulemast Shellfire VPN-i!</string>
+    <string name="needToAcceptAndRegister">Registreeri uus konto</string>
+    <string name="prompt_email_only">E-post</string>
+    <string name="subscribeNewsletter">Telli uudiskiri</string>
+    <string name="register">Registreeri</string>
+    <string name="i_have_an_account">Mul on juba Shellfire\'i konto</string>
+    <string name="greeting_text">Tere tulemast Shellfire VPN-i! Palun logige sisse või registreeruge, et jätkata.</string>
+    <string name="slow">Aeglane</string>
+    <string name="brilliant">Briljantne</string>
+    <string name="back">Tagasi</string>
+
+</resources>
