@@ -25,7 +25,7 @@ This project includes code from **OpenVPN-ics** by Arne Schwabe, which is licens
 - **Derivative Work Clause**: Using or including any part of **ics-openvpn**, especially within the `de.blinkt.openvpn` package, constitutes a derivative work.
 - **OpenSSL Linking Exception**: OpenVPN-ics provides a special exception allowing linking with the OpenSSL library.
 
-For full terms, see the [original OpenVPN-ics license](https://github.com/schwabe/ics-openvpn/blob/master/LICENSE.txt).
+For full terms, see the [original OpenVPN-ics license](https://github.com/schwabe/ics-openvpn/blob/master/main/src/main/assets/full_licenses.html).
 
 ### **LZO Library**
 - LZO is copyrighted by **Markus F.X.J. Oberhumer** and licensed under GPL.
