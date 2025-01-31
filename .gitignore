@@ -35,7 +35,6 @@ fabric.properties
 
 # Ignore IntelliJ IDEA / Android Studio specific files
 .idea/
-.idea/**/*
 
 # Ignore local build files
 .gradle/
@@ -45,3 +44,7 @@ captures/
 
 # Ignore OS-specific files
 Thumbs.db
+.directory
+/.externalNativeBuild/
+*.log
+log.txt
