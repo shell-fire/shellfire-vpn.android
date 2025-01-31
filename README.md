@@ -104,7 +104,7 @@ This project is licensed under **GPL v2** due to its dependence on OpenVPN-ics. 
 For questions, suggestions, or support, reach out via:
 
 - **GitHub Issues** (Bug reports, feature requests)
-- **Email:** [support@shellfirevpn.com](mailto\:support@shellfirevpn.com)
+- **Email:** [support@shellfire.net](mailto\:support@shellfire.net)
 
 ---
 
