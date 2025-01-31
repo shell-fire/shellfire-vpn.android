@@ -20,12 +20,12 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 Additional Licensing and Acknowledgments
 
 OpenVPN-ics
-This project includes code from **OpenVPN-ics** by Arne Schwabe, which is licensed under GPL v2 with additional terms. 
+This project includes code from OpenVPN-ics by Arne Schwabe, which is licensed under GPL v2 with additional terms. 
 
 - Derivative Work Clause: Using or including any part of ics-openvpn, especially within the `de.blinkt.openvpn` package, constitutes a derivative work.
 - OpenSSL Linking Exception: OpenVPN-ics provides a special exception allowing linking with the OpenSSL library.
 
-For full terms, see the [original OpenVPN-ics license](https://github.com/schwabe/ics-openvpn/blob/master/main/src/main/assets/full_licenses.html).
+For full terms, see the original OpenVPN-ics license: https://github.com/schwabe/ics-openvpn/blob/master/main/src/main/assets/full_licenses.html .
 
 LZO Library
 - LZO is copyrighted by Markus F.X.J. Oberhumer and licensed under GPL.
@@ -43,8 +43,6 @@ Bouncy Castle
 - Licensed under a permissive MIT-style license, allowing free use, modification, and distribution.
 
 ---
-
-## Full GPL v2 License Text:
 
 GNU GENERAL PUBLIC LICENSE
 Version 2, June 1991
