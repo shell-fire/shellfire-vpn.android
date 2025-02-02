@@ -1,0 +1,3 @@
+Version 1.0.0:
+- Initial release for F-Droid
+- Fully open-source build with no proprietary dependencies

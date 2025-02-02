@@ -1,0 +1,12 @@
+ShellfireVPN-Android is an open-source Android application that provides a secure and private VPN connection.
+This VPN client can **only be used** to connect to the **Shellfire VPN network**.
+
+Features:
+* Secure VPN connection with encryption
+* Open-source and privacy-focused
+* Two build flavors:
+  * **googlePlay:** For distribution on the Google Play Store (with proprietary dependencies)
+  * **fdroid:** Fully free and open-source build for F-Droid
+* Uses modern Gradle build flavors and stubs to separate proprietary dependencies
+
+The F-Droid version is completely **free of proprietary dependencies** and follows FLOSS principles.
