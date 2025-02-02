@@ -704,6 +704,21 @@ public class MainBaseActivity extends AppCompatActivity implements ActionBar.Tab
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        boolean result = super.onPrepareOptionsMenu(menu);
+
+        if (getResources().getBoolean(R.bool.isFdroidBuild)) {
+            MenuItem rateItem = menu.findItem(R.id.action_rate);
+            if (rateItem != null) {
+                rateItem.setVisible(false);
+            }
+        }
+
+        return result;
+    }
+
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         SparseArray<Runnable> actions = new SparseArray<>();
         actions.put(R.id.action_select_vpn, this::handleSelectVpn);

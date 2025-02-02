@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+         Stub declaration for the cameraZoom attribute.
+         This attribute is normally provided by the Google Maps library,
+         but since we disable maps in the FDroid build, we define it here to
+         satisfy the resource linker.
+    -->
+    <attr name="cameraZoom" format="float" />
+</resources>

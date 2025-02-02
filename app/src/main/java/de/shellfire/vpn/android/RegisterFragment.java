@@ -148,9 +148,16 @@ public class RegisterFragment extends Fragment {
 
         registerButton.setOnClickListener(v -> onClickRegister_button(v));
 
+        // Hide Google Sign-In button in the fdroid build
+        View googleSignInCard = view.findViewById(R.id.google_sign_in_card);
+        if (BuildConfig.FLAVOR.equals("fdroid")) {
+            googleSignInCard.setVisibility(View.GONE);
+        } else {
+            googleSignInCard.setVisibility(View.VISIBLE);
+        }
+
         Button googleSignInButton = view.findViewById(R.id.google_sign_in_button);
         googleSignInButton.setOnClickListener(v -> showGoogleSignInConfirmationDialog());
-
         Log.d(TAG, "Observers set");
 
         // Initialize views and set onClick listeners if needed

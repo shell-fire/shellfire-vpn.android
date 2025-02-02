@@ -14,9 +14,6 @@ import android.os.Process;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.OnMapsSdkInitializedCallback;
-
 import de.shellfire.vpn.android.auth.AuthRepository;
 import de.shellfire.vpn.android.openvpn.OpenVPNService;
 import de.shellfire.vpn.android.openvpn.StatusListener;
@@ -25,14 +22,15 @@ import de.shellfire.vpn.android.widget.BootReceiver;
 /**
  * Created by Alina on 19.02.2018.
  */
-
-public class ShellfireApplication extends Application implements OnMapsSdkInitializedCallback {
+public class ShellfireApplication extends Application {
     private static final String TAG = "ShellfireApplication";
     private static Context mContext;
     private static boolean activityVisible;
     private static boolean isTestMode = false;
     private StatusListener mStatus;
     private BootReceiver bootReceiver;
+
+    private MapInitializer mapInitializer;
 
     public static boolean getIsTestMode() {
         return isTestMode;
@@ -71,7 +69,6 @@ public class ShellfireApplication extends Application implements OnMapsSdkInitia
         // Log the process name and ID
         Log.d(TAG, "onCreate called, process ID: " + processId + ", process name: " + processName);
 
-
         mContext = this;
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
@@ -89,14 +86,16 @@ public class ShellfireApplication extends Application implements OnMapsSdkInitia
 
         registerBootReceiver();
 
-        MapsInitializer.initialize(this, MapsInitializer.Renderer.LATEST, this);
+        // Use flavor-specific MapInitializer
+        mapInitializer = MapInitializerFactory.create(this);
+        mapInitializer.initializeMaps();
+
         VpnConnectionManager.getInstance(this);
         DataRepository.getInstance(this);
         VpnRepository.getInstance(this);
         LogRepository.getInstance(this);
         BillingRepository.getInstance(this);
         AuthRepository.getInstance(this);
-
     }
 
     private void registerBootReceiver() {
@@ -118,18 +117,6 @@ public class ShellfireApplication extends Application implements OnMapsSdkInitia
         return null;
     }
 
-    @Override
-    public void onMapsSdkInitialized(MapsInitializer.Renderer renderer) {
-        switch (renderer) {
-            case LATEST:
-                Log.d("onMapsSdkInitialized", "The latest version of the renderer is used.");
-                break;
-            case LEGACY:
-                Log.d("onMapsSdkInitialized", "The legacy version of the renderer is used.");
-                break;
-        }
-    }
-
     @TargetApi(Build.VERSION_CODES.O)
     private void createNotificationChannels() {
         NotificationManager mNotificationManager =
@@ -142,24 +129,20 @@ public class ShellfireApplication extends Application implements OnMapsSdkInitia
 
         mChannel.setDescription(getString(R.string.channel_description_background));
         mChannel.enableLights(false);
-
         mChannel.setLightColor(Color.DKGRAY);
         mNotificationManager.createNotificationChannel(mChannel);
 
         // Connection status change messages
-
         name = getString(R.string.channel_name_status);
         mChannel = new NotificationChannel(OpenVPNService.NOTIFICATION_CHANNEL_NEWSTATUS_ID,
                 name, NotificationManager.IMPORTANCE_LOW);
 
         mChannel.setDescription(getString(R.string.channel_description_status));
         mChannel.enableLights(true);
-
         mChannel.setLightColor(Color.BLUE);
         mNotificationManager.createNotificationChannel(mChannel);
 
-
-        // Urgent requests, e.g. two factor auth
+        // Urgent requests, e.g. two-factor auth
         name = getString(R.string.channel_name_userreq);
         mChannel = new NotificationChannel(OpenVPNService.NOTIFICATION_CHANNEL_USERREQ_ID,
                 name, NotificationManager.IMPORTANCE_HIGH);

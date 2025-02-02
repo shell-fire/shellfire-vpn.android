@@ -454,7 +454,7 @@ Medeni Kanun\'daki Ortaklığı Bad Vilbel, Almanya</string>
     <string name="try_out_for_7_days">7 gün ücretsiz deneyin.</string>
     <string name="then_get_discount">O zaman %1$s indirim kazanın.</string>
     <string name="one_year">1 Yıl</string>
-    <string name="price_yearly_per_month">1$s / ay\'a karşılık gelir</string>
+    <string name="price_yearly_per_month">%1$s / ay\'a karşılık gelir</string>
     <string name="price_yearly_per_year">%1$s / yıl</string>
     <string name="price_yearly_per_month_all_subs">1 yıl - %1$s / ay</string>
     <string name="discount_also_in_next_two_years">%1$s indirim (ilk 2 yıl için)</string>

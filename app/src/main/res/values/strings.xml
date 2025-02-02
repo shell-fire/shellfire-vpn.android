@@ -533,5 +533,7 @@ Server in %3$s countries world-wide</string>
     <string name="trial_step3_description">Payment for the first year will be automatically processed if you haven’t canceled by this day.</string>
     <string name="for_the_first_two_years">(for the first two years)</string>
     <string name="no_browser_available_to_open_the_link">No browser available to open the link.</string>
+    <string name="visit_website_for_premium_info">Visit our  website www.shellfire.net to learn more about our current Premium offerings.</string>
+    <string name="visit_our_website">Go to www.shellfire.net (opens in external browser)</string>
 
 </resources>
